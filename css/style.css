@@ -397,17 +397,22 @@ html[data-theme="light"] #theme-switch svg:last-child {
 .page-container {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 70px); /* Header ki height nikal kar baqi poori screen le lega */
-    background-color: #0b0f19;       /* Aapka dark theme background */
+    min-height: calc(100vh - 70px);
+    /* Header ki height nikal kar baqi poori screen le lega */
+    background-color: #0b0f19;
+    /* Aapka dark theme background */
 }
 
 /* ⬅️ Left Sidebar Layout Panel */
 .sidebar-panel {
-    width: 250px;                   /* Sidebar ki width jo aapke mark kiye hue area mein fit aayegi */
+    width: 250px;
+    /* Sidebar ki width jo aapke mark kiye hue area mein fit aayegi */
     min-width: 250px;
-    background-color: #0d1220;      /* Slightly lighter dark background premium look ke liye */
+    background-color: #0d1220;
+    /* Slightly lighter dark background premium look ke liye */
     padding: 24px 16px;
-    border-right: 1px solid rgba(255, 255, 255, 0.05); /* Smooth dividing line */
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    /* Smooth dividing line */
 }
 
 /* Vertical List items configuration */
@@ -439,16 +444,18 @@ html[data-theme="light"] #theme-switch svg:last-child {
 
 /* Emerald Green Active tab option (Jaise pehle humne banaya tha) */
 .nav-list li.active a {
-    background-color: #059669; 
+    background-color: #059669;
     color: #ffffff;
     font-weight: 600;
 }
 
 /* 📄 Right Side Content Configuration */
 .content-panel {
-    flex: 1;                        /* Bachi hui poori screen automatic right side wale content ko de dega */
+    flex: 1;
+    /* Bachi hui poori screen automatic right side wale content ko de dega */
     padding: 30px 40px;
-    overflow-y: auto;               /* Is se sirf right side ka maal scroll hoga */
+    overflow-y: auto;
+    /* Is se sirf right side ka maal scroll hoga */
 }
 
 
@@ -1084,10 +1091,9 @@ html[data-theme="dark"] iframe {
     transform: scale(1.1);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
-footer {
+
+/* footer */
+/* footer {
     text-align: center;
     padding: 24px;
     font-size: 0.9rem;
@@ -1138,6 +1144,257 @@ footer a:hover {
 .wa:hover {
     transform: scale(1.1);
 }
+ */
+/* footer */
+.site-footer {
+    background: linear-gradient(180deg, #1b243b, #171f35);
+    padding: 20px 3vw;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-avatar {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-col h4 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-col p,
+.footer-col a {
+    font-size: 0.9rem;
+    color: #dfe0ff;
+    text-decoration: none;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 6px;
+}
+
+.footer-col a:hover {
+    color: #9c97f1;
+}
+
+.footer-col-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.footer-avatar {
+    width: 72px;
+    height: 98px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #1e2167;
+    /* stylish border */
+}
+
+.footer-col-about h3 {
+    font-size: 1.2rem;
+    color: #cfc9ff;
+    margin-bottom: 4px;
+}
+
+.par {
+    font-size: 0.95rem;
+    color: #9295c2;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* Social icons container */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons .icon {
+    position: relative;
+    font-size: 25px;
+    color: snow;
+    transition: color 0.3s ease;
+}
+
+/* Icon base style */
+.icon {
+    position: relative;
+    font-size: 30px;
+    color: #333;
+    transition: color 0.3s ease;
+    touch-action: manipulation;
+    /* for mobile tap */
+}
+
+/* Tooltip-style label below icon */
+.icon::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity 0.3s ease,
+        bottom 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Show label on hover or tap */
+.icon:hover::after,
+.icon:focus::after,
+.icon:active::after {
+    opacity: 1;
+    bottom: -40px;
+}
+
+/* Brand-specific hover color and label background */
+.icon[aria-label="YouTube"]:hover,
+.icon[aria-label="YouTube"]:focus,
+.icon[aria-label="YouTube"]:active {
+    color: #ff0000;
+}
+
+.icon[aria-label="YouTube"]::after {
+    background-color: #ff0000;
+}
+
+.icon[aria-label="GitHub"]:hover,
+.icon[aria-label="GitHub"]:focus,
+.icon[aria-label="GitHub"]:active {
+    color: #2b3137;
+}
+
+.icon[aria-label="GitHub"]::after {
+    background-color: #24292e;
+}
+
+/* Discord hover, focus aur active states par original brand color */
+.icon[aria-label="Discord"]:hover,
+.icon[aria-label="Discord"]:focus,
+.icon[aria-label="Discord"]:active {
+    color: #5865F2;
+}
+
+.icon[aria-label="Discord"]::after {
+    background-color: #5865F2;
+}
+
+
+.icon[aria-label="Instagram"]:hover,
+.icon[aria-label="Instagram"]:focus,
+.icon[aria-label="Instagram"]:active {
+    color: #e1306c;
+}
+
+.icon[aria-label="Instagram"]::after {
+    background-color: #e1306c;
+}
+
+.icon[aria-label="LinkedIn"]:hover,
+.icon[aria-label="LinkedIn"]:focus,
+.icon[aria-label="LinkedIn"]:active {
+    color: #0077b5;
+}
+
+.icon[aria-label="LinkedIn"]::after {
+    background-color: #0077b5;
+}
+
+.icon[aria-label="whatsapp"]:hover,
+.icon[aria-label="whatsapp"]:focus,
+.icon[aria-label="whatsapp"]:active {
+    color: #25d366;
+}
+
+.icon[aria-label="whatsapp"]::after {
+    background-color: #25d366;
+}
+
+.newsletter {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+.newsletter button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #7c6cff;
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 25px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+}
+
+.footer-col-contact a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.footer-col-contact a:hover {
+    color: var(--primary);
+}
+
 
 /* ============================================================
    JAVASCRIPT COMING SOON SECTION
