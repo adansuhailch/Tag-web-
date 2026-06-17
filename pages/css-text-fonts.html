@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Css(text&fonts) Playground</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>All Form tags</h1>
+        <a href="/pages/css-part.html" style="color:#16a085; text-decoration: none;">⬅ Back to Main Page</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
+        </div>
+    </header>
+    <!--  
+    <div id="entry-overlay">
+        <div class="entry-box">
+            <h2>Ready to learn?</h2>
+            <p>If you're willing to learn something new, enter. Otherwise, head to Social media,enjoy and waste your
+                Time.</p>
+            <div class="entry-actions">
+                <button id="enter-btn">I'm willing — enter</button>
+                <button id="reject-btn" class="outline">No thanks — go to Social Media</button>
+            </div>
+        </div>
+    </div>-->
+    <!-- =========================
+     Font Properties
+========================= -->
+    <section id="css-font-properties">
+        <h2>Font Properties</h2>
+        <div class="tag-card" data-tag="font-family" onclick="openModal('font-family')">font-family<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="font-size" onclick="openModal('font-size')">font-size<span class="tooltip">Click
+                for
+                details</span></div>
+        <div class="tag-card" data-tag="font-weight" onclick="openModal('font-weight')">font-weight<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="font-style" onclick="openModal('font-style')">font-style<span
+                class="tooltip">Click
+                for details</span></div>
+        <div class="tag-card" data-tag="font-variant" onclick="openModal('font-variant')">font-variant<span
+                class="tooltip">Click for details</span></div>
+    </section>
+
+    <!-- =========================
+     Text Layout & Spacing
+========================= -->
+    <section id="css-text-layout">
+        <h2>Text Layout & Spacing</h2>
+        <div class="tag-card" data-tag="line-height" onclick="openModal('line-height')">line-height<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="letter-spacing" onclick="openModal('letter-spacing')">
+            letter-spacing<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="word-spacing" onclick="openModal('word-spacing')">word-spacing<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="text-indent" onclick="openModal('text-indent')">text-indent<span
+                class="tooltip">Click for details</span></div>
+    </section>
+
+    <!-- =========================
+     Text Decoration & Transformation
+========================= -->
+    <section id="css-text-decoration">
+        <h2>Text Decoration & Transformation</h2>
+        <div class="tag-card" data-tag="text-decoration" onclick="openModal('text-decoration')">
+            text-decoration<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="text-decoration-color" onclick="openModal('text-decoration-color')">
+            text-decoration-color<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="text-decoration-style" onclick="openModal('text-decoration-style')">
+            text-decoration-style<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="text-decoration-thickness" onclick="openModal('text-decoration-thickness')">
+            text-decoration-thickness<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="text-transform" onclick="openModal('text-transform')">
+            text-transform<span class="tooltip">Click for details</span></div>
+    </section>
+
+    <!-- =========================
+     Text Alignment & Direction
+========================= -->
+    <section id="css-text-alignment">
+        <h2>Text Alignment & Direction</h2>
+        <div class="tag-card" data-tag="text-align" onclick="openModal('text-align')">text-align<span
+                class="tooltip">Click
+                for details</span></div>
+        <div class="tag-card" data-tag="text-align-last" onclick="openModal('text-align-last')">
+            text-align-last<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="direction" onclick="openModal('direction')">direction<span class="tooltip">Click
+                for
+                details</span></div>
+        <div class="tag-card" data-tag="unicode-bidi" onclick="openModal('unicode-bidi')">unicode-bidi<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="vertical-align" onclick="openModal('vertical-align')">
+            vertical-align<span class="tooltip">Click for details</span></div>
+    </section>
+
+    <!-- =========================
+     Text Effects
+========================= -->
+    <section id="css-text-effects">
+        <h2>Text Effects</h2>
+        <div class="tag-card" data-tag="text-shadow" onclick="openModal('text-shadow')">text-shadow<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="overflow-wrap" onclick="openModal('overflow-wrap')">overflow-wrap<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="word-break" onclick="openModal('word-break')">word-break<span
+                class="tooltip">Click
+                for details</span></div>
+        <div class="tag-card" data-tag="hyphens" onclick="openModal('hyphens')">hyphens<span class="tooltip">Click for
+                details</span></div>
+        <div class="tag-card" data-tag="writing-mode" onclick="openModal('writing-mode')">writing-mode<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="text-orientation" onclick="openModal('text-orientation')">
+            text-orientation<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="text-combine-upright" onclick="openModal('text-combine-upright')">
+            text-combine-upright<span class="tooltip">Click for details</span></div>
+    </section>
+
+    <!-- =========================
+     Advanced Font Features
+========================= -->
+    <section id="css-advanced-font">
+        <h2>Advanced Font Features</h2>
+        <div class="tag-card" data-tag="font-feature-settings" onclick="openModal('font-feature-settings')">
+            font-feature-settings<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="font-kerning" onclick="openModal('font-kerning')">font-kerning<span
+                class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="font-variant-ligatures" onclick="openModal('font-variant-ligatures')">
+            font-variant-ligatures<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="font-variant-numeric" onclick="openModal('font-variant-numeric')">
+            font-variant-numeric<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="font-variant-east-asian" onclick="openModal('font-variant-east-asian')">
+            font-variant-east-asian<span class="tooltip">Click for details</span></div>
+        <div class="tag-card" data-tag="font-synthesis" onclick="openModal('font-synthesis')">
+            font-synthesis<span class="tooltip">Click for details</span></div>
+    </section>
+    <script src="/js/css-text-fonts.js"></script>
+    <!-- Modal -->
+    <div id="modal" style="display:none;">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History & Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor"></textarea><br>
+            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+            <iframe id="live-preview"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                <p id="quiz-feedback"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

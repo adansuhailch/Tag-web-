@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Ultimate Css(Other-tags) </title>
+</head>
+
+<body>
+
+    <header>
+        <h1>All Form tags</h1>
+        <a href="../index.html" style="color:#16a085; text-decoration: none;">⬅ Back to Main Page</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
+        </div>
+    </header>
+    <section>
+        <h2>Other Css IMP tags</h2>
+        <!-- TYPOGRAPHY CONTROL -->
+        <div class="tag-card" data-tag="typography-lineheight" onclick="openModal('typography-lineheight')">
+            line-height / letter-spacing / word-spacing / text-indent <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- FONT MANAGEMENT -->
+        <div class="tag-card" data-tag="font-management" onclick="openModal('font-management')">
+            font-variant / font-feature-settings / font-kerning <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- VISIBILITY & INTERACTION -->
+        <div class="tag-card" data-tag="visibility-interaction" onclick="openModal('visibility-interaction')">
+            visibility / pointer-events / user-select / caret-color <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- SCROLL BEHAVIOR -->
+        <div class="tag-card" data-tag="scroll-behavior" onclick="openModal('scroll-behavior')">
+            scroll-behavior / scroll-margin / scroll-padding <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- RESIZE & OVERFLOW -->
+        <div class="tag-card" data-tag="resize-overflow" onclick="openModal('resize-overflow')">
+            resize / overflow-x / overflow-y / overflow-wrap / word-break <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- TOUCH & GESTURE -->
+        <div class="tag-card" data-tag="touch-gesture" onclick="openModal('touch-gesture')">
+            touch-action / -webkit-tap-highlight-color <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- ISOLATION & CONTEXT -->
+        <div class="tag-card" data-tag="isolation-context" onclick="openModal('isolation-context')">
+            isolation / z-index / contain / will-change <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- WRITING MODES -->
+        <div class="tag-card" data-tag="writing-modes" onclick="openModal('writing-modes')">
+            writing-mode / direction / text-orientation <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- COUNTERS -->
+        <div class="tag-card" data-tag="counter-content" onclick="openModal('counter-content')">
+            counter-reset / counter-increment / content <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- CSS VARIABLES -->
+        <div class="tag-card" data-tag="custom-properties" onclick="openModal('custom-properties')">
+            --variable-name / var() <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- ENVIRONMENT UNITS -->
+        <div class="tag-card" data-tag="environment-units" onclick="openModal('environment-units')">
+            env(safe-area-inset-top) <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- CONTAINER QUERIES -->
+        <div class="tag-card" data-tag="container-queries" onclick="openModal('container-queries')">
+            @container / container-type / container-name <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- VIEW TRANSITIONS -->
+        <div class="tag-card" data-tag="view-transitions" onclick="openModal('view-transitions')">
+            view-transition-name / @view-transition <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- ANCHOR POSITIONING -->
+        <div class="tag-card" data-tag="anchor-positioning" onclick="openModal('anchor-positioning')">
+            anchor-name / position-anchor <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- MOTION PATH -->
+        <div class="tag-card" data-tag="motion-path" onclick="openModal('motion-path')">
+            offset-path / offset-distance / offset-rotate <span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- COLOR LEVEL 4/5 -->
+        <div class="tag-card" data-tag="color-level" onclick="openModal('color-level')">
+            Color Level 4/5 (lch, lab, hwb) <span class="tooltip">Click for details</span>
+        </div>
+
+
+
+        <!-- SECOND TABLE (POSITIONING, DISPLAY, ETC.) -->
+
+        <div class="tag-card" data-tag="positioning" onclick="openModal('positioning')">
+            Positioning <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="z-index" onclick="openModal('z-index')">
+            Z-index <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="display" onclick="openModal('display')">
+            Display <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="visibility" onclick="openModal('visibility')">
+            Visibility <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="overflow" onclick="openModal('overflow')">
+            Overflow <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="object-fit" onclick="openModal('object-fit')">
+            Object-fit / Object-position <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="pointer-events" onclick="openModal('pointer-events')">
+            Pointer-events <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="user-select" onclick="openModal('user-select')">
+            User-select <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="isolation" onclick="openModal('isolation')">
+            Isolation <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="writing-mode" onclick="openModal('writing-mode')">
+            Writing-mode / Direction <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="contain" onclick="openModal('contain')">
+            contain / will-change <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="scroll-snap" onclick="openModal('scroll-snap')">
+            Scroll-snap <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="aspect-ratio" onclick="openModal('aspect-ratio')">
+            Aspect-ratio <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="resize" onclick="openModal('resize')">
+            Resize <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="touch-action" onclick="openModal('touch-action')">
+            Touch-action <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <script src="/js/other-csstags.js"></script>
+    <!-- Modal -->
+    <div id="modal" style="display:none;">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History & Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor"></textarea><br>
+            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+            <iframe id="live-preview"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                <p id="quiz-feedback"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

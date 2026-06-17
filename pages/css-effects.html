@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Css(Effects) Playground</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>All Form tags</h1>
+        <a href="/pages/css-part.html" style="color:#16a085; text-decoration: none;">⬅ Back to Main Page</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
+        </div>
+    </header>
+
+    <section>
+        <h2>BASIC / MOST USED EFFECTS</h2>
+        <!-- BASIC / MOST USED EFFECTS -->
+
+        <div class="tag-card" data-tag="text-shadow" onclick="openModal('text-shadow')">
+            text-shadow <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="border-radius" onclick="openModal('border-radius')">
+            border-radius <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="filter" onclick="openModal('filter')">
+            filter <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="transform" onclick="openModal('transform')">
+            transform <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="transition" onclick="openModal('transition')">
+            transition <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>ADVANCED / MODERN EFFECTS</h2>
+        <!-- ADVANCED / MODERN EFFECTS -->
+        <div class="tag-card" data-tag="mix-blend-mode" onclick="openModal('mix-blend-mode')">
+            mix-blend-mode <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="background-blend-mode" onclick="openModal('background-blend-mode')">
+            background-blend-mode <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="clip-path" onclick="openModal('clip-path')">
+            clip-path <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="mask-image" onclick="openModal('mask-image')">
+            mask-image / mask-clip <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="backdrop-filter" onclick="openModal('backdrop-filter')">
+            backdrop-filter <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="perspective" onclick="openModal('perspective')">
+            perspective <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="preserve-3d" onclick="openModal('preserve-3d')">
+            transform-style: preserve-3d <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="will-change" onclick="openModal('will-change')">
+            will-change <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>POWERFUL BUT LESS COMMON</h2>
+        <!-- POWERFUL BUT LESS COMMON -->
+        <div class="tag-card" data-tag="drop-shadow" onclick="openModal('drop-shadow')">
+            filter: drop-shadow() <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="shape-outside" onclick="openModal('shape-outside')">
+            shape-outside <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="object-fit" onclick="openModal('object-fit')">
+            object-fit / object-position <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="scroll-snap" onclick="openModal('scroll-snap')">
+            scroll-snap <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="pointer-events" onclick="openModal('pointer-events')">
+            pointer-events <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="isolation" onclick="openModal('isolation')">
+            isolation <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <section>
+        <h2> NEW / EXPERIMENTAL</h2>
+        <!-- NEW / EXPERIMENTAL -->
+        <div class="tag-card" data-tag="houdini" onclick="openModal('houdini')">
+            CSS Houdini Paint API <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="anchor-position" onclick="openModal('anchor-position')">
+            CSS Anchor Positioning <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="scroll-animations" onclick="openModal('scroll-animations')">
+            Scroll-driven animations <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="motion-path" onclick="openModal('motion-path')">
+            CSS Motion Path <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="css-color-l4" onclick="openModal('css-color-14')">
+            CSS Color Level 4/5 <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <script src="/js/css-effects.js"></script>
+    <!-- Modal -->
+    <div id="modal" style="display:none;">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History & Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor"></textarea><br>
+            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+            <iframe id="live-preview"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                <p id="quiz-feedback"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

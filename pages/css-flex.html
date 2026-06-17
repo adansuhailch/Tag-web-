@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Css(flexbox) Playground</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>All Backgrounds tags</h1>
+        <a href="/pages/css-part.html" style="color:#16a085; text-decoration: none;">⬅ Back to Main Page</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
+        </div>
+    </header>
+    <section>
+        <h2>Main Container-Level Flexbox Properties</h2>
+        <!-- align-items -->
+        <div class="tag-card" data-tag="align-items" onclick="openModal('align-items')">
+            align-items<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- align-content -->
+        <div class="tag-card" data-tag="align-content" onclick="openModal('align-content')">
+            align-content<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <section>
+        <h2>Flex Item-Level Properties</h2>
+        <!-- flex-grow -->
+        <div class="tag-card" data-tag="flex-grow" onclick="openModal('flex-grow')">
+            flex-grow<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- flex-shrink -->
+        <div class="tag-card" data-tag="flex-shrink" onclick="openModal('flex-shrink')">
+            flex-shrink<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- flex-basis -->
+        <div class="tag-card" data-tag="flex-basis" onclick="openModal('flex-basis')">
+            flex-basis<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- flex (shorthand) -->
+        <div class="tag-card" data-tag="flex" onclick="openModal('flex')">
+            flex (shorthand)<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- align-self -->
+        <div class="tag-card" data-tag="align-self" onclick="openModal('align-self')">
+            align-self<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <section>
+        <h2>Advanced / Modern Flexbox Features</h2>
+        <!-- order -->
+        <div class="tag-card" data-tag="order" onclick="openModal('order')">
+            order<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- nested-flexbox -->
+        <div class="tag-card" data-tag="nested-flexbox" onclick="openModal('nested-flexbox')">
+            Nested Flexbox<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- gap -->
+        <div class="tag-card" data-tag="gap" onclick="openModal('gap')">
+            gap<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- responsive-flexbox -->
+        <div class="tag-card" data-tag="responsive-flexbox" onclick="openModal('responsive-flexbox')">
+            Responsive Flexbox<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- flexbox-grid-combo -->
+        <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
+            Flexbox + Grid Combo<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <section>
+        <h2>Less Common but Powerful</h2>
+        <!-- baseline-alignment -->
+        <div class="tag-card" data-tag="baseline-alignment" onclick="openModal('baseline-alignment')">
+            Baseline Alignment<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- flex-basis-auto-vs-0 -->
+        <div class="tag-card" data-tag="flex-basis-auto-vs-0" onclick="openModal('flex-basis-auto-vs-0')">
+            flex-basis: auto vs 0<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- align-content-advanced -->
+        <div class="tag-card" data-tag="align-content-advanced" onclick="openModal('align-content-advanced')">
+            align-content (advanced)<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- order-accessibility -->
+        <div class="tag-card" data-tag="order-accessibility" onclick="openModal('order-accessibility')">
+            order (Accessibility)<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <script src="/js/css-flex.js"></script>
+    <!-- Modal -->
+    <div id="modal" style="display:none;">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History & Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor"></textarea><br>
+            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+            <iframe id="live-preview"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                <p id="quiz-feedback"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

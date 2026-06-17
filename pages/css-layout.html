@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Css(layout) Playground</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>All layouts tags</h1>
+        <a href="/pages/css-part.html" style="color:#16a085; text-decoration: none;">⬅ Back to Main Page</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
+        </div>
+    </header>
+    <section>
+        <h2>🔹Legacy Layouts (Old but still useful in some cases)</h2>
+        <div class="tag-card" data-tag="floats-clearfix" onclick="openModal('floats-clearfix')">
+            Floats + Clearfix<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="positioning" onclick="openModal('positioning')">
+            Positioning (absolute / relative / fixed)<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <section>
+        <h2>🔹 Most Used Modern Layouts</h2>
+        <div class="tag-card" data-tag="css-grid" onclick="openModal('css-grid')">
+            CSS Grid<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="responsive-units" onclick="openModal('responsive-units')">
+            Responsive Units (% , vh , vw , rem)<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="media-queries" onclick="openModal('media-queries')">
+            Media Queries<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <section>
+        <h2>🔹 Advanced / New Layout Features (2023–2025)</h2>
+        <div class="tag-card" data-tag="container-queries" onclick="openModal('container-queries')">
+            Container Queries<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="container-units" onclick="openModal('container-units')">
+            Container Units (cqw, cqh)<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="logical-properties" onclick="openModal('logical-properties')">
+            CSS Logical Properties<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="multi-column" onclick="openModal('multi-column')">
+            Multi-column Layout<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="css-regions" onclick="openModal('css-regions')">
+            CSS Regions (experimental)<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="css-anchor-positioning" onclick="openModal('css-anchor-positioning')">
+            CSS Anchor Positioning<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <section>
+        <h2>🔹 Less Used but Powerful</h2>
+        <div class="tag-card" data-tag="writing-modes" onclick="openModal('writing-modes')">
+            Writing Modes (Vertical Text)<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="aspect-ratio-grid-flex" onclick="openModal('aspect-ratio-grid-flex')">
+            Aspect-ratio + Grid/Flex<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="scroll-snap" onclick="openModal('scroll-snap')">
+            Scroll Snap<span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="css-shapes" onclick="openModal('css-shapes')">
+            CSS Shapes<span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    </section>
+    <script src="/js/css-layout.js"></script>
+    <!-- Modal -->
+    <div id="modal" style="display:none;">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History & Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor"></textarea><br>
+            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+            <iframe id="live-preview"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                <p id="quiz-feedback"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

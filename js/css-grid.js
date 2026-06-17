@@ -1,0 +1,263 @@
+const tagData = {
+    "grid-auto-rows": {
+        "title": "grid-auto-rows Property",
+        "history": "Defines the size of rows that are created implicitly when grid items are placed outside the explicit grid.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-auto-rows Example</title>\n<style>\n  .grid {\n    display: grid;\n    grid-template-columns: 120px 120px;\n    grid-auto-rows: 80px; /* implicit rows will be 80px high */\n    gap: 10px;\n    background: #f7f9fb;\n    padding: 12px;\n  }\n  .item { background: #cfeffd; display: flex; align-items: center; justify-content: center; }\n</style>\n</head>\n<body>\n<h2>CSS grid-auto-rows Example</h2>\n<p>Items that overflow the explicit grid create implicit rows sized by <code>grid-auto-rows</code>.</p>\n<div class=\"grid\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3 (implicit row)</div>\n  <div class=\"item\">4 (implicit row)</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines the size of implicitly created rows in a grid?",
+        "answer": "grid-auto-rows"
+    },
+
+    "grid-auto-columns": {
+        "title": "grid-auto-columns Property",
+        "history": "Defines the size of columns that are created implicitly when items are placed outside the explicit grid.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-auto-columns Example</title>\n<style>\n  .grid {\n    display: grid;\n    grid-template-rows: 80px 80px;\n    grid-auto-columns: 140px; /* implicit columns will be 140px wide */\n    gap: 10px;\n    background: #fff8e6;\n    padding: 12px;\n  }\n  .item { background: #dff7d8; display:flex; align-items:center; justify-content:center; }\n</style>\n</head>\n<body>\n<h2>CSS grid-auto-columns Example</h2>\n<p>An item placed outside the explicit columns will create implicit columns sized by <code>grid-auto-columns</code>.</p>\n<div class=\"grid\">\n  <div class=\"item\" style=\"grid-row:1; grid-column:1;\">A</div>\n  <div class=\"item\" style=\"grid-row:2; grid-column:3;\">B (creates implicit column)</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines the size of implicitly created columns in a grid?",
+        "answer": "grid-auto-columns"
+    },
+
+    "grid-auto-flow": {
+        "title": "grid-auto-flow Property",
+        "history": "Controls how auto-placed items are inserted into the grid: by row, by column, and whether the placement is dense (fills gaps).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-auto-flow Example</title>\n<style>\n  .grid {\n    display: grid;\n    grid-template-columns: repeat(3, 100px);\n    grid-auto-flow: row; /* try 'column' or 'row dense' */\n    gap: 8px;\n    padding: 12px;\n    background: #f3f6ff;\n  }\n  .item { background:#ffdede; height:60px; display:flex; align-items:center; justify-content:center; }\n</style>\n</head>\n<body>\n<h2>CSS grid-auto-flow Example</h2>\n<p>Change <code>grid-auto-flow</code> to see items fill by rows or columns.</p>\n<div class=\"grid\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n  <div class=\"item\">5</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property controls the auto-placement behavior of grid items?",
+        "answer": "grid-auto-flow"
+    },
+
+    "grid-column": {
+        "title": "grid-column Property",
+        "history": "Specifies a grid item's column start and end lines (or span) to control horizontal placement.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-column Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:8px; padding:12px; background:#fffaf0; }\n  .item { background:#e6f0ff; padding:12px; }\n  .wide { grid-column: 1 / 3; }\n  .span { grid-column: span 2; }\n</style>\n</head>\n<body>\n<h2>CSS grid-column Example</h2>\n<div class=\"grid\">\n  <div class=\"item wide\">Wide (1 / 3)</div>\n  <div class=\"item\">A</div>\n  <div class=\"item span\">Span 2</div>\n  <div class=\"item\">B</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines a grid item's column start and end positions?",
+        "answer": "grid-column"
+    },
+
+    "grid-row": {
+        "title": "grid-row Property",
+        "history": "Specifies a grid item's row start and end lines (or span) to control vertical placement.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-row Example</title>\n<style>\n  .grid { display:grid; grid-template-rows: repeat(4, 60px); grid-template-columns: 1fr 1fr; gap:8px; padding:12px; background:#f7fff2; }\n  .item { background:#ffe8d6; display:flex; align-items:center; justify-content:center; }\n  .tall { grid-row: 1 / 3; }\n</style>\n</head>\n<body>\n<h2>CSS grid-row Example</h2>\n<div class=\"grid\">\n  <div class=\"item tall\">Tall (1 / 3)</div>\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines a grid item's row start and end positions?",
+        "answer": "grid-row"
+    },
+
+    "grid-area": {
+        "title": "grid-area Property",
+        "history": "Shorthand for setting grid-row-start, grid-column-start, grid-row-end and grid-column-end; can also reference named areas.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-area Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: 120px 1fr; grid-template-rows: 60px 1fr; gap:8px; padding:12px; background:#f0f7ff; }\n  .header { grid-area: 1 / 1 / 2 / 3; background:#cfe8ff; padding:10px; }\n  .sidebar { grid-area: 2 / 1 / 3 / 2; background:#e8f7e8; padding:10px; }\n  .main { grid-area: 2 / 2 / 3 / 3; background:#fff1d6; padding:10px; }\n</style>\n</head>\n<body>\n<h2>CSS grid-area Example</h2>\n<div class=\"grid\">\n  <div class=\"header\">Header (1 / 1 / 2 / 3)</div>\n  <div class=\"sidebar\">Sidebar</div>\n  <div class=\"main\">Main</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property is shorthand for defining a grid item's area using start/end lines?",
+        "answer": "grid-area"
+    },
+
+    "fr-unit": {
+        "title": "fr Unit",
+        "history": "The <code>fr</code> unit represents a fraction of the available space in the grid container and is commonly used in <code>grid-template-columns</code> and <code>grid-template-rows</code>.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>fr Unit Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: 1fr 2fr 1fr; gap:8px; padding:12px; background:#f9fbff; }\n  .item { background:#e9f0ff; padding:12px; }\n</style>\n</head>\n<body>\n<h2>CSS fr Unit Example</h2>\n<p>Columns sized with <code>1fr 2fr 1fr</code> — middle column gets twice the free space.</p>\n<div class=\"grid\">\n  <div class=\"item\">1fr</div>\n  <div class=\"item\">2fr (wider)</div>\n  <div class=\"item\">1fr</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which unit represents a fraction of the available space in CSS Grid?",
+        "answer": "fr"
+    },
+
+    "repeat": {
+        "title": "repeat() Function",
+        "history": "The <code>repeat()</code> function repeats track definitions in <code>grid-template-columns</code> or <code>grid-template-rows</code>, making templates concise and responsive.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>repeat() Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:8px; padding:12px; background:#fff7fb; }\n  .item { background:#f0e8ff; padding:12px; }\n</style>\n</head>\n<body>\n<h2>CSS repeat() Example</h2>\n<p><code>repeat(4, 1fr)</code> creates four equal columns.</p>\n<div class=\"grid\">\n  <div class=\"item\">A</div>\n  <div class=\"item\">B</div>\n  <div class=\"item\">C</div>\n  <div class=\"item\">D</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which function repeats track sizes in CSS Grid templates?",
+        "answer": "repeat()"
+    },
+
+    "minmax": {
+        "title": "minmax() Function",
+        "history": "Defines a size range for grid tracks, specifying a minimum and maximum size for a column or row.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>minmax() Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(3, minmax(120px, 1fr)); gap:8px; padding:12px; background:#f2fff6; }\n  .item { background:#dff7e6; padding:12px; }\n</style>\n</head>\n<body>\n<h2>CSS minmax() Example</h2>\n<p>Each column is at least 120px but can grow to share remaining space.</p>\n<div class=\"grid\">\n  <div class=\"item\">Box 1</div>\n  <div class=\"item\">Box 2</div>\n  <div class=\"item\">Box 3</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which function defines a minimum and maximum size for a grid track?",
+        "answer": "minmax()"
+    },
+
+    "auto-fit-fill": {
+        "title": "auto-fit / auto-fill",
+        "history": "Used with <code>repeat()</code> and <code>minmax()</code> to create responsive tracks that either fit items into available space (<code>auto-fit</code>) or fill the row with empty tracks (<code>auto-fill</code>).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>auto-fit / auto-fill Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:12px; padding:12px; background:#fff8f2; }\n  .item { background:#ffeedd; padding:18px; text-align:center; }\n</style>\n</head>\n<body>\n<h2>auto-fit / auto-fill Example</h2>\n<p>Resize the window to see how columns adapt using <code>auto-fit</code>.</p>\n<div class=\"grid\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n  <div class=\"item\">5</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which keywords auto-distribute tracks to fit or fill available space?",
+        "answer": "auto-fit / auto-fill"
+    },
+
+    "subgrid": {
+        "title": "subgrid",
+        "history": "Allows a nested grid to inherit track definitions from its parent grid so child items align to the parent's tracks.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>subgrid Example</title>\n<style>\n  .parent { display:grid; grid-template-columns: 120px 1fr; grid-auto-rows: 60px; gap:8px; padding:12px; background:#f7f7ff; }\n  .child { display:grid; grid-template-columns: subgrid; grid-auto-rows: subgrid; gap:6px; }\n  .box { background:#e8eaff; padding:8px; }\n</style>\n</head>\n<body>\n<h2>CSS subgrid Example</h2>\n<p>Nested grid uses the parent's column and row tracks via <code>subgrid</code>.</p>\n<div class=\"parent\">\n  <div class=\"box\">Left</div>\n  <div class=\"child\">\n    <div class=\"box\">Child A</div>\n    <div class=\"box\">Child B</div>\n  </div>\n</div>\n</body>\n</html>",
+        "quiz": "Which keyword allows nested grids to inherit track definitions from the parent?",
+        "answer": "subgrid"
+    },
+
+    "justify-items": {
+        "title": "justify-items Property",
+        "history": "Aligns grid items along the inline (row) axis inside their grid area (start, center, end, stretch).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>justify-items Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; padding:12px; background:#f0fff8; justify-items: center; }\n  .item { background:#dff3ea; padding:18px; }\n</style>\n</head>\n<body>\n<h2>CSS justify-items Example</h2>\n<p>Items are centered horizontally within their grid cells using <code>justify-items: center</code>.</p>\n<div class=\"grid\">\n  <div class=\"item\">A</div>\n  <div class=\"item\">B</div>\n  <div class=\"item\">C</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property aligns items along the inline (row) axis inside their grid area?",
+        "answer": "justify-items"
+    },
+
+    "align-items-grid": {
+        "title": "align-items Property",
+        "history": "Aligns grid items along the block (column) axis inside their grid area (start, center, end, stretch).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>align-items Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; padding:12px; background:#fff6f6; align-items: center; }\n  .item { background:#ffdfe6; height:80px; display:flex; align-items:center; justify-content:center; }\n</style>\n</head>\n<body>\n<h2>CSS align-items Example</h2>\n<p>Items are vertically centered within their grid cells using <code>align-items: center</code>.</p>\n<div class=\"grid\">\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property aligns items along the block (column) axis inside their grid area?",
+        "answer": "align-items"
+    },
+
+    "place-items": {
+        "title": "place-items Property",
+        "history": "Shorthand for setting both <code>align-items</code> and <code>justify-items</code> in one declaration.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>place-items Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; padding:12px; background:#f7f2ff; place-items: center; }\n  .item { background:#e9ddff; padding:18px; }\n</style>\n</head>\n<body>\n<h2>CSS place-items Example</h2>\n<p><code>place-items: center</code> centers items both horizontally and vertically.</p>\n<div class=\"grid\">\n  <div class=\"item\">A</div>\n  <div class=\"item\">B</div>\n  <div class=\"item\">C</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which shorthand sets both align-items and justify-items?",
+        "answer": "place-items"
+    },
+
+    "place-content": {
+        "title": "place-content Property",
+        "history": "Shorthand for setting both <code>align-content</code> and <code>justify-content</code>, controlling how the whole grid content is distributed within the container.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>place-content Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 80px; gap:8px; height:300px; padding:12px; background:#f0f7ff; place-content: space-between center; }\n  .item { background:#dff0ff; display:flex; align-items:center; justify-content:center; }\n</style>\n</head>\n<body>\n<h2>CSS place-content Example</h2>\n<p><code>place-content</code> controls distribution of the grid as a whole inside the container.</p>\n<div class=\"grid\">\n  <div class=\"item\">Top</div>\n  <div class=\"item\">Middle</div>\n  <div class=\"item\">Bottom</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which shorthand sets both align-content and justify-content?",
+        "answer": "place-content"
+    },
+
+    "grid-template-areas": {
+        "title": "grid-template-areas Property",
+        "history": "Defines named areas in a grid template so items can be placed by area name for readable layout definitions.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-template-areas Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: 200px 1fr; grid-template-rows: auto 1fr auto; grid-template-areas: 'header header' 'sidebar main' 'footer footer'; gap:8px; padding:12px; background:#fffaf5; }\n  .header { grid-area: header; background:#ffdca8; padding:12px; }\n  .sidebar { grid-area: sidebar; background:#e6f7ff; padding:12px; }\n  .main { grid-area: main; background:#e8ffd8; padding:12px; }\n  .footer { grid-area: footer; background:#f0e8ff; padding:12px; }\n</style>\n</head>\n<body>\n<h2>CSS grid-template-areas Example</h2>\n<div class=\"grid\">\n  <div class=\"header\">Header</div>\n  <div class=\"sidebar\">Sidebar</div>\n  <div class=\"main\">Main content</div>\n  <div class=\"footer\">Footer</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines named areas for layout in CSS Grid?",
+        "answer": "grid-template-areas"
+    },
+
+    "grid-auto-flow-dense": {
+        "title": "grid-auto-flow: dense",
+        "history": "The <code>dense</code> keyword attempts to fill holes in the grid by backfilling smaller items, improving packing but possibly changing source order.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>grid-auto-flow: dense Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(3, 120px); grid-auto-rows: 80px; grid-auto-flow: row dense; gap:8px; padding:12px; background:#f8fff4; }\n  .item { background:#e6ffe6; display:flex; align-items:center; justify-content:center; }\n  .big { grid-column: span 2; grid-row: span 2; }\n</style>\n</head>\n<body>\n<h2>grid-auto-flow: dense Example</h2>\n<p>Dense packing may reorder placement to fill gaps.</p>\n<div class=\"grid\">\n  <div class=\"item big\">Big</div>\n  <div class=\"item\">1</div>\n  <div class=\"item\">2</div>\n  <div class=\"item\">3</div>\n  <div class=\"item\">4</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which value of grid-auto-flow attempts to backfill gaps with smaller items?",
+        "answer": "dense"
+    },
+
+    "masonry-layout": {
+        "title": "Masonry Layout (experimental)",
+        "history": "Experimental approaches and proposals allow masonry-style layouts where items flow vertically into columns of varying heights; browser support is evolving.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Masonry Example (concept)</title>\n<style>\n  /* Note: true CSS masonry is experimental; this is a conceptual fallback using column layout */\n  .masonry { column-count: 3; column-gap: 12px; padding:12px; }\n  .item { break-inside: avoid; background:#fff0f0; margin-bottom:12px; padding:12px; }\n</style>\n</head>\n<body>\n<h2>Masonry Layout Example (fallback)</h2>\n<p>True CSS masonry is experimental; this example uses multi-column fallback.</p>\n<div class=\"masonry\">\n  <div class=\"item\">Short</div>\n  <div class=\"item\">A bit taller content</div>\n  <div class=\"item\">Much taller content to show masonry effect</div>\n  <div class=\"item\">Short</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which layout arranges items like bricks in columns of varying heights?",
+        "answer": "masonry layout"
+    },
+
+    "aspect-ratio-grid": {
+        "title": "aspect-ratio + Grid",
+        "history": "Combining <code>aspect-ratio</code> with grid tracks helps maintain consistent media or card proportions inside grid cells.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>aspect-ratio + Grid Example</title>\n<style>\n  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; padding:12px; }\n  .card { background:#f0f8ff; padding:8px; }\n  .media { background:#dfefff; aspect-ratio: 16 / 9; width:100%; }\n</style>\n</head>\n<body>\n<h2>aspect-ratio + Grid Example</h2>\n<div class=\"grid\">\n  <div class=\"card\"><div class=\"media\"></div></div>\n  <div class=\"card\"><div class=\"media\"></div></div>\n  <div class=\"card\"><div class=\"media\"></div></div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property ensures elements keep a fixed width-to-height ratio in grid cells?",
+        "answer": "aspect-ratio"
+    },
+
+    "css-shapes-grid": {
+        "title": "CSS Shapes + Grid",
+        "history": "Combining CSS Shapes with grid positioning enables creative layouts where content wraps around shapes while still using grid placement.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>CSS Shapes + Grid Example</title>\n<style>\n  .wrap { display:grid; grid-template-columns: 200px 1fr; gap:12px; padding:12px; }\n  .shape { width:180px; height:180px; float:left; shape-outside: circle(50%); -webkit-shape-outside: circle(50%); background:#ffdede; }\n  .content { background:#fffaf0; padding:12px; }\n</style>\n</head>\n<body>\n<h2>CSS Shapes + Grid Example (concept)</h2>\n<div class=\"wrap\">\n  <div class=\"shape\"></div>\n  <div class=\"content\">Text flows around the circular shape while grid controls overall layout.</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which feature combines content wrapping shapes with grid positioning?",
+        "answer": "CSS Shapes + Grid"
+    },
+
+    "container-queries-grid": {
+        "title": "Container Queries + Grid",
+        "history": "Container queries let grid layouts adapt based on the size of their container rather than the viewport, enabling more modular responsive components.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Container Queries + Grid Example</title>\n<style>\n  .card { container-type: inline-size; border:1px solid #ddd; padding:12px; }\n  .grid { display:grid; gap:8px; }\n  @container (min-width: 400px) {\n    .grid { grid-template-columns: 1fr 1fr; }\n  }\n  @container (max-width: 399px) {\n    .grid { grid-template-columns: 1fr; }\n  }\n  .item { background:#eef6ff; padding:12px; }\n</style>\n</head>\n<body>\n<h2>Container Queries + Grid Example</h2>\n<div class=\"card\">\n  <div class=\"grid\">\n    <div class=\"item\">A</div>\n    <div class=\"item\">B</div>\n    <div class=\"item\">C</div>\n  </div>\n</div>\n</body>\n</html>",
+        "quiz": "Which feature adapts grid layout based on the container size instead of the viewport?",
+        "answer": "container queries"
+    },
+
+    "anchor-positioning-grid": {
+        "title": "Anchor Positioning (experimental)",
+        "history": "Anchor positioning is an experimental feature that allows elements (like tooltips) to be positioned relative to anchor nodes; integration with grid enables precise anchored overlays.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Anchor Positioning (concept)</title>\n<style>\n  /* Anchor positioning is experimental; this is a conceptual example */\n  .grid { display:grid; grid-template-columns: 1fr 1fr; gap:12px; padding:12px; }\n  .anchor { background:#fff0f0; padding:12px; }\n  .tooltip { position:absolute; background:#222; color:#fff; padding:6px; border-radius:6px; }\n</style>\n</head>\n<body>\n<h2>Anchor Positioning (concept)</h2>\n<div style=\"position:relative;\">\n  <div class=\"grid\">\n    <div class=\"anchor\" id=\"a1\">Anchor 1</div>\n    <div class=\"anchor\">Anchor 2</div>\n  </div>\n  <div class=\"tooltip\" style=\"top:40px; left:20px;\">Tooltip near anchor</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which experimental feature positions elements relative to anchor nodes?",
+        "answer": "anchor positioning"
+    },
+
+    "css-masonry": {
+        "title": "CSS Masonry Layout (experimental)",
+        "history": "Newer specs and proposals introduce masonry-style layouts natively in CSS; support varies across browsers and is still evolving.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>CSS Masonry (concept)</title>\n<style>\n  /* Native masonry is experimental; this is a conceptual fallback */\n  .masonry { column-count: 3; column-gap: 12px; padding:12px; }\n  .item { break-inside: avoid; background:#f0f0ff; margin-bottom:12px; padding:12px; }\n</style>\n</head>\n<body>\n<h2>CSS Masonry Example (fallback)</h2>\n<div class=\"masonry\">\n  <div class=\"item\">Short</div>\n  <div class=\"item\">Taller content</div>\n  <div class=\"item\">Even taller content to show masonry effect</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which new layout spec introduces masonry-style arrangements in CSS?",
+        "answer": "CSS Masonry Layout"
+    },
+
+    "subgrid-improvements": {
+        "title": "CSS Subgrid Improvements",
+        "history": "Ongoing improvements to the <code>subgrid</code> feature aim to make nested grid track sharing more powerful and predictable across complex layouts.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>subgrid Improvements (concept)</title>\n<style>\n  .parent { display:grid; grid-template-columns: 120px 1fr 1fr; grid-auto-rows: 60px; gap:8px; padding:12px; }\n  .child { display:grid; grid-template-columns: subgrid; grid-auto-rows: subgrid; gap:6px; }\n  .box { background:#eef2ff; padding:8px; }\n</style>\n</head>\n<body>\n<h2>CSS Subgrid Improvements (concept)</h2>\n<div class=\"parent\">\n  <div class=\"box\">Left</div>\n  <div class=\"child\">\n    <div class=\"box\">Child 1</div>\n    <div class=\"box\">Child 2</div>\n  </div>\n  <div class=\"box\">Right</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which feature improves nested grid track sharing for complex layouts?",
+        "answer": "subgrid improvements"
+    }
+};
+
+function openModal(tag) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('modal-title').innerHTML = tagData[tag].title;
+    document.getElementById('modal-history').innerHTML = tagData[tag].history;
+    document.getElementById('modal-editor').value = tagData[tag].code;
+    document.getElementById('live-preview').srcdoc = tagData[tag].code;
+    document.getElementById('quiz-question').innerHTML = tagData[tag].quiz;
+    document.getElementById('quiz-answer').value = '';
+    document.getElementById('quiz-feedback').innerHTML = '';
+    document.getElementById('quiz').setAttribute('data-tag', tag);
+    document.getElementById("modal-content").classList.remove("modal-dark");
+
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function copyCode() {
+    const code = document.getElementById('modal-editor').value;
+    navigator.clipboard.writeText(code).then(() => {
+        alert('🎉 Code Copied! 🎉');
+    });
+}
+
+function runLiveCode() {
+    const code = document.getElementById('modal-editor').value;
+    document.getElementById('live-preview').srcdoc = code;
+}
+
+function checkAnswer() {
+    const tag = document.getElementById('quiz').getAttribute('data-tag');
+    const answer = document.getElementById('quiz-answer').value.trim().toLowerCase();
+    const correct = tagData[tag].answer.toLowerCase();
+
+    if (answer === correct) {
+        document.getElementById('quiz-feedback').innerHTML = "<span style='color:#00FFFF;'>Correct!</span>";
+    } else {
+        document.getElementById('quiz-feedback').innerHTML = "<span style='color:#ffb703;'>Try again!</span>";
+    }
+}
+
+function searchTag() {
+    const input = document.getElementById('searchBar').value.toLowerCase();
+    const cards = document.querySelectorAll('.tag-card');
+
+    cards.forEach(card => {
+        const tag = card.textContent.toLowerCase(); // card ka text
+        if (tag.includes(input)) {
+            card.style.display = "inline-block"; // show match
+            card.classList.add("highlight");
+        } else {
+            card.style.display = "none"; // hide non-match
+            card.classList.remove("highlight");
+        }
+    });
+
+
+    if (input === "") {
+        cards.forEach(card => {
+            card.style.display = "inline-block";
+            card.classList.remove("highlight");
+        });
+    }
+}
+function toggleModalTheme() {
+    document.getElementById("modal-content")
+        .classList.toggle("modal-dark");
+}

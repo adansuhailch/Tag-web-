@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tag Web — Complete HTML5 tag reference with live examples and quizzes.">
+        <link rel="stylesheet" href="/css/style.css">
+        <script>(function () { var t = localStorage.getItem('tagweb-theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); })();</script>
+        <title>All HTML Tags — Tag Web</title>
+</head>
+
+<body>
+
+        <header>
+                <h1>All HTML Tags in One Page</h1>
+                <a href="../index.html" class="more-tags-link" style="display:inline-block; margin: 6px 0;">⬅ Back to
+                        Main Page</a>
+
+                <button id="theme-switch">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                        d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#e3e3e3">
+                                <path
+                                        d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+                        </svg>
+                </button>
+                <div class="search-container">
+                        <input type="text" id="searchBar" placeholder="🔍 Search tag..." onkeyup="searchTag()"
+                                aria-label="Search tags">
+                </div>
+        </header>
+        <section id="all-tags">
+                <h2>Full reference</h2>
+
+                <!-- Structure -->
+                <div class="group-title">
+                        <h2>Structure</h2>
+                </div>
+                <div class="tag-card" data-tag="doctype" onclick="openModal('doctype')">&lt;!DOCTYPE html&gt;<span
+                                class="tooltip">Click for details</span> Document type
+                </div>
+                <div class="tag-card" data-tag="html" onclick="openModal('html')">&lt;html&gt;<span
+                                class="tooltip">Click for
+                                details</span> Root</div>
+                <div class="tag-card" data-tag="head" onclick="openModal('head')">&lt;head&gt;<span
+                                class="tooltip">Click for
+                                details</span> Metadata</div>
+                <div class="tag-card" data-tag="title" onclick="openModal('title')">&lt;title&gt;<span
+                                class="tooltip">Click for
+                                details</span> Document title</div>
+                <div class="tag-card" data-tag="meta" onclick="openModal('meta')">&lt;meta&gt;<span
+                                class="tooltip">Click for
+                                details</span> Metadata</div>
+                <div class="tag-card" data-tag="link" onclick="openModal('link')">&lt;link&gt;<span
+                                class="tooltip">Click for
+                                details</span> External resource</div>
+                <div class="tag-card" data-tag="style" onclick="openModal('style')">&lt;style&gt;<span
+                                class="tooltip">Click for
+                                details</span> CSS</div>
+                <div class="tag-card" data-tag="script" onclick="openModal('script')">&lt;script&gt;<span
+                                class="tooltip">Click
+                                for details</span> JS</div>
+                <div class="tag-card" data-tag="body" onclick="openModal('body')">&lt;body&gt;<span
+                                class="tooltip">Click for
+                                details</span> Document body</div>
+
+
+                <div class="group-title">
+                        <h2>Text & Inline</h2>
+                </div>
+                <div class="tag-card" data-tag="h1" onclick="openModal('h1')">&lt;h1&gt;–&lt;h6&gt;<span
+                                class="tooltip">Click
+                                for details</span> Headings</div>
+                <div class="tag-card" data-tag="p" onclick="openModal('p')">&lt;p&gt;<span class="tooltip">Click for
+                                details</span> Paragraph</div>
+                <div class="tag-card" data-tag="br" onclick="openModal('br')">&lt;br&gt;<span class="tooltip">Click for
+                                details</span> Line break</div>
+                <div class="tag-card" data-tag="hr" onclick="openModal('hr')">&lt;hr&gt;<span class="tooltip">Click for
+                                details</span> Horizontal rule</div>
+                <div class="tag-card" data-tag="a" onclick="openModal('a')">&lt;a&gt;<span class="tooltip">Click for
+                                details</span> Anchor</div>
+                <div class="tag-card" data-tag="abbr" onclick="openModal('abbr')">&lt;abbr&gt;<span
+                                class="tooltip">Click for
+                                details</span> Abbreviation</div>
+                <div class="tag-card" data-tag="b" onclick="openModal('b')">&lt;b&gt;<span class="tooltip">Click for
+                                details</span> Bold</div>
+                <div class="tag-card" data-tag="strong" onclick="openModal('strong')">&lt;strong&gt;<span
+                                class="tooltip">Click
+                                for details</span> Important</div>
+                <div class="tag-card" data-tag="i" onclick="openModal('i')">&lt;i&gt;<span class="tooltip">Click for
+                                details</span> Italic</div>
+                <div class="tag-card" data-tag="em" onclick="openModal('em')">&lt;em&gt;<span class="tooltip">Click for
+                                details</span> Emphasis</div>
+                <div class="tag-card" data-tag="mark" onclick="openModal('mark')">&lt;mark&gt;<span
+                                class="tooltip">Click for
+                                details</span> Highlight</div>
+                <div class="tag-card" data-tag="small" onclick="openModal('small')">&lt;small&gt;<span
+                                class="tooltip">Click for
+                                details</span> Small text</div>
+                <div class="tag-card" data-tag="sub" onclick="openModal('sub')">&lt;sub&gt;<span class="tooltip">Click
+                                for
+                                details</span> Subscript</div>
+                <div class="tag-card" data-tag="sup" onclick="openModal('sup')">&lt;sup&gt;<span class="tooltip">Click
+                                for
+                                details</span> Superscript</div>
+                <div class="tag-card" data-tag="code" onclick="openModal('code')">&lt;code&gt;<span
+                                class="tooltip">Click for
+                                details</span> Code</div>
+                <div class="tag-card" data-tag="pre" onclick="openModal('pre')">&lt;pre&gt;<span class="tooltip">Click
+                                for
+                                details</span> Preformatted</div>
+                <div class="tag-card" data-tag="kbd" onclick="openModal('kbd')">&lt;kbd&gt;<span class="tooltip">Click
+                                for
+                                details</span> Keyboard input</div>
+                <div class="tag-card" data-tag="samp" onclick="openModal('samp')">&lt;samp&gt;<span
+                                class="tooltip">Click for
+                                details</span> Sample output</div>
+                <div class="tag-card" data-tag="var" onclick="openModal('var')">&lt;var&gt;<span class="tooltip">Click
+                                for
+                                details</span> Variable</div>
+                <div class="tag-card" data-tag="span" onclick="openModal('span')">&lt;span&gt;<span
+                                class="tooltip">Click for
+                                details</span> Inline container</div>
+                <div class="tag-card" data-tag="del" onclick="openModal('del')">&lt;del&gt;<span class="tooltip">Click
+                                for
+                                details</span> Deleted</div>
+                <div class="tag-card" data-tag="ins" onclick="openModal('ins')">&lt;ins&gt;<span class="tooltip">Click
+                                for
+                                details</span> Inserted</div>
+                <div class="tag-card" data-tag="u" onclick="openModal('u')">&lt;u&gt;<span class="tooltip">Click for
+                                details</span> Underline</div>
+                <div class="tag-card" data-tag="s" onclick="openModal('s')">&lt;s&gt;<span class="tooltip">Click for
+                                details</span> Inaccurate</div>
+
+
+                <!-- Media -->
+                <div class="group-title">
+                        <h2>Media</h2>
+                </div>
+                <div class="tag-card" data-tag="img" onclick="openModal('img')">&lt;img&gt;<span class="tooltip">Click
+                                for
+                                details</span> Image</div>
+                <div class="tag-card" data-tag="audio" onclick="openModal('audio')">&lt;audio&gt;<span
+                                class="tooltip">Click for
+                                details</span> Audio</div>
+                <div class="tag-card" data-tag="video" onclick="openModal('video')">&lt;video&gt;<span
+                                class="tooltip">Click for
+                                details</span> Video</div>
+                <div class="tag-card" data-tag="source" onclick="openModal('source')">&lt;source&gt;<span
+                                class="tooltip">Click
+                                for details</span> Media source</div>
+                <div class="tag-card" data-tag="track" onclick="openModal('track')">&lt;track&gt;<span
+                                class="tooltip">Click for
+                                details</span> Text track</div>
+                <div class="tag-card" data-tag="map" onclick="openModal('map')">&lt;map&gt;<span class="tooltip">Click
+                                for
+                                details</span> Image map</div>
+                <div class="tag-card" data-tag="area" onclick="openModal('area')">&lt;area&gt;<span
+                                class="tooltip">Click for
+                                details</span> Image area</div>
+                <div class="tag-card" data-tag="figure" onclick="openModal('figure')">&lt;figure&gt;<span
+                                class="tooltip">Click
+                                for details</span>figure</div>
+                <div class="tag-card" data-tag="figcaption" onclick="openModal('figcaption')">&lt;figcaption&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="canvas" onclick="openModal('canvas')">&lt;canvas&gt;<span
+                                class="tooltip">Click
+                                for details</span>canvas</div>
+                <div class="tag-card" data-tag="svg" onclick="openModal('svg')">&lt;svg&gt;<span class="tooltip">Click
+                                for
+                                details</span></div>
+                <div class="tag-card" data-tag="iframe" onclick="openModal('iframe')">&lt;iframe&gt;<span
+                                class="tooltip">Click
+                                for details</span></div>
+                <div class="tag-card" data-tag="embed" onclick="openModal('embed')">&lt;embed&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="object" onclick="openModal('object')">&lt;object&gt;<span
+                                class="tooltip">Click
+                                for details</span></div>
+                <div class="tag-card" data-tag="param" onclick="openModal('param')">&lt;param&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+
+                <!-- Lists -->
+                <div class="group-title">
+                        <h2>Lists</h2>
+                </div>
+                <div class="tag-card" data-tag="ul" onclick="openModal('ul')">&lt;ul&gt;<span class="tooltip">Click for
+                                details</span> Unordered</div>
+                <div class="tag-card" data-tag="ol" onclick="openModal('ol')">&lt;ol&gt;<span class="tooltip">Click for
+                                details</span> Ordered</div>
+                <div class="tag-card" data-tag="li" onclick="openModal('li')">&lt;li&gt;<span class="tooltip">Click for
+                                details</span> Item</div>
+                <div class="tag-card" data-tag="dl" onclick="openModal('dl')">&lt;dl&gt;<span class="tooltip">Click for
+                                details</span> Description list</div>
+                <div class="tag-card" data-tag="dt" onclick="openModal('dt')">&lt;dt&gt;<span class="tooltip">Click for
+                                details</span> Term</div>
+                <div class="tag-card" data-tag="dd" onclick="openModal('dd')">&lt;dd&gt;<span class="tooltip">Click for
+                                details</span> Definition</div>
+
+                <!-- Forms -->
+                <div class="group-title">
+                        <h2>Forms</h2>
+                </div>
+                <div class="tag-card" data-tag="form" onclick="openModal('form')">&lt;form&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="input" onclick="openModal('input')">&lt;input&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="textarea" onclick="openModal('textarea')">&lt;textarea&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="button" onclick="openModal('button')">&lt;button&gt;<span
+                                class="tooltip">Click
+                                for details</span></div>
+                <div class="tag-card" data-tag="select" onclick="openModal('select')">&lt;select&gt;<span
+                                class="tooltip">Click
+                                for details</span></div>
+                <div class="tag-card" data-tag="optgroup" onclick="openModal('optgroup')">&lt;optgroup&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="option" onclick="openModal('option')">&lt;option&gt;<span
+                                class="tooltip">Click
+                                for details</span></div>
+                <div class="tag-card" data-tag="label" onclick="openModal('label')">&lt;label&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="fieldset" onclick="openModal('fieldset')">&lt;fieldset&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="legend" onclick="openModal('legend')">&lt;legend&gt;<span
+                                class="tooltip">Click
+                                for details</span></div>
+                <div class="tag-card" data-tag="datalist" onclick="openModal('datalist')">&lt;datalist&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="output" onclick="openModal('output')">&lt;output&gt;<span
+                                class="tooltip">Click
+                                for details</span></div>
+                <div class="tag-card" data-tag="progress" onclick="openModal('progress')">&lt;progress&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="meter" onclick="openModal('meter')">&lt;meter&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+
+                <!-- Tables -->
+                <div class="group-title">
+                        <h2>Tables</h2>
+                </div>
+                <div class="tag-card" data-tag="table" onclick="openModal('table')">&lt;table&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="caption" onclick="openModal('caption')">&lt;caption&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="thead" onclick="openModal('thead')">&lt;thead&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="tbody" onclick="openModal('tbody')">&lt;tbody&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="tfoot" onclick="openModal('tfoot')">&lt;tfoot&gt;<span
+                                class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="tr" onclick="openModal('tr')">&lt;tr&gt;<span class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="td" onclick="openModal('td')">&lt;td&gt;<span class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="th" onclick="openModal('th')">&lt;th&gt;<span class="tooltip">Click for
+                                details</span></div>
+                <div class="tag-card" data-tag="colgroup" onclick="openModal('colgroup')">&lt;colgroup&gt;<span
+                                class="tooltip">Click for details</span></div>
+                <div class="tag-card" data-tag="col" onclick="openModal('col')">&lt;col&gt;<span class="tooltip">Click
+                                for
+                                details</span></div>
+
+                <!-- Deprecated (optional) -->
+                <div class="group-title">
+                        <h2>Deprecated/Obsolete</h2>
+                </div>
+                <div class="tag-card" data-tag="acronym" onclick="openModal('acronym')">&lt;acronym&gt;<span
+                                class="tooltip">Click for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="applet" onclick="openModal('applet')">&lt;applet&gt;<span
+                                class="tooltip">Click
+                                for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="big" onclick="openModal('big')">&lt;big&gt;<span class="tooltip">Click
+                                for
+                                details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="center" onclick="openModal('center')">&lt;center&gt;<span
+                                class="tooltip">Click
+                                for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="font" onclick="openModal('font')">&lt;font&gt;<span
+                                class="tooltip">Click for
+                                details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="frame" onclick="openModal('frame')">&lt;frame&gt;<span
+                                class="tooltip">Click for
+                                details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="frameset" onclick="openModal('frameset')">&lt;frameset&gt;<span
+                                class="tooltip">Click for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="dir" onclick="openModal('dir')">&lt;dir&gt;<span class="tooltip">Click
+                                for
+                                details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="isindex" onclick="openModal('isindex')">&lt;isindex&gt;<span
+                                class="tooltip">Click for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="keygen" onclick="openModal('keygen')">&lt;keygen&gt;<span
+                                class="tooltip">Click
+                                for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="menuitem" onclick="openModal('menuitem')">&lt;menuitem&gt;<span
+                                class="tooltip">Click for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="marquee" onclick="openModal('marquee')">&lt;marquee&gt;<span
+                                class="tooltip">Click for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="nobr" onclick="openModal('nobr')">&lt;nobr&gt;<span
+                                class="tooltip">Click for
+                                details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="noembed" onclick="openModal('noembed')">&lt;noembed&gt;<span
+                                class="tooltip">Click for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="spacer" onclick="openModal('spacer')">&lt;spacer&gt;<span
+                                class="tooltip">Click
+                                for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="strike" onclick="openModal('strike')">&lt;strike&gt;<span
+                                class="tooltip">Click
+                                for details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="tt" onclick="openModal('tt')">&lt;tt&gt;<span class="tooltip">Click for
+                                details</span> (Deprecated)</div>
+                <div class="tag-card" data-tag="xmp" onclick="openModal('xmp')">&lt;xmp&gt;<span class="tooltip">Click
+                                for
+                                details</span> (Deprecated)</div>
+        </section>
+
+
+        <div id="modal">
+                <div id="modal-content">
+                        <span id="close-modal" onclick="closeModal()">&times;</span>
+                        <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+                        <h3 id="modal-title">Tag Name</h3>
+                        <p id="modal-history">History & Modern Use</p>
+
+                        <h4>Example Code (Editable)</h4>
+                        <textarea id="modal-editor"></textarea><br>
+                        <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+                        <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+                        <iframe id="live-preview"></iframe>
+
+                        <div class="quiz-section" id="quiz">
+                                <h4>Quiz:</h4>
+                                <p id="quiz-question"></p>
+                                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                                <p id="quiz-feedback"></p>
+                        </div>
+                </div>
+        </div>
+        <!-- scrool button -->
+        <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
+        <button id="scrollBottomBtn" aria-label="Scroll to bottom"><i class="fa-solid fa-angles-down fa-beat"></i></button>
+        <script src="/js/theme.js"></script>
+        <script src="/js/other-tags.js"></script>
+</body>
+
+</html>

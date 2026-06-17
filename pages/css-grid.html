@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Css(grid) Playground</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>All Backgrounds tags</h1>
+        <a href="/pages/css-part.html" style="color:#16a085; text-decoration: none;">⬅ Back to Main Page</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
+        </div>
+    </header>
+    <section>
+        <h2>🔹 Basics (Most Used Today)
+            Main Properties (Parent level):
+        </h2>
+        <!-- grid-auto-rows -->
+        <div class="tag-card" data-tag="grid-auto-rows" onclick="openModal('grid-auto-rows')">
+            grid-auto-rows<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- grid-auto-columns -->
+        <div class="tag-card" data-tag="grid-auto-columns" onclick="openModal('grid-auto-columns')">
+            grid-auto-columns<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- grid-auto-flow -->
+        <div class="tag-card" data-tag="grid-auto-flow" onclick="openModal('grid-auto-flow')">
+            grid-auto-flow<span class="tooltip">Click for details</span>
+        </div>
+        <h2>Grid Items (Child level):</h2>
+        <!-- grid-column -->
+        <div class="tag-card" data-tag="grid-column" onclick="openModal('grid-column')">
+            grid-column<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- grid-row -->
+        <div class="tag-card" data-tag="grid-row" onclick="openModal('grid-row')">
+            grid-row<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- grid-area -->
+        <div class="tag-card" data-tag="grid-area" onclick="openModal('grid-area')">
+            grid-area<span class="tooltip">Click for details</span>
+        </div>
+
+    </section>
+    <section>
+        <h2>🔹 Advanced Features</h2>
+        <!-- fr-unit -->
+        <div class="tag-card" data-tag="fr-unit" onclick="openModal('fr-unit')">
+            fr unit<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- repeat -->
+        <div class="tag-card" data-tag="repeat" onclick="openModal('repeat')">
+            repeat()<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- minmax -->
+        <div class="tag-card" data-tag="minmax" onclick="openModal('minmax')">
+            minmax()<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- auto-fit-fill -->
+        <div class="tag-card" data-tag="auto-fit-fill" onclick="openModal('auto-fit-fill')">
+            auto-fit / auto-fill<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- subgrid -->
+        <div class="tag-card" data-tag="subgrid" onclick="openModal('subgrid')">
+            subgrid<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- justify-items -->
+        <div class="tag-card" data-tag="justify-items" onclick="openModal('justify-items')">
+            justify-items<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- align-items -->
+        <div class="tag-card" data-tag="align-items-grid" onclick="openModal('align-items-grid')">
+            align-items<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- place-items -->
+        <div class="tag-card" data-tag="place-items" onclick="openModal('place-items')">
+            place-items<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- place-content -->
+        <div class="tag-card" data-tag="place-content" onclick="openModal('place-content')">
+            place-content<span class="tooltip">Click for details</span>
+        </div>
+
+    </section>
+    <section>
+        <h2>🔹 Less Common but Powerful</h2>
+        <!-- grid-template-areas -->
+        <div class="tag-card" data-tag="grid-template-areas" onclick="openModal('grid-template-areas')">
+            grid-template-areas<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- grid-auto-flow-dense -->
+        <div class="tag-card" data-tag="grid-auto-flow-dense" onclick="openModal('grid-auto-flow-dense')">
+            grid-auto-flow: dense<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- masonry-layout -->
+        <div class="tag-card" data-tag="masonry-layout" onclick="openModal('masonry-layout')">
+            Masonry Layout (experimental)<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- aspect-ratio-grid -->
+        <div class="tag-card" data-tag="aspect-ratio-grid" onclick="openModal('aspect-ratio-grid')">
+            aspect-ratio + grid<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- css-shapes-grid -->
+        <div class="tag-card" data-tag="css-shapes-grid" onclick="openModal('css-shapes-grid')">
+            CSS Shapes + Grid<span class="tooltip">Click for details</span>
+        </div>
+
+    </section>
+    <section>
+        <h2>🔹 New / Experimental (2023–2025)</h2>
+        <!-- container-queries-grid -->
+        <div class="tag-card" data-tag="container-queries-grid" onclick="openModal('container-queries-grid')">
+            Container Queries + Grid<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- anchor-positioning-grid -->
+        <div class="tag-card" data-tag="anchor-positioning-grid" onclick="openModal('anchor-positioning-grid')">
+            Anchor Positioning<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- css-masonry -->
+        <div class="tag-card" data-tag="css-masonry" onclick="openModal('css-masonry')">
+            CSS Masonry Layout<span class="tooltip">Click for details</span>
+        </div>
+
+        <!-- subgrid-improvements -->
+        <div class="tag-card" data-tag="subgrid-improvements" onclick="openModal('subgrid-improvements')">
+            CSS Subgrid Improvements<span class="tooltip">Click for details</span>
+        </div>
+
+    </section>
+    <script src="/js/css-grid.js"></script>
+    <!-- Modal -->
+    <div id="modal" style="display:none;">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History & Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor"></textarea><br>
+            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+            <iframe id="live-preview"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                <p id="quiz-feedback"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

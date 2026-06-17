@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate CSS(background) Playground</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>All Backgrounds tags</h1>
+        <a href="/pages/css-part.html" style="color:#16a085; text-decoration: none;">⬅ Back to Main Page</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
+        </div>
+    </header>
+    <section id="Most Common(Stable & Widely Used)">
+        <h2>🔹 Most Common(Stable & Widely Used)</h2>
+        <div class="tag-card" data-tag="background-image" onclick="openModal('background-image')">
+            background-image
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="background-repeat" onclick="openModal('background-repeat')">
+            background-repeat
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="background-position" onclick="openModal('background-position')">
+            background-position
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="background-size" onclick="openModal('background-size')">
+            background-size
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="background-attachment" onclick="openModal('background-attachment')">
+            background-attachment
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+    <section id="Advanced / Modern Properties (2020–2025)">
+        <h2>🔹 Advanced / Modern Properties (2020–2025)</h2>
+
+        <div class="tag-card" data-tag="background-origin" onclick="openModal('background-origin')">
+            background-origin
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="background-blend-mode" onclick="openModal('background-blend-mode')">
+            background-blend-mode
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="multiple-backgrounds" onclick="openModal('multiple-backgrounds')">
+            multiple backgrounds
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="gradients" onclick="openModal('gradients')">
+            gradients
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <section id="New / Less Common but Powerful">
+        <h2>🔹 New / Less Common but Powerful</h2>
+        <div class="tag-card" data-tag="conic-gradient" onclick="openModal('conic-gradient')">
+            conic-gradient()
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="background-clip-text" onclick="openModal('background-clip-text')">
+            background-clip: text
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card" data-tag="conic-gradient" onclick="openModal('conic-gradient')">
+            conic-gradient()
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="css-logical-properties" onclick="openModal('cssLogicalProperties')">
+            CSS logical properties
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="system-colors" onclick="openModal('systemColors')">
+            system colors
+            <span class="tooltip">Click for details</span>
+        </div>
+
+        <div class="tag-card" data-tag="css-houdini" onclick="openModal('houdiniPaintDemo')">
+            CSS Houdini Paint API
+            <span class="tooltip">Click for details</span>
+        </div>
+
+    </section>
+    <script src="/js/css-background.js"></script>
+    <!-- Modal -->
+    <div id="modal" style="display:none;">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History & Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor"></textarea><br>
+            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+
+            <iframe id="live-preview"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
+                <p id="quiz-feedback"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

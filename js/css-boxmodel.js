@@ -1,0 +1,454 @@
+const tagData = {
+    "width": {
+        "title": "width Property",
+        "history": "The width property sets the horizontal size of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Width Example</title>\n<style>\n  .box {\n    width: 300px;\n    height: 100px;\n    background-color: lightblue;\n  }\n</style>\n</head>\n<body>\n<h2>CSS width Property Example</h2>\n<div class=\"box\">This box has width of 300px</div>\n</body>\n</html>",
+        "quiz": "Which property sets the horizontal size of an element?",
+        "answer": "width"
+    },
+
+    "height": {
+        "title": "height Property",
+        "history": "The height property sets the vertical size of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Height Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 150px;\n    background-color: lightgreen;\n  }\n</style>\n</head>\n<body>\n<h2>CSS height Property Example</h2>\n<div class=\"box\">This box has height of 150px</div>\n</body>\n</html>",
+        "quiz": "Which property sets the vertical size of an element?",
+        "answer": "height"
+    },
+
+    "min-width": {
+        "title": "min-width Property",
+        "history": "The min-width property sets the minimum width of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Min-Width Example</title>\n<style>\n  .box {\n    min-width: 200px;\n    height: 100px;\n    background-color: lightcoral;\n  }\n</style>\n</head>\n<body>\n<h2>CSS min-width Property Example</h2>\n<div class=\"box\">This box cannot be smaller than 200px width</div>\n</body>\n</html>",
+        "quiz": "Which property sets the minimum width of an element?",
+        "answer": "min-width"
+    },
+
+    "max-width": {
+        "title": "max-width Property",
+        "history": "The max-width property sets the maximum width of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Max-Width Example</title>\n<style>\n  .box {\n    max-width: 400px;\n    height: 100px;\n    background-color: lightyellow;\n  }\n</style>\n</head>\n<body>\n<h2>CSS max-width Property Example</h2>\n<div class=\"box\">This box cannot be larger than 400px width</div>\n</body>\n</html>",
+        "quiz": "Which property sets the maximum width of an element?",
+        "answer": "max-width"
+    },
+
+    "min-height": {
+        "title": "min-height Property",
+        "history": "The min-height property sets the minimum height of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Min-Height Example</title>\n<style>\n  .box {\n    width: 200px;\n    min-height: 150px;\n    background-color: lightpink;\n  }\n</style>\n</head>\n<body>\n<h2>CSS min-height Property Example</h2>\n<div class=\"box\">This box cannot be smaller than 150px height</div>\n</body>\n</html>",
+        "quiz": "Which property sets the minimum height of an element?",
+        "answer": "min-height"
+    },
+
+    "max-height": {
+        "title": "max-height Property",
+        "history": "The max-height property sets the maximum height of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Max-Height Example</title>\n<style>\n  .box {\n    width: 200px;\n    max-height: 200px;\n    background-color: lightgray;\n  }\n</style>\n</head>\n<body>\n<h2>CSS max-height Property Example</h2>\n<div class=\"box\">This box cannot be taller than 200px height</div>\n</body>\n</html>",
+        "quiz": "Which property sets the maximum height of an element?",
+        "answer": "max-height"
+    },
+    "padding": {
+        "title": "padding Property (Shorthand)",
+        "history": "The padding property is a shorthand that sets the inner spacing on all four sides of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Padding Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightblue;\n    border: 2px solid navy;\n    padding: 20px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS padding Property Example</h2>\n<div class=\"box\">This box has 20px padding on all sides.</div>\n</body>\n</html>",
+        "quiz": "Which property sets inner spacing on all four sides of an element?",
+        "answer": "padding"
+    },
+
+    "padding-top": {
+        "title": "padding-top Property",
+        "history": "The padding-top property sets the inner spacing between the content and the top border of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Padding-Top Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightgreen;\n    border: 2px solid darkgreen;\n    padding-top: 30px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS padding-top Property Example</h2>\n<div class=\"box\">This box has 30px padding at the top.</div>\n</body>\n</html>",
+        "quiz": "Which property sets inner spacing at the top of an element?",
+        "answer": "padding-top"
+    },
+
+    "padding-right": {
+        "title": "padding-right Property",
+        "history": "The padding-right property sets the inner spacing between the content and the right border of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Padding-Right Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightyellow;\n    border: 2px solid orange;\n    padding-right: 40px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS padding-right Property Example</h2>\n<div class=\"box\">This box has 40px padding on the right.</div>\n</body>\n</html>",
+        "quiz": "Which property sets inner spacing on the right side of an element?",
+        "answer": "padding-right"
+    },
+
+    "padding-bottom": {
+        "title": "padding-bottom Property",
+        "history": "The padding-bottom property sets the inner spacing between the content and the bottom border of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Padding-Bottom Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightcoral;\n    border: 2px solid maroon;\n    padding-bottom: 25px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS padding-bottom Property Example</h2>\n<div class=\"box\">This box has 25px padding at the bottom.</div>\n</body>\n</html>",
+        "quiz": "Which property sets inner spacing at the bottom of an element?",
+        "answer": "padding-bottom"
+    },
+
+    "padding-left": {
+        "title": "padding-left Property",
+        "history": "The padding-left property sets the inner spacing between the content and the left border of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Padding-Left Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightgray;\n    border: 2px solid black;\n    padding-left: 35px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS padding-left Property Example</h2>\n<div class=\"box\">This box has 35px padding on the left.</div>\n</body>\n</html>",
+        "quiz": "Which property sets inner spacing on the left side of an element?",
+        "answer": "padding-left"
+    },
+    "border": {
+        "title": "border Property (Shorthand)",
+        "history": "The border property is a shorthand that sets the width, style, and color of an element's border.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Border Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightblue;\n    border: 5px solid navy;\n  }\n</style>\n</head>\n<body>\n<h2>CSS border Property Example</h2>\n<div class=\"box\">This box has a 5px solid navy border.</div>\n</body>\n</html>",
+        "quiz": "Which property sets width, style, and color of an element's border in one declaration?",
+        "answer": "border"
+    },
+
+    "border-width": {
+        "title": "border-width Property",
+        "history": "The border-width property sets the thickness of an element's border.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Border-Width Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightgreen;\n    border-style: solid;\n    border-width: 10px;\n    border-color: darkgreen;\n  }\n</style>\n</head>\n<body>\n<h2>CSS border-width Property Example</h2>\n<div class=\"box\">This box has a 10px border width.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the thickness of an element's border?",
+        "answer": "border-width"
+    },
+
+    "border-style": {
+        "title": "border-style Property",
+        "history": "The border-style property sets the style of an element's border, such as solid, dashed, dotted, or double.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Border-Style Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightyellow;\n    border-width: 5px;\n    border-style: dashed;\n    border-color: orange;\n  }\n</style>\n</head>\n<body>\n<h2>CSS border-style Property Example</h2>\n<div class=\"box\">This box has a dashed border style.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the style of an element's border?",
+        "answer": "border-style"
+    },
+
+    "border-color": {
+        "title": "border-color Property",
+        "history": "The border-color property sets the color of an element's border.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Border-Color Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightcoral;\n    border-width: 5px;\n    border-style: solid;\n    border-color: red;\n  }\n</style>\n</head>\n<body>\n<h2>CSS border-color Property Example</h2>\n<div class=\"box\">This box has a red border color.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the color of an element's border?",
+        "answer": "border-color"
+    },
+
+    "border-radius": {
+        "title": "border-radius Property",
+        "history": "The border-radius property rounds the corners of an element's border.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Border-Radius Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightgray;\n    border: 3px solid black;\n    border-radius: 15px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS border-radius Property Example</h2>\n<div class=\"box\">This box has rounded corners using border-radius.</div>\n</body>\n</html>",
+        "quiz": "Which property rounds the corners of an element's border?",
+        "answer": "border-radius"
+    },
+    "margin": {
+        "title": "margin Property (Shorthand)",
+        "history": "The margin property is a shorthand that sets the outer spacing on all four sides of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Margin Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightblue;\n    border: 2px solid navy;\n    margin: 30px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS margin Property Example</h2>\n<div class=\"box\">This box has 30px margin on all sides.</div>\n</body>\n</html>",
+        "quiz": "Which property sets outer spacing on all four sides of an element?",
+        "answer": "margin"
+    },
+
+    "margin-top": {
+        "title": "margin-top Property",
+        "history": "The margin-top property sets the outer spacing above an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Margin-Top Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightgreen;\n    border: 2px solid darkgreen;\n    margin-top: 40px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS margin-top Property Example</h2>\n<div class=\"box\">This box has 40px margin at the top.</div>\n</body>\n</html>",
+        "quiz": "Which property sets outer spacing above an element?",
+        "answer": "margin-top"
+    },
+
+    "margin-right": {
+        "title": "margin-right Property",
+        "history": "The margin-right property sets the outer spacing to the right of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Margin-Right Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightyellow;\n    border: 2px solid orange;\n    margin-right: 50px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS margin-right Property Example</h2>\n<div class=\"box\">This box has 50px margin on the right.</div>\n</body>\n</html>",
+        "quiz": "Which property sets outer spacing on the right side of an element?",
+        "answer": "margin-right"
+    },
+
+    "margin-bottom": {
+        "title": "margin-bottom Property",
+        "history": "The margin-bottom property sets the outer spacing below an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Margin-Bottom Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightcoral;\n    border: 2px solid maroon;\n    margin-bottom: 35px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS margin-bottom Property Example</h2>\n<div class=\"box\">This box has 35px margin at the bottom.</div>\n</body>\n</html>",
+        "quiz": "Which property sets outer spacing below an element?",
+        "answer": "margin-bottom"
+    },
+
+    "margin-left": {
+        "title": "margin-left Property",
+        "history": "The margin-left property sets the outer spacing to the left of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Margin-Left Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightgray;\n    border: 2px solid black;\n    margin-left: 45px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS margin-left Property Example</h2>\n<div class=\"box\">This box has 45px margin on the left.</div>\n</body>\n</html>",
+        "quiz": "Which property sets outer spacing on the left side of an element?",
+        "answer": "margin-left"
+    },
+    "box-sizing": {
+        "title": "box-sizing Property",
+        "history": "The box-sizing property defines how the total width and height of an element are calculated.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Box-Sizing Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 100px;\n    padding: 20px;\n    border: 5px solid navy;\n    box-sizing: border-box;\n    background-color: lightblue;\n  }\n</style>\n</head>\n<body>\n<h2>CSS box-sizing Property Example</h2>\n<div class=\"box\">This box uses border-box sizing.</div>\n</body>\n</html>",
+        "quiz": "Which property defines how the total width and height of an element are calculated?",
+        "answer": "box-sizing"
+    },
+
+    "max-width": {
+        "title": "max-width Property",
+        "history": "The max-width property sets the maximum width of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Max-Width Example</title>\n<style>\n  .box {\n    max-width: 300px;\n    height: 100px;\n    background-color: lightgreen;\n    border: 2px solid darkgreen;\n  }\n</style>\n</head>\n<body>\n<h2>CSS max-width Property Example</h2>\n<div class=\"box\">This box cannot be wider than 300px.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the maximum width of an element?",
+        "answer": "max-width"
+    },
+
+    "min-width": {
+        "title": "min-width Property",
+        "history": "The min-width property sets the minimum width of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Min-Width Example</title>\n<style>\n  .box {\n    min-width: 200px;\n    height: 100px;\n    background-color: lightyellow;\n    border: 2px solid orange;\n  }\n</style>\n</head>\n<body>\n<h2>CSS min-width Property Example</h2>\n<div class=\"box\">This box cannot be smaller than 200px width.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the minimum width of an element?",
+        "answer": "min-width"
+    },
+
+    "max-height": {
+        "title": "max-height Property",
+        "history": "The max-height property sets the maximum height of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Max-Height Example</title>\n<style>\n  .box {\n    width: 200px;\n    max-height: 150px;\n    background-color: lightcoral;\n    border: 2px solid maroon;\n  }\n</style>\n</head>\n<body>\n<h2>CSS max-height Property Example</h2>\n<div class=\"box\">This box cannot be taller than 150px.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the maximum height of an element?",
+        "answer": "max-height"
+    },
+
+    "min-height": {
+        "title": "min-height Property",
+        "history": "The min-height property sets the minimum height of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Min-Height Example</title>\n<style>\n  .box {\n    width: 200px;\n    min-height: 120px;\n    background-color: lightgray;\n    border: 2px solid black;\n  }\n</style>\n</head>\n<body>\n<h2>CSS min-height Property Example</h2>\n<div class=\"box\">This box cannot be shorter than 120px.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the minimum height of an element?",
+        "answer": "min-height"
+    },
+
+    "aspect-ratio": {
+        "title": "aspect-ratio Property",
+        "history": "The aspect-ratio property sets a preferred width-to-height ratio for an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Aspect-Ratio Example</title>\n<style>\n  .box {\n    aspect-ratio: 16 / 9;\n    width: 320px;\n    background-color: lightpink;\n    border: 2px solid purple;\n  }\n</style>\n</head>\n<body>\n<h2>CSS aspect-ratio Property Example</h2>\n<div class=\"box\">This box maintains a 16:9 aspect ratio.</div>\n</body>\n</html>",
+        "quiz": "Which property sets a preferred width-to-height ratio for an element?",
+        "answer": "aspect-ratio"
+    },
+    "display": {
+        "title": "display Property",
+        "history": "The display property defines how an element is displayed on the page (block, inline, flex, grid, etc.).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Display Example</title>\n<style>\n  .box {\n    display: inline-block;\n    width: 150px;\n    height: 80px;\n    background-color: lightblue;\n    margin: 10px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS display Property Example</h2>\n<div class=\"box\">Box 1</div>\n<div class=\"box\">Box 2</div>\n</body>\n</html>",
+        "quiz": "Which property defines how an element is displayed (block, inline, flex, grid)?",
+        "answer": "display"
+    },
+
+    "position": {
+        "title": "position Property",
+        "history": "The position property specifies the positioning method for an element (static, relative, absolute, fixed, sticky).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Position Example</title>\n<style>\n  .box {\n    position: absolute;\n    top: 50px;\n    left: 50px;\n    width: 150px;\n    height: 80px;\n    background-color: lightgreen;\n  }\n</style>\n</head>\n<body>\n<h2>CSS position Property Example</h2>\n<div class=\"box\">This box is positioned absolutely.</div>\n</body>\n</html>",
+        "quiz": "Which property specifies the positioning method for an element?",
+        "answer": "position"
+    },
+
+    "top": {
+        "title": "top Property",
+        "history": "The top property sets the vertical position of a positioned element relative to its container.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Top Example</title>\n<style>\n  .box {\n    position: relative;\n    top: 30px;\n    width: 150px;\n    height: 80px;\n    background-color: lightyellow;\n  }\n</style>\n</head>\n<body>\n<h2>CSS top Property Example</h2>\n<div class=\"box\">This box is moved 30px down using top.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the vertical position of a positioned element?",
+        "answer": "top"
+    },
+
+    "right": {
+        "title": "right Property",
+        "history": "The right property sets the horizontal position of a positioned element relative to its container.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Right Example</title>\n<style>\n  .box {\n    position: relative;\n    right: 20px;\n    width: 150px;\n    height: 80px;\n    background-color: lightcoral;\n  }\n</style>\n</head>\n<body>\n<h2>CSS right Property Example</h2>\n<div class=\"box\">This box is moved 20px left using right.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the horizontal position of a positioned element from the right?",
+        "answer": "right"
+    },
+
+    "bottom": {
+        "title": "bottom Property",
+        "history": "The bottom property sets the vertical position of a positioned element from the bottom of its container.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Bottom Example</title>\n<style>\n  .box {\n    position: relative;\n    bottom: 25px;\n    width: 150px;\n    height: 80px;\n    background-color: lightgray;\n  }\n</style>\n</head>\n<body>\n<h2>CSS bottom Property Example</h2>\n<div class=\"box\">This box is moved 25px up using bottom.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the vertical position of a positioned element from the bottom?",
+        "answer": "bottom"
+    },
+
+    "left": {
+        "title": "left Property",
+        "history": "The left property sets the horizontal position of a positioned element from the left of its container.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Left Example</title>\n<style>\n  .box {\n    position: relative;\n    left: 40px;\n    width: 150px;\n    height: 80px;\n    background-color: lightpink;\n  }\n</style>\n</head>\n<body>\n<h2>CSS left Property Example</h2>\n<div class=\"box\">This box is moved 40px right using left.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the horizontal position of a positioned element from the left?",
+        "answer": "left"
+    },
+
+    "z-index": {
+        "title": "z-index Property",
+        "history": "The z-index property sets the stack order of elements, determining which element appears on top.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Z-Index Example</title>\n<style>\n  .box1 {\n    position: absolute;\n    top: 40px;\n    left: 40px;\n    width: 150px;\n    height: 80px;\n    background-color: lightblue;\n    z-index: 1;\n  }\n  .box2 {\n    position: absolute;\n    top: 60px;\n    left: 60px;\n    width: 150px;\n    height: 80px;\n    background-color: lightgreen;\n    z-index: 2;\n  }\n</style>\n</head>\n<body>\n<h2>CSS z-index Property Example</h2>\n<div class=\"box1\">Box 1</div>\n<div class=\"box2\">Box 2 (on top)</div>\n</body>\n</html>",
+        "quiz": "Which property sets the stack order of elements?",
+        "answer": "z-index"
+    },
+
+    "float": {
+        "title": "float Property",
+        "history": "The float property places an element to the left or right of its container, allowing text to wrap around it.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Float Example</title>\n<style>\n  img {\n    float: right;\n    margin: 10px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS float Property Example</h2>\n<p>This paragraph has an image floated to the right.<img src=\"https://via.placeholder.com/80\" alt=\"demo\"></p>\n</body>\n</html>",
+        "quiz": "Which property places an element to the left or right allowing text to wrap around it?",
+        "answer": "float"
+    },
+
+    "clear": {
+        "title": "clear Property",
+        "history": "The clear property specifies what elements can float beside a cleared element and on which side.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Clear Example</title>\n<style>\n  .box1 {\n    float: left;\n    width: 100px;\n    height: 80px;\n    background-color: lightblue;\n    margin: 10px;\n  }\n  .box2 {\n    clear: left;\n    width: 200px;\n    height: 80px;\n    background-color: lightgreen;\n  }\n</style>\n</head>\n<body>\n<h2>CSS clear Property Example</h2>\n<div class=\"box1\">Floated Box</div>\n<div class=\"box2\">This box clears the left float.</div>\n</body>\n</html>",
+        "quiz": "Which property specifies what elements can float beside a cleared element?",
+        "answer": "clear"
+    },
+    "overflow": {
+        "title": "overflow Property",
+        "history": "The overflow property controls what happens when content overflows an element's box.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Overflow Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 100px;\n    border: 2px solid navy;\n    overflow: scroll;\n  }\n</style>\n</head>\n<body>\n<h2>CSS overflow Property Example</h2>\n<div class=\"box\">This content is too long to fit inside the box, so scrollbars appear.</div>\n</body>\n</html>",
+        "quiz": "Which property controls how content is handled when it overflows an element's box?",
+        "answer": "overflow"
+    },
+
+    "overflow-x": {
+        "title": "overflow-x Property",
+        "history": "The overflow-x property controls the horizontal overflow of content in an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Overflow-X Example</title>\n<style>\n  .box {\n    width: 150px;\n    height: 80px;\n    border: 2px solid green;\n    overflow-x: auto;\n  }\n</style>\n</head>\n<body>\n<h2>CSS overflow-x Property Example</h2>\n<div class=\"box\">ThisIsAVeryLongWordThatWillCauseHorizontalScrolling.</div>\n</body>\n</html>",
+        "quiz": "Which property controls horizontal overflow of content?",
+        "answer": "overflow-x"
+    },
+
+    "overflow-y": {
+        "title": "overflow-y Property",
+        "history": "The overflow-y property controls the vertical overflow of content in an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Overflow-Y Example</title>\n<style>\n  .box {\n    width: 150px;\n    height: 80px;\n    border: 2px solid red;\n    overflow-y: auto;\n  }\n</style>\n</head>\n<body>\n<h2>CSS overflow-y Property Example</h2>\n<div class=\"box\">Line 1<br>Line 2<br>Line 3<br>Line 4<br>Line 5<br>Line 6</div>\n</body>\n</html>",
+        "quiz": "Which property controls vertical overflow of content?",
+        "answer": "overflow-y"
+    },
+
+    "clip-path": {
+        "title": "clip-path Property",
+        "history": "The clip-path property defines a clipping region to display only a portion of an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Clip-Path Example</title>\n<style>\n  .circle {\n    width: 200px;\n    height: 200px;\n    background-color: lightblue;\n    clip-path: circle(50%);\n  }\n</style>\n</head>\n<body>\n<h2>CSS clip-path Property Example</h2>\n<div class=\"circle\">This box is clipped into a circle shape.</div>\n</body>\n</html>",
+        "quiz": "Which property defines a clipping region for an element?",
+        "answer": "clip-path"
+    },
+
+    "visibility": {
+        "title": "visibility Property",
+        "history": "The visibility property specifies whether an element is visible or hidden, without affecting layout.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Visibility Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 80px;\n    background-color: lightgreen;\n    border: 2px solid darkgreen;\n    visibility: hidden;\n  }\n</style>\n</head>\n<body>\n<h2>CSS visibility Property Example</h2>\n<div class=\"box\">This box is hidden but still takes up space.</div>\n</body>\n</html>",
+        "quiz": "Which property hides an element without removing its space in layout?",
+        "answer": "visibility"
+    },
+    "outline": {
+        "title": "outline Property",
+        "history": "The outline property is a shorthand that sets the color, style, and width of an element's outline. Unlike borders, outlines do not take up space and may overlap other content.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Outline Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 80px;\n    background-color: lightblue;\n    outline: 3px dashed red;\n  }\n</style>\n</head>\n<body>\n<h2>CSS outline Property Example</h2>\n<div class=\"box\">This box has a red dashed outline.</div>\n</body>\n</html>",
+        "quiz": "Which property sets an element's outline without affecting layout?",
+        "answer": "outline"
+    },
+
+    "outline-offset": {
+        "title": "outline-offset Property",
+        "history": "The outline-offset property sets the space between an element's outline and its border edge.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Outline-Offset Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 80px;\n    background-color: lightgreen;\n    border: 2px solid darkgreen;\n    outline: 3px solid orange;\n    outline-offset: 10px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS outline-offset Property Example</h2>\n<div class=\"box\">This box has an outline offset of 10px.</div>\n</body>\n</html>",
+        "quiz": "Which property sets the distance between an element's outline and its border?",
+        "answer": "outline-offset"
+    },
+
+    "box-shadow": {
+        "title": "box-shadow Property",
+        "history": "The box-shadow property adds shadow effects around an element's frame.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Box-Shadow Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 80px;\n    background-color: lightcoral;\n    border: 2px solid maroon;\n    box-shadow: 5px 5px 10px gray;\n  }\n</style>\n</head>\n<body>\n<h2>CSS box-shadow Property Example</h2>\n<div class=\"box\">This box has a shadow using box-shadow.</div>\n</body>\n</html>",
+        "quiz": "Which property adds shadow effects around an element's frame?",
+        "answer": "box-shadow"
+    },
+    "margin-collapsing": {
+        "title": "Margin Collapsing Concept",
+        "history": "Margin collapsing happens when vertical margins of adjacent block elements combine into a single margin instead of adding up.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Margin Collapsing Example</title>\n<style>\n  .box1 {\n    margin-bottom: 30px;\n    background-color: lightblue;\n    height: 50px;\n  }\n  .box2 {\n    margin-top: 40px;\n    background-color: lightgreen;\n    height: 50px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS Margin Collapsing Example</h2>\n<div class=\"box1\">Box 1</div>\n<div class=\"box2\">Box 2</div>\n<p>Here, the 30px and 40px margins collapse into 40px total.</p>\n</body>\n</html>",
+        "quiz": "What happens when vertical margins of two block elements meet?",
+        "answer": "They collapse into a single margin."
+    },
+
+    "inline-vs-block": {
+        "title": "Inline vs Block Elements",
+        "history": "Inline elements flow within text and do not start on a new line, while block elements start on a new line and take full width.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Inline vs Block Example</title>\n<style>\n  .inline { color: red; }\n  .block { background-color: lightyellow; height: 40px; }\n</style>\n</head>\n<body>\n<h2>Inline vs Block Example</h2>\n<p>This is <span class=\"inline\">inline text</span> inside a paragraph.</p>\n<div class=\"block\">This is a block element.</div>\n</body>\n</html>",
+        "quiz": "Which type of element starts on a new line and takes full width?",
+        "answer": "Block element"
+    },
+
+    "line-box-formation": {
+        "title": "Line Box Formation",
+        "history": "Line boxes are created around inline elements inside a block container. They determine how inline content is aligned vertically.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Line Box Formation Example</title>\n<style>\n  .text { line-height: 2; background-color: lightgray; }\n  .inline { background-color: lightpink; }\n</style>\n</head>\n<body>\n<h2>Line Box Formation Example</h2>\n<p class=\"text\">This <span class=\"inline\">inline span</span> is inside a line box.</p>\n</body>\n</html>",
+        "quiz": "What is formed around inline elements inside a block container?",
+        "answer": "Line box"
+    },
+
+    "flex-grid-box-model": {
+        "title": "Flexbox/Grid Integration with Box Model",
+        "history": "Flexbox and Grid layouts respect the box model, including margin, border, padding, and content, while providing advanced alignment and distribution.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Flexbox Example</title>\n<style>\n  .container {\n    display: flex;\n    gap: 10px;\n    border: 2px solid navy;\n    padding: 10px;\n  }\n  .item {\n    flex: 1;\n    background-color: lightgreen;\n    height: 60px;\n  }\n</style>\n</head>\n<body>\n<h2>Flexbox Integration Example</h2>\n<div class=\"container\">\n  <div class=\"item\">Item 1</div>\n  <div class=\"item\">Item 2</div>\n  <div class=\"item\">Item 3</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which layout systems integrate with the box model for advanced alignment?",
+        "answer": "Flexbox and Grid"
+    },
+
+    "stacking-context": {
+        "title": "Stacking Context",
+        "history": "A stacking context is formed when elements have certain properties (like position, opacity, or z-index). It determines how elements are layered on top of each other.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Stacking Context Example</title>\n<style>\n  .parent {\n    position: relative;\n    z-index: 1;\n    background-color: lightblue;\n    width: 200px;\n    height: 100px;\n  }\n  .child {\n    position: absolute;\n    z-index: 2;\n    background-color: lightcoral;\n    width: 100px;\n    height: 50px;\n    top: 25px;\n    left: 50px;\n  }\n</style>\n</head>\n<body>\n<h2>Stacking Context Example</h2>\n<div class=\"parent\">Parent\n  <div class=\"child\">Child on top</div>\n</div>\n</body>\n</html>",
+        "quiz": "What determines how elements are layered on top of each other?",
+        "answer": "Stacking context"
+    }
+};
+function openModal(tag) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('modal-title').innerHTML = tagData[tag].title;
+    document.getElementById('modal-history').innerHTML = tagData[tag].history;
+    document.getElementById('modal-editor').value = tagData[tag].code;
+    document.getElementById('live-preview').srcdoc = tagData[tag].code;
+    document.getElementById('quiz-question').innerHTML = tagData[tag].quiz;
+    document.getElementById('quiz-answer').value = '';
+    document.getElementById('quiz-feedback').innerHTML = '';
+    document.getElementById('quiz').setAttribute('data-tag', tag);
+    document.getElementById("modal-content").classList.remove("modal-dark");
+
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function copyCode() {
+    const code = document.getElementById('modal-editor').value;
+    navigator.clipboard.writeText(code).then(() => {
+        alert('🎉 Code Copied! 🎉');
+    });
+}
+
+function runLiveCode() {
+    const code = document.getElementById('modal-editor').value;
+    document.getElementById('live-preview').srcdoc = code;
+}
+
+function checkAnswer() {
+    const tag = document.getElementById('quiz').getAttribute('data-tag');
+    const answer = document.getElementById('quiz-answer').value.trim().toLowerCase();
+    const correct = tagData[tag].answer.toLowerCase();
+
+    if (answer === correct) {
+        document.getElementById('quiz-feedback').innerHTML = "<span style='color:#00FFFF;'>Correct!</span>";
+    } else {
+        document.getElementById('quiz-feedback').innerHTML = "<span style='color:#ffb703;'>Try again!</span>";
+    }
+}
+
+function searchTag() {
+    const input = document.getElementById('searchBar').value.toLowerCase();
+    const cards = document.querySelectorAll('.tag-card');
+
+    cards.forEach(card => {
+        const tag = card.textContent.toLowerCase(); // card ka text
+        if (tag.includes(input)) {
+            card.style.display = "inline-block"; // show match
+            card.classList.add("highlight");
+        } else {
+            card.style.display = "none"; // hide non-match
+            card.classList.remove("highlight");
+        }
+    });
+
+
+    if (input === "") {
+        cards.forEach(card => {
+            card.style.display = "inline-block";
+            card.classList.remove("highlight");
+        });
+    }
+}
+function toggleModalTheme() {
+    document.getElementById("modal-content")
+        .classList.toggle("modal-dark");
+}

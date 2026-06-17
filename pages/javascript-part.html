@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tag Web — Interactive JavaScript learning hub. Explore variables, functions, DOM, async JS and more with live code editors and quizzes.">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Prevent flash -->
+    <script>(function () { var t = localStorage.getItem('tagweb-theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); })();</script>
+    <link rel="icon" type="image/x-icon" href="/assets/tag web logo.png">
+    <title>JavaScript Learning Hub — Tag Web</title>
+    <!-- CodeMirror Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/eclipse.min.css">
+    <style>
+        /* ── JS Page Specific Styles ──── */
+
+        /* Progress bar */
+        .js-progress-wrap {
+            background: var(--bg-header);
+            padding: 10px 24px;
+            border-bottom: 1px solid var(--border-modal);
+        }
+
+        .js-progress-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .js-progress-track {
+            height: 6px;
+            background: var(--border-modal);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        #js-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f59e0b, #10b981);
+            border-radius: 20px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        #js-reset-btn {
+            background: none;
+            border: 1px solid var(--border-modal);
+            color: var(--text-secondary);
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        #js-reset-btn:hover {
+            color: #ef4444;
+            border-color: #ef4444;
+        }
+
+        /* Category filter bar */
+        #category-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 16px 0 8px;
+            justify-content: center;
+        }
+
+        .filter-pill {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1.5px solid var(--pill-color, #6b7280);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+        }
+
+        .filter-pill:hover {
+            background: var(--pill-color, #6b7280);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .filter-pill.active {
+            background: var(--pill-color, #6b7280);
+            color: #fff;
+        }
+
+        /* Category section header */
+        .js-category-section .group-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .js-category-section .group-title h2 {
+            margin: 0;
+            text-align: left;
+            font-size: 1.3rem;
+        }
+
+        /* JS Topic card enhancements */
+        .js-topic-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .js-topic-card:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        .js-topic-card.active-card {
+            border-color: #f59e0b;
+            box-shadow: 0 0 14px rgba(245, 158, 11, 0.45);
+        }
+
+        .js-card-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .js-card-desc {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .js-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .js-difficulty-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .badge-beginner {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .badge-intermediate {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        .js-learn-btn {
+            font-size: 0.75rem;
+            background: var(--btn-run-bg);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 4px 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .js-learn-btn:hover {
+            background: var(--btn-run-hover);
+        }
+
+        /* Modal difficulty badge */
+        .modal-difficulty-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+        }
+
+        /* Modal navigation */
+        .modal-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            gap: 10px;
+        }
+
+        .modal-nav button {
+            flex: 1;
+            padding: 8px 14px;
+            background: var(--btn-run-bg);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .modal-nav button:hover {
+            background: var(--btn-run-hover);
+            transform: translateY(-1px);
+        }
+
+        /* JS hero banner */
+        .js-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            border: 1px solid #312e81;
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            margin: 0 auto 24px;
+            max-width: 1100px;
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+        }
+
+        html[data-theme="light"] .js-hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #f0f4ff 100%);
+            border-color: #c7d2fe;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .js-hero-emoji {
+            font-size: 3rem;
+            margin-bottom: 8px;
+        }
+
+        .js-hero h1 {
+            font-size: 2rem;
+            color: #f59e0b;
+            text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+            margin: 0 0 8px;
+        }
+
+        .js-hero p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+        }
+
+        .js-search-wrap {
+            margin-top: 16px;
+        }
+
+        #jsSearchBar {
+            width: 60%;
+            max-width: 420px;
+            padding: 10px 16px;
+            border: 2px solid var(--search-border);
+            border-radius: 25px;
+            font-size: 15px;
+            outline: none;
+            background: var(--search-bg);
+            color: var(--search-text);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        #jsSearchBar:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+        }
+
+        #jsSearchBar::placeholder {
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 600px) {
+            #jsSearchBar {
+                width: 90%;
+            }
+
+            .js-hero h1 {
+                font-size: 1.4rem;
+            }
+
+            #category-filter-bar {
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── HEADER ─────────────────────────────────────── -->
+    <header>
+        <h1>⚡ JavaScript Learning Hub</h1>
+        <a href="/index.html" class="more-tags-link" style="display:inline-block;margin:4px 0;">⬅ Back to Main Page</a>
+
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- ── PROGRESS BAR ──────────────────────────────── -->
+    <div class="js-progress-wrap">
+        <div class="js-progress-label">
+            <span id="js-progress-text">0 / 0 topics explored (0%)</span>
+            <button id="js-reset-btn" onclick="resetProgress()">↺ Reset</button>
+        </div>
+        <div class="js-progress-track">
+            <div id="js-progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- ── HERO BANNER ───────────────────────────────── -->
+    <section class="js-hero">
+        <div class="js-hero-emoji">⚡</div>
+        <h1>Learn JavaScript</h1>
+        <p>Explore 40+ interactive topics — from variables to async/await. Click any card, read the explanation, run
+            live code, and test yourself with a quiz.</p>
+        <div class="js-search-wrap">
+            <input type="text" id="jsSearchBar" placeholder="🔍 Search topic..." oninput="searchTopic()"
+                aria-label="Search JavaScript topics">
+        </div>
+    </section>
+
+    <!-- ── CATEGORY FILTERS ──────────────────────────── -->
+    <section style="padding-top:8px; padding-bottom:0;">
+        <div id="category-filter-bar" role="group" aria-label="Filter by category"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         TOPIC SECTIONS — one per category
+    ═══════════════════════════════════════════════ -->
+
+    <!-- 1. BASICS -->
+    <section class="js-category-section" id="section-basics">
+        <div class="group-title">
+            <h2>⚡ JavaScript Basics</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="script-tag" data-category="Basics"
+            onclick="openModal('script-tag')">
+            <div class="js-card-title">&lt;script&gt; Tag</div>
+            <div class="js-card-desc">Embed or link JavaScript in an HTML page</div>
+            <div class="js-card-footer">
+                <span class="js-difficulty-badge badge-beginner">Beginner</span>
+                <button class="js-learn-btn">Learn More →</button>
+            </div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="console-log" data-category="Basics"
+            onclick="openModal('console-log')">
+            <div class="js-card-title">console.log()</div>
+            <div class="js-card-desc">Print output to the browser's developer console</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="comments" data-category="Basics"
+            onclick="openModal('comments')">
+            <div class="js-card-title">Comments</div>
+            <div class="js-card-desc">Single-line // and multi-line /* */ code comments</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="variables" data-category="Basics"
+            onclick="openModal('variables')">
+            <div class="js-card-title">Variables (let, const, var)</div>
+            <div class="js-card-desc">Store and reference data values in your program</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="data-types" data-category="Basics"
+            onclick="openModal('data-types')">
+            <div class="js-card-title">Data Types</div>
+            <div class="js-card-desc">String, Number, Boolean, Null, Undefined, Object, Symbol</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="template-literals" data-category="Basics"
+            onclick="openModal('template-literals')">
+            <div class="js-card-title">Template Literals</div>
+            <div class="js-card-desc">Backtick strings with embedded expressions using ${}</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="typeof" data-category="Basics" onclick="openModal('typeof')">
+            <div class="js-card-title">typeof Operator</div>
+            <div class="js-card-desc">Returns a string describing the type of any value</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="string-methods" data-category="Basics"
+            onclick="openModal('string-methods')">
+            <div class="js-card-title">String Methods</div>
+            <div class="js-card-desc">trim(), split(), replace(), includes(), slice() and more</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="number-methods" data-category="Basics"
+            onclick="openModal('number-methods')">
+            <div class="js-card-title">Number Methods & Math</div>
+            <div class="js-card-desc">Math.floor(), Math.random(), toFixed(), parseInt() and more</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="modules" data-category="Basics" onclick="openModal('modules')">
+            <div class="js-card-title">ES Modules (import/export)</div>
+            <div class="js-card-desc">Split code into reusable files with import and export</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 2. OPERATORS -->
+    <section class="js-category-section" id="section-operators">
+        <div class="group-title">
+            <h2>➕ Operators &amp; Expressions</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="arithmetic-operators" data-category="Operators"
+            onclick="openModal('arithmetic-operators')">
+            <div class="js-card-title">Arithmetic Operators</div>
+            <div class="js-card-desc">+, -, *, /, %, ** and increment/decrement</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="comparison-operators" data-category="Operators"
+            onclick="openModal('comparison-operators')">
+            <div class="js-card-title">Comparison Operators</div>
+            <div class="js-card-desc">==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="logical-operators" data-category="Operators"
+            onclick="openModal('logical-operators')">
+            <div class="js-card-title">Logical Operators</div>
+            <div class="js-card-desc">&amp;&amp; (AND), || (OR), ! (NOT) with short-circuit evaluation</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="ternary-operator" data-category="Operators"
+            onclick="openModal('ternary-operator')">
+            <div class="js-card-title">Ternary Operator</div>
+            <div class="js-card-desc">condition ? trueValue : falseValue — compact if/else</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="nullish-coalescing" data-category="Operators"
+            onclick="openModal('nullish-coalescing')">
+            <div class="js-card-title">Nullish Coalescing (??)</div>
+            <div class="js-card-desc">Safe default values: only triggers on null or undefined</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="optional-chaining" data-category="Operators"
+            onclick="openModal('optional-chaining')">
+            <div class="js-card-title">Optional Chaining (?.)</div>
+            <div class="js-card-desc">Safely access nested properties without errors</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 3. CONTROL FLOW -->
+    <section class="js-category-section" id="section-control-flow">
+        <div class="group-title">
+            <h2>🔀 Control Flow</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="if-else" data-category="Control Flow"
+            onclick="openModal('if-else')">
+            <div class="js-card-title">if / else</div>
+            <div class="js-card-desc">Execute different code based on conditions</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="switch" data-category="Control Flow"
+            onclick="openModal('switch')">
+            <div class="js-card-title">switch Statement</div>
+            <div class="js-card-desc">Match a value against multiple cases efficiently</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="for-loop" data-category="Control Flow"
+            onclick="openModal('for-loop')">
+            <div class="js-card-title">for Loop</div>
+            <div class="js-card-desc">Classic for, for...of, and for...in iteration</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="while-loop" data-category="Control Flow"
+            onclick="openModal('while-loop')">
+            <div class="js-card-title">while / do...while</div>
+            <div class="js-card-desc">Repeat code while a condition is true</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="break-continue" data-category="Control Flow"
+            onclick="openModal('break-continue')">
+            <div class="js-card-title">break &amp; continue</div>
+            <div class="js-card-desc">Exit a loop early or skip the current iteration</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 4. FUNCTIONS -->
+    <section class="js-category-section" id="section-functions">
+        <div class="group-title">
+            <h2>🔧 Functions</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="function-declaration" data-category="Functions"
+            onclick="openModal('function-declaration')">
+            <div class="js-card-title">Function Declaration</div>
+            <div class="js-card-desc">Define reusable code blocks with the function keyword</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="arrow-functions" data-category="Functions"
+            onclick="openModal('arrow-functions')">
+            <div class="js-card-title">Arrow Functions</div>
+            <div class="js-card-desc">Concise ES6 function syntax with => and lexical this</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="parameters-arguments" data-category="Functions"
+            onclick="openModal('parameters-arguments')">
+            <div class="js-card-title">Parameters &amp; Arguments</div>
+            <div class="js-card-desc">Pass data into functions, including default values</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="return-values" data-category="Functions"
+            onclick="openModal('return-values')">
+            <div class="js-card-title">Return Values</div>
+            <div class="js-card-desc">Send data back from a function with the return keyword</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="callbacks" data-category="Functions"
+            onclick="openModal('callbacks')">
+            <div class="js-card-title">Callback Functions</div>
+            <div class="js-card-desc">Functions passed as arguments to be called later</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="rest-spread" data-category="Functions"
+            onclick="openModal('rest-spread')">
+            <div class="js-card-title">Rest &amp; Spread (...)</div>
+            <div class="js-card-desc">Collect arguments into an array or expand arrays/objects</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="closures" data-category="Functions"
+            onclick="openModal('closures')">
+            <div class="js-card-title">Closures</div>
+            <div class="js-card-desc">Functions that remember their outer scope's variables</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 5. ARRAYS -->
+    <section class="js-category-section" id="section-arrays">
+        <div class="group-title">
+            <h2>📦 Arrays</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-basics" data-category="Arrays"
+            onclick="openModal('array-basics')">
+            <div class="js-card-title">Array Basics</div>
+            <div class="js-card-desc">Create and access ordered lists of values</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="push-pop" data-category="Arrays"
+            onclick="openModal('push-pop')">
+            <div class="js-card-title">push / pop / shift / unshift</div>
+            <div class="js-card-desc">Add and remove elements from the start or end</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-foreach" data-category="Arrays"
+            onclick="openModal('array-foreach')">
+            <div class="js-card-title">Array .forEach()</div>
+            <div class="js-card-desc">Execute a function for every element in an array</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-map" data-category="Arrays"
+            onclick="openModal('array-map')">
+            <div class="js-card-title">Array .map()</div>
+            <div class="js-card-desc">Transform every element and return a new array</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-filter" data-category="Arrays"
+            onclick="openModal('array-filter')">
+            <div class="js-card-title">Array .filter()</div>
+            <div class="js-card-desc">Keep only elements that pass a test function</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-reduce" data-category="Arrays"
+            onclick="openModal('array-reduce')">
+            <div class="js-card-title">Array .reduce()</div>
+            <div class="js-card-desc">Accumulate all elements into a single value</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-find" data-category="Arrays"
+            onclick="openModal('array-find')">
+            <div class="js-card-title">Array .find() &amp; .findIndex()</div>
+            <div class="js-card-desc">Find the first matching element or its index</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-sort" data-category="Arrays"
+            onclick="openModal('array-sort')">
+            <div class="js-card-title">Array .sort()</div>
+            <div class="js-card-desc">Sort elements alphabetically or numerically</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="array-slice-splice" data-category="Arrays"
+            onclick="openModal('array-slice-splice')">
+            <div class="js-card-title">slice &amp; splice</div>
+            <div class="js-card-desc">Extract portions or mutate arrays in-place</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 6. OBJECTS -->
+    <section class="js-category-section" id="section-objects">
+        <div class="group-title">
+            <h2>🗂️ Objects</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="object-basics" data-category="Objects"
+            onclick="openModal('object-basics')">
+            <div class="js-card-title">Object Basics</div>
+            <div class="js-card-desc">Store key-value pairs and access with dot or bracket notation</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="object-methods" data-category="Objects"
+            onclick="openModal('object-methods')">
+            <div class="js-card-title">Object Methods</div>
+            <div class="js-card-desc">Object.keys(), .values(), .entries(), .assign()</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="this-keyword" data-category="Objects"
+            onclick="openModal('this-keyword')">
+            <div class="js-card-title">this Keyword</div>
+            <div class="js-card-desc">Refers to the calling object inside a method</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="destructuring" data-category="Objects"
+            onclick="openModal('destructuring')">
+            <div class="js-card-title">Destructuring</div>
+            <div class="js-card-desc">Unpack arrays and object properties into variables</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="spread-objects" data-category="Objects"
+            onclick="openModal('spread-objects')">
+            <div class="js-card-title">Spread with Objects</div>
+            <div class="js-card-desc">Copy and merge objects with the spread operator</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="class-syntax" data-category="Objects"
+            onclick="openModal('class-syntax')">
+            <div class="js-card-title">ES6 Classes</div>
+            <div class="js-card-desc">Blueprint for objects with constructor and methods</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 7. DOM -->
+    <section class="js-category-section" id="section-dom">
+        <div class="group-title">
+            <h2>🌐 DOM Manipulation</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="getElementById" data-category="DOM"
+            onclick="openModal('getElementById')">
+            <div class="js-card-title">getElementById()</div>
+            <div class="js-card-desc">Select a single element by its unique ID</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="querySelector" data-category="DOM"
+            onclick="openModal('querySelector')">
+            <div class="js-card-title">querySelector &amp; querySelectorAll</div>
+            <div class="js-card-desc">Select elements using CSS selector syntax</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="classList" data-category="DOM" onclick="openModal('classList')">
+            <div class="js-card-title">classList Methods</div>
+            <div class="js-card-desc">add, remove, toggle, and contains CSS classes</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="style-manipulation" data-category="DOM"
+            onclick="openModal('style-manipulation')">
+            <div class="js-card-title">Style Manipulation</div>
+            <div class="js-card-desc">Set inline CSS properties via element.style</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="createElement" data-category="DOM"
+            onclick="openModal('createElement')">
+            <div class="js-card-title">createElement &amp; appendChild</div>
+            <div class="js-card-desc">Dynamically create and insert HTML elements</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="remove-element" data-category="DOM"
+            onclick="openModal('remove-element')">
+            <div class="js-card-title">Removing Elements</div>
+            <div class="js-card-desc">Delete elements from the DOM with .remove()</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 8. EVENTS -->
+    <section class="js-category-section" id="section-events">
+        <div class="group-title">
+            <h2>🎯 Events</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="addEventListener" data-category="Events"
+            onclick="openModal('addEventListener')">
+            <div class="js-card-title">addEventListener()</div>
+            <div class="js-card-desc">Attach event handlers to elements cleanly</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="keyboard-events" data-category="Events"
+            onclick="openModal('keyboard-events')">
+            <div class="js-card-title">Keyboard Events</div>
+            <div class="js-card-desc">keydown, keyup — detect which key was pressed</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="form-events" data-category="Events"
+            onclick="openModal('form-events')">
+            <div class="js-card-title">Form Events</div>
+            <div class="js-card-desc">submit, input, change — handle form interactions</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="event-bubbling" data-category="Events"
+            onclick="openModal('event-bubbling')">
+            <div class="js-card-title">Event Bubbling &amp; Delegation</div>
+            <div class="js-card-desc">Handle child events via a single parent listener</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 9. ASYNC JS -->
+    <section class="js-category-section" id="section-async">
+        <div class="group-title">
+            <h2>⏳ Async JavaScript</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="promises" data-category="Async" onclick="openModal('promises')">
+            <div class="js-card-title">Promises</div>
+            <div class="js-card-desc">Handle future values with .then(), .catch(), .finally()</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="async-await" data-category="Async"
+            onclick="openModal('async-await')">
+            <div class="js-card-title">async / await</div>
+            <div class="js-card-desc">Write async code that reads like synchronous code</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="fetch-api" data-category="Async"
+            onclick="openModal('fetch-api')">
+            <div class="js-card-title">fetch API</div>
+            <div class="js-card-desc">Make HTTP requests to APIs and handle JSON responses</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="error-handling" data-category="Async"
+            onclick="openModal('error-handling')">
+            <div class="js-card-title">try / catch / finally</div>
+            <div class="js-card-desc">Handle errors gracefully with structured error handling</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="json" data-category="Async" onclick="openModal('json')">
+            <div class="js-card-title">JSON</div>
+            <div class="js-card-desc">Parse and stringify data for APIs and storage</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- 10. BROWSER APIs -->
+    <section class="js-category-section" id="section-browser">
+        <div class="group-title">
+            <h2>🛠️ Browser APIs</h2>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="localStorage" data-category="Browser APIs"
+            onclick="openModal('localStorage')">
+            <div class="js-card-title">localStorage</div>
+            <div class="js-card-desc">Persist data in the browser across sessions</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="sessionStorage" data-category="Browser APIs"
+            onclick="openModal('sessionStorage')">
+            <div class="js-card-title">sessionStorage</div>
+            <div class="js-card-desc">Temporary storage that clears when the tab closes</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="timers" data-category="Browser APIs"
+            onclick="openModal('timers')">
+            <div class="js-card-title">setTimeout &amp; setInterval</div>
+            <div class="js-card-desc">Run code after a delay or on a repeating schedule</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="clipboard-api" data-category="Browser APIs"
+            onclick="openModal('clipboard-api')">
+            <div class="js-card-title">Clipboard API</div>
+            <div class="js-card-desc">Copy text to the clipboard programmatically</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+        <div class="tag-card js-topic-card" data-topic="date-object" data-category="Browser APIs"
+            onclick="openModal('date-object')">
+            <div class="js-card-title">Date Object</div>
+            <div class="js-card-desc">Work with dates and times in JavaScript</div>
+            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                    class="js-learn-btn">Learn More →</button></div>
+            <span class="tooltip">Click for details</span>
+        </div>
+    </section>
+
+    <!-- ── MODAL ─────────────────────────────────────── -->
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()" role="button" aria-label="Close modal">&times;</span>
+            <button class="modal-toggle" onclick="toggleModalTheme()" aria-label="Toggle modal theme">🌙 Theme</button>
+
+            <span id="modal-difficulty" class="modal-difficulty-badge badge-beginner">Beginner</span>
+            <h3 id="modal-title">Topic Name</h3>
+            <p id="modal-history">Explanation</p>
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4>Example Code <small style="font-size:0.75rem;color:var(--text-secondary);font-weight:400;">(Editable
+                        — Ctrl+Enter to run)</small></h4>
+                <div>
+                    <button class="action-sm-btn" onclick="formatCode()" title="Format Code">✨ Format</button>
+                    <button class="action-sm-btn" onclick="resetCode()" title="Reset to original">↺ Reset</button>
+                </div>
+            </div>
+            <textarea id="modal-editor" aria-label="Editable code example"></textarea>
+            <br>
+            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+
+            <iframe id="live-preview" title="Live code preview" sandbox="allow-scripts allow-same-origin"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quick Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here" aria-label="Quiz answer">
+                <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                <p id="quiz-feedback" aria-live="polite"></p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="modal-nav">
+                <button id="prev-topic-btn" onclick="goPrevTopic()">⬅ Previous Topic</button>
+                <button id="next-topic-btn" onclick="goNextTopic()">Next Topic ➡</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── SCROLL BUTTONS ─────────────────────────────── -->
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
+    <button id="scrollBottomBtn" aria-label="Scroll to bottom"><i class="fa-solid fa-angles-down fa-beat"></i></button>
+
+    <!-- ── FOOTER ─────────────────────────────────────── -->
+    <section>
+        <footer>
+            <div class="tag-card">
+                <img src="/assets/adan.png" alt="Profile photo of Adan Suhail" class="DP">
+                <h3 style="color: var(--text-modal-h3); margin: 8px 0 4px;">Adan Suhail</h3>
+                <p>
+                    <a href="https://wa.me/923074449331" target="_blank" rel="noopener"><img src="/assets/whatsapp.jpg"
+                            alt="WhatsApp" class="wa"></a>
+                    <a href="mailto:adansuahilch@gmail.com?subject=Hello%20There" target="_blank" rel="noopener"><img
+                            src="/assets/gmail.png" alt="Gmail" class="wa"></a>
+                    <a href="https://www.instagram.com/adansuhailch13/?__pwa=1#" target="_blank" rel="noopener"><img
+                            src="/assets/instagram.png" alt="Instagram" class="wa"></a>
+                </p>
+            </div>
+            <p>🎨 Want to play with colors? <a href="/pages/colour-piker.html">Try my Color Picker</a></p>
+            <p>📝 Take our Tag Web Test to join our WhatsApp Community! <a href="/pages/test.html">Try it out</a></p>
+            <p><a href="/pages/about-me.html">About me..!!</a></p>
+            <p>&copy; 2025 Tag Web. Built with ❤️ for web learners by <strong>Hafiz Adan Suhail</strong> 😎</p>
+        </footer>
+    </section>
+
+    <!-- ── SCRIPTS ─────────────────────────────────────── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js_beautify/1.14.7/beautify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js_beautify/1.14.7/beautify-html.min.js"></script>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/js-topics.js"></script>
+    <script src="/js/js-part.js"></script>
+
+</body>
+
+</html>

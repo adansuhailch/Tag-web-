@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Tag Web — The ultimate HTML & CSS learning playground. Explore tags interactively with live code editors, quizzes, and examples." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="canonical" href="https://tag-web.is-a.dev/">
+    <link rel="stylesheet" href="/css/style.css" />
+    <script>
+        (function () {
+            var t = localStorage.getItem("tagweb-theme") || "dark";
+            document.documentElement.setAttribute("data-theme", t);
+        })();
+    </script>
+    <link rel="icon" type="image/x-icon" href="/assets/tag web logo.png" />
+    <title>Tag Web — Ultimate HTML Playground</title>
+</head>
+
+<body>
+    <!-- ── Entry Splash Overlay ─────────────────────────── -->
+    <!-- <div id="entry-overlay">
+        <div class="entry-box">
+            <h1>Ready to learn? 🚀</h1>
+            <p>
+                If you're willing to learn something new, enter.<br />Otherwise, head
+                to social media and waste your time.
+            </p>
+            <div class="entry-actions">
+                <button id="enter-btn">I'm willing — Enter ✅</button>
+                <button id="reject-btn" class="outline">
+                    No thanks — Social Media 📱
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- ── Header ───────────────────────────────────────── -->
+    <header>
+        <!-- <h1>Ultimate HTML Playground</h1> -->
+        <div class="logo">
+            <img src="/assets/tag web logo.png" alt="Tag Web logo" class="dra-LOGO" />
+            <span class="brand-wordmark">Tag Web</span>
+        </div>
+
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchBar" placeholder="Search Topics, Tags..." onkeyup="searchTag()"
+                aria-label="Search HTML tags" />
+        </div>
+
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+        </button>
+
+        <div class="button-group">
+            <!-- 1. Color Lab Button -->
+            <button class="btn btn-dark">
+                <span class="icon-palette">🎨</span> Color Lab
+            </button>
+
+            <a href="#" class="btn btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Join Community
+            </a>
+        </div>
+
+        <!-- <div class="nav-container">
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#text">Text</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#Semantic Tags">Semantic Tags</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#Other-tags">Other HTML5 Tags</a></li>
+                    <li><a href="/pages/css-part.html">CSS Tags</a></li>
+                    <li><a href="/pages/javascript-part.html">⚡ JavaScript</a></li>
+                    <li><a href="https://amazing-color-picker.vercel.app/">🌈 Color Picker</a></li>
+                    <li><a href="https://tag-web-digitaltest.netlify.app/">📝 Join Community</a></li>
+                </ul>
+            </nav>
+        </div> -->
+
+
+    </header>
+    <div class="page-container">
+        <aside class="sidebar-panel">
+            <ul class="nav-list">
+                <li class="active"><a href="#text">📝 Text Tags</a></li>
+                <li><a href="#links">🔗 Links Tags</a></li>
+                <li><a href="#lists">📋 List Tags</a></li>
+                <li><a href="#forms">📰 Form Tags</a></li>
+                <li><a href="#media">🖼️ Media Tags</a></li>
+                <li><a href="#Semantic-Tags">📦 Semantic Tags</a></li>
+                <li><a href="#tables">🧮 Table Tags</a></li>
+                <li><a href="#Other-tags">🛡️ HTML5 Tags</a></li>
+                <li><a href="/pages/css-part.html">🧬 CSS Tags</a></li>
+                <li><a href="/pages/javascript-part.html">⚡ JavaScript</a></li>
+            </ul>
+        </aside>
+        <main class="content-panel">
+
+            <!-- TEXT SECTION -->
+            <section id="text">
+                <h2>Text Tags</h2>
+                <div class="tag-card" data-tag="!DOCTYPE" onclick="openModal('!doctype')">
+                    &lt;!doctype&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="h1" onclick="openModal('h1')">
+                    &lt;h1&gt; Heading<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="Paragraph" onclick="openModal('p')">
+                    &lt;p&gt; Paragraph<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="bold" onclick="openModal('b')">
+                    &lt;b&gt; Bold<span class="tooltip">Click for details</span>
+                </div>
+                <a href="/pages/text-tag.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
+            </section>
+
+            <!-- Links Section -->
+            <section id="links">
+                <h2>Link Tags</h2>
+                <div class="tag-card" data-tag="Anchor" onclick="openModal('a')">
+                    &lt;a&gt; Anchor Link<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="Navigation" onclick="openModal('nav')">
+                    &lt;nav&gt; Navigation<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="href" onclick="openModal('href')">
+                    &lt;href&gt; Hyperlink Reference<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="target" onclick="openModal('target')">
+                    &lt;target&gt; Target Attribute<span class="tooltip">Click for details</span>
+                </div>
+            </section>
+
+            <!-- LISTS SECTION -->
+            <section id="lists">
+                <h2>List Tags</h2>
+                <div class="tag-card" data-tag="ul" onclick="openModal('ul')">
+                    &lt;ul&gt; Unordered List<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="ol" onclick="openModal('ol')">
+                    &lt;ol&gt; Ordered List<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="li" onclick="openModal('li')">
+                    &lt;li&gt; List Item<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="dl" onclick="openModal('dl')">
+                    &lt;dl&gt; Description List<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="dt" onclick="openModal('dt')">
+                    &lt;dt&gt; Description Term<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="dd" onclick="openModal('dd')">
+                    &lt;dd&gt; Description Definition<span class="tooltip">Click for details</span>
+                </div>
+            </section>
+
+            <!-- Forms Section -->
+            <section id="forms">
+                <h2>Form Tags</h2>
+                <div class="tag-card" data-tag="form" onclick="openModal('form')">
+                    &lt;form&gt; Form<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="input" onclick="openModal('input')">
+                    &lt;input&gt; Input<span class="tooltip">Click for details</span>
+                </div>
+                <a href="/pages/form-tag.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
+            </section>
+
+            <!-- Media Section -->
+            <section id="media">
+                <h2>Media Tags</h2>
+                <div class="tag-card" data-tag="img" onclick="openModal('img')">
+                    &lt;img&gt; Image<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="audio" onclick="openModal('audio')">
+                    &lt;audio&gt; Audio<span class="tooltip">Click for details</span>
+                </div>
+                <a href="/pages/semantic-media.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
+            </section>
+
+            <!-- Semmentic Section -->
+            <section id="Semantic Tags">
+                <h2>Semantic Tags (HTML5)</h2>
+                <div class="tag-card" data-tag="header" onclick="openModal('header')">
+                    &lt;header&gt; Header<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="footer" onclick="openModal('footer')">
+                    &lt;footer&gt; Footer<span class="tooltip">Click for details</span>
+                </div>
+                <a href="/pages/semantic-media.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
+            </section>
+
+
+            <!-- Table Sectin -->
+            <section id="tables">
+                <h2>Table Tags</h2>
+                <div class="tag-card" data-tag="tables" onclick="openModal('table')">
+                    &lt;table&gt; Table<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="tr" onclick="openModal('tr')">
+                    &lt;tr&gt; Table Row<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="td" onclick="openModal('td')">
+                    &lt;td&gt; Table Data Cell<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="Table header" onclick="openModal('th')">
+                    &lt;th&gt; Table Header Cell<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="caption" onclick="openModal('caption')">
+                    &lt;caption&gt; Table Caption<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="table body" onclick="openModal('tbody')">
+                    &lt;tbody&gt; Table Body<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="table foot" onclick="openModal('tfoot')">
+                    &lt;tfoot&gt; Table Footer<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="column group" onclick="openModal('colgroup')">
+                    &lt;colgroup&gt; Column Group<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="column" onclick="openModal('col')">
+                    &lt;col&gt; Column<span class="tooltip">Click for details</span>
+                </div>
+            </section>
+
+
+            <!-- Other HTML tags -->
+            <section id="Other-tags">
+                <h2>Other HTML5 Tags</h2>
+                <div class="tag-card" data-tag="Citation" onclick="openModal('cite')">
+                    &lt;cite&gt; Citation<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="inline quote" onclick="openModal('q')">
+                    &lt;q&gt; Inline Quote<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="blockquote" onclick="openModal('blockquote')">
+                    &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
+                </div>
+                <a href="/pages/other-tags.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
+            </section>
+
+
+            <!-- Learn JavaScript Section -->
+            <section id="javascript-tags" style="text-align: center">
+                <h2>Learn JavaScript <span style="color: #f59e0b">⚡</span></h2>
+                <p style="
+          color: var(--text-secondary);
+          max-width: 520px;
+          margin: 0 auto 20px;
+          font-size: 0.95rem;
+          line-height: 1.6;
+        ">
+                    Master JavaScript from scratch — variables, functions, DOM, async/await
+                    and more. Interactive cards, live code editor, and quizzes await you!
+                </p>
+                <div style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: center;
+          margin-bottom: 20px;
+        ">
+                    <span style="
+            background: rgba(245, 158, 11, 0.12);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+          ">⚡ 40+ Topics</span>
+                    <span style="
+            background: rgba(16, 185, 129, 0.12);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+          ">▶ Live Code Runner</span>
+                    <span style="
+            background: rgba(99, 102, 241, 0.12);
+            color: #818cf8;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+          ">📝 Quizzes</span>
+                    <span style="
+            background: rgba(236, 72, 153, 0.12);
+            color: #f472b6;
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+          ">🔀 Category Filters</span>
+                </div>
+                <a href="/pages/javascript-part.html" style="
+          display: inline-block;
+          background: linear-gradient(135deg, #f59e0b, #d97706);
+          color: #fff;
+          font-weight: 700;
+          font-size: 1rem;
+          padding: 12px 28px;
+          border-radius: 10px;
+          text-decoration: none;
+          transition:
+            transform 0.2s,
+            box-shadow 0.2s;
+          box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+        " onmouseover="
+          this.style.transform = 'translateY(-2px)';
+          this.style.boxShadow = '0 8px 24px rgba(245,158,11,0.5)';
+        " onmouseout="
+          this.style.transform = '';
+          this.style.boxShadow = '0 4px 20px rgba(245,158,11,0.4)';
+        ">
+                    ⚡ Start Learning JavaScript →
+                </a>
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ── MODAL ────────────────────────────────────────── -->
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()" role="button" aria-label="Close modal">&times;</span>
+            <button class="modal-toggle" onclick="toggleModalTheme()" aria-label="Toggle modal theme">
+                🌙 Theme
+            </button>
+            <h3 id="modal-title">Tag Name</h3>
+            <p id="modal-history">History &amp; Modern Use</p>
+
+            <h4>Example Code (Editable)</h4>
+            <textarea id="modal-editor" aria-label="Editable code example"></textarea><br />
+            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+
+            <iframe id="live-preview" title="Live code preview" sandbox="allow-scripts allow-same-origin"></iframe>
+
+            <div class="quiz-section" id="quiz">
+                <h4>Quick Quiz:</h4>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Type your answer here" aria-label="Quiz answer" />
+                <button class="quiz-btn" onclick="checkAnswer()">
+                    Check Answer ✓
+                </button>
+                <p id="quiz-feedback" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- scroll buttons -->
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
+    <button id="scrollBottomBtn" aria-label="Scroll to bottom"><i class="fa-solid fa-angles-down fa-beat"></i></button>
+
+    <!-- footer -->
+    <section>
+        <footer>
+            <div class="tag-card">
+                <img src="/assets/adan.png" alt="Profile photo of Adan Suhail" class="DP" />
+                <h3>Adan Suhail</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/adansuhailch13/?__pwa=1#" target="_blank" aria-label="Instagram"
+                        class="icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="http://www.youtube.com/@Hafizadanadansuhail" target="_blank" aria-label="YouTube"
+                        class="icon"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/adansuhailch-cell" target="_blank" aria-label="GitHub" class="icon"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hafiz-adan-suhail-2676a13b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BG6RcmMyDSFWK5rGHtB36Hw%3D%3D"
+                        target="_blank" aria-label="LinkedIn" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/923074449331?text=Hi%20Hafiz%20Adan%20Suhail%20i%20want%20to%20appreciate%20you%20and%20want%20a%20source%20code%20of%20%22...%22%20website"
+                        target="_blank" aria-label="whatsapp" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://discord.gg/kKDSCWZfWZ" target="_blank" aria-label="Discord" class="icon"><i
+                            class="fa-brands fa-discord"></i></a>
+                </div>
+            </div>
+            <p>
+                🎨 Want to play with colors?
+                <a href="https://amazing-color-picker.vercel.app/">Try my Color Picker</a>
+            </p>
+            <p>
+                📝 Take our Tag Web Test to join our WhatsApp Community!
+                <a href="https://tag-web-digitaltest.netlify.app/">Try it out</a>
+            </p>
+            <p><a href="https://adandev.is-a.dev/">About me..!!</a></p>
+            <p>
+                &copy; 2025 Tag Web. Built with ❤️ for web learners by
+                <strong>Hafiz Adan Suhail</strong> 😎
+            </p>
+        </footer>
+    </section>
+
+    <!-- ── Scripts ──────────────────────────────────────── -->
+    <script>
+        // Entry overlay logic
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("entry-overlay").style.display = "flex";
+        });
+
+        document.getElementById("enter-btn").addEventListener("click", () => {
+            document.getElementById("entry-overlay").style.display = "none";
+        });
+
+        document.getElementById("reject-btn").addEventListener("click", () => {
+            window.open("https://www.instagram.com/", "_blank");
+        });
+    </script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/tag-web.js"></script>
+</body>
+
+</html>

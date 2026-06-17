@@ -1,0 +1,324 @@
+const tagData = {
+    "font-family": {
+        "title": "font-family Property",
+        "history": "The font-family property specifies the typeface for text content.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Family Example</title>\n  <style>\n    .text {\n      font-family: 'Courier New', Courier, monospace;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-family Property Example</h2>\n  <p class=\"text\">This text uses Courier New font-family.</p>\n</body>\n</html>",
+        "quiz": "Which property defines the typeface of text?",
+        "answer": "font-family"
+    },
+
+    "font-size": {
+        "title": "font-size Property",
+        "history": "The font-size property sets the size of the text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Size Example</title>\n  <style>\n    .text {\n      font-size: 24px;\n      font-family: Arial, sans-serif;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-size Property Example</h2>\n  <p class=\"text\">This text has 24px font-size.</p>\n</body>\n</html>",
+        "quiz": "Which property controls the size of text?",
+        "answer": "font-size"
+    },
+
+    "font-weight": {
+        "title": "font-weight Property",
+        "history": "The font-weight property sets the thickness or boldness of text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Weight Example</title>\n  <style>\n    .text {\n      font-weight: bold;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-weight Property Example</h2>\n  <p class=\"text\">This text is bold using font-weight.</p>\n</body>\n</html>",
+        "quiz": "Which property makes text bold or lighter?",
+        "answer": "font-weight"
+    },
+
+    "font-style": {
+        "title": "font-style Property",
+        "history": "The font-style property defines whether text is normal, italic, or oblique.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Style Example</title>\n  <style>\n    .text {\n      font-style: italic;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-style Property Example</h2>\n  <p class=\"text\">This text is italic using font-style.</p>\n</body>\n</html>",
+        "quiz": "Which property sets text to italic or normal style?",
+        "answer": "font-style"
+    },
+
+    "font-variant": {
+        "title": "font-variant Property",
+        "history": "The font-variant property controls the use of small-caps in text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Variant Example</title>\n  <style>\n    .text {\n      font-variant: small-caps;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-variant Property Example</h2>\n  <p class=\"text\">This text uses small-caps with font-variant.</p>\n</body>\n</html>",
+        "quiz": "Which property enables small-caps style for text?",
+        "answer": "font-variant"
+    },
+    "line-height": {
+        "title": "line-height Property",
+        "history": "The line-height property sets the space between lines of text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Line-Height Example</title>\n  <style>\n    .text {\n      font-size: 18px;\n      line-height: 2;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS line-height Property Example</h2>\n  <p class=\"text\">This text has a line-height of 2, which increases the space between lines.</p>\n</body>\n</html>",
+        "quiz": "Which property controls the spacing between lines of text?",
+        "answer": "line-height"
+    },
+
+    "letter-spacing": {
+        "title": "letter-spacing Property",
+        "history": "The letter-spacing property sets the space between characters in text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Letter-Spacing Example</title>\n  <style>\n    .text {\n      font-size: 20px;\n      letter-spacing: 5px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS letter-spacing Property Example</h2>\n  <p class=\"text\">This text has 5px letter-spacing.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the space between characters in text?",
+        "answer": "letter-spacing"
+    },
+
+    "word-spacing": {
+        "title": "word-spacing Property",
+        "history": "The word-spacing property sets the space between words in text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Word-Spacing Example</title>\n  <style>\n    .text {\n      font-size: 20px;\n      word-spacing: 15px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS word-spacing Property Example</h2>\n  <p class=\"text\">This text has 15px word-spacing applied.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the space between words in text?",
+        "answer": "word-spacing"
+    },
+
+    "text-indent": {
+        "title": "text-indent Property",
+        "history": "The text-indent property specifies the indentation of the first line in a block of text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Indent Example</title>\n  <style>\n    .text {\n      font-size: 18px;\n      text-indent: 50px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-indent Property Example</h2>\n  <p class=\"text\">This paragraph has a text-indent of 50px applied to the first line.</p>\n</body>\n</html>",
+        "quiz": "Which property indents the first line of a block of text?",
+        "answer": "text-indent"
+    },
+    "text-decoration": {
+        "title": "text-decoration Property",
+        "history": "The text-decoration property specifies the decoration added to text, such as underline, overline, or line-through.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Decoration Example</title>\n  <style>\n    .text {\n      text-decoration: underline;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-decoration Property Example</h2>\n  <p class=\"text\">This text is underlined using text-decoration.</p>\n</body>\n</html>",
+        "quiz": "Which property adds underline, overline, or line-through to text?",
+        "answer": "text-decoration"
+    },
+
+    "text-decoration-color": {
+        "title": "text-decoration-color Property",
+        "history": "The text-decoration-color property sets the color of text decoration lines.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Decoration-Color Example</title>\n  <style>\n    .text {\n      text-decoration: underline;\n      text-decoration-color: red;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-decoration-color Property Example</h2>\n  <p class=\"text\">This text has a red underline using text-decoration-color.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the color of text decoration lines?",
+        "answer": "text-decoration-color"
+    },
+
+    "text-decoration-style": {
+        "title": "text-decoration-style Property",
+        "history": "The text-decoration-style property defines the style of text decoration lines, such as solid, dotted, dashed, double, or wavy.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Decoration-Style Example</title>\n  <style>\n    .text {\n      text-decoration: underline;\n      text-decoration-style: wavy;\n      text-decoration-color: blue;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-decoration-style Property Example</h2>\n  <p class=\"text\">This text has a wavy underline using text-decoration-style.</p>\n</body>\n</html>",
+        "quiz": "Which property defines the style of text decoration lines?",
+        "answer": "text-decoration-style"
+    },
+
+    "text-decoration-thickness": {
+        "title": "text-decoration-thickness Property",
+        "history": "The text-decoration-thickness property sets the thickness of text decoration lines.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Decoration-Thickness Example</title>\n  <style>\n    .text {\n      text-decoration: underline;\n      text-decoration-thickness: 5px;\n      text-decoration-color: green;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-decoration-thickness Property Example</h2>\n  <p class=\"text\">This text has a thick underline using text-decoration-thickness.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the thickness of text decoration lines?",
+        "answer": "text-decoration-thickness"
+    },
+
+    "text-transform": {
+        "title": "text-transform Property",
+        "history": "The text-transform property controls the capitalization of text, such as uppercase, lowercase, or capitalize.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Transform Example</title>\n  <style>\n    .text {\n      text-transform: uppercase;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-transform Property Example</h2>\n  <p class=\"text\">This text is transformed to uppercase using text-transform.</p>\n</body>\n</html>",
+        "quiz": "Which property changes text to uppercase, lowercase, or capitalize?",
+        "answer": "text-transform"
+    },
+    "text-align": {
+        "title": "text-align Property",
+        "history": "The text-align property sets the horizontal alignment of text inside an element.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Align Example</title>\n  <style>\n    .text {\n      text-align: center;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-align Property Example</h2>\n  <p class=\"text\">This text is centered using text-align.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the horizontal alignment of text?",
+        "answer": "text-align"
+    },
+
+    "text-align-last": {
+        "title": "text-align-last Property",
+        "history": "The text-align-last property sets the alignment of the last line of text in a block.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Align-Last Example</title>\n  <style>\n    .text {\n      text-align: justify;\n      text-align-last: right;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-align-last Property Example</h2>\n  <p class=\"text\">This paragraph has justified text, but the last line is aligned to the right.</p>\n</body>\n</html>",
+        "quiz": "Which property controls the alignment of the last line of text?",
+        "answer": "text-align-last"
+    },
+
+    "direction": {
+        "title": "direction Property",
+        "history": "The direction property specifies the text direction, either left-to-right (ltr) or right-to-left (rtl).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Direction Example</title>\n  <style>\n    .text {\n      direction: rtl;\n      unicode-bidi: bidi-override;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS direction Property Example</h2>\n  <p class=\"text\">This text is displayed right-to-left using direction.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the text direction as left-to-right or right-to-left?",
+        "answer": "direction"
+    },
+
+    "unicode-bidi": {
+        "title": "unicode-bidi Property",
+        "history": "The unicode-bidi property works with the direction property to control text embedding and overrides for bidirectional text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Unicode-Bidi Example</title>\n  <style>\n    .text {\n      direction: rtl;\n      unicode-bidi: bidi-override;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS unicode-bidi Property Example</h2>\n  <p class=\"text\">This text uses unicode-bidi with direction to override text flow.</p>\n</body>\n</html>",
+        "quiz": "Which property works with direction to control bidirectional text embedding and overrides?",
+        "answer": "unicode-bidi"
+    },
+
+    "vertical-align": {
+        "title": "vertical-align Property",
+        "history": "The vertical-align property sets the vertical alignment of inline or table-cell elements.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Vertical-Align Example</title>\n  <style>\n    .text {\n      font-size: 20px;\n    }\n    img {\n      vertical-align: middle;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS vertical-align Property Example</h2>\n  <p class=\"text\">This image <img src=\"https://via.placeholder.com/40\" alt=\"demo\"> is vertically aligned to the middle of the text.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the vertical alignment of inline or table-cell elements?",
+        "answer": "vertical-align"
+    },
+    "text-shadow": {
+        "title": "text-shadow Property",
+        "history": "The text-shadow property adds shadow effects to text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Shadow Example</title>\n  <style>\n    .text {\n      font-size: 30px;\n      text-shadow: 2px 2px 5px gray;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-shadow Property Example</h2>\n  <p class=\"text\">This text has a shadow using text-shadow.</p>\n</body>\n</html>",
+        "quiz": "Which property adds shadow effects to text?",
+        "answer": "text-shadow"
+    },
+
+    "overflow-wrap": {
+        "title": "overflow-wrap Property",
+        "history": "The overflow-wrap property specifies whether text should break when it overflows its container.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Overflow-Wrap Example</title>\n  <style>\n    .box {\n      width: 200px;\n      border: 1px solid black;\n      overflow-wrap: break-word;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS overflow-wrap Property Example</h2>\n  <div class=\"box\">ThisIsAVeryLongWordThatWillBreakUsingOverflowWrap.</div>\n</body>\n</html>",
+        "quiz": "Which property forces text to break when it overflows its container?",
+        "answer": "overflow-wrap"
+    },
+
+    "word-break": {
+        "title": "word-break Property",
+        "history": "The word-break property specifies how words should break when reaching the end of a line.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Word-Break Example</title>\n  <style>\n    .box {\n      width: 200px;\n      border: 1px solid black;\n      word-break: break-all;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS word-break Property Example</h2>\n  <div class=\"box\">ThisIsAVeryLongWordThatWillBreakAnywhereUsingWordBreak.</div>\n</body>\n</html>",
+        "quiz": "Which property controls how words break at the end of a line?",
+        "answer": "word-break"
+    },
+
+    "hyphens": {
+        "title": "hyphens Property",
+        "history": "The hyphens property controls whether words can be hyphenated when they break across lines.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Hyphens Example</title>\n  <style>\n    .box {\n      width: 200px;\n      border: 1px solid black;\n      hyphens: auto;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS hyphens Property Example</h2>\n  <p class=\"box\">This paragraph demonstrates automatic hyphenation when words break across lines.</p>\n</body>\n</html>",
+        "quiz": "Which property controls automatic hyphenation of words?",
+        "answer": "hyphens"
+    },
+
+    "writing-mode": {
+        "title": "writing-mode Property",
+        "history": "The writing-mode property defines whether text is horizontal or vertical.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Writing-Mode Example</title>\n  <style>\n    .text {\n      writing-mode: vertical-rl;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS writing-mode Property Example</h2>\n  <p class=\"text\">This text is displayed vertically using writing-mode.</p>\n</body>\n</html>",
+        "quiz": "Which property sets text to horizontal or vertical layout?",
+        "answer": "writing-mode"
+    },
+
+    "text-orientation": {
+        "title": "text-orientation Property",
+        "history": "The text-orientation property sets the orientation of characters in vertical writing modes.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Orientation Example</title>\n  <style>\n    .text {\n      writing-mode: vertical-rl;\n      text-orientation: upright;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-orientation Property Example</h2>\n  <p class=\"text\">This text has upright orientation in vertical writing mode.</p>\n</body>\n</html>",
+        "quiz": "Which property sets the orientation of characters in vertical writing mode?",
+        "answer": "text-orientation"
+    },
+
+    "text-combine-upright": {
+        "title": "text-combine-upright Property",
+        "history": "The text-combine-upright property combines multiple characters into a single upright glyph in vertical writing modes.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Combine-Upright Example</title>\n  <style>\n    .text {\n      writing-mode: vertical-rl;\n      text-combine-upright: all;\n      font-size: 20px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-combine-upright Property Example</h2>\n  <p class=\"text\">2025 is combined upright using text-combine-upright.</p>\n</body>\n</html>",
+        "quiz": "Which property combines multiple characters into one upright glyph in vertical writing mode?",
+        "answer": "text-combine-upright"
+    },
+    "font-feature-settings": {
+        "title": "font-feature-settings Property",
+        "history": "The font-feature-settings property allows control over advanced typographic features in OpenType fonts.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Feature-Settings Example</title>\n  <style>\n    .text {\n      font-family: 'Times New Roman', serif;\n      font-feature-settings: \"smcp\";\n      font-size: 24px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-feature-settings Property Example</h2>\n  <p class=\"text\">This text uses small-caps feature from OpenType.</p>\n</body>\n</html>",
+        "quiz": "Which property enables advanced OpenType font features like small-caps or ligatures?",
+        "answer": "font-feature-settings"
+    },
+
+    "font-kerning": {
+        "title": "font-kerning Property",
+        "history": "The font-kerning property controls the use of kerning, adjusting spacing between specific character pairs.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Kerning Example</title>\n  <style>\n    .text {\n      font-family: Georgia, serif;\n      font-kerning: normal;\n      font-size: 24px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-kerning Property Example</h2>\n  <p class=\"text\">This text uses normal kerning between characters.</p>\n</body>\n</html>",
+        "quiz": "Which property controls spacing adjustments between specific character pairs?",
+        "answer": "font-kerning"
+    },
+
+    "font-variant-ligatures": {
+        "title": "font-variant-ligatures Property",
+        "history": "The font-variant-ligatures property controls the use of ligatures in text.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Variant-Ligatures Example</title>\n  <style>\n    .text {\n      font-family: Georgia, serif;\n      font-variant-ligatures: none;\n      font-size: 24px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-variant-ligatures Property Example</h2>\n  <p class=\"text\">This text disables ligatures using font-variant-ligatures.</p>\n</body>\n</html>",
+        "quiz": "Which property enables or disables ligatures in text?",
+        "answer": "font-variant-ligatures"
+    },
+
+    "font-variant-numeric": {
+        "title": "font-variant-numeric Property",
+        "history": "The font-variant-numeric property controls the usage of numeric glyphs, such as oldstyle or lining numbers.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Variant-Numeric Example</title>\n  <style>\n    .text {\n      font-family: Georgia, serif;\n      font-variant-numeric: oldstyle-nums;\n      font-size: 24px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-variant-numeric Property Example</h2>\n  <p class=\"text\">This text uses oldstyle numbers with font-variant-numeric.</p>\n</body>\n</html>",
+        "quiz": "Which property controls the style of numeric glyphs like oldstyle or lining numbers?",
+        "answer": "font-variant-numeric"
+    },
+
+    "font-variant-east-asian": {
+        "title": "font-variant-east-asian Property",
+        "history": "The font-variant-east-asian property controls glyph forms for East Asian text, such as traditional or simplified.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Variant-East-Asian Example</title>\n  <style>\n    .text {\n      font-family: 'Noto Sans JP', sans-serif;\n      font-variant-east-asian: traditional;\n      font-size: 24px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-variant-east-asian Property Example</h2>\n  <p class=\"text\">This text uses traditional East Asian glyph forms.</p>\n</body>\n</html>",
+        "quiz": "Which property controls glyph forms for East Asian text?",
+        "answer": "font-variant-east-asian"
+    },
+
+    "font-synthesis": {
+        "title": "font-synthesis Property",
+        "history": "The font-synthesis property controls whether browsers can synthesize bold or italic styles when unavailable.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Font-Synthesis Example</title>\n  <style>\n    .text {\n      font-family: Georgia, serif;\n      font-synthesis: none;\n      font-size: 24px;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS font-synthesis Property Example</h2>\n  <p class=\"text\">This text disables synthetic bold or italic styles using font-synthesis.</p>\n</body>\n</html>",
+        "quiz": "Which property controls whether browsers can synthesize bold or italic styles?",
+        "answer": "font-synthesis"
+    }
+};
+
+function openModal(tag) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('modal-title').innerHTML = tagData[tag].title;
+    document.getElementById('modal-history').innerHTML = tagData[tag].history;
+    document.getElementById('modal-editor').value = tagData[tag].code;
+    document.getElementById('live-preview').srcdoc = tagData[tag].code;
+    document.getElementById('quiz-question').innerHTML = tagData[tag].quiz;
+    document.getElementById('quiz-answer').value = '';
+    document.getElementById('quiz-feedback').innerHTML = '';
+    document.getElementById('quiz').setAttribute('data-tag', tag);
+    document.getElementById("modal-content").classList.remove("modal-dark");
+
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function copyCode() {
+    const code = document.getElementById('modal-editor').value;
+    navigator.clipboard.writeText(code).then(() => {
+        alert('🎉 Code Copied! 🎉');
+    });
+}
+
+function runLiveCode() {
+    const code = document.getElementById('modal-editor').value;
+    document.getElementById('live-preview').srcdoc = code;
+}
+
+function checkAnswer() {
+    const tag = document.getElementById('quiz').getAttribute('data-tag');
+    const answer = document.getElementById('quiz-answer').value.trim().toLowerCase();
+    const correct = tagData[tag].answer.toLowerCase();
+
+    if (answer === correct) {
+        document.getElementById('quiz-feedback').innerHTML = "<span style='color:#00FFFF;'>Correct!</span>";
+    } else {
+        document.getElementById('quiz-feedback').innerHTML = "<span style='color:#ffb703;'>Try again!</span>";
+    }
+}
+
+function searchTag() {
+    const input = document.getElementById('searchBar').value.toLowerCase();
+    const cards = document.querySelectorAll('.tag-card');
+
+    cards.forEach(card => {
+        const tag = card.textContent.toLowerCase(); // card ka text
+        if (tag.includes(input)) {
+            card.style.display = "inline-block"; // show match
+            card.classList.add("highlight");
+        } else {
+            card.style.display = "none"; // hide non-match
+            card.classList.remove("highlight");
+        }
+    });
+
+
+    if (input === "") {
+        cards.forEach(card => {
+            card.style.display = "inline-block";
+            card.classList.remove("highlight");
+        });
+    }
+}
+
+function toggleModalTheme() {
+    document.getElementById("modal-content")
+        .classList.toggle("modal-dark");
+}
+
