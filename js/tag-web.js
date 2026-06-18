@@ -6,13 +6,20 @@ const tagData = {
         quiz: "Which is the tag that tells the browser which version of HTML user used?",
         answer: "doctype"
     },
-    "h1": {
-        title: "<h1> Heading Tag",
-        history: "Since HTML 2, for headings h1-h6",
-        code: "<h1>This is heading 1</h1>",
-        quiz: "What tag is used for the largest heading?",
-        answer: "h1"
-    },
+    // "h1": {
+    //     title: "<h1> Heading Tag",
+    //     history: "Since HTML 2, for headings h1-h6",
+    //     code: "<h1>This is heading 1</h1>",
+    //     quiz: "What tag is used for the largest heading?",
+    //     answer: "h1"
+    // },
+      h1: {
+    title: "&lt;h1&gt; Heading Tag",
+    history: "<strong>About:</strong> The &lt;h1&gt; tag defines the most important heading on the page.<br><br><strong>Modern Use:</strong> Search engines use headings to index the structure of your web pages. Always use exactly one h1 per page.",
+    code: "<h1>Hello World</h1>\n<p>Welcome to Tag Web! Start learning code.</p>",
+    quiz: "Which tag creates the highest level system document heading hierarchy?",
+    answer: "h1"
+  },
     "p": {
         title: "<p> Paragraph Tag",
         history: "Used for paragraphs of text",

@@ -22,24 +22,8 @@
 </head>
 
 <body>
-    <!-- ── Entry Splash Overlay ─────────────────────────── -->
-    <!-- <div id="entry-overlay">
-        <div class="entry-box">
-            <h1>Ready to learn? 🚀</h1>
-            <p>
-                If you're willing to learn something new, enter.<br />Otherwise, head
-                to social media and waste your time.
-            </p>
-            <div class="entry-actions">
-                <button id="enter-btn">I'm willing — Enter ✅</button>
-                <button id="reject-btn" class="outline">
-                    No thanks — Social Media 📱
-                </button>
-            </div>
-        </div>
-    </div> -->
 
-    <!-- ── Header ───────────────────────────────────────── -->
+    <!-- header -->
     <header>
         <!-- <h1>Ultimate HTML Playground</h1> -->
         <div class="logo">
@@ -118,20 +102,40 @@
         </aside>
         <main class="content-panel">
 
+            <!--             
+            <div id="entry-overlay">
+                <div class="entry-box">
+                    <h1>Ready to learn? 🚀</h1>
+                    <p>
+                        If you're willing to learn something new, enter.<br />Otherwise, head
+                        to social media and waste your time.
+                    </p>
+                    <div class="entry-actions">
+                        <button id="enter-btn">I'm willing — Enter ✅</button>
+                        <button id="reject-btn" class="outline">
+                            No thanks — Social Media 📱
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+
+
             <!-- TEXT SECTION -->
             <section id="text">
                 <h2>Text Tags</h2>
-                <div class="tag-card" data-tag="!DOCTYPE" onclick="openModal('!doctype')">
-                    &lt;!doctype&gt;<span class="tooltip">Click for more details</span>
-                </div>
-                <div class="tag-card" data-tag="h1" onclick="openModal('h1')">
-                    &lt;h1&gt; Heading<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="Paragraph" onclick="openModal('p')">
-                    &lt;p&gt; Paragraph<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="bold" onclick="openModal('b')">
-                    &lt;b&gt; Bold<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="!DOCTYPE" onclick="openModal('!doctype')">
+                        &lt;!doctype&gt;<span class="tooltip">Click for more details</span>
+                    </div>
+                    <div class="tag-card" data-tag="h1" onclick="openModal('h1')">
+                        &lt;h1&gt; Heading<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="Paragraph" onclick="openModal('p')">
+                        &lt;p&gt; Paragraph<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="bold" onclick="openModal('b')">
+                        &lt;b&gt; Bold<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
                 <a href="/pages/text-tag.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
             </section>
@@ -139,51 +143,57 @@
             <!-- Links Section -->
             <section id="links">
                 <h2>Link Tags</h2>
-                <div class="tag-card" data-tag="Anchor" onclick="openModal('a')">
-                    &lt;a&gt; Anchor Link<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="Navigation" onclick="openModal('nav')">
-                    &lt;nav&gt; Navigation<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="href" onclick="openModal('href')">
-                    &lt;href&gt; Hyperlink Reference<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="target" onclick="openModal('target')">
-                    &lt;target&gt; Target Attribute<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="Anchor" onclick="openModal('a')">
+                        &lt;a&gt; Anchor Link<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="Navigation" onclick="openModal('nav')">
+                        &lt;nav&gt; Navigation<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="href" onclick="openModal('href')">
+                        &lt;href&gt; Hyperlink Reference<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="target" onclick="openModal('target')">
+                        &lt;target&gt; Target Attribute<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
             </section>
 
             <!-- LISTS SECTION -->
             <section id="lists">
                 <h2>List Tags</h2>
-                <div class="tag-card" data-tag="ul" onclick="openModal('ul')">
-                    &lt;ul&gt; Unordered List<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="ol" onclick="openModal('ol')">
-                    &lt;ol&gt; Ordered List<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="li" onclick="openModal('li')">
-                    &lt;li&gt; List Item<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="dl" onclick="openModal('dl')">
-                    &lt;dl&gt; Description List<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="dt" onclick="openModal('dt')">
-                    &lt;dt&gt; Description Term<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="dd" onclick="openModal('dd')">
-                    &lt;dd&gt; Description Definition<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="ul" onclick="openModal('ul')">
+                        &lt;ul&gt; Unordered List<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="ol" onclick="openModal('ol')">
+                        &lt;ol&gt; Ordered List<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="li" onclick="openModal('li')">
+                        &lt;li&gt; List Item<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="dl" onclick="openModal('dl')">
+                        &lt;dl&gt; Description List<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="dt" onclick="openModal('dt')">
+                        &lt;dt&gt; Description Term<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="dd" onclick="openModal('dd')">
+                        &lt;dd&gt; Description Definition<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
             </section>
 
             <!-- Forms Section -->
             <section id="forms">
                 <h2>Form Tags</h2>
-                <div class="tag-card" data-tag="form" onclick="openModal('form')">
-                    &lt;form&gt; Form<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="input" onclick="openModal('input')">
-                    &lt;input&gt; Input<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="form" onclick="openModal('form')">
+                        &lt;form&gt; Form<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="input" onclick="openModal('input')">
+                        &lt;input&gt; Input<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
                 <a href="/pages/form-tag.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
             </section>
@@ -191,11 +201,13 @@
             <!-- Media Section -->
             <section id="media">
                 <h2>Media Tags</h2>
-                <div class="tag-card" data-tag="img" onclick="openModal('img')">
-                    &lt;img&gt; Image<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="audio" onclick="openModal('audio')">
-                    &lt;audio&gt; Audio<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="img" onclick="openModal('img')">
+                        &lt;img&gt; Image<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="audio" onclick="openModal('audio')">
+                        &lt;audio&gt; Audio<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
                 <a href="/pages/semantic-media.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
             </section>
@@ -203,12 +215,15 @@
             <!-- Semmentic Section -->
             <section id="Semantic Tags">
                 <h2>Semantic Tags (HTML5)</h2>
-                <div class="tag-card" data-tag="header" onclick="openModal('header')">
-                    &lt;header&gt; Header<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="header" onclick="openModal('header')">
+                        &lt;header&gt; Header<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="footer" onclick="openModal('footer')">
+                        &lt;footer&gt; Footer<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
-                <div class="tag-card" data-tag="footer" onclick="openModal('footer')">
-                    &lt;footer&gt; Footer<span class="tooltip">Click for details</span>
-                </div>
+
                 <a href="/pages/semantic-media.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
             </section>
 
@@ -216,32 +231,34 @@
             <!-- Table Sectin -->
             <section id="tables">
                 <h2>Table Tags</h2>
-                <div class="tag-card" data-tag="tables" onclick="openModal('table')">
-                    &lt;table&gt; Table<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="tr" onclick="openModal('tr')">
-                    &lt;tr&gt; Table Row<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="td" onclick="openModal('td')">
-                    &lt;td&gt; Table Data Cell<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="Table header" onclick="openModal('th')">
-                    &lt;th&gt; Table Header Cell<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="caption" onclick="openModal('caption')">
-                    &lt;caption&gt; Table Caption<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="table body" onclick="openModal('tbody')">
-                    &lt;tbody&gt; Table Body<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="table foot" onclick="openModal('tfoot')">
-                    &lt;tfoot&gt; Table Footer<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="column group" onclick="openModal('colgroup')">
-                    &lt;colgroup&gt; Column Group<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="column" onclick="openModal('col')">
-                    &lt;col&gt; Column<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="tables" onclick="openModal('table')">
+                        &lt;table&gt; Table<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="tr" onclick="openModal('tr')">
+                        &lt;tr&gt; Table Row<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="td" onclick="openModal('td')">
+                        &lt;td&gt; Table Data Cell<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="Table header" onclick="openModal('th')">
+                        &lt;th&gt; Table Header Cell<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="caption" onclick="openModal('caption')">
+                        &lt;caption&gt; Table Caption<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="table body" onclick="openModal('tbody')">
+                        &lt;tbody&gt; Table Body<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="table foot" onclick="openModal('tfoot')">
+                        &lt;tfoot&gt; Table Footer<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="column group" onclick="openModal('colgroup')">
+                        &lt;colgroup&gt; Column Group<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="column" onclick="openModal('col')">
+                        &lt;col&gt; Column<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
             </section>
 
@@ -249,14 +266,16 @@
             <!-- Other HTML tags -->
             <section id="Other-tags">
                 <h2>Other HTML5 Tags</h2>
-                <div class="tag-card" data-tag="Citation" onclick="openModal('cite')">
-                    &lt;cite&gt; Citation<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="inline quote" onclick="openModal('q')">
-                    &lt;q&gt; Inline Quote<span class="tooltip">Click for details</span>
-                </div>
-                <div class="tag-card" data-tag="blockquote" onclick="openModal('blockquote')">
-                    &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="Citation" onclick="openModal('cite')">
+                        &lt;cite&gt; Citation<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="inline quote" onclick="openModal('q')">
+                        &lt;q&gt; Inline Quote<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="blockquote" onclick="openModal('blockquote')">
+                        &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
+                    </div>
                 </div>
                 <a href="/pages/other-tags.html" class="more-tags-link">➕ Click here to view and enjoy more tags</a>
             </section>
@@ -357,7 +376,7 @@
 
 
     <!-- ── MODAL ────────────────────────────────────────── -->
-    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <!-- <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div id="modal-content">
             <span id="close-modal" onclick="closeModal()" role="button" aria-label="Close modal">&times;</span>
             <button class="modal-toggle" onclick="toggleModalTheme()" aria-label="Toggle modal theme">
@@ -383,46 +402,82 @@
                 <p id="quiz-feedback" aria-live="polite"></p>
             </div>
         </div>
+    </div> -->
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div id="modal-content">
+            <!-- Top Toolbar / Breadcrumbs -->
+            <div class="modal-header-bar">
+                <button id="close-modal" onclick="closeModal()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <div class="breadcrumbs">Text Tags &gt; <span id="modal-title" style="color: #64ffda;">&lt;h1&gt;
+                        Heading Tag</span></div>
+                <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
+            </div>
+
+            <!-- Main Body Wrapper Grid -->
+            <div class="modal-body-layout">
+
+                <!-- ⬅️ Left Panel: Text Information -->
+                <div class="modal-left">
+                    <div class="info-block">
+                        <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
+                        <div id="modal-history">Loading history and usage notes...</div>
+                    </div>
+
+                    <div class="info-block tip-box">
+                        <h4>💡 Tip</h4>
+                        <p>Use heading tags in order: &lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt; for better structure and SEO.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ➡️ Right Panel: Editor & Quiz Tools -->
+                <div class="modal-right">
+
+                    <!-- Live Code Box -->
+                    <div class="editor-wrapper">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                        </div>
+                        <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
+
+                        <div class="editor-actions">
+                            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+                            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                        </div>
+                    </div>
+
+                    <!-- Preview Output Window -->
+                    <div class="preview-wrapper">
+                        <div class="preview-header">Output</div>
+                        <iframe id="live-preview" title="Live code preview"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+
+                    <!-- Multiple Choice Quiz Box -->
+                    <div class="quiz-section" id="quiz">
+                        <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
+                        <p id="quiz-question">Which tag is used for the most important heading in HTML?</p>
+
+                        <!-- 🛠️ Dynamic Quiz Input: Multiple choice system as requested in picture -->
+                        <div class="quiz-options-group">
+                            <input type="text" id="quiz-answer" placeholder="Type your answer here (e.g. h1)"
+                                aria-label="Quiz answer" />
+                            <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                        </div>
+                        <p id="quiz-feedback" aria-live="polite"></p>
+                    </div>
+
+                </div> <!-- modal-right ends -->
+
+            </div> <!-- modal-body-layout ends -->
+        </div>
     </div>
+
 
     <!-- scroll buttons -->
     <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
     <button id="scrollBottomBtn" aria-label="Scroll to bottom"><i class="fa-solid fa-angles-down fa-beat"></i></button>
 
-    <!-- footer -->
-    <!-- <footer>
-            <div class="tag-card">
-                <img src="/assets/adan.png" alt="Profile photo of Adan Suhail" class="DP" />
-                <h3>Adan Suhail</h3>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/adansuhailch13/?__pwa=1#" target="_blank" aria-label="Instagram"
-                        class="icon"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="http://www.youtube.com/@Hafizadanadansuhail" target="_blank" aria-label="YouTube"
-                        class="icon"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://github.com/adansuhailch-cell" target="_blank" aria-label="GitHub" class="icon"><i
-                            class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/hafiz-adan-suhail-2676a13b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BG6RcmMyDSFWK5rGHtB36Hw%3D%3D"
-                        target="_blank" aria-label="LinkedIn" class="icon"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://wa.me/923074449331?text=Hi%20Hafiz%20Adan%20Suhail%20i%20want%20to%20appreciate%20you%20and%20want%20a%20source%20code%20of%20%22...%22%20website"
-                        target="_blank" aria-label="whatsapp" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://discord.gg/kKDSCWZfWZ" target="_blank" aria-label="Discord" class="icon"><i
-                            class="fa-brands fa-discord"></i></a>
-                </div>
-            </div>
-            <p>
-                🎨 Want to play with colors?
-                <a href="https://amazing-color-picker.vercel.app/">Try my Color Picker</a>
-            </p>
-            <p>
-                📝 Take our Tag Web Test to join our WhatsApp Community!
-                <a href="https://tag-web-digitaltest.netlify.app/">Try it out</a>
-            </p>
-            <p><a href="https://adandev.is-a.dev/">About me..!!</a></p>
-            <p>
-                &copy; 2025 Tag Web. Built with ❤️ for web learners by
-                <strong>Hafiz Adan Suhail</strong> 😎
-            </p>
-        </footer> -->
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-col-about">
@@ -455,7 +510,7 @@
                 <h4>Follow</h4>
                 <div class="social-icons">
                     <a href="https://discord.gg/kKDSCWZfWZ" target="_blank" aria-label="Discord" class="icon"><i
-                        class="fa-brands fa-discord"></i></a>
+                            class="fa-brands fa-discord"></i></a>
                     <a href="https://www.instagram.com/adansuhailch13/?__pwa=1#" target="_blank" aria-label="Instagram"
                         class="icon"><i class="fa-brands fa-instagram"></i></a>
                     <a href="http://www.youtube.com/@Hafizadanadansuhail" target="_blank" aria-label="YouTube"
