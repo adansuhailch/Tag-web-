@@ -1,0 +1,107 @@
+{
+    "background-image": {
+        "title": "<background-image>",
+        "history": "Sets one or more background images (url(), gradients).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>background-image</title></head><body style=\"background-image:url('https://via.placeholder.com/600x200');\">\n  <h1>background-image demo</h1>\n  <p>Background image applied to body.</p>\n</body></html>",
+        "quiz": "Which property sets a background image?",
+        "answer": "background-image"
+    },
+    "background-repeat": {
+        "title": "<background-repeat>",
+        "history": "Controls tiling of background images (repeat, no-repeat, repeat-x, repeat-y, space, round).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>background-repeat</title></head><body style=\"background-image:url('https://via.placeholder.com/150'); background-repeat:no-repeat;\">\n  <h1>background-repeat demo</h1>\n</body></html>",
+        "quiz": "Which property controls background tiling?",
+        "answer": "background-repeat"
+    },
+    "background-position": {
+        "title": "<background-position>",
+        "history": "Sets initial position of background image (keywords, percentages, lengths).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>background-position</title></head><body style=\"background-image:url('https://via.placeholder.com/300'); background-position:right top;\">\n  <h1>background-position demo</h1>\n</body></html>",
+        "quiz": "Which property sets the background image position?",
+        "answer": "background-position"
+    },
+    "background-size": {
+        "title": "<background-size>",
+        "history": "Controls size of background images (cover, contain, or explicit sizes).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>background-size</title></head><body style=\"background-image:url('https://via.placeholder.com/800x400'); background-size:cover;\">\n  <h1>background-size demo</h1>\n</body></html>",
+        "quiz": "Which property scales the background image?",
+        "answer": "background-size"
+    },
+    "background-attachment": {
+        "title": "<background-attachment>",
+        "history": "Determines whether background scrolls with content or is fixed to viewport (scroll, fixed, local).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>background-attachment</title></head><body style=\"background-image:url('https://via.placeholder.com/800x600'); background-attachment:fixed;\">\n  <h1>background-attachment demo</h1>\n</body></html>",
+        "quiz": "Which property fixes the background to the viewport?",
+        "answer": "background-attachment"
+    },
+    "background-origin": {
+        "title": "<background-origin>",
+        "history": "Specifies the box (border-box, padding-box, content-box) used to position/clip the background.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>background-origin</title></head><body>\n  <div style=\"width:300px;height:120px;border:20px solid #ccc;padding:16px;background:url('https://via.placeholder.com/200') no-repeat;background-origin:content-box;\">\n    <h1>background-origin demo</h1>\n  </div>\n</body></html>",
+        "quiz": "Which property sets the box used for background positioning?",
+        "answer": "background-origin"
+    },
+    "background-blend-mode": {
+        "title": "<background-blend-mode>",
+        "history": "Blends background layers and background-color using blend modes (multiply, screen, overlay, etc.).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>background-blend-mode</title></head><body style=\"background-image:linear-gradient(rgba(255,0,0,0.5),rgba(0,0,255,0.5)), url('https://via.placeholder.com/600'); background-blend-mode:multiply;\">\n  <h1>background-blend-mode demo</h1>\n</body></html>",
+        "quiz": "Which property blends multiple background layers?",
+        "answer": "background-blend-mode"
+    },
+    "multiple-backgrounds": {
+        "title": "<multiple backgrounds>",
+        "history": "CSS allows multiple comma-separated background layers; order matters (first is topmost).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\"><title>multiple backgrounds</title></head><body style=\"background-image:url('https://via.placeholder.com/200'), linear-gradient(45deg, rgba(255,255,0,0.3), rgba(0,255,255,0.3)); background-repeat:no-repeat,repeat;\">\n  <h1>multiple backgrounds demo</h1>\n</body></html>",
+        "quiz": "How do you apply more than one background image to an element?",
+        "answer": "Use comma-separated values in background-image"
+    },
+    "gradients": {
+        "title": "Gradients",
+        "history": "CSS gradients allow smooth transitions between colors without images (linear, radial, conic).",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Gradients Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 100px;\n    background: linear-gradient(to right, red, blue);\n  }\n</style>\n</head>\n<body>\n<h2>CSS Gradients Example</h2>\n<div class=\"box\">This box uses a linear gradient.</div>\n</body>\n</html>",
+        "quiz": "Which CSS feature creates smooth color transitions without images?",
+        "answer": "gradients"
+    },
+    "layering": {
+        "title": "Background Layering",
+        "history": "Each background layer can be controlled separately with properties like background-size, background-position, etc.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Background Layering Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 100px;\n    background: url('a.png'), linear-gradient(to right, yellow, green);\n    background-size: contain, cover;\n  }\n</style>\n</head>\n<body>\n<h2>CSS Background Layering Example</h2>\n<div class=\"box\">This box has layered backgrounds.</div>\n</body>\n</html>",
+        "quiz": "Which feature allows controlling each background layer separately?",
+        "answer": "Background layering"
+    },
+    "conic-gradient": {
+        "title": "conic-gradient() Function",
+        "history": "The conic-gradient() function creates pie chart-like circular gradients without images.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Conic-Gradient Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 200px;\n    background: conic-gradient(red, yellow, green, blue);\n    border-radius: 50%;\n  }\n</style>\n</head>\n<body>\n<h2>CSS conic-gradient() Example</h2>\n<div class=\"box\">This box uses conic-gradient.</div>\n</body>\n</html>",
+        "quiz": "Which function creates pie chart-like circular gradients?",
+        "answer": "conic-gradient()"
+    },
+    "background-clip-text": {
+        "title": "background-clip: text",
+        "history": "Using background-clip: text fills text with an image or gradient instead of solid color.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Background-Clip Text Example</title>\n<style>\n  .text {\n    font-size: 40px;\n    background: linear-gradient(to right, red, blue);\n    -webkit-background-clip: text;\n    color: transparent;\n  }\n</style>\n</head>\n<body>\n<h2>CSS background-clip:text Example</h2>\n<p class=\"text\">Gradient Text</p>\n</body>\n</html>",
+        "quiz": "Which property can fill text with an image or gradient?",
+        "answer": "background-clip: text"
+    },
+    "houdiniPaintDemo": {
+        "title": "<CSS Houdini Paint API>",
+        "history": "Paint worklets draw custom CSS images off the main thread; use feature detection before registering.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Houdini Paint Demo</title>\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <style>\n    .card{width:320px;height:160px;border-radius:8px;background:paint(stripes);display:flex;align-items:center;justify-content:center;color:#fff}\n  </style>\n</head>\n<body>\n  <h1>Houdini Paint API Demo</h1>\n  <div class=\"card\">Painted background</div>\n  <script>\n    const code = `\n      class Stripes {\n        paint(ctx, size) {\n          ctx.fillStyle='#222'; ctx.fillRect(0,0,size.width,size.height);\n          ctx.fillStyle='#6cf'; for(let x=0;x<size.width;x+=30){ ctx.fillRect(x,0,15,size.height); }\n        }\n      }\n      registerPaint('stripes', Stripes);\n    `;\n    if ('paintWorklet' in CSS) {\n      const blob = new Blob([code], {type:'application/javascript'});\n      CSS.paintWorklet.addModule(URL.createObjectURL(blob));\n    } else {\n      console.warn('Paint API not supported');\n    }\n  </script>\n</body>\n</html>",
+        "quiz": "What API lets you draw custom CSS backgrounds using worklets?",
+        "answer": "CSS Houdini Paint API"
+    },
+    "cssLogicalProperties": {
+        "title": "<CSS Logical Properties>",
+        "history": "Logical properties map layout to flow-relative directions (inline/block/start/end) and help with internationalization.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>CSS Logical Properties Demo</title>\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <style>\n    body{font-family:Arial;padding:16px}\n    .box{border:1px solid #ccc;padding:12px;margin-block:12px;margin-inline:8px}\n    .example{padding-inline:16px;padding-block:8px;background:#f4f8ff}\n  </style>\n</head>\n<body>\n  <h1>Logical Properties Example</h1>\n  <p>Using <code>margin-inline</code> and <code>padding-block</code> instead of left/right/top/bottom.</p>\n  <div class=\"box example\" dir=\"ltr\">LTR: margin-inline applies left/right</div>\n  <div class=\"box example\" dir=\"rtl\">RTL: margin-inline flips automatically</div>\n</body>\n</html>",
+        "quiz": "Which CSS feature maps layout to flow-relative directions for RTL/LTR support?",
+        "answer": "CSS logical properties"
+    },
+    "systemColors": {
+        "title": "<System Colors / Color Keywords>",
+        "history": "CSS provides named color keywords and system color mappings to match platform UI; use keywords or hex/RGB values.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>System Colors Demo</title>\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <style>\n    body{font-family:Arial;padding:16px}\n    .swatch{display:inline-block;width:120px;height:60px;margin:8px;border:1px solid #ccc;text-align:center;line-height:60px}\n    .red{background:crimson} .navy{background:navy;color:#fff} .system{background:ButtonFace;color:ButtonText}\n  </style>\n</head>\n<body>\n  <h1>System Colors and Keywords</h1>\n  <div class=\"swatch red\">crimson</div>\n  <div class=\"swatch navy\">navy</div>\n  <div class=\"swatch system\">ButtonFace</div>\n  <p>Use named keywords or hex/RGB for precise control.</p>\n</body>\n</html>",
+        "quiz": "What CSS values let you use named colors or platform UI colors?",
+        "answer": "color keywords / system colors"
+    }
+}

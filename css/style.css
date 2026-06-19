@@ -169,7 +169,7 @@ a {
     transition: color 0.2s;
 }
 
-a:hover {
+a:not(.no-hover) :hover {
     color: var(--nav-link-hover);
 }
 
@@ -408,11 +408,11 @@ html[data-theme="light"] #theme-switch svg:last-child {
     width: 270px;
     min-width: 270px;
     background-color: #0d1220;
-    border:3px solid rgba(255, 255, 255, 0.05);
-    margin:20px 0 20px 20px;
+    border: 3px solid rgba(255, 255, 255, 0.05);
+    margin: 20px 0 20px 20px;
     border-radius: 20px;
     height: max-content;
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 24px 16px;
@@ -604,17 +604,18 @@ html[data-theme="light"] #theme-switch svg:last-child {
     transition: all 0.3s ease;
 }
 
-.btn-whatsapp {
-    background: linear-gradient(135deg, #00b05c, #008f4c);
+.btn-discord {
+    background: linear-gradient(135deg, #2c37ad, #2b37b4);
     color: #ffffff;
     border: none;
-    box-shadow: 0 4px 12px rgba(0, 176, 92, 0.2);
+    box-shadow: 0 4px 12px rgba(29, 39, 153, 0.3);
 }
 
-.btn-whatsapp:hover {
-    background: linear-gradient(135deg, #00c467, #00a357);
+.btn-discord:hover {
+    background: linear-gradient(135deg, #252d86, #212b97);
     transform: translateY(-1px);
 }
+
 
 .icon-palette,
 .icon-moon {
@@ -935,13 +936,14 @@ section {
     background: var(--bg-modal, #0a1120);
     color: var(--text-primary, #ffffff);
     padding: 24px;
-    max-width: 1200px; /* 🚀 Photo ki tarah bada landscape layout dene ke liye size barhaya */
+    max-width: 1200px;
+    /* 🚀 Photo ki tarah bada landscape layout dene ke liye size barhaya */
     width: 95%;
     border-radius: 16px;
     position: relative;
     max-height: 92vh;
     overflow-y: auto;
-    border: 1px solid var(--border-modal, rgba(255,255,255,0.08));
+    border: 1px solid var(--border-modal, rgba(255, 255, 255, 0.08));
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
@@ -956,27 +958,35 @@ section {
 }
 
 #close-modal {
-    position: static; /* Remove absolute positioning */
+    position: static;
+    /* Remove absolute positioning */
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
 }
-#close-modal:hover { color: #ff5555; background: rgba(255, 85, 85, 0.1); }
+
+#close-modal:hover {
+    color: #ff5555;
+    background: rgba(255, 85, 85, 0.1);
+}
 
 /* 🚀 MAIN SPLIT SCREEN SYSTEM GRID */
 .modal-body-layout {
     display: flex;
-    gap: 24px; /* Space between columns */
-    flex-wrap: wrap; /* Mobile friendly responsive behavior */
+    gap: 24px;
+    /* Space between columns */
+    flex-wrap: wrap;
+    /* Mobile friendly responsive behavior */
 }
 
 /* Left panel text management */
 .modal-left {
-    flex: 1 1 350px; /* 35% minimum space distribution */
+    flex: 1 1 350px;
+    /* 35% minimum space distribution */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -984,7 +994,8 @@ section {
 
 /* Right panel interactive zone */
 .modal-right {
-    flex: 2 1 550px; /* 65% space distribution for editor tools */
+    flex: 2 1 550px;
+    /* 65% space distribution for editor tools */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -993,39 +1004,44 @@ section {
 /* 🎨 Live Code Box Textarea adjustments */
 .editor-wrapper {
     background: #0d1527;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     overflow: hidden;
 }
+
 .editor-header {
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     padding: 10px 16px;
     font-size: 13px;
     font-weight: 600;
     color: #9ca3af;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 #modal-editor {
     width: 100%;
     height: 140px;
     background: transparent;
     border: none;
-    color: #38bdf8; /* Coding cyan color */
+    color: #38bdf8;
+    /* Coding cyan color */
     font-family: 'Courier New', Courier, monospace;
     padding: 15px;
     font-size: 15px;
     resize: vertical;
     outline: none;
 }
+
 .editor-actions {
     padding: 10px 15px;
     display: flex;
     gap: 10px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 /* Run & Copy sleek actions elements buttons */
-.run-btn, .copy-btn {
+.run-btn,
+.copy-btn {
     padding: 6px 14px;
     font-size: 13px;
     border-radius: 6px;
@@ -1033,16 +1049,27 @@ section {
     cursor: pointer;
     font-weight: 500;
 }
-.run-btn { background: #059669; color: white; }
-.copy-btn { background: rgba(255,255,255,0.05); color: white; border: 1px solid rgba(255,255,255,0.1); }
+
+.run-btn {
+    background: #059669;
+    color: white;
+}
+
+.copy-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 /* 🖼️ Embedded window outputs view configurations */
 .preview-wrapper {
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    background: #ffffff; /* White document simulation box */
+    background: #ffffff;
+    /* White document simulation box */
     overflow: hidden;
 }
+
 .preview-header {
     background: #f3f4f6;
     color: #374151;
@@ -1050,6 +1077,7 @@ section {
     font-size: 12px;
     font-weight: 600;
 }
+
 #live-preview {
     width: 100%;
     height: 150px;
@@ -1071,15 +1099,17 @@ section {
     gap: 10px;
     margin-top: 10px;
 }
+
 #quiz-answer {
     flex: 1;
     padding: 10px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 8px;
     outline: none;
 }
+
 .quiz-btn {
     background: #2563eb;
     color: white;

@@ -18,7 +18,16 @@
 
 <body>
     <header>
-        <h1>Ultimate CSS Playground</h1>
+        <div class="logo">
+            <img src="/assets/tag web logo.png" alt="Tag Web logo" class="dra-LOGO" />
+            <span class="brand-wordmark">Tag Web</span>
+        </div>
+
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchBar" placeholder="Search Topics, Tags..." onkeyup="searchTag()"
+                aria-label="Search HTML tags" />
+        </div>
 
         <button id="theme-switch">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
@@ -30,234 +39,319 @@
                     d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
             </svg>
         </button>
-        <div class="nav-container">
-            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="#Text-fonts">Text & Fonts</a></li>
-                    <li class="dropdown">
-                        <a href="#Box model">Box Model</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/pages/css-background.html">🔹Core Layers</a></li>
-                            <li><a href="/pages/css-dimension-sixe.html">🔹Dimension & Sizing</a></li>
-                            <li><a href="/pages/css-layout.html">🔹Position & Layout</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#Css Backgrounds">Backgrounds</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/pages/css-background.html#Most Common(Stable & Widely Used)">🔹Most Common</a>
-                            </li>
-                            <li><a
-                                    href="/pages/css-background.html#Advanced / Modern Properties (2020–2025)">🔹Advanced</a>
-                            </li>
-                            <li><a href="/pages/css-background.html#New / Less Common but Powerful">🔹New & Powerful</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="/pages/css-layout.html">Layout</a></li>
-                    <li><a href="/pages/css-flex.html">Flexbox</a></li>
-                    <li><a href="/pages/css-grid.html">Grid</a></li>
-                    <li><a href="/pages/css-effects.html">Effects</a></li>
-                    <li><a href="/pages/css-animation.html">Animations</a></li>
-                    <li><a href="/pages/other-css-tags.html">Others</a></li>
-                    <li><a href="../index.html">New HTML:5 Tags</a></li>
-                </ul>
-            </nav>
+
+        <div class="button-group">
+            <a href="https://amazing-color-picker.vercel.app/" target="_blank"><button class="btn btn-dark">
+                    <span class="icon-palette">🎨</span> Color Lab
+                </button>
+            </a>
+
+            <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover">
+                <i class="fa-brands fa-discord"></i>Join Community
+            </a>
+
         </div>
-        <div class="search-container">
-            <input type="text" id="searchBar" placeholder="Search tag..." onkeyup="searchTag()">
-        </div>
+
+
     </header>
+    <div class="page-container">
+        <aside class="sidebar-panel">
+            <ul class="nav-list">
+                <li class="active"><a href="#text">📝 Text Tags</a></li>
+                <li> <a href="#Box model">Box Model</a></li>
+                <li><a href="/pages/css-background.html">🔹Core Layers</a></li>
+                <li><a href="/pages/css-dimension-sixe.html">🔹Dimension & Sizing</a></li>
+                <li><a href="/pages/css-layout.html">🔹Position & Layout</a></li>
+                <li><a href="#Css Backgrounds">Backgrounds</a></li>
+                <li><a href="/pages/css-background.html#Most Common(Stable & Widely Used)">🔹Most Common</a>
+                </li>
+                <li><a href="/pages/css-background.html#Advanced / Modern Properties (2020–2025)">🔹Advanced</a>
+                </li>
+                <li><a href="/pages/css-background.html#New / Less Common but Powerful">🔹New & Powerful</a>
+                </li>
+                </li>
+                <li><a href="/pages/css-layout.html">Layout</a></li>
+                <li><a href="/pages/css-flex.html">Flexbox</a></li>
+                <li><a href="/pages/css-grid.html">Grid</a></li>
+                <li><a href="/pages/css-effects.html">Effects</a></li>
+                <li><a href="/pages/css-animation.html">Animations</a></li>
+                <li><a href="/pages/other-css-tags.html">Others</a></li>
+                <li><a href="../index.html">New HTML:5 Tags</a></li>
+            </ul>
+        </aside>
+        <main class="content-panel">
+            <section id="Text-fonts">
+                <h2>Text & fonts</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="white-space" onclick="openModal('white-space')">white-space<span
+                            class="tooltip">Click
+                            for details</span></div>
+                    <div class="tag-card" data-tag="tab-size" onclick="openModal('tab-size')">tab-size<span
+                            class="tooltip">Click
+                            for
+                            details</span></div>
+
+                    <div class="tag-card" data-tag="font-stretch" onclick="openModal('font-stretch')">font-stretch<span
+                            class="tooltip">Click for details</span></div>
+                    <div class="tag-card" data-tag="font" onclick="openModal('font')">font (shorthand)<span
+                            class="tooltip">Click
+                            for
+                            details</span></div>
+
+                </div>
+                <a href="/pages/css-text-fonts.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+
+            <section id="Box model">
+                <h2>Box model(Core layers)</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="width" onclick="openModal('width')">width<span class="tooltip">Click
+                            for
+                            details</span>
+                    </div>
+                    <div class="tag-card" data-tag="padding" onclick="openModal('padding')">padding <span
+                            class="tooltip">Click for
+                            details</span></div>
+                    <div class="tag-card" data-tag="margin-top" onclick="openModal('margin-top')">margin-top<span
+                            class="tooltip">Click
+                            for details</span></div>
+                </div>
+                <a href="/pages/css-boxmodel.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+            <section id="Css Backgrounds">
+                <h2>Css Backgrounds</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="background-color" onclick="openModal('background-color')">
+                        background-color
+                        <span class="tooltip">Click for details</span>
+                    </div>
 
 
-    <section id="Text-fonts">
-        <h2>Text & fonts</h2>
-        <div class="tag-card" data-tag="white-space" onclick="openModal('white-space')">white-space<span
-                class="tooltip">Click
-                for details</span></div>
-        <div class="tag-card" data-tag="tab-size" onclick="openModal('tab-size')">tab-size<span class="tooltip">Click
-                for
-                details</span></div>
-        </div>
-        <div class="tag-card" data-tag="font-stretch" onclick="openModal('font-stretch')">font-stretch<span
-                class="tooltip">Click for details</span></div>
-        <div class="tag-card" data-tag="font" onclick="openModal('font')">font (shorthand)<span class="tooltip">Click
-                for
-                details</span></div>
-        <a href="/pages/css-text-fonts.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
+                    <div class="tag-card" data-tag="background-shorthand" onclick="openModal('background-shorthand')">
+                        background (shorthand)
+                        <span class="tooltip">Click for details</span>
+                    </div>
 
-    <section id="Box model">
-        <h2>Box model(Core layers)</h2>
-        <div class="tag-card" data-tag="width" onclick="openModal('width')">width<span class="tooltip">Click for
-                details</span>
-        </div>
-        <div class="tag-card" data-tag="padding" onclick="openModal('padding')">padding <span class="tooltip">Click for
-                details</span></div>
-        <div class="tag-card" data-tag="margin-top" onclick="openModal('margin-top')">margin-top<span
-                class="tooltip">Click
-                for details</span></div>
-        <a href="/pages/css-boxmodel.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
-    <section id="Css Backgrounds">
-        <!-- 🔹 Most Common / Purane Properties (Stable & Widely Used) -->
-        <h2>Css Backgrounds</h2>
-        <div class="tag-card" data-tag="background-color" onclick="openModal('background-color')">
-            background-color
-            <span class="tooltip">Click for details</span>
-        </div>
+                    <!-- Advanced 2020–2025 -->
+                    <div class="tag-card" data-tag="background-clip" onclick="openModal('background-clip')">
+                        background-clip
+                        <span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="houdini" onclick="openModal('houdiniPaint')">
+                        CSS Houdini Paint API
+                        <span class="tooltip">Click for details</span>
+                    </div>
+                </div>
+                <a href="/pages/css-background.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+            <section id="css Layout">
+                <h2>Css Layouts</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="tables-layout" onclick="openModal('tables-layout')">
+                        Tables (Old Layout)<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="flexbox" onclick="openModal('flexbox')">
+                        Flexbox<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="subgrid" onclick="openModal('subgrid')">
+                        Subgrid<span class="tooltip">Click for details</span>
+                    </div>
+                    <div class="tag-card" data-tag="multi-column-power" onclick="openModal('multi-column-power')">
+                        Multi-column (Powerful)<span class="tooltip">Click for details</span>
+                    </div>
+                </div>
+                <a href="/pages/css-layout.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+            <section id="Flexbox">
+                <h2>Css Flexbox</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="flex-direction" onclick="openModal('flex-direction')">
+                        flex-direction<span class="tooltip">Click for details</span>
+                    </div>
 
+                    <!-- flex-wrap -->
+                    <div class="tag-card" data-tag="flex-wrap" onclick="openModal('flex-wrap')">
+                        flex-wrap<span class="tooltip">Click for details</span>
+                    </div>
 
-        <div class="tag-card" data-tag="background-shorthand" onclick="openModal('background-shorthand')">
-            background (shorthand)
-            <span class="tooltip">Click for details</span>
-        </div>
+                    <!-- justify-content -->
+                    <div class="tag-card" data-tag="justify-content" onclick="openModal('justify-content')">
+                        justify-content<span class="tooltip">Click for details</span>
+                    </div>
+                </div>
+                <a href="/pages/css-flex.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+            <section>
+                <h2>Css grid</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="grid-template-columns" onclick="openModal('grid-template-columns')">
+                        grid-template-columns<span class="tooltip">Click for details</span>
+                    </div>
 
-        <!-- Advanced 2020–2025 -->
-        <div class="tag-card" data-tag="background-clip" onclick="openModal('background-clip')">
-            background-clip
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card" data-tag="houdini" onclick="openModal('houdiniPaint')">
-            CSS Houdini Paint API
-            <span class="tooltip">Click for details</span>
-        </div>
-        <a href="/pages/css-background.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
-    <section id="css Layout">
-        <h2>Css Layouts</h2>
-        <!-- old layouts -->
-        <div class="tag-card" data-tag="tables-layout" onclick="openModal('tables-layout')">
-            Tables (Old Layout)<span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card" data-tag="flexbox" onclick="openModal('flexbox')">
-            Flexbox<span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card" data-tag="subgrid" onclick="openModal('subgrid')">
-            Subgrid<span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card" data-tag="multi-column-power" onclick="openModal('multi-column-power')">
-            Multi-column (Powerful)<span class="tooltip">Click for details</span>
-        </div>
-        <a href="/pages/css-layout.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
-    <section id="Flexbox">
-        <h2>Css Flexbox</h2>
-        <!-- flex-direction -->
-        <div class="tag-card" data-tag="flex-direction" onclick="openModal('flex-direction')">
-            flex-direction<span class="tooltip">Click for details</span>
-        </div>
+                    <!-- grid-template-rows -->
+                    <div class="tag-card" data-tag="grid-template-rows" onclick="openModal('grid-template-rows')">
+                        grid-template-rows<span class="tooltip">Click for details</span>
+                    </div>
 
-        <!-- flex-wrap -->
-        <div class="tag-card" data-tag="flex-wrap" onclick="openModal('flex-wrap')">
-            flex-wrap<span class="tooltip">Click for details</span>
-        </div>
+                    <!-- gap -->
+                    <div class="tag-card" data-tag="gap" onclick="openModal('gap')">
+                        gap<span class="tooltip">Click for details</span>
+                    </div>
+                </div>
+                <a href="/pages/css-grid.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+            <section>
+                <h2>Css Effects</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="color-bg" onclick="openModal('color-bg')">
+                        color / background-color <span class="tooltip">Click for details</span>
+                    </div>
 
-        <!-- justify-content -->
-        <div class="tag-card" data-tag="justify-content" onclick="openModal('justify-content')">
-            justify-content<span class="tooltip">Click for details</span>
-        </div>
+                    <div class="tag-card" data-tag="opacity" onclick="openModal('opacity')">
+                        opacity <span class="tooltip">Click for details</span>
+                    </div>
 
-        <a href="/pages/css-flex.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
-    <section>
-        <h2>Css grid</h2>
-        <!-- grid-template-columns -->
-        <div class="tag-card" data-tag="grid-template-columns" onclick="openModal('grid-template-columns')">
-            grid-template-columns<span class="tooltip">Click for details</span>
-        </div>
+                    <div class="tag-card" data-tag="box-shadow" onclick="openModal('box-shadow')">
+                        box-shadow <span class="tooltip">Click for details</span>
+                    </div>
+                </div>
+                <a href="/pages/css-effects.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+            <section>
+                <h2>Css Animation</h2>
+                <div class="cards-grid">
+                    <div class="tag-card" data-tag="transition" onclick="openModal('transition')">
+                        transition <span class="tooltip">Click for details</span>
+                    </div>
 
-        <!-- grid-template-rows -->
-        <div class="tag-card" data-tag="grid-template-rows" onclick="openModal('grid-template-rows')">
-            grid-template-rows<span class="tooltip">Click for details</span>
-        </div>
+                    <div class="tag-card" data-tag="keyframes" onclick="openModal('keyframes')">
+                        @keyframes <span class="tooltip">Click for details</span>
+                    </div>
 
-        <!-- gap -->
-        <div class="tag-card" data-tag="gap" onclick="openModal('gap')">
-            gap<span class="tooltip">Click for details</span>
-        </div>
-        <a href="/pages/css-grid.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
-    <section>
-        <h2>Css Effects</h2>
+                    <div class="tag-card" data-tag="animation-basics" onclick="openModal('animation-basics')">
+                        animation-name / duration / delay <span class="tooltip">Click for details</span>
+                    </div>
+                </div>
+                <a href="/pages/css-animation.html"
+                    style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
+                    ➕ Click here to view and enjoy more tags
+                </a>
+            </section>
+        </main>
+        <div id="modal">
+            <div id="modal-content">
+                <span id="close-modal" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title">Tag Name</h3>
+                <p id="modal-history">History & Modern Use</p>
 
-        <div class="tag-card" data-tag="color-bg" onclick="openModal('color-bg')">
-            color / background-color <span class="tooltip">Click for details</span>
-        </div>
+                <h4>Example Code (Editable)</h4>
+                <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+                <textarea id="modal-editor"></textarea><br>
+                <button class="run-btn" onclick="runLiveCode()">Run Code</button>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
 
-        <div class="tag-card" data-tag="opacity" onclick="openModal('opacity')">
-            opacity <span class="tooltip">Click for details</span>
-        </div>
+                <iframe id="live-preview"></iframe>
 
-        <div class="tag-card" data-tag="box-shadow" onclick="openModal('box-shadow')">
-            box-shadow <span class="tooltip">Click for details</span>
-        </div>
+                <div class="quiz-section" id="quiz">
+                    <h4>Quiz:</h4>
+                    <p id="quiz-question"></p>
+                    <inp<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                        <div id="modal-content">
+                            <!-- Top Toolbar / Breadcrumbs -->
+                            <div class="modal-header-bar">
+                                <button id="close-modal" onclick="closeModal()"><i class="fa-solid fa-arrow-left"></i>
+                                    Back</button>
+                                <div class="breadcrumbs">Text Tags &gt; <span id="modal-title"
+                                        style="color: #64ffda;">&lt;h1&gt;
+                                        Heading Tag</span></div>
+                                <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
+                            </div>
 
-        <a href="/pages/css-effects.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
-    <section>
-        <h2>Css Animation</h2>
+                            <!-- Main Body Wrapper Grid -->
+                            <div class="modal-body-layout">
 
-        <div class="tag-card" data-tag="transition" onclick="openModal('transition')">
-            transition <span class="tooltip">Click for details</span>
-        </div>
+                                <!-- ⬅️ Left Panel: Text Information -->
+                                <div class="modal-left">
+                                    <div class="info-block">
+                                        <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
+                                        <div id="modal-history">Loading history and usage notes...</div>
+                                    </div>
 
-        <div class="tag-card" data-tag="keyframes" onclick="openModal('keyframes')">
-            @keyframes <span class="tooltip">Click for details</span>
-        </div>
+                                    <div class="info-block tip-box">
+                                        <h4>💡 Tip</h4>
+                                        <p>Use heading tags in order: &lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt; for better
+                                            structure and SEO.
+                                        </p>
+                                    </div>
+                                </div>
 
-        <div class="tag-card" data-tag="animation-basics" onclick="openModal('animation-basics')">
-            animation-name / duration / delay <span class="tooltip">Click for details</span>
-        </div>
-        <a href="/pages/css-animation.html"
-            style="display:block; margin-top:10px; color:#16a085; font-weight:bold; text-decoration:none;">
-            ➕ Click here to view and enjoy more tags
-        </a>
-    </section>
-    <div id="modal">
-        <div id="modal-content">
-            <span id="close-modal" onclick="closeModal()">&times;</span>
-            <h3 id="modal-title">Tag Name</h3>
-            <p id="modal-history">History & Modern Use</p>
+                                <!-- ➡️ Right Panel: Editor & Quiz Tools -->
+                                <div class="modal-right">
 
-            <h4>Example Code (Editable)</h4>
-            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
-            <textarea id="modal-editor"></textarea><br>
-            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
-            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                                    <!-- Live Code Box -->
+                                    <div class="editor-wrapper">
+                                        <div class="editor-header">
+                                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                                        </div>
+                                        <textarea id="modal-editor" aria-label="Editable code example"
+                                            spellcheck="false"></textarea>
 
-            <iframe id="live-preview"></iframe>
+                                        <div class="editor-actions">
+                                            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+                                            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                                        </div>
+                                    </div>
 
-            <div class="quiz-section" id="quiz">
-                <h4>Quiz:</h4>
-                <p id="quiz-question"></p>
-                <input type="text" id="quiz-answer" placeholder="Type your answer here">
+                                    <!-- Preview Output Window -->
+                                    <div class="preview-wrapper">
+                                        <div class="preview-header">Output</div>
+                                        <iframe id="live-preview" title="Live code preview"
+                                            sandbox="allow-scripts allow-same-origin"></iframe>
+                                    </div>
+
+                                    <!-- Multiple Choice Quiz Box -->
+                                    <div class="quiz-section" id="quiz">
+                                        <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
+                                        <p id="quiz-question">Which tag is used for the most important heading in HTML?
+                                        </p>
+
+                                        <!-- 🛠️ Dynamic Quiz Input: Multiple choice system as requested in picture -->
+                                        <div class="quiz-options-group">
+                                            <input type="text" id="quiz-answer"
+                                                placeholder="Type your answer here (e.g. h1)"
+                                                aria-label="Quiz answer" />
+                                            <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                                        </div>
+                                        <p id="quiz-feedback" aria-live="polite"></p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+                ut type="text" id="quiz-answer" placeholder="Type your answer here">
                 <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
                 <p id="quiz-feedback"></p>
             </div>

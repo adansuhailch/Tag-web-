@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Css(animation) Playground</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -19,136 +22,191 @@
     </header>
     <section>
         <h2>Basics (OLD / Most Used)</h2>
-        <!-- BASIC (OLD / MOST USED) -->
+        <div class="cards-grid">
+            <!-- BASIC (OLD / MOST USED) -->
 
-        <div class="tag-card" data-tag="iteration-count" onclick="openModal('iteration-count')">
-            animation-iteration-count <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="iteration-count" onclick="openModal('iteration-count')">
+                animation-iteration-count <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="animation-direction" onclick="openModal('animation-direction')">
-            animation-direction <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="animation-direction" onclick="openModal('animation-direction')">
+                animation-direction <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="fill-mode" onclick="openModal('fill-mode')">
-            animation-fill-mode <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="fill-mode" onclick="openModal('fill-mode')">
+                animation-fill-mode <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="play-state" onclick="openModal('play-state')">
-            animation-play-state <span class="tooltip">Click for details</span>
+            <div class="tag-card" data-tag="play-state" onclick="openModal('play-state')">
+                animation-play-state <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
     <section>
         <h2>INTERMEDIATE / ADVANCED</h2>
-        <!-- INTERMEDIATE / ADVANCED -->
-        <div class="tag-card" data-tag="timing-function" onclick="openModal('timing-function')">
-            animation-timing-function <span class="tooltip">Click for details</span>
-        </div>
+        <div class="cards-grid">
+            <!-- INTERMEDIATE / ADVANCED -->
+            <div class="tag-card" data-tag="timing-function" onclick="openModal('timing-function')">
+                animation-timing-function <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="steps" onclick="openModal('steps')">
-            steps() <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="steps" onclick="openModal('steps')">
+                steps() <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="multiple-animations" onclick="openModal('multiple-animations')">
-            Multiple animations <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="multiple-animations" onclick="openModal('multiple-animations')">
+                Multiple animations <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="transform-animation" onclick="openModal('transform-animation')">
-            transform + animation <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="transform-animation" onclick="openModal('transform-animation')">
+                transform + animation <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="transform-3d" onclick="openModal('transform-3d')">
-            3D transforms (rotateX, rotateY, perspective) <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="transform-3d" onclick="openModal('transform-3d')">
+                3D transforms (rotateX, rotateY, perspective) <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="filter-animation" onclick="openModal('filter-animation')">
-            filter + animation <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="filter-animation" onclick="openModal('filter-animation')">
+                filter + animation <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="clip-path-animation" onclick="openModal('clip-path-animation')">
-            clip-path + animation <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="clip-path-animation" onclick="openModal('clip-path-animation')">
+                clip-path + animation <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="backdrop-animation" onclick="openModal('backdrop-animation')">
-            backdrop-filter + animation <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="backdrop-animation" onclick="openModal('backdrop-animation')">
+                backdrop-filter + animation <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="will-change" onclick="openModal('will-change')">
-            will-change <span class="tooltip">Click for details</span>
+            <div class="tag-card" data-tag="will-change" onclick="openModal('will-change')">
+                will-change <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
     <section>
         <h2>LESS COMMON BUT POWERFUL</h2>
+        <div class="cards-grid">
 
-        <!-- LESS COMMON BUT POWERFUL -->
-        <div class="tag-card" data-tag="blend-animation" onclick="openModal('blend-animation')">
-            mix-blend-mode + animation <span class="tooltip">Click for details</span>
-        </div>
+            <!-- LESS COMMON BUT POWERFUL -->
+            <div class="tag-card" data-tag="blend-animation" onclick="openModal('blend-animation')">
+                mix-blend-mode + animation <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="motion-path" onclick="openModal('motion-path')">
-            Motion path (offset-path) <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="motion-path" onclick="openModal('motion-path')">
+                Motion path (offset-path) <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="scroll-snap-animation" onclick="openModal('scroll-snap-animation')">
-            Scroll-snap + animation <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="scroll-snap-animation" onclick="openModal('scroll-snap-animation')">
+                Scroll-snap + animation <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="shape-outside-animation" onclick="openModal('shape-outside-animation')">
-            Shape-outside + animation <span class="tooltip">Click for details</span>
+            <div class="tag-card" data-tag="shape-outside-animation" onclick="openModal('shape-outside-animation')">
+                Shape-outside + animation <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
     <section>
         <h2>FUTURE / EXPERIMENTAL (2023–2025)</h2>
+        <div class="cards-grid">
 
-        <!-- FUTURE / EXPERIMENTAL (2023–2025) -->
-        <div class="tag-card" data-tag="scroll-driven" onclick="openModal('scroll-driven')">
-            Scroll-driven animations <span class="tooltip">Click for details</span>
-        </div>
+            <!-- FUTURE / EXPERIMENTAL (2023–2025) -->
+            <div class="tag-card" data-tag="scroll-driven" onclick="openModal('scroll-driven')">
+                Scroll-driven animations <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="anchor-position" onclick="openModal('anchor-position')">
-            CSS Anchor Positioning <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="anchor-position" onclick="openModal('anchor-position')">
+                CSS Anchor Positioning <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="houdini-animation" onclick="openModal('houdini-animation-worklets')">
-            CSS Houdini Animation Worklets <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="houdini-animation" onclick="openModal('houdini-animation-worklets')">
+                CSS Houdini Animation Worklets <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="motion-path-l2" onclick="openModal('motion-path-l2')">
-            CSS Motion Path Level 2 <span class="tooltip">Click for details</span>
-        </div>
+            <div class="tag-card" data-tag="motion-path-l2" onclick="openModal('motion-path-l2')">
+                CSS Motion Path Level 2 <span class="tooltip">Click for details</span>
+            </div>
 
-        <div class="tag-card" data-tag="color-level4" onclick="openModal('color-level4')">
-            Color Level 4/5 animations <span class="tooltip">Click for details</span>
+            <div class="tag-card" data-tag="color-level4" onclick="openModal('color-level4')">
+                Color Level 4/5 animations <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
-    <script src="/js/css-animation.js"></script>
+
     <!-- Modal -->
-    <div id="modal" style="display:none;">
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div id="modal-content">
-            <span id="close-modal" onclick="closeModal()">&times;</span>
-            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+            <!-- Top Toolbar / Breadcrumbs -->
+            <div class="modal-header-bar">
+                <button id="close-modal" onclick="closeModal()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <div class="breadcrumbs">Text Tags &gt; <span id="modal-title" style="color: #64ffda;">&lt;h1&gt;
+                        Heading Tag</span></div>
+                <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
+            </div>
 
-            <h3 id="modal-title">Tag Name</h3>
-            <p id="modal-history">History & Modern Use</p>
+            <!-- Main Body Wrapper Grid -->
+            <div class="modal-body-layout">
 
-            <h4>Example Code (Editable)</h4>
-            <textarea id="modal-editor"></textarea><br>
-            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
-            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                <!-- ⬅️ Left Panel: Text Information -->
+                <div class="modal-left">
+                    <div class="info-block">
+                        <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
+                        <div id="modal-history">Loading history and usage notes...</div>
+                    </div>
 
-            <iframe id="live-preview"></iframe>
+                    <div class="info-block tip-box">
+                        <h4>💡 Tip</h4>
+                        <p>Use heading tags in order: &lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt; for better structure and SEO.
+                        </p>
+                    </div>
+                </div>
 
-            <div class="quiz-section" id="quiz">
-                <h4>Quiz:</h4>
-                <p id="quiz-question"></p>
-                <input type="text" id="quiz-answer" placeholder="Type your answer here">
-                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
-                <p id="quiz-feedback"></p>
+                <!-- ➡️ Right Panel: Editor & Quiz Tools -->
+                <div class="modal-right">
+
+                    <!-- Live Code Box -->
+                    <div class="editor-wrapper">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                        </div>
+                        <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
+
+                        <div class="editor-actions">
+                            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+                            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                        </div>
+                    </div>
+
+                    <!-- Preview Output Window -->
+                    <div class="preview-wrapper">
+                        <div class="preview-header">Output</div>
+                        <iframe id="live-preview" title="Live code preview"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+
+                    <!-- Multiple Choice Quiz Box -->
+                    <div class="quiz-section" id="quiz">
+                        <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
+                        <p id="quiz-question">Which tag is used for the most important heading in HTML?</p>
+
+                        <!-- 🛠️ Dynamic Quiz Input: Multiple choice system as requested in picture -->
+                        <div class="quiz-options-group">
+                            <input type="text" id="quiz-answer" placeholder="Type your answer here (e.g. h1)"
+                                aria-label="Quiz answer" />
+                            <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                        </div>
+                        <p id="quiz-feedback" aria-live="polite"></p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
+    <script src="/js/css-animation.js"></script>
+    <script src="/js/core-actions.js"></script>
 </body>
 
 </html>

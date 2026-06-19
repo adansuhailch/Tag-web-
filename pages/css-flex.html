@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Css(flexbox) Playground</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -19,118 +22,173 @@
     </header>
     <section>
         <h2>Main Container-Level Flexbox Properties</h2>
-        <!-- align-items -->
-        <div class="tag-card" data-tag="align-items" onclick="openModal('align-items')">
-            align-items<span class="tooltip">Click for details</span>
-        </div>
+        <div class="cards-grid">
+            <!-- align-items -->
+            <div class="tag-card" data-tag="align-items" onclick="openModal('align-items')">
+                align-items<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- align-content -->
-        <div class="tag-card" data-tag="align-content" onclick="openModal('align-content')">
-            align-content<span class="tooltip">Click for details</span>
+            <!-- align-content -->
+            <div class="tag-card" data-tag="align-content" onclick="openModal('align-content')">
+                align-content<span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
     <section>
         <h2>Flex Item-Level Properties</h2>
         <!-- flex-grow -->
-        <div class="tag-card" data-tag="flex-grow" onclick="openModal('flex-grow')">
-            flex-grow<span class="tooltip">Click for details</span>
-        </div>
+        <div class="cards-grid">
+            <div class="tag-card" data-tag="flex-grow" onclick="openModal('flex-grow')">
+                flex-grow<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- flex-shrink -->
-        <div class="tag-card" data-tag="flex-shrink" onclick="openModal('flex-shrink')">
-            flex-shrink<span class="tooltip">Click for details</span>
-        </div>
+            <!-- flex-shrink -->
+            <div class="tag-card" data-tag="flex-shrink" onclick="openModal('flex-shrink')">
+                flex-shrink<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- flex-basis -->
-        <div class="tag-card" data-tag="flex-basis" onclick="openModal('flex-basis')">
-            flex-basis<span class="tooltip">Click for details</span>
-        </div>
+            <!-- flex-basis -->
+            <div class="tag-card" data-tag="flex-basis" onclick="openModal('flex-basis')">
+                flex-basis<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- flex (shorthand) -->
-        <div class="tag-card" data-tag="flex" onclick="openModal('flex')">
-            flex (shorthand)<span class="tooltip">Click for details</span>
-        </div>
+            <!-- flex (shorthand) -->
+            <div class="tag-card" data-tag="flex" onclick="openModal('flex')">
+                flex (shorthand)<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- align-self -->
-        <div class="tag-card" data-tag="align-self" onclick="openModal('align-self')">
-            align-self<span class="tooltip">Click for details</span>
+            <!-- align-self -->
+            <div class="tag-card" data-tag="align-self" onclick="openModal('align-self')">
+                align-self<span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
     <section>
         <h2>Advanced / Modern Flexbox Features</h2>
         <!-- order -->
-        <div class="tag-card" data-tag="order" onclick="openModal('order')">
-            order<span class="tooltip">Click for details</span>
-        </div>
+        <div class="cards-grid">
+            <div class="tag-card" data-tag="order" onclick="openModal('order')">
+                order<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- nested-flexbox -->
-        <div class="tag-card" data-tag="nested-flexbox" onclick="openModal('nested-flexbox')">
-            Nested Flexbox<span class="tooltip">Click for details</span>
-        </div>
+            <!-- nested-flexbox -->
+            <div class="tag-card" data-tag="nested-flexbox" onclick="openModal('nested-flexbox')">
+                Nested Flexbox<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- gap -->
-        <div class="tag-card" data-tag="gap" onclick="openModal('gap')">
-            gap<span class="tooltip">Click for details</span>
-        </div>
+            <!-- gap -->
+            <div class="tag-card" data-tag="gap" onclick="openModal('gap')">
+                gap<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- responsive-flexbox -->
-        <div class="tag-card" data-tag="responsive-flexbox" onclick="openModal('responsive-flexbox')">
-            Responsive Flexbox<span class="tooltip">Click for details</span>
-        </div>
+            <!-- responsive-flexbox -->
+            <div class="tag-card" data-tag="responsive-flexbox" onclick="openModal('responsive-flexbox')">
+                Responsive Flexbox<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- flexbox-grid-combo -->
-        <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
-            Flexbox + Grid Combo<span class="tooltip">Click for details</span>
+            <!-- flexbox-grid-combo -->
+            <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
+                Flexbox + Grid Combo<span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
     <section>
         <h2>Less Common but Powerful</h2>
         <!-- baseline-alignment -->
-        <div class="tag-card" data-tag="baseline-alignment" onclick="openModal('baseline-alignment')">
-            Baseline Alignment<span class="tooltip">Click for details</span>
-        </div>
+        <div class="cards-grid">
+            <div class="tag-card" data-tag="baseline-alignment" onclick="openModal('baseline-alignment')">
+                Baseline Alignment<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- flex-basis-auto-vs-0 -->
-        <div class="tag-card" data-tag="flex-basis-auto-vs-0" onclick="openModal('flex-basis-auto-vs-0')">
-            flex-basis: auto vs 0<span class="tooltip">Click for details</span>
-        </div>
+            <!-- flex-basis-auto-vs-0 -->
+            <div class="tag-card" data-tag="flex-basis-auto-vs-0" onclick="openModal('flex-basis-auto-vs-0')">
+                flex-basis: auto vs 0<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- align-content-advanced -->
-        <div class="tag-card" data-tag="align-content-advanced" onclick="openModal('align-content-advanced')">
-            align-content (advanced)<span class="tooltip">Click for details</span>
-        </div>
+            <!-- align-content-advanced -->
+            <div class="tag-card" data-tag="align-content-advanced" onclick="openModal('align-content-advanced')">
+                align-content (advanced)<span class="tooltip">Click for details</span>
+            </div>
 
-        <!-- order-accessibility -->
-        <div class="tag-card" data-tag="order-accessibility" onclick="openModal('order-accessibility')">
-            order (Accessibility)<span class="tooltip">Click for details</span>
+            <!-- order-accessibility -->
+            <div class="tag-card" data-tag="order-accessibility" onclick="openModal('order-accessibility')">
+                order (Accessibility)<span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
-    <script src="/js/css-flex.js"></script>
     <!-- Modal -->
-    <div id="modal" style="display:none;">
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div id="modal-content">
-            <span id="close-modal" onclick="closeModal()">&times;</span>
-            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+            <!-- Top Toolbar / Breadcrumbs -->
+            <div class="modal-header-bar">
+                <button id="close-modal" onclick="closeModal()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <div class="breadcrumbs">Text Tags &gt; <span id="modal-title" style="color: #64ffda;">&lt;h1&gt;
+                        Heading Tag</span></div>
+                <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
+            </div>
 
-            <h3 id="modal-title">Tag Name</h3>
-            <p id="modal-history">History & Modern Use</p>
+            <!-- Main Body Wrapper Grid -->
+            <div class="modal-body-layout">
 
-            <h4>Example Code (Editable)</h4>
-            <textarea id="modal-editor"></textarea><br>
-            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
-            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                <!-- ⬅️ Left Panel: Text Information -->
+                <div class="modal-left">
+                    <div class="info-block">
+                        <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
+                        <div id="modal-history">Loading history and usage notes...</div>
+                    </div>
 
-            <iframe id="live-preview"></iframe>
+                    <div class="info-block tip-box">
+                        <h4>💡 Tip</h4>
+                        <p>Use heading tags in order: &lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt; for better structure and SEO.
+                        </p>
+                    </div>
+                </div>
 
-            <div class="quiz-section" id="quiz">
-                <h4>Quiz:</h4>
-                <p id="quiz-question"></p>
-                <input type="text" id="quiz-answer" placeholder="Type your answer here">
-                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
-                <p id="quiz-feedback"></p>
+                <!-- ➡️ Right Panel: Editor & Quiz Tools -->
+                <div class="modal-right">
+
+                    <!-- Live Code Box -->
+                    <div class="editor-wrapper">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                        </div>
+                        <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
+
+                        <div class="editor-actions">
+                            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+                            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                        </div>
+                    </div>
+
+                    <!-- Preview Output Window -->
+                    <div class="preview-wrapper">
+                        <div class="preview-header">Output</div>
+                        <iframe id="live-preview" title="Live code preview"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+
+                    <!-- Multiple Choice Quiz Box -->
+                    <div class="quiz-section" id="quiz">
+                        <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
+                        <p id="quiz-question">Which tag is used for the most important heading in HTML?</p>
+
+                        <!-- 🛠️ Dynamic Quiz Input: Multiple choice system as requested in picture -->
+                        <div class="quiz-options-group">
+                            <input type="text" id="quiz-answer" placeholder="Type your answer here (e.g. h1)"
+                                aria-label="Quiz answer" />
+                            <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                        </div>
+                        <p id="quiz-feedback" aria-live="polite"></p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
+
+    <script src="/js/css-flex.js"></script>
+    <script src="/js/core-actions.js"></script>
 </body>
 
 </html>

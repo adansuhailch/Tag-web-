@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tag Web — HTML5 semantic and media tags with live examples.">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>(function () { var t = localStorage.getItem('tagweb-theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); })();</script>
     <title>Semantic &amp; Media Tags — Tag Web</title>
 </head>
@@ -90,30 +93,76 @@
     </section>
 
     <!-- Modal -->
-    <div id="modal" style="display:none;">
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div id="modal-content">
-            <span id="close-modal" onclick="closeModal()">&times;</span>
-            <button id="modalThemeBtn" onclick="toggleModalTheme()">🌙</button>
+            <!-- Top Toolbar / Breadcrumbs -->
+            <div class="modal-header-bar">
+                <button id="close-modal" onclick="closeModal()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <div class="breadcrumbs">Text Tags &gt; <span id="modal-title" style="color: #64ffda;">&lt;h1&gt;
+                        Heading Tag</span></div>
+                <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
+            </div>
 
-            <h3 id="modal-title">Tag Name</h3>
-            <p id="modal-history">History & Modern Use</p>
+            <!-- Main Body Wrapper Grid -->
+            <div class="modal-body-layout">
 
-            <h4>Example Code (Editable)</h4>
-            <textarea id="modal-editor"></textarea><br>
-            <button class="run-btn" onclick="runLiveCode()">Run Code</button>
-            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                <!-- ⬅️ Left Panel: Text Information -->
+                <div class="modal-left">
+                    <div class="info-block">
+                        <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
+                        <div id="modal-history">Loading history and usage notes...</div>
+                    </div>
 
-            <iframe id="live-preview"></iframe>
+                    <div class="info-block tip-box">
+                        <h4>💡 Tip</h4>
+                        <p>Use heading tags in order: &lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt; for better structure and SEO.
+                        </p>
+                    </div>
+                </div>
 
-            <div class="quiz-section" id="quiz">
-                <h4>Quiz:</h4>
-                <p id="quiz-question"></p>
-                <input type="text" id="quiz-answer" placeholder="Type your answer here">
-                <button class="quiz-btn" onclick="checkAnswer()">Check Answer</button>
-                <p id="quiz-feedback"></p>
+                <!-- ➡️ Right Panel: Editor & Quiz Tools -->
+                <div class="modal-right">
+
+                    <!-- Live Code Box -->
+                    <div class="editor-wrapper">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                        </div>
+                        <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
+
+                        <div class="editor-actions">
+                            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+                            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                        </div>
+                    </div>
+
+                    <!-- Preview Output Window -->
+                    <div class="preview-wrapper">
+                        <div class="preview-header">Output</div>
+                        <iframe id="live-preview" title="Live code preview"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+
+                    <!-- Multiple Choice Quiz Box -->
+                    <div class="quiz-section" id="quiz">
+                        <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
+                        <p id="quiz-question">Which tag is used for the most important heading in HTML?</p>
+
+                        <!-- 🛠️ Dynamic Quiz Input: Multiple choice system as requested in picture -->
+                        <div class="quiz-options-group">
+                            <input type="text" id="quiz-answer" placeholder="Type your answer here (e.g. h1)"
+                                aria-label="Quiz answer" />
+                            <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                        </div>
+                        <p id="quiz-feedback" aria-live="polite"></p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
+
     <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
     <button id="scrollBottomBtn" aria-label="Scroll to bottom"><i class="fa-solid fa-angles-down fa-beat"></i></button>
     <script src="/js/theme.js"></script>
