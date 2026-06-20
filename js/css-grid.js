@@ -8,7 +8,7 @@ async function loadCssGrid() {
 
         console.log("🚀 Media & Semantic Tags architecture initialized successfully!");
     } catch (error) {
-        console.error("❌ Data sync broken inside layout container:", error)
+        console.error("❌ Data sync broken inside layout container:", error);
     }
 }
 

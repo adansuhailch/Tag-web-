@@ -1,10 +1,3 @@
-/**
- * theme.js — Shared Light/Dark Mode Toggle
- * Tag Web | Applied to all pages
- *
- * Usage: <script src="/js/theme.js"></script>
- * Add a button with id="themeToggleBtn" in the page header.
- */
 (function () {
     const STORAGE_KEY = 'tagweb-theme';
     const root = document.documentElement;
@@ -100,7 +93,7 @@
                     });
                 }
             });
-            
+
             // Close mobile menu when a regular link is clicked
             const navLinks = navbar.querySelectorAll('.nav-list > li:not(.dropdown) > a');
             navLinks.forEach(link => {
@@ -111,7 +104,7 @@
                     }
                 });
             });
-            
+
             // Handle inner dropdown link clicks to also close the menu
             const dropdownLinks = navbar.querySelectorAll('.dropdown-menu a');
             dropdownLinks.forEach(link => {

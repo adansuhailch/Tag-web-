@@ -1,0 +1,107 @@
+{
+    "align-items": {
+        "title": "align-items Property",
+        "history": "Aligns flex items along the cross axis (flex-start, center, stretch, baseline).",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Align-Items Example</title>\n<style>\n  .container { display: flex; align-items: center; height: 150px; background: lightgray; }\n  .item { background: lightcoral; padding: 10px; }\n</style>\n</head>\n<body>\n<h2>CSS align-items Example</h2>\n<div class=\"container\">\n  <div class=\"item\">Box 1</div>\n  <div class=\"item\">Box 2</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property aligns flex items along the cross axis?",
+        "answer": "align-items"
+    },
+    "align-content": {
+        "title": "align-content Property (Advanced)",
+        "history": "The align-content property aligns multiple rows (or columns) of grid or flex items when there is extra space in the cross-axis. It only works when there are multiple lines (wrap enabled in flex or multiple rows in grid).",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Align-Content Example</title>\n<style>\n  .grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-auto-rows: 60px;\n    height: 250px;\n    align-content: space-between;\n    gap: 10px;\n    background: lightgray;\n  }\n  .item { background: lightblue; text-align: center; }\n</style>\n</head>\n<body>\n<h2>CSS align-content (Advanced) Example</h2>\n<div class=\"grid\">\n  <div class=\"item\">Box 1</div>\n  <div class=\"item\">Box 2</div>\n  <div class=\"item\">Box 3</div>\n  <div class=\"item\">Box 4</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property aligns multiple rows or columns when extra space is available?",
+        "answer": "align-content"
+    },
+    "flex-grow": {
+        "title": "flex-grow Property",
+        "history": "Defines how much a flex item can grow relative to others.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Flex-Grow Example</title>\n<style>\n  .container { display: flex; }\n  .item1 { flex-grow: 1; background: lightblue; }\n  .item2 { flex-grow: 2; background: lightgreen; }\n</style>\n</head>\n<body>\n<h2>CSS flex-grow Example</h2>\n<div class=\"container\">\n  <div class=\"item1\">Grow 1</div>\n  <div class=\"item2\">Grow 2</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines how much a flex item can grow?",
+        "answer": "flex-grow"
+    },
+    "flex-shrink": {
+        "title": "flex-shrink Property",
+        "history": "Defines how much a flex item can shrink relative to others.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Flex-Shrink Example</title>\n<style>\n  .container { display: flex; width: 300px; }\n  .item1 { flex-shrink: 1; background: lightblue; width: 200px; }\n  .item2 { flex-shrink: 2; background: lightgreen; width: 200px; }\n</style>\n</head>\n<body>\n<h2>CSS flex-shrink Example</h2>\n<div class=\"container\">\n  <div class=\"item1\">Shrink 1</div>\n  <div class=\"item2\">Shrink 2</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines how much a flex item can shrink?",
+        "answer": "flex-shrink"
+    },
+    "flex-basis": {
+        "title": "flex-basis Property",
+        "history": "Defines the initial size of a flex item before free space is distributed.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Flex-Basis Example</title>\n<style>\n  .container { display: flex; }\n  .item { flex-basis: 150px; background: lightcoral; }\n</style>\n</head>\n<body>\n<h2>CSS flex-basis Example</h2>\n<div class=\"container\">\n  <div class=\"item\">Item with flex-basis 150px</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property defines the initial size of a flex item?",
+        "answer": "flex-basis"
+    },
+    "flex": {
+        "title": "flex Property (Shorthand)",
+        "history": "Shorthand for flex-grow, flex-shrink, and flex-basis.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Flex Shorthand Example</title>\n<style>\n  .container { display: flex; }\n  .item { flex: 1 1 100px; background: lightblue; }\n</style>\n</head>\n<body>\n<h2>CSS flex Shorthand Example</h2>\n<div class=\"container\">\n  <div class=\"item\">flex: 1 1 100px</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which shorthand sets flex-grow, flex-shrink, and flex-basis?",
+        "answer": "flex"
+    },
+    "align-self": {
+        "title": "align-self Property",
+        "history": "Allows individual flex items to override the container's align-items setting.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Align-Self Example</title>\n<style>\n  .container { display: flex; height: 150px; align-items: flex-start; }\n  .item1 { background: lightblue; padding: 10px; }\n  .item2 { background: lightgreen; padding: 10px; align-self: center; }\n</style>\n</head>\n<body>\n<h2>CSS align-self Example</h2>\n<div class=\"container\">\n  <div class=\"item1\">Item 1</div>\n  <div class=\"item2\">Item 2 (centered)</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property allows individual flex items to override container alignment?",
+        "answer": "align-self"
+    },
+    "order": {
+        "title": "order Property",
+        "history": "Changes the visual order of flex items without altering the HTML source order.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Order Example</title>\n<style>\n  .container { display: flex; gap: 10px; }\n  .item1 { order: 2; background: lightblue; padding: 10px; }\n  .item2 { order: 1; background: lightgreen; padding: 10px; }\n</style>\n</head>\n<body>\n<h2>CSS order Property Example</h2>\n<div class=\"container\">\n  <div class=\"item1\">Item 1 (order 2)</div>\n  <div class=\"item2\">Item 2 (order 1)</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property changes the visual order of flex items?",
+        "answer": "order"
+    },
+    "nested-flexbox": {
+        "title": "Nested Flexbox",
+        "history": "Flex containers can be nested inside each other to create complex layouts.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Nested Flexbox Example</title>\n<style>\n  .outer { display: flex; gap: 10px; }\n  .inner { display: flex; flex-direction: column; gap: 5px; background: lightyellow; padding: 10px; }\n  .item { background: lightblue; padding: 5px; }\n</style>\n</head>\n<body>\n<h2>Nested Flexbox Example</h2>\n<div class=\"outer\">\n  <div class=\"inner\">\n    <div class=\"item\">Inner 1</div>\n    <div class=\"item\">Inner 2</div>\n  </div>\n  <div class=\"inner\">\n    <div class=\"item\">Inner A</div>\n    <div class=\"item\">Inner B</div>\n  </div>\n</div>\n</body>\n</html>",
+        "quiz": "Which technique uses flex containers inside flex containers?",
+        "answer": "Nested Flexbox"
+    },
+    "gap": {
+        "title": "gap Property",
+        "history": "Introduced in 2020, the gap property adds spacing between flex items without using margins.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Gap Example</title>\n<style>\n  .container { display: flex; gap: 20px; }\n  .item { background: lightcoral; padding: 20px; }\n</style>\n</head>\n<body>\n<h2>CSS gap Property Example</h2>\n<div class=\"container\">\n  <div class=\"item\">Item 1</div>\n  <div class=\"item\">Item 2</div>\n  <div class=\"item\">Item 3</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which property adds spacing between flex items without margins?",
+        "answer": "gap"
+    },
+    "responsive-flexbox": {
+        "title": "Responsive Flexbox",
+        "history": "Flexbox combined with min/max-width, clamp(), and media queries creates responsive layouts.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Responsive Flexbox Example</title>\n<style>\n  .container { display: flex; flex-wrap: wrap; gap: 10px; }\n  .item { flex: 1 1 clamp(150px, 30%, 300px); background: lightgreen; padding: 20px; }\n</style>\n</head>\n<body>\n<h2>Responsive Flexbox Example</h2>\n<div class=\"container\">\n  <div class=\"item\">Card 1</div>\n  <div class=\"item\">Card 2</div>\n  <div class=\"item\">Card 3</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which technique combines flexbox with min/max-width, clamp(), and media queries?",
+        "answer": "Responsive Flexbox"
+    },
+    "flexbox-grid-combo": {
+        "title": "Flexbox + Grid Combo",
+        "history": "Flexbox is ideal for small components, while Grid is best for full page layouts.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Flexbox + Grid Combo Example</title>\n<style>\n  .navbar { display: flex; gap: 10px; background: lightblue; padding: 10px; }\n  .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; margin-top: 20px; }\n  .item { background: lightcoral; padding: 20px; }\n</style>\n</head>\n<body>\n<h2>Flexbox + Grid Combo Example</h2>\n<div class=\"navbar\">\n  <div class=\"item\">Home</div>\n  <div class=\"item\">About</div>\n  <div class=\"item\">Contact</div>\n</div>\n<div class=\"grid\">\n  <div class=\"item\">Sidebar</div>\n  <div class=\"item\">Main Content</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which combo uses Flexbox for small components and Grid for full layouts?",
+        "answer": "Flexbox + Grid Combo"
+    },
+    "baseline-alignment": {
+        "title": "Baseline Alignment",
+        "history": "Aligns flex items based on text baseline, useful for text-heavy layouts.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Baseline Alignment Example</title>\n<style>\n  .container { display: flex; align-items: baseline; }\n  .item1 { font-size: 20px; background: lightblue; }\n  .item2 { font-size: 40px; background: lightgreen; }\n</style>\n</head>\n<body>\n<h2>Baseline Alignment Example</h2>\n<div class=\"container\">\n  <div class=\"item1\">Small Text</div>\n  <div class=\"item2\">Large Text</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which alignment is useful for text-heavy layouts?",
+        "answer": "Baseline alignment"
+    },
+    "flex-basis-auto-vs-0": {
+        "title": "flex-basis: auto vs 0",
+        "history": "flex-basis:auto sizes items based on content, while flex-basis:0 distributes space equally. Subtle difference for responsiveness.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Flex-Basis Auto vs 0 Example</title>\n<style>\n  .container { display: flex; }\n  .auto { flex: 1 1 auto; background: lightblue; }\n  .zero { flex: 1 1 0; background: lightgreen; }\n</style>\n</head>\n<body>\n<h2>Flex-Basis Auto vs 0 Example</h2>\n<div class=\"container\">\n  <div class=\"auto\">flex-basis:auto</div>\n  <div class=\"zero\">flex-basis:0</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which flex-basis value sizes items based on content?",
+        "answer": "auto"
+    },
+    "order-accessibility": {
+        "title": "order Property (Accessibility)",
+        "history": "The order property changes the visual order of flex or grid items without changing the HTML source order. This is useful for accessibility, as semantic HTML order remains intact while visual presentation can be adjusted.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Order Accessibility Example</title>\n<style>\n  .container { display: flex; gap: 10px; }\n  .item1 { order: 2; background: lightblue; padding: 10px; }\n  .item2 { order: 1; background: lightgreen; padding: 10px; }\n  .item3 { order: 3; background: lightcoral; padding: 10px; }\n</style>\n</head>\n<body>\n<h2>CSS order Property (Accessibility) Example</h2>\n<div class=\"container\">\n  <div class=\"item1\">Item 1 (order 2)</div>\n  <div class=\"item2\">Item 2 (order 1)</div>\n  <div class=\"item3\">Item 3 (order 3)</div>\n</div>\n<p>Note: The HTML source order remains semantic, but visual order is changed.</p>\n</body>\n</html>",
+        "quiz": "Which property changes the visual order of items without altering HTML source order?",
+        "answer": "order"
+    }
+}

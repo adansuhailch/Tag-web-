@@ -1,4 +1,4 @@
-let data = {};
+let tagData = {};
 
 async function loadCssAnimation() {
   try {
