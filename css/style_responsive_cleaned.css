@@ -112,7 +112,7 @@ body {
     margin: 0;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     /* background-color: var(--bg-body); */
-    color: #0b0f19;
+    color: var(--text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
     min-height: 100vh;
 }
@@ -167,7 +167,7 @@ a {
     transition: color 0.2s;
 }
 
-a:not(.no-hover) :hover {
+a:not(.no-hover):hover {
     color: var(--nav-link-hover);
 }
 
@@ -176,6 +176,8 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
     width: 100%;
     background: var(--bg-header);
     color: var(--text-primary);
@@ -198,7 +200,7 @@ html[data-theme="light"] header h1 {
 
 /* Logo */
 .logo {
-    margin-right: 12%;
+    margin-right: clamp(12px, 4vw, 12%);
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
@@ -238,10 +240,7 @@ html[data-theme="light"] .brand-wordmark {
     border-radius: 8px;
 }
 
-/* ============================================================
-   THEME TOGGLE BUTTON (UPGRADED UI/UX)
-   ============================================================ */
-
+/* theme button */
 #theme-switch {
     height: 50px;
     width: 50px;
@@ -253,7 +252,7 @@ html[data-theme="light"] .brand-wordmark {
     background-color: #010125;
     position: sticky;
     top: 10px;
-    left: 100%;
+    margin-left: auto;
     z-index: 100;
     cursor: pointer;
 }
@@ -298,15 +297,65 @@ html[data-theme="light"] #theme-switch svg:last-child {
     }
 }
 
+/* navbar mobile responsive 
+@media (max-width: 768px) {
 
-/* ============================================================
-   RESPONSIVE NAVIGATION SYSTEM
-   ============================================================ */
+    .hamburger {
+        display: flex;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100vh;
+        background: var(--bg-nav);
+        transition: left 0.4s ease;
+        padding-top: 70px;
+        z-index: 1500;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list a {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background: rgba(255, 255, 255, 0.05);
+        padding-left: 10px;
+    }
+
+    .dropdown.mobile-open .dropdown-menu {
+        display: block;
+    }
+}
+*/
+
+/* responsive nav bar */
 .nav-container {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-top: 16px;
-    margin-bottom: -16px;
+    width: 100%;
+    margin: 16px 0 0;
     position: relative;
     background: var(--bg-nav);
     box-shadow: 0 0 15px var(--shadow-card);
@@ -352,14 +401,14 @@ html[data-theme="light"] #theme-switch svg:last-child {
     transform: translateY(-7px) rotate(-45deg);
 }
 
+
 /* page container */
 .page-container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     min-height: calc(100vh - 70px);
-    /* Header ki height nikal kar baqi poori screen le lega */
     background-color: #0b0f19;
-    /* Aapka dark theme background */
 }
 
 /* ⬅️ Left Sidebar Layout Panel */
@@ -416,6 +465,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
 /* 📄 Right Side Content Configuration */
 .content-panel {
     flex: 1;
+    min-width: 0;
     /* Bachi hui poori screen automatic right side wale content ko de dega */
     padding: 30px 40px;
     overflow-y: auto;
@@ -449,7 +499,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
     }
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
     /* ✅ SHOW hamburger only on mobile */
@@ -512,8 +562,8 @@ html[data-theme="light"] #theme-switch svg:last-child {
     position: relative;
     max-width: 420px;
     width: 100%;
-    margin-left: 50px;
-    margin-right: 5.75rem;
+    flex: 1 1 320px;
+    margin: 0;
 }
 
 .search-icon {
@@ -542,8 +592,9 @@ html[data-theme="light"] #theme-switch svg:last-child {
 .button-group {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
-    margin-left: 0;
+    margin-left: auto;
 
 }
 
@@ -553,7 +604,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
     justify-content: center;
     gap: 8px;
     padding: 10px 18px;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     border-radius: 8px;
@@ -581,7 +632,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
 }
 
 .btn-whatsapp i {
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 #searchBar::placeholder {
@@ -896,7 +947,7 @@ section {
     padding: 24px;
     max-width: 1200px;
     /* 🚀 Photo ki tarah bada landscape layout dene ke liye size barhaya */
-    width: 95%;
+    width: min(95%, 1200px);
     border-radius: 16px;
     position: relative;
     max-height: 92vh;
@@ -1056,6 +1107,7 @@ section {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 #quiz-answer {
@@ -1230,7 +1282,7 @@ html[data-theme="dark"] iframe {
     border: 1px solid var(--border-modal);
     background: var(--bg-scrollbtn);
     color: var(--text-primary);
-    font-size: 18px;
+    font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     transition: background 0.25s, transform 0.15s;
@@ -1320,23 +1372,6 @@ html[data-theme="dark"] iframe {
 
 .social-icons {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.icon {
-    width: 38px;
-    height: 38px;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-}
-
-/* Social icons container */
-.social-icons {
-    display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -1344,23 +1379,25 @@ html[data-theme="dark"] iframe {
 }
 
 .social-icons .icon {
+    width: 38px;
+    height: 38px;
     position: relative;
     font-size: 25px;
     color: snow;
-    transition: color 0.3s ease;
-}
-
-/* Icon base style */
-.icon {
-    position: relative;
-    font-size: 30px;
-    color: #333;
-    transition: color 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     touch-action: manipulation;
-    /* for mobile tap */
 }
 
-/* Tooltip-style label below icon */
+.social-icons .icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
 .icon::after {
     content: attr(aria-label);
     position: absolute;
@@ -1373,13 +1410,10 @@ html[data-theme="dark"] iframe {
     color: white;
     opacity: 0;
     pointer-events: none;
-    transition:
-        opacity 0.3s ease,
-        bottom 0.3s ease;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
     white-space: nowrap;
 }
 
-/* Show label on hover or tap */
 .icon:hover::after,
 .icon:focus::after,
 .icon:active::after {
@@ -1387,7 +1421,6 @@ html[data-theme="dark"] iframe {
     bottom: -40px;
 }
 
-/* Brand-specific hover color and label background */
 .icon[aria-label="YouTube"]:hover,
 .icon[aria-label="YouTube"]:focus,
 .icon[aria-label="YouTube"]:active {
@@ -1407,18 +1440,6 @@ html[data-theme="dark"] iframe {
 .icon[aria-label="GitHub"]::after {
     background-color: #24292e;
 }
-
-/* discord */
-.icon[aria-label="Discord"]:hover,
-.icon[aria-label="Discord"]:focus,
-.icon[aria-label="Discord"]:active {
-    color: #5865F2;
-}
-
-.icon[aria-label="Discord"]::after {
-    background-color: #5865F2;
-}
-
 
 .icon[aria-label="Instagram"]:hover,
 .icon[aria-label="Instagram"]:focus,
@@ -1450,189 +1471,67 @@ html[data-theme="dark"] iframe {
     background-color: #25d366;
 }
 
-
-.newsletter {
-    display: flex;
-    gap: 8px;
-    margin-top: 10px;
-    flex-wrap: wrap;
+/* light mode */
+html[data-theme="light"] .social-icons .icon {
+    color: #0D1117;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
-.footer-bottom {
-    max-width: 1200px;
-    margin: 25px auto 0;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 0.85rem;
+html[data-theme="light"] .social-icons .icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
-.footer-col-contact a {
-    color: var(--text-muted);
-    text-decoration: none;
+html[data-theme="light"] .icon[aria-label="YouTube"]:hover,
+html[data-theme="light"] .icon[aria-label="YouTube"]:focus,
+html[data-theme="light"] .icon[aria-label="YouTube"]:active {
+    color: #ff0000;
 }
 
-.footer-col-contact a:hover {
-    color: var(--primary);
+html[data-theme="light"] .icon[aria-label="YouTube"]::after {
+    background-color: #ff0000;
 }
 
-/* javascript section */
-.coming-soon-section {
-    position: relative;
-    overflow: hidden;
+html[data-theme="light"] .icon[aria-label="GitHub"]:hover,
+html[data-theme="light"] .icon[aria-label="GitHub"]:focus,
+html[data-theme="light"] .icon[aria-label="GitHub"]:active {
+    color: #2b3137;
 }
 
-.coming-soon-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    background: repeating-linear-gradient(-45deg,
-            transparent,
-            transparent 8px,
-            rgba(255, 193, 7, 0.04) 8px,
-            rgba(255, 193, 7, 0.04) 16px);
-    pointer-events: none;
+html[data-theme="light"] .icon[aria-label="GitHub"]::after {
+    background-color: #24292e;
 }
 
-.coming-soon-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.8rem;
-    padding: 4px 12px;
-    border-radius: 20px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+html[data-theme="light"] .icon[aria-label="Instagram"]:hover,
+html[data-theme="light"] .icon[aria-label="Instagram"]:focus,
+html[data-theme="light"] .icon[aria-label="Instagram"]:active {
+    color: #e1306c;
 }
 
-.js-card-locked {
-    background: var(--bg-card);
-    color: var(--text-secondary);
-    border: 1px dashed #f59e0b;
-    margin: 8px 0;
-    padding: 14px 18px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    opacity: 0.7;
-    transition: opacity 0.2s;
+html[data-theme="light"] .icon[aria-label="Instagram"]::after {
+    background-color: #e1306c;
 }
 
-.js-card-locked:hover {
-    opacity: 0.9;
+html[data-theme="light"] .icon[aria-label="LinkedIn"]:hover,
+html[data-theme="light"] .icon[aria-label="LinkedIn"]:focus,
+html[data-theme="light"] .icon[aria-label="LinkedIn"]:active {
+    color: #0077b5;
 }
 
-.lock-icon {
-    font-size: 1.1rem;
-    flex-shrink: 0;
+html[data-theme="light"] .icon[aria-label="LinkedIn"]::after {
+    background-color: #0077b5;
 }
 
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+html[data-theme="light"] .icon[aria-label="whatsapp"]:hover,
+html[data-theme="light"] .icon[aria-label="whatsapp"]:focus,
+html[data-theme="light"] .icon[aria-label="whatsapp"]:active {
+    color: #25d366;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-40px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+html[data-theme="light"] .icon[aria-label="whatsapp"]::after {
+    background-color: #25d366;
 }
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.3rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    section {
-        margin: 14px 10px;
-        padding: 16px;
-    }
-
-    #searchBar {
-        width: 85%;
-    }
-}
-
-@media (max-width: 480px) {
-    .entry-box {
-        padding: 22px 16px;
-    }
-
-    .entry-box h1 {
-        font-size: 1.3rem;
-    }
-
-    .entry-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #enter-btn,
-    #reject-btn {
-        width: 100%;
-    }
-
-    .brand-wordmark {
-        display: none;
-    }
-
-    .dra-LOGO {
-        width: 44px;
-        height: 44px;
-    }
-
-    #modal-content {
-        padding: 16px;
-    }
-}
-
-/* ============================================================
-   SCROLLBAR STYLING (optional, webkit)
-   ============================================================ */
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg-body);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--border-modal);
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--text-accent);
-}
-
