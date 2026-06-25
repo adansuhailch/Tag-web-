@@ -27,13 +27,23 @@
     <header>
         <div class="logo">
             <img src="/assets/tag web logo.png" alt="Tag Web logo" class="dra-LOGO" />
-            <span class="brand-wordmark">Tag Web</span>
+            <a href="/index.html"><span class="brand-wordmark">Tag Web</span></a>
         </div>
 
         <div class="search-container">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input type="text" id="searchBar" placeholder="Search Topics, Tags..." onkeyup="searchTag()"
                 aria-label="Search HTML tags" />
+        </div>
+        <div class="button-group">
+            <a href="https://amazing-color-picker.vercel.app/" target="_blank"><button class="btn btn-dark">
+                    <span class="icon-palette">🎨</span> Color Lab
+                </button>
+            </a>
+
+            <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover">
+                <i class="fa-brands fa-discord"></i>Join Community
+            </a>
         </div>
 
         <button id="theme-switch">
@@ -47,16 +57,7 @@
             </svg>
         </button>
 
-        <div class="button-group">
-            <!-- 1. Color Lab Button -->
-            <button class="btn btn-dark">
-                <span class="icon-palette">🎨</span> Color Lab
-            </button>
 
-            <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover">
-                <i class="fa-brands fa-discord"></i>Join Community
-            </a>
-        </div>
     </header>
     <div class="page-container">
         <aside class="sidebar-panel">
@@ -74,25 +75,6 @@
             </ul>
         </aside>
         <main class="content-panel">
-
-            <!--             
-            <div id="entry-overlay">
-                <div class="entry-box">
-                    <h1>Ready to learn? 🚀</h1>
-                    <p>
-                        If you're willing to learn something new, enter.<br />Otherwise, head
-                        to social media and waste your time.
-                    </p>
-                    <div class="entry-actions">
-                        <button id="enter-btn">I'm willing — Enter ✅</button>
-                        <button id="reject-btn" class="outline">
-                            No thanks — Social Media 📱
-                        </button>
-                    </div>
-                </div>
-            </div> -->
-
-
             <!-- TEXT SECTION -->
             <section id="text">
                 <h2>Text Tags</h2>
@@ -456,8 +438,8 @@
                             class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/hafiz-adan-suhail-2676a13b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BD%2F6qN1F2TjedwxIfMtwDWw%3D%3D"
                         target="_blank" aria-label="LinkedIn" class="icon"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://wa.me/923074449331?text=Hi%20Hafiz%20Adan%20Suhail%20i%20want%20to%20appreciate%20you%20and%20want%20a%20source%20code%20of%20%22...%22%20website"
-                        target="_blank" aria-label="whatsapp" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://wa.me/923074449331?" target="_blank" aria-label="whatsapp" class="icon"><i
+                            class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -467,23 +449,6 @@
             <p class="muted small">Designed with HTML, CSS and a little JS</p>
         </div>
     </footer>
-
-
-
-    <!-- scripts -->
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("entry-overlay").style.display = "flex";
-        });
-
-        document.getElementById("enter-btn").addEventListener("click", () => {
-            document.getElementById("entry-overlay").style.display = "none";
-        });
-
-        document.getElementById("reject-btn").addEventListener("click", () => {
-            window.open("https://www.instagram.com/", "_blank");
-        });
-    </script> -->
     <script src="/js/theme.js"></script>
     <script src="/js/tag-web.js"></script>
     <script src="/js/core-actions.js"></script>

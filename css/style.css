@@ -181,7 +181,6 @@ header {
     color: var(--text-primary);
     padding: 10px 15px;
     box-shadow: var(--shadow-header);
-    /* position: relative; */
 }
 
 header h1 {

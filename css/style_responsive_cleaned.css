@@ -183,8 +183,18 @@ header {
     color: var(--text-primary);
     padding: 10px 15px;
     box-shadow: var(--shadow-header);
-    /* position: relative; */
 }
+
+/* header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background: var(--bg-header);
+    color: var(--text-primary);
+    padding: 10px 15px;
+    box-shadow: var(--shadow-header);
+} */
 
 header h1 {
     font-size: 1.6rem;
@@ -198,7 +208,7 @@ html[data-theme="light"] header h1 {
     color: #0D1117;
 }
 
-/* Logo */
+
 .logo {
     margin-right: clamp(12px, 4vw, 12%);
     display: inline-flex;
@@ -252,7 +262,7 @@ html[data-theme="light"] .brand-wordmark {
     background-color: #010125;
     position: sticky;
     top: 10px;
-    margin-left: auto;
+    margin-left: 20px;
     z-index: 100;
     cursor: pointer;
 }
