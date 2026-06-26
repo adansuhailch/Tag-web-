@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tag-web.is-a.dev/sitemap.xml

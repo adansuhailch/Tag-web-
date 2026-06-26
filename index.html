@@ -2,23 +2,27 @@
 <html lang="en" data-theme="dark">
 
 <head>
+
+    <title>Tag Web</title>
+    <!-- Place to write all meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Tag Web — The ultimate HTML & CSS learning playground. Explore tags interactively with live code editors, quizzes, and examples." />
+
+    <!-- Place to write all links -->
+    <link rel="canonical" href="https://tag-web.is-a.dev/">
+    <link rel="icon" type="image/x-icon" href="/assets/tag web logo.png" />
+    <link rel="stylesheet" href="/css/style_responsive_cleaned.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="canonical" href="https://tag-web.is-a.dev/">
-    <link rel="stylesheet" href="/css/style_responsive_cleaned.css" />
     <script>
         (function () {
             var t = localStorage.getItem("tagweb-theme") || "dark";
             document.documentElement.setAttribute("data-theme", t);
         })();
     </script>
-    <link rel="icon" type="image/x-icon" href="/assets/tag web logo.png" />
-    <title>Tag Web</title>
 </head>
 
 <body>
@@ -45,7 +49,11 @@
                 <i class="fa-brands fa-discord"></i>Join Community
             </a>
         </div>
-
+        <button id="menu-btn" class="hamburger" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <button id="theme-switch">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
                 <path
@@ -60,7 +68,7 @@
 
     </header>
     <div class="page-container">
-        <aside class="sidebar-panel">
+        <aside class="sidebar-panel" id="sidebar">
             <ul class="nav-list">
                 <li class="active"><a href="#text">📝 Text Tags</a></li>
                 <li><a href="#links">🔗 Links Tags</a></li>
@@ -446,12 +454,12 @@
 
         <div class="footer-bottom">
             <p>© Hafiz Muhammad Adan. All rights reserved.</p>
-            <p class="muted small">Designed with HTML, CSS and a little JS</p>
         </div>
     </footer>
     <script src="/js/theme.js"></script>
     <script src="/js/tag-web.js"></script>
     <script src="/js/core-actions.js"></script>
+    <div id="sidebar-overlay"></div>
 </body>
 
 </html>

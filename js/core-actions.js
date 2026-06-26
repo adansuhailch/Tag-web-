@@ -1,3 +1,58 @@
+// ===============================
+// Mobile Sidebar Navigation
+// ===============================
+
+const menuBtn = document.getElementById("menu-btn");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("sidebar-overlay");
+const navLinks = document.querySelectorAll(".nav-list a");
+
+// Open Sidebar
+function openSidebar() {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("menu-open");
+    menuBtn.setAttribute("aria-expanded", "true");
+}
+
+// Close Sidebar
+function closeSidebar() {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
+    menuBtn.setAttribute("aria-expanded", "false");
+}
+
+// Toggle Sidebar
+menuBtn.addEventListener("click", () => {
+
+    if (sidebar.classList.contains("active")) {
+        closeSidebar();
+    } else {
+        openSidebar();
+    }
+
+});
+
+// Close when clicking overlay
+overlay.addEventListener("click", closeSidebar);
+
+// Close when pressing ESC
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape" && sidebar.classList.contains("active")) {
+        closeSidebar();
+    }
+
+});
+
+// Close when clicking any sidebar link
+navLinks.forEach(link => {
+
+    link.addEventListener("click", closeSidebar);
+
+});
+
 function openModal(tag) {
     document.getElementById('modal').style.display = 'flex';
     document.getElementById('modal-title').innerHTML = tagData[tag].title;

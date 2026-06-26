@@ -19,7 +19,7 @@
     --text-heading: #f0f6fc;
     --text-modal-h3: #3fb950;
     --text-modal-h4: #58a6ff;
-    --text-accent: #193454;
+    --text-accent: #363acd;
     --text-code: #e6edf3;
     --text-history: #9da7b3;
 
@@ -383,7 +383,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
     border: none;
     cursor: pointer;
     position: absolute;
-    top: -46px;
+    top: 15px;
     right: 15px;
     z-index: 2000;
 }
@@ -416,6 +416,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
 .page-container {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     width: 100%;
     min-height: calc(100vh - 70px);
     background-color: #0b0f19;
@@ -429,12 +430,38 @@ html[data-theme="light"] #theme-switch svg:last-child {
     border: 3px solid rgba(255, 255, 255, 0.05);
     margin: 20px 0 20px 20px;
     border-radius: 20px;
-    height: max-content;
+    /* this is for to fit just how long is the panel in moble */
+    height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 24px 16px;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: left 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+/* sidebar overlay in the end of index.html */
+#sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 1400;
+}
+
+#sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.menu-open {
+
+    overflow: hidden;
 
 }
 
@@ -522,7 +549,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
     }
 
     /* Sidebar menu */
-    .navbar {
+    .sidebar-panel {
         position: fixed;
         top: 0;
         left: -100%;
@@ -534,7 +561,7 @@ html[data-theme="light"] #theme-switch svg:last-child {
         z-index: 1500;
     }
 
-    .navbar.active {
+    .sidebar-panel.active {
         left: 0;
     }
 
@@ -589,10 +616,8 @@ html[data-theme="light"] #theme-switch svg:last-child {
 #searchBar {
     width: 100%;
     padding: 16px 25px 16px 50px;
-    border: 5px solid var(--search-border);
     border-radius: 10px;
-    font-size: 15px;
-    outline: none;
+    font-size: 20px;
     transition: border-color 0.3s, box-shadow 0.3s;
     background: var(--search-bg);
     color: var(--search-text);
@@ -649,10 +674,10 @@ html[data-theme="light"] #theme-switch svg:last-child {
     color: var(--text-secondary);
 }
 
-#searchBar:focus {
+/* #searchBar:focus {
     border-color: var(--btn-run-hover);
     box-shadow: 0 0 10px rgba(30, 144, 255, 0.35);
-}
+} */
 
 /* ============================================================
    ENTRY OVERLAY (Splash Screen)

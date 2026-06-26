@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Tag Web — Interactive JavaScript learning hub. Explore variables, functions, DOM, async JS and more with live code editors and quizzes.">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
@@ -357,85 +357,95 @@
         <div class="group-title">
             <h2>⚡ JavaScript Basics</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="script-tag" data-category="Basics"
-            onclick="openModal('script-tag')">
-            <div class="js-card-title">&lt;script&gt; Tag</div>
-            <div class="js-card-desc">Embed or link JavaScript in an HTML page</div>
-            <div class="js-card-footer">
-                <span class="js-difficulty-badge badge-beginner">Beginner</span>
-                <button class="js-learn-btn">Learn More →</button>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="script-tag" data-category="Basics"
+                onclick="openModal('script-tag')">
+                <div class="js-card-title">&lt;script&gt; Tag</div>
+                <div class="js-card-desc">Embed or link JavaScript in an HTML page</div>
+                <div class="js-card-footer">
+                    <span class="js-difficulty-badge badge-beginner">Beginner</span>
+                    <button class="js-learn-btn">Learn More →</button>
+                </div>
+                <span class="tooltip">Click for details</span>
             </div>
-            <span class="tooltip">Click for details</span>
+
+            <div class="tag-card js-topic-card" data-topic="console-log" data-category="Basics"
+                onclick="openModal('console-log')">
+                <div class="js-card-title">console.log()</div>
+                <div class="js-card-desc">Print output to the browser's developer console</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="comments" data-category="Basics"
+                onclick="openModal('comments')">
+                <div class="js-card-title">Comments</div>
+                <div class="js-card-desc">Single-line // and multi-line /* */ code comments</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="console-log" data-category="Basics"
-            onclick="openModal('console-log')">
-            <div class="js-card-title">console.log()</div>
-            <div class="js-card-desc">Print output to the browser's developer console</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="variables" data-category="Basics"
+                onclick="openModal('variables')">
+                <div class="js-card-title">Variables (let, const, var)</div>
+                <div class="js-card-desc">Store and reference data values in your program</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="data-types" data-category="Basics"
+                onclick="openModal('data-types')">
+                <div class="js-card-title">Data Types</div>
+                <div class="js-card-desc">String, Number, Boolean, Null, Undefined, Object, Symbol</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="template-literals" data-category="Basics"
+                onclick="openModal('template-literals')">
+                <div class="js-card-title">Template Literals</div>
+                <div class="js-card-desc">Backtick strings with embedded expressions using ${}</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="comments" data-category="Basics"
-            onclick="openModal('comments')">
-            <div class="js-card-title">Comments</div>
-            <div class="js-card-desc">Single-line // and multi-line /* */ code comments</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="variables" data-category="Basics"
-            onclick="openModal('variables')">
-            <div class="js-card-title">Variables (let, const, var)</div>
-            <div class="js-card-desc">Store and reference data values in your program</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="data-types" data-category="Basics"
-            onclick="openModal('data-types')">
-            <div class="js-card-title">Data Types</div>
-            <div class="js-card-desc">String, Number, Boolean, Null, Undefined, Object, Symbol</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="template-literals" data-category="Basics"
-            onclick="openModal('template-literals')">
-            <div class="js-card-title">Template Literals</div>
-            <div class="js-card-desc">Backtick strings with embedded expressions using ${}</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="typeof" data-category="Basics" onclick="openModal('typeof')">
-            <div class="js-card-title">typeof Operator</div>
-            <div class="js-card-desc">Returns a string describing the type of any value</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="string-methods" data-category="Basics"
-            onclick="openModal('string-methods')">
-            <div class="js-card-title">String Methods</div>
-            <div class="js-card-desc">trim(), split(), replace(), includes(), slice() and more</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="number-methods" data-category="Basics"
-            onclick="openModal('number-methods')">
-            <div class="js-card-title">Number Methods & Math</div>
-            <div class="js-card-desc">Math.floor(), Math.random(), toFixed(), parseInt() and more</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="modules" data-category="Basics" onclick="openModal('modules')">
-            <div class="js-card-title">ES Modules (import/export)</div>
-            <div class="js-card-desc">Split code into reusable files with import and export</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="typeof" data-category="Basics"
+                onclick="openModal('typeof')">
+                <div class="js-card-title">typeof Operator</div>
+                <div class="js-card-desc">Returns a string describing the type of any value</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="string-methods" data-category="Basics"
+                onclick="openModal('string-methods')">
+                <div class="js-card-title">String Methods</div>
+                <div class="js-card-desc">trim(), split(), replace(), includes(), slice() and more</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="number-methods" data-category="Basics"
+                onclick="openModal('number-methods')">
+                <div class="js-card-title">Number Methods & Math</div>
+                <div class="js-card-desc">Math.floor(), Math.random(), toFixed(), parseInt() and more</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="modules" data-category="Basics"
+                onclick="openModal('modules')">
+                <div class="js-card-title">ES Modules (import/export)</div>
+                <div class="js-card-desc">Split code into reusable files with import and export</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -444,53 +454,59 @@
         <div class="group-title">
             <h2>➕ Operators &amp; Expressions</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="arithmetic-operators" data-category="Operators"
-            onclick="openModal('arithmetic-operators')">
-            <div class="js-card-title">Arithmetic Operators</div>
-            <div class="js-card-desc">+, -, *, /, %, ** and increment/decrement</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="arithmetic-operators" data-category="Operators"
+                onclick="openModal('arithmetic-operators')">
+                <div class="js-card-title">Arithmetic Operators</div>
+                <div class="js-card-desc">+, -, *, /, %, ** and increment/decrement</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="comparison-operators" data-category="Operators"
+                onclick="openModal('comparison-operators')">
+                <div class="js-card-title">Comparison Operators</div>
+                <div class="js-card-desc">==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="logical-operators" data-category="Operators"
+                onclick="openModal('logical-operators')">
+                <div class="js-card-title">Logical Operators</div>
+                <div class="js-card-desc">&amp;&amp; (AND), || (OR), ! (NOT) with short-circuit evaluation</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="comparison-operators" data-category="Operators"
-            onclick="openModal('comparison-operators')">
-            <div class="js-card-title">Comparison Operators</div>
-            <div class="js-card-desc">==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="logical-operators" data-category="Operators"
-            onclick="openModal('logical-operators')">
-            <div class="js-card-title">Logical Operators</div>
-            <div class="js-card-desc">&amp;&amp; (AND), || (OR), ! (NOT) with short-circuit evaluation</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="ternary-operator" data-category="Operators"
-            onclick="openModal('ternary-operator')">
-            <div class="js-card-title">Ternary Operator</div>
-            <div class="js-card-desc">condition ? trueValue : falseValue — compact if/else</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="nullish-coalescing" data-category="Operators"
-            onclick="openModal('nullish-coalescing')">
-            <div class="js-card-title">Nullish Coalescing (??)</div>
-            <div class="js-card-desc">Safe default values: only triggers on null or undefined</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="optional-chaining" data-category="Operators"
-            onclick="openModal('optional-chaining')">
-            <div class="js-card-title">Optional Chaining (?.)</div>
-            <div class="js-card-desc">Safely access nested properties without errors</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="ternary-operator" data-category="Operators"
+                onclick="openModal('ternary-operator')">
+                <div class="js-card-title">Ternary Operator</div>
+                <div class="js-card-desc">condition ? trueValue : falseValue — compact if/else</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="nullish-coalescing" data-category="Operators"
+                onclick="openModal('nullish-coalescing')">
+                <div class="js-card-title">Nullish Coalescing (??)</div>
+                <div class="js-card-desc">Safe default values: only triggers on null or undefined</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="optional-chaining" data-category="Operators"
+                onclick="openModal('optional-chaining')">
+                <div class="js-card-title">Optional Chaining (?.)</div>
+                <div class="js-card-desc">Safely access nested properties without errors</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -499,45 +515,49 @@
         <div class="group-title">
             <h2>🔀 Control Flow</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="if-else" data-category="Control Flow"
-            onclick="openModal('if-else')">
-            <div class="js-card-title">if / else</div>
-            <div class="js-card-desc">Execute different code based on conditions</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="if-else" data-category="Control Flow"
+                onclick="openModal('if-else')">
+                <div class="js-card-title">if / else</div>
+                <div class="js-card-desc">Execute different code based on conditions</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="switch" data-category="Control Flow"
+                onclick="openModal('switch')">
+                <div class="js-card-title">switch Statement</div>
+                <div class="js-card-desc">Match a value against multiple cases efficiently</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="for-loop" data-category="Control Flow"
+                onclick="openModal('for-loop')">
+                <div class="js-card-title">for Loop</div>
+                <div class="js-card-desc">Classic for, for...of, and for...in iteration</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="switch" data-category="Control Flow"
-            onclick="openModal('switch')">
-            <div class="js-card-title">switch Statement</div>
-            <div class="js-card-desc">Match a value against multiple cases efficiently</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="for-loop" data-category="Control Flow"
-            onclick="openModal('for-loop')">
-            <div class="js-card-title">for Loop</div>
-            <div class="js-card-desc">Classic for, for...of, and for...in iteration</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="while-loop" data-category="Control Flow"
-            onclick="openModal('while-loop')">
-            <div class="js-card-title">while / do...while</div>
-            <div class="js-card-desc">Repeat code while a condition is true</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="break-continue" data-category="Control Flow"
-            onclick="openModal('break-continue')">
-            <div class="js-card-title">break &amp; continue</div>
-            <div class="js-card-desc">Exit a loop early or skip the current iteration</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="while-loop" data-category="Control Flow"
+                onclick="openModal('while-loop')">
+                <div class="js-card-title">while / do...while</div>
+                <div class="js-card-desc">Repeat code while a condition is true</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="break-continue" data-category="Control Flow"
+                onclick="openModal('break-continue')">
+                <div class="js-card-title">break &amp; continue</div>
+                <div class="js-card-desc">Exit a loop early or skip the current iteration</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -546,53 +566,59 @@
         <div class="group-title">
             <h2>🔧 Functions</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="function-declaration" data-category="Functions"
-            onclick="openModal('function-declaration')">
-            <div class="js-card-title">Function Declaration</div>
-            <div class="js-card-desc">Define reusable code blocks with the function keyword</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="function-declaration" data-category="Functions"
+                onclick="openModal('function-declaration')">
+                <div class="js-card-title">Function Declaration</div>
+                <div class="js-card-desc">Define reusable code blocks with the function keyword</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="arrow-functions" data-category="Functions"
+                onclick="openModal('arrow-functions')">
+                <div class="js-card-title">Arrow Functions</div>
+                <div class="js-card-desc">Concise ES6 function syntax with => and lexical this</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="parameters-arguments" data-category="Functions"
+                onclick="openModal('parameters-arguments')">
+                <div class="js-card-title">Parameters &amp; Arguments</div>
+                <div class="js-card-desc">Pass data into functions, including default values</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="arrow-functions" data-category="Functions"
-            onclick="openModal('arrow-functions')">
-            <div class="js-card-title">Arrow Functions</div>
-            <div class="js-card-desc">Concise ES6 function syntax with => and lexical this</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="parameters-arguments" data-category="Functions"
-            onclick="openModal('parameters-arguments')">
-            <div class="js-card-title">Parameters &amp; Arguments</div>
-            <div class="js-card-desc">Pass data into functions, including default values</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="return-values" data-category="Functions"
-            onclick="openModal('return-values')">
-            <div class="js-card-title">Return Values</div>
-            <div class="js-card-desc">Send data back from a function with the return keyword</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="callbacks" data-category="Functions"
-            onclick="openModal('callbacks')">
-            <div class="js-card-title">Callback Functions</div>
-            <div class="js-card-desc">Functions passed as arguments to be called later</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="rest-spread" data-category="Functions"
-            onclick="openModal('rest-spread')">
-            <div class="js-card-title">Rest &amp; Spread (...)</div>
-            <div class="js-card-desc">Collect arguments into an array or expand arrays/objects</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="return-values" data-category="Functions"
+                onclick="openModal('return-values')">
+                <div class="js-card-title">Return Values</div>
+                <div class="js-card-desc">Send data back from a function with the return keyword</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="callbacks" data-category="Functions"
+                onclick="openModal('callbacks')">
+                <div class="js-card-title">Callback Functions</div>
+                <div class="js-card-desc">Functions passed as arguments to be called later</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="rest-spread" data-category="Functions"
+                onclick="openModal('rest-spread')">
+                <div class="js-card-title">Rest &amp; Spread (...)</div>
+                <div class="js-card-desc">Collect arguments into an array or expand arrays/objects</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
         <div class="tag-card js-topic-card" data-topic="closures" data-category="Functions"
             onclick="openModal('closures')">
@@ -609,77 +635,86 @@
         <div class="group-title">
             <h2>📦 Arrays</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="array-basics" data-category="Arrays"
-            onclick="openModal('array-basics')">
-            <div class="js-card-title">Array Basics</div>
-            <div class="js-card-desc">Create and access ordered lists of values</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="array-basics" data-category="Arrays"
+                onclick="openModal('array-basics')">
+                <div class="js-card-title">Array Basics</div>
+                <div class="js-card-desc">Create and access ordered lists of values</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="push-pop" data-category="Arrays"
+                onclick="openModal('push-pop')">
+                <div class="js-card-title">push / pop / shift / unshift</div>
+                <div class="js-card-desc">Add and remove elements from the start or end</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="array-foreach" data-category="Arrays"
+                onclick="openModal('array-foreach')">
+                <div class="js-card-title">Array .forEach()</div>
+                <div class="js-card-desc">Execute a function for every element in an array</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="push-pop" data-category="Arrays"
-            onclick="openModal('push-pop')">
-            <div class="js-card-title">push / pop / shift / unshift</div>
-            <div class="js-card-desc">Add and remove elements from the start or end</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="array-map" data-category="Arrays"
+                onclick="openModal('array-map')">
+                <div class="js-card-title">Array .map()</div>
+                <div class="js-card-desc">Transform every element and return a new array</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="array-filter" data-category="Arrays"
+                onclick="openModal('array-filter')">
+                <div class="js-card-title">Array .filter()</div>
+                <div class="js-card-desc">Keep only elements that pass a test function</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="array-reduce" data-category="Arrays"
+                onclick="openModal('array-reduce')">
+                <div class="js-card-title">Array .reduce()</div>
+                <div class="js-card-desc">Accumulate all elements into a single value</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="array-find" data-category="Arrays"
+                onclick="openModal('array-find')">
+                <div class="js-card-title">Array .find() &amp; .findIndex()</div>
+                <div class="js-card-desc">Find the first matching element or its index</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="array-foreach" data-category="Arrays"
-            onclick="openModal('array-foreach')">
-            <div class="js-card-title">Array .forEach()</div>
-            <div class="js-card-desc">Execute a function for every element in an array</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="array-map" data-category="Arrays"
-            onclick="openModal('array-map')">
-            <div class="js-card-title">Array .map()</div>
-            <div class="js-card-desc">Transform every element and return a new array</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="array-filter" data-category="Arrays"
-            onclick="openModal('array-filter')">
-            <div class="js-card-title">Array .filter()</div>
-            <div class="js-card-desc">Keep only elements that pass a test function</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="array-reduce" data-category="Arrays"
-            onclick="openModal('array-reduce')">
-            <div class="js-card-title">Array .reduce()</div>
-            <div class="js-card-desc">Accumulate all elements into a single value</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="array-find" data-category="Arrays"
-            onclick="openModal('array-find')">
-            <div class="js-card-title">Array .find() &amp; .findIndex()</div>
-            <div class="js-card-desc">Find the first matching element or its index</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="array-sort" data-category="Arrays"
-            onclick="openModal('array-sort')">
-            <div class="js-card-title">Array .sort()</div>
-            <div class="js-card-desc">Sort elements alphabetically or numerically</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="array-slice-splice" data-category="Arrays"
-            onclick="openModal('array-slice-splice')">
-            <div class="js-card-title">slice &amp; splice</div>
-            <div class="js-card-desc">Extract portions or mutate arrays in-place</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="array-sort" data-category="Arrays"
+                onclick="openModal('array-sort')">
+                <div class="js-card-title">Array .sort()</div>
+                <div class="js-card-desc">Sort elements alphabetically or numerically</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="array-slice-splice" data-category="Arrays"
+                onclick="openModal('array-slice-splice')">
+                <div class="js-card-title">slice &amp; splice</div>
+                <div class="js-card-desc">Extract portions or mutate arrays in-place</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -688,53 +723,63 @@
         <div class="group-title">
             <h2>🗂️ Objects</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="object-basics" data-category="Objects"
-            onclick="openModal('object-basics')">
-            <div class="js-card-title">Object Basics</div>
-            <div class="js-card-desc">Store key-value pairs and access with dot or bracket notation</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="object-basics" data-category="Objects"
+                onclick="openModal('object-basics')">
+                <div class="js-card-title">Object Basics</div>
+                <div class="js-card-desc">Store key-value pairs and access with dot or bracket notation</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="object-methods" data-category="Objects"
+                onclick="openModal('object-methods')">
+                <div class="js-card-title">Object Methods</div>
+                <div class="js-card-desc">Object.keys(), .values(), .entries(), .assign()</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="object-methods" data-category="Objects"
-            onclick="openModal('object-methods')">
-            <div class="js-card-title">Object Methods</div>
-            <div class="js-card-desc">Object.keys(), .values(), .entries(), .assign()</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="this-keyword" data-category="Objects"
+                onclick="openModal('this-keyword')">
+                <div class="js-card-title">this Keyword</div>
+                <div class="js-card-desc">Refers to the calling object inside a method</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="destructuring" data-category="Objects"
+                onclick="openModal('destructuring')">
+                <div class="js-card-title">Destructuring</div>
+                <div class="js-card-desc">Unpack arrays and object properties into variables</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="this-keyword" data-category="Objects"
-            onclick="openModal('this-keyword')">
-            <div class="js-card-title">this Keyword</div>
-            <div class="js-card-desc">Refers to the calling object inside a method</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="destructuring" data-category="Objects"
-            onclick="openModal('destructuring')">
-            <div class="js-card-title">Destructuring</div>
-            <div class="js-card-desc">Unpack arrays and object properties into variables</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="spread-objects" data-category="Objects"
-            onclick="openModal('spread-objects')">
-            <div class="js-card-title">Spread with Objects</div>
-            <div class="js-card-desc">Copy and merge objects with the spread operator</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="class-syntax" data-category="Objects"
-            onclick="openModal('class-syntax')">
-            <div class="js-card-title">ES6 Classes</div>
-            <div class="js-card-desc">Blueprint for objects with constructor and methods</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="spread-objects" data-category="Objects"
+                onclick="openModal('spread-objects')">
+                <div class="js-card-title">Spread with Objects</div>
+                <div class="js-card-desc">Copy and merge objects with the spread operator</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="class-syntax" data-category="Objects"
+                onclick="openModal('class-syntax')">
+                <div class="js-card-title">ES6 Classes</div>
+                <div class="js-card-desc">Blueprint for objects with constructor and methods</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -743,52 +788,57 @@
         <div class="group-title">
             <h2>🌐 DOM Manipulation</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="getElementById" data-category="DOM"
-            onclick="openModal('getElementById')">
-            <div class="js-card-title">getElementById()</div>
-            <div class="js-card-desc">Select a single element by its unique ID</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="getElementById" data-category="DOM"
+                onclick="openModal('getElementById')">
+                <div class="js-card-title">getElementById()</div>
+                <div class="js-card-desc">Select a single element by its unique ID</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="querySelector" data-category="DOM"
+                onclick="openModal('querySelector')">
+                <div class="js-card-title">querySelector &amp; querySelectorAll</div>
+                <div class="js-card-desc">Select elements using CSS selector syntax</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="classList" data-category="DOM"
+                onclick="openModal('classList')">
+                <div class="js-card-title">classList Methods</div>
+                <div class="js-card-desc">add, remove, toggle, and contains CSS classes</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="querySelector" data-category="DOM"
-            onclick="openModal('querySelector')">
-            <div class="js-card-title">querySelector &amp; querySelectorAll</div>
-            <div class="js-card-desc">Select elements using CSS selector syntax</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="classList" data-category="DOM" onclick="openModal('classList')">
-            <div class="js-card-title">classList Methods</div>
-            <div class="js-card-desc">add, remove, toggle, and contains CSS classes</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="style-manipulation" data-category="DOM"
-            onclick="openModal('style-manipulation')">
-            <div class="js-card-title">Style Manipulation</div>
-            <div class="js-card-desc">Set inline CSS properties via element.style</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="createElement" data-category="DOM"
-            onclick="openModal('createElement')">
-            <div class="js-card-title">createElement &amp; appendChild</div>
-            <div class="js-card-desc">Dynamically create and insert HTML elements</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="remove-element" data-category="DOM"
-            onclick="openModal('remove-element')">
-            <div class="js-card-title">Removing Elements</div>
-            <div class="js-card-desc">Delete elements from the DOM with .remove()</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="style-manipulation" data-category="DOM"
+                onclick="openModal('style-manipulation')">
+                <div class="js-card-title">Style Manipulation</div>
+                <div class="js-card-desc">Set inline CSS properties via element.style</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="createElement" data-category="DOM"
+                onclick="openModal('createElement')">
+                <div class="js-card-title">createElement &amp; appendChild</div>
+                <div class="js-card-desc">Dynamically create and insert HTML elements</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="remove-element" data-category="DOM"
+                onclick="openModal('remove-element')">
+                <div class="js-card-title">Removing Elements</div>
+                <div class="js-card-desc">Delete elements from the DOM with .remove()</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -797,37 +847,42 @@
         <div class="group-title">
             <h2>🎯 Events</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="addEventListener" data-category="Events"
-            onclick="openModal('addEventListener')">
-            <div class="js-card-title">addEventListener()</div>
-            <div class="js-card-desc">Attach event handlers to elements cleanly</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="addEventListener" data-category="Events"
+                onclick="openModal('addEventListener')">
+                <div class="js-card-title">addEventListener()</div>
+                <div class="js-card-desc">Attach event handlers to elements cleanly</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="keyboard-events" data-category="Events"
+                onclick="openModal('keyboard-events')">
+                <div class="js-card-title">Keyboard Events</div>
+                <div class="js-card-desc">keydown, keyup — detect which key was pressed</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="keyboard-events" data-category="Events"
-            onclick="openModal('keyboard-events')">
-            <div class="js-card-title">Keyboard Events</div>
-            <div class="js-card-desc">keydown, keyup — detect which key was pressed</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="form-events" data-category="Events"
-            onclick="openModal('form-events')">
-            <div class="js-card-title">Form Events</div>
-            <div class="js-card-desc">submit, input, change — handle form interactions</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="event-bubbling" data-category="Events"
-            onclick="openModal('event-bubbling')">
-            <div class="js-card-title">Event Bubbling &amp; Delegation</div>
-            <div class="js-card-desc">Handle child events via a single parent listener</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="form-events" data-category="Events"
+                onclick="openModal('form-events')">
+                <div class="js-card-title">Form Events</div>
+                <div class="js-card-desc">submit, input, change — handle form interactions</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="event-bubbling" data-category="Events"
+                onclick="openModal('event-bubbling')">
+                <div class="js-card-title">Event Bubbling &amp; Delegation</div>
+                <div class="js-card-desc">Handle child events via a single parent listener</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -836,36 +891,44 @@
         <div class="group-title">
             <h2>⏳ Async JavaScript</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="promises" data-category="Async" onclick="openModal('promises')">
-            <div class="js-card-title">Promises</div>
-            <div class="js-card-desc">Handle future values with .then(), .catch(), .finally()</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="promises" data-category="Async"
+                onclick="openModal('promises')">
+                <div class="js-card-title">Promises</div>
+                <div class="js-card-desc">Handle future values with .then(), .catch(), .finally()</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="async-await" data-category="Async"
+                onclick="openModal('async-await')">
+                <div class="js-card-title">async / await</div>
+                <div class="js-card-desc">Write async code that reads like synchronous code</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="async-await" data-category="Async"
-            onclick="openModal('async-await')">
-            <div class="js-card-title">async / await</div>
-            <div class="js-card-desc">Write async code that reads like synchronous code</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="fetch-api" data-category="Async"
-            onclick="openModal('fetch-api')">
-            <div class="js-card-title">fetch API</div>
-            <div class="js-card-desc">Make HTTP requests to APIs and handle JSON responses</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="error-handling" data-category="Async"
-            onclick="openModal('error-handling')">
-            <div class="js-card-title">try / catch / finally</div>
-            <div class="js-card-desc">Handle errors gracefully with structured error handling</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="fetch-api" data-category="Async"
+                onclick="openModal('fetch-api')">
+                <div class="js-card-title">fetch API</div>
+                <div class="js-card-desc">Make HTTP requests to APIs and handle JSON responses</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="error-handling" data-category="Async"
+                onclick="openModal('error-handling')">
+                <div class="js-card-title">try / catch / finally</div>
+                <div class="js-card-desc">Handle errors gracefully with structured error handling</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
         <div class="tag-card js-topic-card" data-topic="json" data-category="Async" onclick="openModal('json')">
             <div class="js-card-title">JSON</div>
@@ -881,45 +944,50 @@
         <div class="group-title">
             <h2>🛠️ Browser APIs</h2>
         </div>
-        <div class="tag-card js-topic-card" data-topic="localStorage" data-category="Browser APIs"
-            onclick="openModal('localStorage')">
-            <div class="js-card-title">localStorage</div>
-            <div class="js-card-desc">Persist data in the browser across sessions</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="localStorage" data-category="Browser APIs"
+                onclick="openModal('localStorage')">
+                <div class="js-card-title">localStorage</div>
+                <div class="js-card-desc">Persist data in the browser across sessions</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="sessionStorage" data-category="Browser APIs"
+                onclick="openModal('sessionStorage')">
+                <div class="js-card-title">sessionStorage</div>
+                <div class="js-card-desc">Temporary storage that clears when the tab closes</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="timers" data-category="Browser APIs"
+                onclick="openModal('timers')">
+                <div class="js-card-title">setTimeout &amp; setInterval</div>
+                <div class="js-card-desc">Run code after a delay or on a repeating schedule</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
-        <div class="tag-card js-topic-card" data-topic="sessionStorage" data-category="Browser APIs"
-            onclick="openModal('sessionStorage')">
-            <div class="js-card-title">sessionStorage</div>
-            <div class="js-card-desc">Temporary storage that clears when the tab closes</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="timers" data-category="Browser APIs"
-            onclick="openModal('timers')">
-            <div class="js-card-title">setTimeout &amp; setInterval</div>
-            <div class="js-card-desc">Run code after a delay or on a repeating schedule</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="clipboard-api" data-category="Browser APIs"
-            onclick="openModal('clipboard-api')">
-            <div class="js-card-title">Clipboard API</div>
-            <div class="js-card-desc">Copy text to the clipboard programmatically</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-intermediate">Intermediate</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
-        </div>
-        <div class="tag-card js-topic-card" data-topic="date-object" data-category="Browser APIs"
-            onclick="openModal('date-object')">
-            <div class="js-card-title">Date Object</div>
-            <div class="js-card-desc">Work with dates and times in JavaScript</div>
-            <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
-                    class="js-learn-btn">Learn More →</button></div>
-            <span class="tooltip">Click for details</span>
+        <div class="cards-grid">
+            <div class="tag-card js-topic-card" data-topic="clipboard-api" data-category="Browser APIs"
+                onclick="openModal('clipboard-api')">
+                <div class="js-card-title">Clipboard API</div>
+                <div class="js-card-desc">Copy text to the clipboard programmatically</div>
+                <div class="js-card-footer"><span
+                        class="js-difficulty-badge badge-intermediate">Intermediate</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card js-topic-card" data-topic="date-object" data-category="Browser APIs"
+                onclick="openModal('date-object')">
+                <div class="js-card-title">Date Object</div>
+                <div class="js-card-desc">Work with dates and times in JavaScript</div>
+                <div class="js-card-footer"><span class="js-difficulty-badge badge-beginner">Beginner</span><button
+                        class="js-learn-btn">Learn More →</button></div>
+                <span class="tooltip">Click for details</span>
+            </div>
         </div>
     </section>
 
@@ -1025,42 +1093,12 @@
         </div>
     </div>
 
-
-    <!-- Navigation -->
-    <div class="modal-nav">
-        <button id="prev-topic-btn" onclick="goPrevTopic()">⬅ Previous Topic</button>
-        <button id="next-topic-btn" onclick="goNextTopic()">Next Topic ➡</button>
-    </div>
-    </div>
-    </div>
-
     <!-- ── SCROLL BUTTONS ─────────────────────────────── -->
     <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
     <button id="scrollBottomBtn" aria-label="Scroll to bottom"><i class="fa-solid fa-angles-down fa-beat"></i></button>
 
-    <!-- ── FOOTER ─────────────────────────────────────── -->
-    <section>
-        <footer>
-            <div class="tag-card">
-                <img src="/assets/adan.png" alt="Profile photo of Adan Suhail" class="DP">
-                <h3 style="color: var(--text-modal-h3); margin: 8px 0 4px;">Adan Suhail</h3>
-                <p>
-                    <a href="https://wa.me/923074449331" target="_blank" rel="noopener"><img src="/assets/whatsapp.jpg"
-                            alt="WhatsApp" class="wa"></a>
-                    <a href="mailto:adansuahilch@gmail.com?subject=Hello%20There" target="_blank" rel="noopener"><img
-                            src="/assets/gmail.png" alt="Gmail" class="wa"></a>
-                    <a href="https://www.instagram.com/adansuhailch13/?__pwa=1#" target="_blank" rel="noopener"><img
-                            src="/assets/instagram.png" alt="Instagram" class="wa"></a>
-                </p>
-            </div>
-            <p>🎨 Want to play with colors? <a href="/pages/colour-piker.html">Try my Color Picker</a></p>
-            <p>📝 Take our Tag Web Test to join our WhatsApp Community! <a href="/pages/test.html">Try it out</a></p>
-            <p><a href="/pages/about-me.html">About me..!!</a></p>
-            <p>&copy; 2025 Tag Web. Built with ❤️ for web learners by <strong>Hafiz Adan Suhail</strong> 😎</p>
-        </footer>
-    </section>
-
-    <!-- ── SCRIPTS ─────────────────────────────────────── -->
+    <!-- I remove the footer cause i think in js footer is useless!!! -->
+    <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
