@@ -301,15 +301,6 @@ html[data-theme="light"] #theme-switch svg:last-child {
 /* ============================================================
    RESPONSIVE NAVIGATION SYSTEM
    ============================================================ */
-.nav-container {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-top: 16px;
-    margin-bottom: -16px;
-    position: relative;
-    background: var(--bg-nav);
-    box-shadow: 0 0 15px var(--shadow-card);
-}
 
 /* 🔴 DEFAULT: HIDE hamburger on desktop */
 .hamburger {
@@ -426,19 +417,6 @@ html[data-theme="light"] #theme-switch svg:last-child {
 
 
 /* DROPDOWN */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--bg-nav);
-    border: 1px solid var(--border-modal);
-    min-width: 220px;
-    border-radius: 8px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s;
-}
 
 /* Desktop dropdown */
 @media (min-width: 769px) {
@@ -494,12 +472,6 @@ html[data-theme="light"] #theme-switch svg:last-child {
     }
 
     /* Mobile dropdown */
-    .dropdown-menu {
-        position: static;
-        display: none;
-        background: rgba(255, 255, 255, 0.05);
-        padding-left: 10px;
-    }
 
     .dropdown.mobile-open .dropdown-menu {
         display: block;
@@ -607,20 +579,6 @@ html[data-theme="light"] #theme-switch svg:last-child {
     z-index: 9999;
 }
 
-.entry-box {
-    max-width: 520px;
-    width: 90%;
-    background: var(--bg-entry);
-    padding: 32px 28px;
-    border: 1px solid #30363d;
-
-    box-shadow:
-        0 1px 0 rgba(27, 31, 36, 0.04),
-        0 8px 24px rgba(0, 0, 0, 0.4);
-    border-radius: 16px;
-    text-align: center;
-    border: 1px solid var(--border-modal);
-}
 
 .entry-box h1 {
     color: var(--text-accent);
@@ -636,12 +594,6 @@ html[data-theme="light"] #theme-switch svg:last-child {
     background: none;
 }
 
-.entry-actions {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
 #enter-btn,
 #reject-btn {
@@ -1114,25 +1066,10 @@ textarea:focus {
     margin-bottom: 10px;
 }
 
-.CodeMirror-scroll {
-    min-height: 150px;
-    max-height: 400px;
-}
 
 /* ============================================================
    MODAL ACTION BUTTONS
    ============================================================ */
-.action-sm-btn {
-    background: transparent;
-    border: 1px solid var(--border-modal);
-    color: var(--text-secondary);
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    margin-left: 6px;
-}
 
 .action-sm-btn:hover {
     background: var(--btn-run-hover);
@@ -1480,10 +1417,6 @@ html[data-theme="dark"] iframe {
 }
 
 /* javascript section */
-.coming-soon-section {
-    position: relative;
-    overflow: hidden;
-}
 
 .coming-soon-section::before {
     content: '';
@@ -1498,43 +1431,12 @@ html[data-theme="dark"] iframe {
     pointer-events: none;
 }
 
-.coming-soon-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.8rem;
-    padding: 4px 12px;
-    border-radius: 20px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
-}
 
-.js-card-locked {
-    background: var(--bg-card);
-    color: var(--text-secondary);
-    border: 1px dashed #f59e0b;
-    margin: 8px 0;
-    padding: 14px 18px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
 
 .js-card-locked:hover {
     opacity: 0.9;
 }
 
-.lock-icon {
-    font-size: 1.1rem;
-    flex-shrink: 0;
-}
 
 /* ============================================================
    ANIMATIONS
@@ -1584,18 +1486,11 @@ html[data-theme="dark"] iframe {
 }
 
 @media (max-width: 480px) {
-    .entry-box {
-        padding: 22px 16px;
-    }
 
     .entry-box h1 {
         font-size: 1.3rem;
     }
 
-    .entry-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
 
     #enter-btn,
     #reject-btn {

@@ -124,7 +124,6 @@ function searchTag() {
 // scrool button
 // ─── 🚀 SCROLL BUTTONS SYSTEM (BULLETPROOF) ───
 
-// 1. Click Event Listeners With Separate Checks
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const scrollBottomBtn = document.getElementById('scrollBottomBtn');
 
@@ -136,18 +135,30 @@ if (scrollTopBtn) {
 
 if (scrollBottomBtn) {
     scrollBottomBtn.addEventListener("click", () => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
     });
 }
 
-// 2. Scroll Window Event Listener With Dynamic Safety Check
 window.addEventListener("scroll", () => {
     const topBtn = document.getElementById("scrollTopBtn");
+    const bottomBtn = document.getElementById("scrollBottomBtn");
+    
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
     if (topBtn) {
-        if (window.scrollY > 200) {
+        if (scrollTop > 200) {
             topBtn.style.display = "block";
         } else {
             topBtn.style.display = "none";
+        }
+    }
+
+    if (bottomBtn) {
+        if (scrollTop < totalHeight - 200) {
+            bottomBtn.style.display = "block";
+        } else {
+            bottomBtn.style.display = "none";
         }
     }
 });
