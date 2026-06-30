@@ -1,3 +1,11 @@
+/**
+ * js-topics.js — JavaScript Learning Topic Data
+ * Tag Web | Used by js-part.js and javascript-part.html
+ *
+ * Shape: { title, history, code, quiz, answer, difficulty, category }
+ * difficulty: 'Beginner' | 'Intermediate'
+ * category:   one of the 11 category keys below
+ */
 const jsTopicData = {
 
     /* ═══════════════════════════════════════════════
