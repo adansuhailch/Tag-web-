@@ -1,0 +1,79 @@
+/* ============================================================
+SECTIONS
+============================================================ */
+section {
+    margin: 24px auto;
+    padding: 24px;
+    max-width: 1100px;
+    background: var(--bg-section);
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--shadow-section);
+    transition: background 0.3s;
+}
+
+/* cards-grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+/* Tag cards */
+.tag-card {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-card);
+    margin: 0;
+    padding: 16px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-card);
+    position: relative;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* extra code */
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tag-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px var(--shadow-card);
+    border-color: var(--text-accent);
+}
+
+.tag-card.highlight {
+    background: var(--btn-run-hover);
+    color: #fff;
+    border-color: transparent;
+}
+
+/* ── "More tags" links inside sections (previously inline styles) ── */
+.more-tags-link {
+    display: block;
+    margin-top: 12px;
+    color: var(--link-more);
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.more-tags-link:hover {
+    color: var(--btn-run-hover);
+}
+
+/* ── Blur when search active ── */
+.blur .tag-card {
+    filter: blur(3px);
+}
+
+.tag-card[style*="inline-block"] {
+    filter: none !important;
+}
