@@ -108,6 +108,11 @@ html[data-theme="light"] {
     box-sizing: border-box;
 }
 
+::selection {
+    background: #8B5CF6;
+    color: #FFFFFF;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
@@ -182,19 +187,13 @@ header {
     background: var(--bg-header);
     color: var(--text-primary);
     padding: 10px 15px;
-    box-shadow: var(--shadow-header);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    background: var(--bg-header);
-    color: var(--text-primary);
-    padding: 10px 15px;
-    box-shadow: var(--shadow-header);
-} */
 
 header h1 {
     font-size: 1.6rem;
@@ -679,92 +678,10 @@ body.menu-open {
     box-shadow: 0 0 10px rgba(30, 144, 255, 0.35);
 } */
 
-/* ============================================================
-   ENTRY OVERLAY (Splash Screen)
-   ============================================================ */
-#entry-overlay {
-    position: fixed;
-    inset: 0;
-    background: var(--overlay-bg);
-    backdrop-filter: blur(6px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-
-.entry-box {
-    max-width: 520px;
-    width: 90%;
-    background: var(--bg-entry);
-    padding: 32px 28px;
-    border: 1px solid #30363d;
-
-    box-shadow:
-        0 1px 0 rgba(27, 31, 36, 0.04),
-        0 8px 24px rgba(0, 0, 0, 0.4);
-    border-radius: 16px;
-    text-align: center;
-    border: 1px solid var(--border-modal);
-}
-
-.entry-box h1 {
-    color: var(--text-accent);
-    margin-bottom: 12px;
-    font-size: 1.6rem;
-}
-
-.entry-box p {
-    color: var(--text-secondary);
-    margin-bottom: 24px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    background: none;
-}
-
-.entry-actions {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-#enter-btn,
-#reject-btn {
-    padding: 11px 20px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background 0.25s, transform 0.15s;
-}
-
-#enter-btn {
-    background: #16a085;
-    color: #fff;
-}
-
-#enter-btn:hover {
-    background: var(--btn-run-hover);
-    transform: translateY(-1px);
-}
-
-#reject-btn {
-    background: transparent;
-    color: var(--text-secondary);
-    border: 1px solid var(--border-modal);
-}
-
-#reject-btn:hover {
-    background: rgba(255, 60, 60, 0.12);
-    color: #ff5555;
-    border-color: #ff5555;
-}
 
 /* ============================================================
-   SECTIONS
-   ============================================================ */
+SECTIONS
+============================================================ */
 section {
     margin: 24px auto;
     padding: 24px;
@@ -842,9 +759,7 @@ section {
     filter: none !important;
 }
 
-/* ============================================================
-   TOOLTIP
-   ============================================================ */
+/* tooltip */
 .tooltip {
     visibility: hidden;
     background: var(--tooltip-bg);
@@ -865,9 +780,7 @@ section {
     visibility: visible;
 }
 
-/* ============================================================
-   MODAL
-   ============================================================ */
+/* Modal */
 #modal {
     display: none;
     position: fixed;
@@ -1207,19 +1120,7 @@ textarea:focus {
 }
 
 /* ============================================================
-   MODAL ACTION BUTTONS
-   ============================================================ */
-.action-sm-btn {
-    background: transparent;
-    border: 1px solid var(--border-modal);
-    color: var(--text-secondary);
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    margin-left: 6px;
-}
+MODAL ACTION BUTTONS
 
 .action-sm-btn:hover {
     background: var(--btn-run-hover);
@@ -1305,7 +1206,7 @@ html[data-theme="dark"] iframe {
     border-color: var(--btn-run-hover);
 }
 
-/* scroll buttons */
+/* scroll buttons
 #scrollTopBtn,
 #scrollBottomBtn {
     position: fixed;
@@ -1334,7 +1235,7 @@ html[data-theme="dark"] iframe {
 #scrollBottomBtn:hover {
     background: var(--btn-run-hover);
     transform: scale(1.1);
-}
+} */
 
 
 /* footer */

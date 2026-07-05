@@ -1,0 +1,36 @@
+/* header buttons */
+.button-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: auto;
+
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-discord {
+    background: linear-gradient(135deg, #2c37ad, #2b37b4);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(29, 39, 153, 0.3);
+}
+
+.btn-discord:hover {
+    background: linear-gradient(135deg, #252d86, #212b97);
+    transform: translateY(-1px);
+}
