@@ -130,8 +130,13 @@ header {
     background: var(--bg-header);
     color: var(--text-primary);
     padding: 10px 15px;
-    box-shadow: var(--shadow-header);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 
 header h1 {
     font-size: 1.6rem;
@@ -569,9 +574,7 @@ section {
     filter: none !important;
 }
 
-/* ============================================================
-   TOOLTIP
-   ============================================================ */
+/* tooltip */
 .tooltip {
     visibility: hidden;
     background: var(--tooltip-bg);
@@ -592,9 +595,7 @@ section {
     visibility: visible;
 }
 
-/* ============================================================
-   MODAL
-   ============================================================ */
+/* Modal */
 #modal {
     display: none;
     position: fixed;
