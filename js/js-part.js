@@ -1,4 +1,11 @@
-// state
+/**
+ * js-part.js — JavaScript Learning Page Logic
+ * Tag Web | Requires js-topics.js to be loaded first
+ */
+
+/* ═══════════════════════════════════════════════
+   STATE
+═══════════════════════════════════════════════ */
 let currentTopicKey = null;
 let allTopicKeys = [];
 let filteredKeys = [];
@@ -45,7 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Modal
+/* ═══════════════════════════════════════════════
+   MODAL
+═══════════════════════════════════════════════ */
 function openModal(key) {
     const topic = jsTopicData[key];
     if (!topic) return;
