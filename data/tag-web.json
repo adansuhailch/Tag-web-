@@ -1,14 +1,14 @@
 {
     "!doctype": {
         "title": "<!doctype>",
-        "history": "<h1> <>!DOCTYPE html> is used to specify that the document is an HTML5 document. It helps browsers render the page correctly by indicating the HTML version being used.</h1>",
-        "tip": "The <!DOCTYPE> declaration must be the first line of the HTML document. It is not case-sensitive, but it is recommended to use uppercase for consistency.",
-        "code": "<!DOCTYPE html>\n<html>\n<head>\n<title>Title of the document</title>\n</head>\n<body>\nThe content of the document......\n</body>\n</html>",
+        "history": "<h1>&lt;!DOCTYPE html&gt;</h1> is used to specify that the document is an HTML5 document. It helps browsers render the page correctly.",
+        "tip": "The &lt;!DOCTYPE&gt; declaration must be the very first line of your HTML document, before any tags.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<title>Title of the document</title>\n</head>\n<body>\n<p>The content of the document goes here.</p>\n</body>\n</html>",
         "quiz": "Which is the tag that tells the browser which version of HTML user used?",
         "answer": "doctype"
     },
     "h1": {
-        "title": "<h1> Heading Tag",
+        "title": " Heading Tag",
         "history": "<h1> The tag defines the most important heading on the page. Search engines use headings to index the structure of your web pages. Always use exactly one h1 per page.</h1>",
         "tip": "The <h1> tag is used to define the main heading of a webpage. It is important for SEO and accessibility, as it helps search engines and screen readers understand the content hierarchy.",
         "code": "<h1>Hello World</h1>\n<p>Welcome to Tag Web! Start learning code.</p>",

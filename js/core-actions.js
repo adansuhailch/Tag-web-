@@ -1,7 +1,3 @@
-// ===============================
-// Mobile Sidebar Navigation
-// ===============================
-
 const menuBtn = document.getElementById("menu-btn");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("sidebar-overlay");
@@ -23,38 +19,48 @@ function closeSidebar() {
     menuBtn.setAttribute("aria-expanded", "false");
 }
 
-// Toggle Sidebar
-menuBtn.addEventListener("click", () => {
-
-    if (sidebar.classList.contains("active")) {
-        closeSidebar();
-    } else {
-        openSidebar();
-    }
-
-});
+// Toggle Sidebar (Galti se crash hone se bachane ke liye if condition lagayi)
+if (menuBtn) {
+    menuBtn.addEventListener("click", () => {
+        if (sidebar.classList.contains("active")) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+    });
+}
 
 // Close when clicking overlay
-overlay.addEventListener("click", closeSidebar);
-
-// Close when pressing ESC
-document.addEventListener("keydown", (e) => {
-
-    if (e.key === "Escape" && sidebar.classList.contains("active")) {
-        closeSidebar();
-    }
-
-});
+if (overlay) {
+    overlay.addEventListener("click", closeSidebar);
+}
 
 // Close when clicking any sidebar link
-navLinks.forEach(link => {
+if (navLinks && navLinks.length > 0) {
+    navLinks.forEach(link => {
+        link.addEventListener("click", closeSidebar);
+    });
+}
 
-    link.addEventListener("click", closeSidebar);
-
-});
-
+// ─── OLD OPENMODAL BLOCK KO REDIRECT ENGINE MEIN BADAL DIYA ───
 function openModal(tag) {
-    document.getElementById('modal').style.display = 'flex';
+    // Ab same page par dabba kholne ke bajaye, yeh user ko naye page par bhej dega tag name ke sath!
+    window.open(`/pages/editor.html?tag=${tag}`, '_blank');
+}
+
+// Back to previous page action logic
+function goBack() {
+    window.history.back();
+}
+
+
+
+// Full page template ke andar data insert karne ka function
+function fillEditorPageData(tag) {
+    if (!tagData[tag]) {
+        document.getElementById('modal-title').innerHTML = "Tag Not Found";
+        return;
+    }
     document.getElementById('modal-title').innerHTML = tagData[tag].title;
     document.getElementById('modal-history').innerHTML = tagData[tag].history;
     document.getElementById('modal-tip').innerHTML = tagData[tag].tip || "No tip available for this tag.";
@@ -64,16 +70,10 @@ function openModal(tag) {
     document.getElementById('quiz-answer').value = '';
     document.getElementById('quiz-feedback').innerHTML = '';
 
-    // yahan tag ko hidden attribute me store hota ha
     document.getElementById('quiz').setAttribute('data-tag', tag);
-    document.getElementById("modal-content").classList.remove("modal-dark");
-
 }
 
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-}
-
+// Baqi functions (copyCode, runLiveCode, checkAnswer) bilkul same pehle jaise hi kaam karte rahenge!
 function copyCode() {
     const code = document.getElementById('modal-editor').value;
     navigator.clipboard.writeText(code).then(() => {
@@ -81,14 +81,12 @@ function copyCode() {
     });
 }
 
-
 function runLiveCode() {
     const code = document.getElementById('modal-editor').value;
     document.getElementById('live-preview').srcdoc = code;
 }
 
 function checkAnswer() {
-    // hidden attribute 
     const tag = document.getElementById('quiz').getAttribute('data-tag');
     const answer = document.getElementById('quiz-answer').value.trim().toLowerCase();
     const correct = tagData[tag].answer.toLowerCase();
@@ -99,6 +97,7 @@ function checkAnswer() {
         document.getElementById('quiz-feedback').innerHTML = "<span style='color:#ffb703;'>Try again!</span>";
     }
 }
+
 function searchTag() {
     const input = document.getElementById('searchBar').value.toLowerCase();
     const cards = document.querySelectorAll('.tag-card');

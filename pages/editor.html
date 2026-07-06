@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Web - Documentation & Editor</title>
+    <!-- FontAwesome Icons Link -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Aapki main style settings link -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Is master full-screen page ko desktop par bina scroll ke fit rakhne ke liye settings */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: var(--bg-modal, #0a1120);
+            color: var(--text-primary, #ffffff);
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .editor-page-container {
+            padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Grid sizes ko fullscreen ke liye optimize kiya */
+        #modal-editor {
+            height: 250px !important;
+            /* Editor ko full room diya coding ke liye */
+        }
+
+        #live-preview {
+            height: 300px !important;
+            /* Live test area bada kar diya */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="editor-page-container">
+        <!-- Top Toolbar / Breadcrumbs (Back button ab history ke sath chalega) -->
+        <div class="modal-header-bar">
+            <button id="close-modal" onclick="goBack()"><i class="fa-solid fa-arrow-left"></i> Back to Tags</button>
+            <div class="breadcrumbs">Documentation &gt; <span id="modal-title" style="color: #64ffda;">Loading...</span>
+            </div>
+            <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
+        </div>
+
+        <!-- Main Body Wrapper Grid (Aapka banaya hua split columns system) -->
+        <div class="modal-body-layout">
+
+            <!-- ⬅️ Left Panel: Text Information -->
+            <div class="modal-left">
+                <div class="info-block">
+                    <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
+                    <div id="modal-history">Loading history and usage notes...</div>
+                </div>
+
+                <div class="info-block tip-box">
+                    <h4>💡 Tip</h4>
+                    <p id="modal-tip">Loading tip information...</p>
+                </div>
+            </div>
+
+            <!-- ➡️ Right Panel: Editor & Quiz Tools -->
+            <div class="modal-right">
+
+                <!-- Live Code Box -->
+                <div class="editor-wrapper">
+                    <div class="editor-header">
+                        <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                    </div>
+                    <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
+
+                    <div class="editor-actions">
+                        <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
+                        <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                    </div>
+                </div>
+
+                <!-- Preview Output Window -->
+                <div class="preview-wrapper">
+                    <div class="preview-header">Output</div>
+                    <iframe id="live-preview" title="Live code preview"
+                        sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+
+                <!-- Multiple Choice Quiz Box -->
+                <div class="quiz-section" id="quiz">
+                    <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
+                    <p id="quiz-question">Loading quiz question...</p>
+
+                    <div class="quiz-options-group">
+                        <input type="text" id="quiz-answer" placeholder="Type your answer here (e.g. h1)"
+                            aria-label="Quiz answer" />
+                        <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                    </div>
+                    <p id="quiz-feedback" aria-live="polite"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Pehle core-actions.js lagayein kyunki isme functions hain -->
+    <script src="../js/core-actions.js"></script>
+
+    <!-- Phir tag-web.js lagayein kyunki yeh download ka engine hai -->
+    <script src="../js/tag-web.js"></script>
+</body>
+
+</html>
