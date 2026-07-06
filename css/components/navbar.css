@@ -51,58 +51,26 @@
     background-color: #0b0f19;
 }
 
-/* ⬅️ Left Sidebar Layout Panel */
-.sidebar-panel {
-    width: 270px;
-    min-width: 270px;
+/* ⬅️ Left Sidebar Layout Panel (Upgraded) */
+/* .sidebar-panel {
+    width: 70px;
+    min-width: 70px;
     background-color: #0d1220;
     border: 3px solid rgba(255, 255, 255, 0.05);
     margin: 20px 0 20px 20px;
     border-radius: 20px;
-    /* this is for to fit just how long is the panel in moble */
-    height: auto;
-    min-height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 24px 16px;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-    transition: left 0.35s ease,
-        box-shadow 0.35s ease;
-
-}
-
-
-/* sidebar overlay in the end of index.html */
-#sidebar-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .45);
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-    z-index: 1400;
-}
-
-#sidebar-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-body.menu-open {
-
+    padding: 24px 8px;
     overflow: hidden;
-
+    transition: width 0.3s ease;
 }
 
-/* Vertical List items configuration */
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.sidebar-panel:hover {
+    width: 250px;
+    min-width: 250px;
 }
 
 .nav-list li a {
@@ -114,20 +82,18 @@ body.menu-open {
     font-size: 14px;
     font-weight: 500;
     border-radius: 8px;
-    transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
-.nav-list li a:hover {
-    background-color: rgba(255, 255, 255, 0.04);
-    color: #ffffff;
+
+.nav-list li a span {
+    display: none;
+    margin-left: 10px;
 }
 
-/* Emerald Green Active tab option (Jaise pehle humne banaya tha) */
-.nav-list li.active a {
-    background-color: #059669;
-    color: #ffffff;
-    font-weight: 600;
-}
+.sidebar-panel:hover .nav-list li a span {
+    display: inline;
+} */
 
 /* 📄 Right Side Content Configuration */
 .content-panel {

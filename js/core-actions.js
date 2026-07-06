@@ -43,10 +43,50 @@ if (navLinks && navLinks.length > 0) {
 }
 
 // ─── OLD OPENMODAL BLOCK KO REDIRECT ENGINE MEIN BADAL DIYA ───
+// function openModal(tag) {
+//     let category = 'tag-web';
+
+//     if (window.location.pathname.includes('text-tag.html')) {
+//         category = 'text-tag';
+//     } else if (window.location.pathname.includes('semantic-media.html')) {
+//         category = 'semantic-media';
+//     } else if (window.location.pathname.includes('other-tags.html')) {
+//         category = 'other-tags';
+//     } else if (window.location.pathname.includes('other-css-tags.html')) {
+//         category = 'other-css-tags';
+//     } else if (window.location.pathname.includes('javascript-part.html')) {
+//         category = 'javascript-part';
+//     } else if (window.location.pathname.includes('form-tag.html')) {
+//         category = 'form-tag';
+//     } else if (window.location.pathname.includes('css-text-fonts.html')) {
+//         category = 'css-text-fonts';
+//     } else if (window.location.pathname.includes('css-part.html')) {
+//         category = 'css-part';
+//     } else if (window.location.pathname.includes('css-layout.html')) {
+//         category = 'css-layout';
+//     } else if (window.location.pathname.includes('css-grid.html')) {
+//         category = 'css-grid';
+//     } else if (window.location.pathname.includes('css-flex.html')) {
+//         category = 'css-flex';
+//     } else if (window.location.pathname.includes('css-effects.html')) {
+//         category = 'css-effects';
+//     } else if (window.location.pathname.includes('css-dimension-size.html')) {
+//         category = 'css-dimension-size';
+//     } else if (window.location.pathname.includes('css-boxmodel.html')) {
+//         category = 'css-boxmodel';
+//     } else if (window.location.pathname.includes('css-background.html')) {
+//         category = 'css-background';
+//     } else if (window.location.pathname.includes('css-animation.html')) {
+//         category = 'css-animation';
+//     }
+//     window.open(`/pages/editor.html?category=${category}&tag=${tag}`, '_blank');
+// }
 function openModal(tag) {
-    // Ab same page par dabba kholne ke bajaye, yeh user ko naye page par bhej dega tag name ke sath!
-    window.open(`/pages/editor.html?tag=${tag}`, '_blank');
+    let pageName = window.location.pathname.split("/").pop().replace(".html", "");
+    let category = (pageName === "index" || pageName === "") ? "tag-web" : pageName;
+    window.open(`/pages/editor.html?category=${category}&tag=${tag}`, '_blank');
 }
+
 
 // Back to previous page action logic
 function goBack() {
@@ -97,6 +137,44 @@ function checkAnswer() {
         document.getElementById('quiz-feedback').innerHTML = "<span style='color:#ffb703;'>Try again!</span>";
     }
 }
+// Global variable declare kiya taake data safe rahe
+if (typeof tagData === 'undefined') {
+    window.tagData = {};
+}
+
+async function loadDynamicEditorData() {
+    // Agar hum sirf editor.html wale page par hain, tabhi yeh engine chalayein
+    if (window.location.pathname.includes('editor.html')) {
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category') || 'tag-web'; // Default
+            const tag = urlParams.get('tag');
+
+            // Category ke mutabiq sahi json rasta select kiya
+            let jsonPath = `../data/${category}.json`;
+
+            const response = await fetch(jsonPath);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            window.tagData = await response.json();
+            console.log(`🎉 Master Engine loaded data successfully from: ${jsonPath}`);
+
+            // Data aate hi screen par fill kar do
+            if (tag && typeof fillEditorPageData === 'function') {
+                fillEditorPageData(tag);
+            }
+
+        } catch (error) {
+            console.error("🚨 Master Engine Error loading data:", error);
+        }
+    }
+}
+
+// Page load hote hi automatic fire hoga
+document.addEventListener("DOMContentLoaded", loadDynamicEditorData);
+
 
 function searchTag() {
     const input = document.getElementById('searchBar').value.toLowerCase();

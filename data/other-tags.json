@@ -1,756 +1,864 @@
 {
     "doctype": {
         "title": "<!DOCTYPE html> Document type",
-        "history": "Declares the HTML document type and version.",
+        "history": "<h1>Declares the HTML document type and version.</h1>",
+        "tip": "The <code>&lt;!DOCTYPE html&gt;</code> declaration defines the HTML version.",
         "code": "<!DOCTYPE html>\n<html>\n<head><title>Doc</title></head>\n<body>Content</body>\n</html>",
         "quiz": "Which declaration sets the HTML document type?",
         "answer": "doctype"
     },
     "html": {
         "title": "<html> Root",
-        "history": "Root element wrapping the page.",
+        "history": "<h1>Root element wrapping the page.</h1>",
+        "tip": "The <code>&lt;html&gt;</code> tag is the root element of an HTML document.",
         "code": "<html>...</html>",
         "quiz": "Which is the root element of HTML?",
         "answer": "html"
     },
     "head": {
         "title": "<head> Metadata",
-        "history": "Holds metadata, links, and scripts.",
+        "history": "<h1>Holds metadata, links, and scripts.</h1>",
+        "tip": "The <code>&lt;head&gt;</code> tag is used to hold metadata for the HTML document.",
         "code": "<head>\n  <meta charset='UTF-8'>\n  <title>Title</title>\n</head>",
         "quiz": "Which element contains metadata?",
         "answer": "head"
     },
     "title": {
         "title": "<title> Title",
-        "history": "Defines the document title.",
+        "history": "<h1>Defines the document title.</h1>",
+        "tip": "The <code>&lt;title&gt;</code> tag is used to define the title of the HTML document.",
         "code": "<head>\n  <title>My Page</title>\n</head>",
         "quiz": "Which tag sets the page title?",
         "answer": "title"
     },
     "meta": {
         "title": "<meta> Metadata",
-        "history": "Defines document metadata.",
+        "history": "<h1>Defines document metadata.</h1>",
+        "tip": "The <code>&lt;meta&gt;</code> tag provides data about the HTML document that is not displayed on the page.",
         "code": "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
         "quiz": "Which tag sets metadata like viewport?",
         "answer": "meta"
     },
     "link": {
         "title": "<link> External resource",
-        "history": "Links external resources like CSS.",
+        "history": "<h1>Links external resources like CSS.</h1>",
+        "tip": "The <code>&lt;link&gt;</code> tag is used to link external resources like CSS.",
         "code": "<link rel='stylesheet' href='styles.css'>",
         "quiz": "Which tag links external styles?",
         "answer": "link"
     },
     "style": {
         "title": "<style> CSS",
-        "history": "Embeds CSS styles.",
+        "history": "<h1>Embeds CSS styles.</h1>",
+        "tip": "The <code>&lt;style&gt;</code> tag is used to embed CSS styles within the HTML document.",
         "code": "<style>body{font-family:Segoe UI}</style>",
         "quiz": "Which tag embeds CSS?",
         "answer": "style"
     },
     "script": {
         "title": "<script> JS",
-        "history": "Embeds client-side JavaScript.",
+        "history": "<h1>Embeds client-side JavaScript.</h1>",
+        "tip": "The <code>&lt;script&gt;</code> tag is used to embed client-side JavaScript within the HTML document.",
         "code": "<script>console.log('Hello')</script>",
         "quiz": "Which tag embeds JavaScript?",
         "answer": "script"
     },
     "body": {
         "title": "<body> Document body",
-        "history": "Contains the visible page content.",
+        "history": "<h1>Contains the visible page content.</h1>",
+        "tip": "The <code>&lt;body&gt;</code> tag is used to contain the visible content of the HTML document.",
         "code": "<body>Visible content</body>",
         "quiz": "Which tag holds page content?",
         "answer": "body"
     },
     "h1": {
         "title": "<h1>–<h6> Headings",
-        "history": "Section headings, h1 strongest.",
+        "history": "<h1>Section headings, h1 strongest.</h1>",
+        "tip": "The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags are used for headings, with <code>&lt;h1&gt;</code> being the most important and <code>&lt;h6&gt;</code> the least.",
         "code": "<h1>Main</h1>\n<h2>Sub</h2>",
         "quiz": "Which heading level is strongest?",
         "answer": "h1"
     },
     "p": {
         "title": "<p> Paragraph",
-        "history": "Paragraph of text.",
+        "history": "<h1>Paragraph of text.</h1>",
+        "tip": "The <code>&lt;p&gt;</code> tag is used to define a paragraph.",
         "code": "<p>This is a paragraph.</p>",
         "quiz": "Which tag wraps a paragraph?",
         "answer": "p"
     },
     "br": {
         "title": "<br> Line break",
-        "history": "Inserts a line break.",
+        "history": "<h1>Inserts a line break.</h1>",
+        "tip": "The <code>&lt;br&gt;</code> tag is used to insert a line break in text.",
         "code": "First line<br>Second line",
         "quiz": "Which tag inserts a line break?",
         "answer": "br"
     },
     "hr": {
         "title": "<hr> Horizontal rule",
-        "history": "A thematic break.",
+        "history": "<h1>A thematic break.</h1>",
+        "tip": "The <code>&lt;hr&gt;</code> tag is used to create a horizontal rule, which is a thematic break in the content.",
         "code": "<hr>",
         "quiz": "Which tag adds a thematic break?",
         "answer": "hr"
     },
     "a": {
         "title": "<a> Anchor",
-        "history": "Creates hyperlinks.",
-        "code": "<a href='https://example.com' target='_blank'>Visit</a>",
+        "history": "<h1>Creates hyperlinks.</h1>",
+        "tip": "The <code>&lt;a&gt;</code> tag is used to create hyperlinks to other pages or resources.",
+        "code": "<a href='https://adandev.is-a.dev' target='_blank'>Visit</a>",
         "quiz": "Which tag creates a hyperlink?",
         "answer": "a"
     },
     "abbr": {
         "title": "<abbr> Abbreviation",
-        "history": "Defines abbreviation with tooltip.",
+        "history": "<h1>Defines abbreviation with tooltip.</h1>",
+        "tip": "The <code>&lt;abbr&gt;</code> tag is used to define an abbreviation or acronym, providing a tooltip with the full term.",
         "code": "<abbr title='HyperText Markup Language'>HTML</abbr>",
         "quiz": "Which tag shows a tooltip for abbreviation?",
         "answer": "abbr"
     },
     "b": {
         "title": "<b> Bold",
-        "history": "Stylistically bold text.",
+        "history": "<h1>Stylistically bold text.</h1>",
+        "tip": "The <code>&lt;b&gt;</code> tag is used to make text bold without implying any extra importance.",
         "code": "<b>Bold</b>",
         "quiz": "Which tag makes text bold without importance?",
         "answer": "b"
     },
     "strong": {
         "title": "<strong> Important",
-        "history": "Strong importance.",
+        "history": "<h1>Strong importance.</h1>",
+        "tip": "The <code>&lt;strong&gt;</code> tag is used to indicate that the text has strong importance.",
         "code": "<strong>Important</strong>",
         "quiz": "Which tag indicates strong importance?",
         "answer": "strong"
     },
     "i": {
         "title": "<i> Italic",
-        "history": "Stylistically offset text.",
+        "history": "<h1>Stylistically offset text.</h1>",
+        "tip": "The <code>&lt;i&gt;</code> tag is used to make text italic without implying any extra emphasis.",
         "code": "<i>Italic</i>",
         "quiz": "Which tag italicizes text?",
         "answer": "i"
     },
     "em": {
         "title": "<em> Emphasis",
-        "history": "Stressed emphasis.",
+        "history": "<h1>Stressed emphasis.</h1>",
+        "tip": "The <code>&lt;em&gt;</code> tag is used to indicate that the text has a different emphasis than the surrounding text.",
         "code": "<em>Emphasis</em>",
         "quiz": "Which tag indicates emphasis?",
         "answer": "em"
     },
     "mark": {
         "title": "<mark> Highlight",
-        "history": "Highlighted text.",
+        "history": "<h1>Highlighted text.</h1>",
+        "tip": "The <code>&lt;mark&gt;</code> tag is used to highlight text for reference or emphasis.",
         "code": "<mark>Important</mark>",
         "quiz": "Which tag highlights text?",
         "answer": "mark"
     },
     "small": {
         "title": "<small> Small",
-        "history": "Small print.",
+        "history": "<h1>Small print.</h1>",
+        "tip": "The <code>&lt;small&gt;</code> tag is used to reduce the font size of the text, often for fine print or disclaimers.",
         "code": "<small>Note</small>",
         "quiz": "Which tag reduces font size?",
         "answer": "small"
     },
     "sub": {
         "title": "<sub> Subscript",
-        "history": "Subscript text.",
+        "history": "<h1>Subscript text.</h1>",
+        "tip": "The <code>&lt;sub&gt;</code> tag is used to display text as subscript, typically for chemical formulas or mathematical expressions.",
         "code": "H<sub>2</sub>O",
         "quiz": "Which tag shows subscript?",
         "answer": "sub"
     },
     "sup": {
         "title": "<sup> Superscript",
-        "history": "Superscript text.",
+        "history": "<h1>Superscript text.</h1>",
+        "tip": "The <code>&lt;sup&gt;</code> tag is used to display text as superscript, typically for mathematical powers or footnotes.",
         "code": "E = mc<sup>2</sup>",
         "quiz": "Which tag shows superscript?",
         "answer": "sup"
     },
     "code": {
         "title": "<code> Code",
-        "history": "Inline code.",
+        "history": "<h1>Inline code.</h1>",
+        "tip": "The <code>&lt;code&gt;</code> tag is used to display inline code snippets or programming code.",
         "code": "<code>console.log(x)</code>",
         "quiz": "Which tag shows code inline?",
         "answer": "code"
     },
     "pre": {
         "title": "<pre> Preformatted",
-        "history": "Preserves whitespace.",
+        "history": "<h1>Preserves whitespace.</h1>",
+        "tip": "The <code>&lt;pre&gt;</code> tag is used to display preformatted text, preserving whitespace and line breaks.",
         "code": "<pre>line 1\n  line 2</pre>",
         "quiz": "Which tag preserves whitespace?",
         "answer": "pre"
     },
     "kbd": {
         "title": "<kbd> Keyboard",
-        "history": "Keyboard input.",
+        "history": "<h1>Keyboard input.</h1>",
+        "tip": "The <code>&lt;kbd&gt;</code> tag is used to indicate keyboard input or commands.",
         "code": "<kbd>Ctrl</kbd> + <kbd>C</kbd>",
         "quiz": "Which tag marks keyboard input?",
         "answer": "kbd"
     },
     "samp": {
         "title": "<samp> Sample",
-        "history": "Sample output.",
+        "history": "<h1>Sample output.</h1>",
+        "tip": "The <code>&lt;samp&gt;</code> tag is used to indicate sample output from a program or system.",
         "code": "<samp>Output: OK</samp>",
         "quiz": "Which tag marks sample output?",
         "answer": "samp"
     },
     "var": {
         "title": "<var> Variable",
-        "history": "Variable name.",
+        "history": "<h1>Variable name.</h1>",
+        "tip": "The <code>&lt;var&gt;</code> tag is used to indicate a variable in programming or mathematical expressions.",
         "code": "<var>x</var>",
         "quiz": "Which tag marks a variable?",
         "answer": "var"
     },
     "cite": {
         "title": "<cite> Citation",
-        "history": "Title of a work.",
+        "history": "<h1>Title of a work.</h1>",
+        "tip": "The <code>&lt;cite&gt;</code> tag is used to indicate the title of a work, such as a book, article, or research paper.",
         "code": "<cite>Thinking, Fast and Slow</cite>",
         "quiz": "Which tag cites a work title?",
         "answer": "cite"
     },
     "q": {
         "title": "<q> Quote",
-        "history": "Short inline quote.",
+        "history": "<h1>Short inline quote.</h1>",
+        "tip": "The <code>&lt;q&gt;</code> tag is used to indicate a short inline quotation.",
         "code": "<q>Be yourself.</q>",
         "quiz": "Which tag shows an inline quote?",
         "answer": "q"
     },
     "blockquote": {
         "title": "<blockquote> Block quote",
-        "history": "Extended quotation.",
+        "history": "<h1>Extended quotation.</h1>",
+        "tip": "The <code>&lt;blockquote&gt;</code> tag is used to indicate a longer quotation, typically displayed as a block.",
         "code": "<blockquote>Long quote</blockquote>",
         "quiz": "Which tag shows a block quote?",
         "answer": "blockquote"
     },
     "span": {
         "title": "<span> Inline",
-        "history": "Generic inline container.",
+        "history": "<h1>Generic inline container.</h1>",
+        "tip": "The <code>&lt;span&gt;</code> tag is a generic inline container for phrasing content, often used for styling purposes.",
         "code": "<span class='badge'>New</span>",
         "quiz": "Which tag is a generic inline?",
         "answer": "span"
     },
     "del": {
         "title": "<del> Deleted",
-        "history": "Deleted text.",
+        "history": "<h1>Deleted text.</h1>",
+        "tip": "The <code>&lt;del&gt;</code> tag is used to indicate text that has been deleted from a document.",
         "code": "<del>Old</del>",
         "quiz": "Which tag marks deleted text?",
         "answer": "del"
     },
     "ins": {
         "title": "<ins> Inserted",
-        "history": "Inserted text.",
+        "history": "<h1>Inserted text.</h1>",
+        "tip": "The <code>&lt;ins&gt;</code> tag is used to indicate text that has been inserted into a document.",
         "code": "<ins>New</ins>",
         "quiz": "Which tag marks inserted text?",
         "answer": "ins"
     },
     "u": {
         "title": "<u> Underline",
-        "history": "Underline without semantics.",
+        "history": "<h1>Underline without semantics.</h1>",
+        "tip": "The <code>&lt;u&gt;</code> tag is used to underline text without implying any extra importance.",
         "code": "<u>Decorative</u>",
         "quiz": "Which tag underlines text?",
         "answer": "u"
     },
     "s": {
         "title": "<s> Inaccurate",
-        "history": "No longer accurate.",
+        "history": "<h1>No longer accurate.</h1>",
+        "tip": "The <code>&lt;s&gt;</code> tag is used to indicate text that is no longer accurate or relevant.",
         "code": "<s>Old price</s>",
         "quiz": "Which tag marks inaccurate text?",
         "answer": "s"
     },
     "header": {
         "title": "<header>",
-        "history": "Introductory section.",
+        "history": "<h1>Introductory section.</h1>",
+        "tip": "The <code>&lt;header&gt;</code> tag is used to define a header for a document or section.",
         "code": "<header>Hero</header>",
         "quiz": "Which tag marks header section?",
         "answer": "header"
     },
     "nav": {
         "title": "<nav>",
-        "history": "Navigation links.",
+        "history": "<h1>Navigation links.</h1>",
+        "tip": "The <code>&lt;nav&gt;</code> tag is used to define a set of navigation links.",
         "code": "<nav><a href='#'>Home</a></nav>",
         "quiz": "Which tag holds navigation?",
         "answer": "nav"
     },
     "main": {
         "title": "<main>",
-        "history": "Primary content.",
+        "history": "<h1>Primary content.</h1>",
+        "tip": "The <code>&lt;main&gt;</code> tag is used to define the main content of a document.",
         "code": "<main>Content</main>",
         "quiz": "Which tag marks primary content?",
         "answer": "main"
     },
     "section": {
         "title": "<section>",
-        "history": "Standalone section.",
+        "history": "<h1>Standalone section.</h1>",
+        "tip": "The <code>&lt;section&gt;</code> tag is used to define a standalone section in a document.",
         "code": "<section><h2>Title</h2></section>",
         "quiz": "Which tag marks a section?",
         "answer": "section"
     },
     "article": {
         "title": "<article>",
-        "history": "Independent content.",
+        "history": "<h1>Independent content.</h1>",
+        "tip": "The <code>&lt;article&gt;</code> tag is used to define independent, self-contained content.",
         "code": "<article><h2>Post</h2></article>",
         "quiz": "Which tag marks an article?",
         "answer": "article"
     },
     "aside": {
         "title": "<aside>",
-        "history": "Complementary content.",
+        "history": "<h1>Complementary content.</h1>",
+        "tip": "The <code>&lt;aside&gt;</code> tag is used to define content that is tangentially related to the main content.",
         "code": "<aside>Sidebar</aside>",
         "quiz": "Which tag marks sidebar?",
         "answer": "aside"
     },
     "footer": {
         "title": "<footer>",
-        "history": "Footer content.",
+        "history": "<h1>Footer content.</h1>",
+        "tip": "The <code>&lt;footer&gt;</code> tag is used to define a footer for a document or section.",
         "code": "<footer>© 2025</footer>",
         "quiz": "Which tag marks footer?",
         "answer": "footer"
     },
     "address": {
         "title": "<address>",
-        "history": "Contact information.",
+        "history": "<h1>Contact information.</h1>",
+        "tip": "The <code>&lt;address&gt;</code> tag is used to provide contact information for the author or owner of a document.",
         "code": "<address>Street, City</address>",
         "quiz": "Which tag holds contact info?",
         "answer": "address"
     },
     "time": {
         "title": "<time>",
-        "history": "Date/time.",
+        "history": "<h1>Date/time.</h1>",
+        "tip": "The <code>&lt;time&gt;</code> tag is used to define a date or time.",
         "code": "<time datetime='2025-12-05'>Dec 5, 2025</time>",
         "quiz": "Which tag represents time?",
         "answer": "time"
     },
     "img": {
         "title": "<img>",
-        "history": "Embeds images.",
+        "history": "<h1>Embeds images.</h1>",
+        "tip": "The <code>&lt;img&gt;</code> tag is used to embed an image in a document.",
         "code": "<img src='assets/tag-web-logo.png' alt='Tag-Web'>",
         "quiz": "Which tag shows an image?",
         "answer": "img"
     },
     "audio": {
         "title": "<audio>",
-        "history": "Embeds audio.",
+        "history": "<h1>Embeds audio.</h1>",
+        "tip": "The <code>&lt;audio&gt;</code> tag is used to embed audio content in a document.",
         "code": "<audio controls><source src='assets/Believer.mp3' type='audio/mpeg'>Your browser does not support audio.</audio>",
         "quiz": "Which tag embeds audio?",
         "answer": "audio"
     },
     "video": {
         "title": "<video>",
-        "history": "Embeds video.",
+        "history": "<h1>Embeds video.</h1>",
+        "tip": "The <code>&lt;video&gt;</code> tag is used to embed video content in a document.",
         "code": "<video controls><source src='movie.mp4' type='video/mp4'>Your browser does not support video.</video>",
         "quiz": "Which tag embeds video?",
         "answer": "video"
     },
     "source": {
         "title": "<source>",
-        "history": "Media source.",
+        "history": "<h1>Media source.</h1>",
+        "tip": "The <code>&lt;source&gt;</code> tag is used to specify multiple media resources for media elements like <audio> and <video>.",
         "code": "<video controls>\n  <source src='movie.mp4' type='video/mp4'>\n  <source src='movie.ogg' type='video/ogg'>\n</video>",
         "quiz": "Which tag defines media source?",
         "answer": "source"
     },
     "track": {
         "title": "<track>",
-        "history": "Text tracks for media.",
+        "history": "<h1>Text tracks for media.</h1>",
+        "tip": "The <code>&lt;track&gt;</code> tag is used to specify text tracks for media elements like <video>.",
         "code": "<video controls>\n  <source src='movie.mp4' type='video/mp4'>\n  <track src='subtitles_en.vtt' kind='subtitles' srclang='en' label='English'>\n</video>",
         "quiz": "Which tag adds subtitles?",
         "answer": "track"
     },
     "map": {
         "title": "<map>",
-        "history": "Image map.",
+        "history": "<h1>Image map.</h1>",
+        "tip": "The <code>&lt;map&gt;</code> tag is used to define an image map.",
         "code": "<img src='img.png' usemap='#m1'>\n<map name='m1'><area shape='rect' coords='0,0,50,50' href='#'></map>",
         "quiz": "Which tag creates image map?",
         "answer": "map"
     },
     "area": {
         "title": "<area>",
-        "history": "Clickable area.",
+        "history": "<h1>Clickable area.</h1>",
+        "tip": "The <code>&lt;area&gt;</code> tag is used to define a clickable area within an image map.",
         "code": "<map name='m1'><area shape='circle' coords='75,75,25' href='#'></map>",
         "quiz": "Which tag defines clickable area?",
         "answer": "area"
     },
     "figure": {
         "title": "<figure>",
-        "history": "Self-contained content.",
+        "history": "<h1>Self-contained content.</h1>",
+        "tip": "The <code>&lt;figure&gt;</code> tag is used to define a standalone figure in a document.",
         "code": "<figure><img src='pic.jpg'><figcaption>Caption</figcaption></figure>",
         "quiz": "Which tag wraps figure + caption?",
         "answer": "figure"
     },
     "figcaption": {
         "title": "<figcaption>",
-        "history": "Figure caption.",
+        "history": "<h1>Figure caption.</h1>",
+        "tip": "The <code>&lt;figcaption&gt;</code> tag is used to define a caption for a figure.",
         "code": "<figcaption>Caption</figcaption>",
         "quiz": "Which tag captions a figure?",
         "answer": "figcaption"
     },
     "canvas": {
         "title": "<canvas>",
-        "history": "Graphics drawing.",
+        "history": "<h1>Graphics drawing.</h1>",
+        "tip": "The <code>&lt;canvas&gt;</code> tag is used to create a drawing surface.",
         "code": "<canvas id='c' width='200' height='100'></canvas>\n<script>const ctx=c.getContext('2d');ctx.fillRect(10,10,50,30);</script>",
         "quiz": "Which tag provides a drawing surface?",
         "answer": "canvas"
     },
     "svg": {
         "title": "<svg>",
-        "history": "Vector graphics.",
+        "history": "<h1>Vector graphics.</h1>",
+        "tip": "The <code>&lt;svg&gt;</code> tag is used to define vector graphics.",
         "code": "<svg width='120' height='60'><circle cx='30' cy='30' r='20' fill='tomato'/></svg>",
         "quiz": "Which tag defines vector graphics?",
         "answer": "svg"
     },
     "iframe": {
         "title": "<iframe>",
-        "history": "Embeds HTML page.",
+        "history": "<h1>Embeds HTML page.</h1>",
+        "tip": "The <code>&lt;iframe&gt;</code> tag is used to embed another HTML page.",
         "code": "<iframe src='https://example.com' title='Example' width='300' height='150'></iframe>",
         "quiz": "Which tag embeds another page?",
         "answer": "iframe"
     },
     "embed": {
         "title": "<embed>",
-        "history": "Embeds external content.",
+        "history": "<h1>Embeds external content.</h1>",
+        "tip": "The <code>&lt;embed&gt;</code> tag is used to embed external content.",
         "code": "<embed src='file.pdf' width='300' height='200'>",
         "quiz": "Which tag embeds external content?",
         "answer": "embed"
     },
     "object": {
         "title": "<object>",
-        "history": "Embeds objects.",
+        "history": "<h1>Embeds objects.</h1>",
+        "tip": "The <code>&lt;object&gt;</code> tag is used to embed objects.",
         "code": "<object data='file.pdf' type='application/pdf' width='300' height='200'></object>",
         "quiz": "Which tag embeds objects?",
         "answer": "object"
     },
     "param": {
         "title": "<param>",
-        "history": "Parameters for object.",
+        "history": "<h1>Parameters for object.</h1>",
+        "tip": "The <code>&lt;param&gt;</code> tag is used to specify parameters for the <object> element.",
         "code": "<object data='movie.swf'><param name='autoplay' value='true'></object>",
         "quiz": "Which tag sets parameters for object?",
         "answer": "param"
     },
     "ul": {
         "title": "<ul>",
-        "history": "Unordered list.",
+        "history": "<h1>Unordered list.</h1>",
+        "tip": "The <code>&lt;ul&gt;</code> tag is used to define an unordered list.",
         "code": "<ul><li>Item 1</li><li>Item 2</li></ul>",
         "quiz": "Which tag defines bullet list?",
         "answer": "ul"
     },
     "ol": {
         "title": "<ol>",
-        "history": "Ordered list.",
+        "history": "<h1>Ordered list.</h1>",
+        "tip": "The <code>&lt;ol&gt;</code> tag is used to define an ordered list.",
         "code": "<ol><li>Step 1</li><li>Step 2</li></ol>",
         "quiz": "Which tag defines numbered list?",
         "answer": "ol"
     },
     "li": {
         "title": "<li>",
-        "history": "List item.",
+        "history": "<h1>List item.</h1>",
+        "tip": "The <code>&lt;li&gt;</code> tag is used to define a list item.",
         "code": "<ul><li>Item</li></ul>",
         "quiz": "Which tag defines a list item?",
         "answer": "li"
     },
     "dl": {
         "title": "<dl>",
-        "history": "Description list.",
+        "history": "<h1>Description list.</h1>",
+        "tip": "The <code>&lt;dl&gt;</code> tag is used to define a description list.",
         "code": "<dl><dt>HTML</dt><dd>Language</dd></dl>",
         "quiz": "Which tag defines description list?",
         "answer": "dl"
     },
     "dt": {
         "title": "<dt>",
-        "history": "Term.",
+        "history": "<h1>Term.</h1>",
+        "tip": "The <code>&lt;dt&gt;</code> tag is used to define a term in a description list.",
         "code": "<dt>Term</dt>",
         "quiz": "Which tag defines term?",
         "answer": "dt"
     },
     "dd": {
         "title": "<dd>",
-        "history": "Definition.",
+        "history": "<h1>Definition.</h1>",
+        "tip": "The <code>&lt;dd&gt;</code> tag is used to define the description of a term.",
         "code": "<dd>Definition</dd>",
         "quiz": "Which tag defines description?",
         "answer": "dd"
     },
     "form": {
         "title": "<form>",
-        "history": "Form container.",
+        "history": "<h1>Form container.</h1>",
+        "tip": "The <code>&lt;form&gt;</code> tag is used to create an HTML form.",
         "code": "<form><input type='text'><button>Submit</button></form>",
         "quiz": "Which tag wraps form fields?",
         "answer": "form"
     },
     "input": {
         "title": "<input>",
-        "history": "Input field.",
+        "history": "<h1>Input field.</h1>",
+        "tip": "The <code>&lt;input&gt;</code> tag is used to create an input field.",
         "code": "<input type='text' placeholder='Name'>",
         "quiz": "Which tag creates an input?",
         "answer": "input"
     },
     "textarea": {
         "title": "<textarea>",
-        "history": "Multiline input.",
+        "history": "<h1>Multiline input.</h1>",
+        "tip": "The <code>&lt;textarea&gt;</code> tag is used to create a multiline input field.",
         "code": "<textarea rows='4' cols='40'>Text</textarea>",
         "quiz": "Which tag creates multiline input?",
         "answer": "textarea"
     },
     "button": {
         "title": "<button>",
-        "history": "Clickable button.",
+        "history": "<h1>Clickable button.</h1>",
+        "tip": "The <code>&lt;button&gt;</code> tag is used to create a clickable button.",
         "code": "<button type='button'>Click</button>",
         "quiz": "Which tag creates a button?",
         "answer": "button"
     },
     "select": {
         "title": "<select>",
-        "history": "Dropdown.",
+        "history": "<h1>Dropdown.</h1>",
+        "tip": "The <code>&lt;select&gt;</code> tag is used to create a dropdown list.",
         "code": "<select><option>A</option><option>B</option></select>",
         "quiz": "Which tag creates dropdown?",
         "answer": "select"
     },
     "optgroup": {
         "title": "<optgroup>",
-        "history": "Group options.",
+        "history": "<h1>Group options.</h1>",
+        "tip": "The <code>&lt;optgroup&gt;</code> tag is used to group options in a dropdown list.",
         "code": "<select><optgroup label='Fruits'><option>Apple</option></optgroup></select>",
         "quiz": "Which tag groups dropdown options?",
         "answer": "optgroup"
     },
     "option": {
         "title": "<option>",
-        "history": "Dropdown option.",
+        "history": "<h1>Dropdown option.</h1>",
+        "tip": "The <code>&lt;option&gt;</code> tag is used to define an option in a dropdown list.",
         "code": "<select><option>One</option><option>Two</option></select>",
         "quiz": "Which tag defines dropdown option?",
         "answer": "option"
     },
     "label": {
         "title": "<label>",
-        "history": "Field label.",
+        "history": "<h1>Field label.</h1>",
+        "tip": "The <code>&lt;label&gt;</code> tag is used to label an input field.",
         "code": "<label for='n'>Name</label><input id='n'>",
         "quiz": "Which tag labels an input?",
         "answer": "label"
     },
     "fieldset": {
         "title": "<fieldset>",
-        "history": "Group fields.",
+        "history": "<h1>Group fields.</h1>",
+        "tip": "The <code>&lt;fieldset&gt;</code> tag is used to group related form elements.",
         "code": "<fieldset><legend>Info</legend><input></fieldset>",
         "quiz": "Which tag groups related fields?",
         "answer": "fieldset"
     },
     "legend": {
         "title": "<legend>",
-        "history": "Fieldset title.",
+        "history": "<h1>Fieldset title.</h1>",
+        "tip": "The <code>&lt;legend&gt;</code> tag is used to title a fieldset.",
         "code": "<legend>Details</legend>",
         "quiz": "Which tag titles a fieldset?",
         "answer": "legend"
     },
     "datalist": {
         "title": "<datalist>",
-        "history": "Autocomplete options.",
+        "history": "<h1>Autocomplete options.</h1>",
+        "tip": "The <code>&lt;datalist&gt;</code> tag is used to provide a list of predefined options for an input field.",
         "code": "<input list='b'><datalist id='b'><option>Chrome</option></datalist>",
         "quiz": "Which tag provides predefined options?",
         "answer": "datalist"
     },
     "output": {
         "title": "<output>",
-        "history": "Calculation result.",
+        "history": "<h1>Calculation result.</h1>",
+        "tip": "The <code>&lt;output&gt;</code> tag is used to display the result of a calculation.",
         "code": "<form oninput='r.value=+a.value + +b.value'><input id='a' type='number'> + <input id='b' type='number'> = <output name='r'></output></form>",
         "quiz": "Which tag shows calculation result?",
         "answer": "output"
     },
     "progress": {
         "title": "<progress>",
-        "history": "Task progress.",
+        "history": "<h1>Task progress.</h1>",
+        "tip": "The <code>&lt;progress&gt;</code> tag is used to display the progress of a task.",
         "code": "<progress value='70' max='100'>70%</progress>",
         "quiz": "Which tag shows progress?",
         "answer": "progress"
     },
     "meter": {
         "title": "<meter>",
-        "history": "Measurement.",
+        "history": "<h1>Measurement.</h1>",
+        "tip": "The <code>&lt;meter&gt;</code> tag is used to display a scalar measurement within a known range.",
         "code": "<meter value='0.6' min='0' max='1'>60%</meter>",
         "quiz": "Which tag shows a measurement?",
         "answer": "meter"
     },
     "table": {
         "title": "<table>",
-        "history": "Tabular data container.",
+        "history": "<h1>Tabular data container.</h1>",
+        "tip": "The <code>&lt;table&gt;</code> tag is used to create an HTML table.",
         "code": "<table border='1'><tr><th>Item</th><th>Qty</th></tr><tr><td>Apples</td><td>5</td></tr></table>",
         "quiz": "Which tag defines a table?",
         "answer": "table"
     },
     "caption": {
         "title": "<caption>",
-        "history": "Table title.",
+        "history": "<h1>Table title.</h1>",
+        "tip": "The <code>&lt;caption&gt;</code> tag is used to title a table.",
         "code": "<table><caption>Marks</caption><tr><th>Name</th><th>Score</th></tr></table>",
         "quiz": "Which tag titles a table?",
         "answer": "caption"
     },
     "thead": {
         "title": "<thead>",
-        "history": "Header rows.",
+        "history": "<h1>Header rows.</h1>",
+        "tip": "The <code>&lt;thead&gt;</code> tag is used to group header rows in a table.",
         "code": "<table><thead><tr><th>A</th><th>B</th></tr></thead><tbody><tr><td>1</td><td>2</td></tr></tbody></table>",
         "quiz": "Which tag groups header rows?",
         "answer": "thead"
     },
     "tbody": {
         "title": "<tbody>",
-        "history": "Body rows.",
+        "history": "<h1>Body rows.</h1>",
+        "tip": "The <code>&lt;tbody&gt;</code> tag is used to group body rows in a table.",
         "code": "<table><tbody><tr><td>A</td><td>B</td></tr></tbody></table>",
         "quiz": "Which tag groups body rows?",
         "answer": "tbody"
     },
     "tfoot": {
         "title": "<tfoot>",
-        "history": "Footer rows.",
+        "history": "<h1>Footer rows.</h1>",
+        "tip": "The <code>&lt;tfoot&gt;</code> tag is used to group footer rows in a table.",
         "code": "<table><tfoot><tr><td>Total</td><td>100</td></tr></tfoot></table>",
         "quiz": "Which tag groups footer rows?",
         "answer": "tfoot"
     },
     "tr": {
         "title": "<tr>",
-        "history": "Table row.",
+        "history": "<h1>Table row.</h1>",
+        "tip": "The <code>&lt;tr&gt;</code> tag is used to define a table row.",
         "code": "<table><tr><td>X</td><td>Y</td></tr></table>",
         "quiz": "Which tag defines a table row?",
         "answer": "tr"
     },
     "td": {
         "title": "<td>",
-        "history": "Data cell.",
+        "history": "<h1>Data cell.</h1>",
+        "tip": "The <code>&lt;td&gt;</code> tag is used to define a data cell.",
         "code": "<table><tr><td>Cell</td></tr></table>",
         "quiz": "Which tag defines a data cell?",
         "answer": "td"
     },
     "th": {
         "title": "<th>",
-        "history": "Header cell.",
+        "history": "<h1>Header cell.</h1>",
+        "tip": "The <code>&lt;th&gt;</code> tag is used to define a header cell.",
         "code": "<table><tr><th>Head</th></tr></table>",
         "quiz": "Which tag defines a header cell?",
         "answer": "th"
     },
     "colgroup": {
         "title": "<colgroup>",
-        "history": "Column group.",
+        "history": "<h1>Column group.</h1>",
+        "tip": "The <code>&lt;colgroup&gt;</code> tag is used to group columns in a table.",
         "code": "<table><colgroup><col span='2' style='background:#eee'></colgroup><tr><th>A</th><th>B</th></tr></table>",
         "quiz": "Which tag groups columns?",
         "answer": "colgroup"
     },
     "col": {
         "title": "<col>",
-        "history": "Column properties.",
+        "history": "<h1>Column properties.</h1>",
+        "tip": "The <code>&lt;col&gt;</code> tag is used to define column properties.",
         "code": "<table><colgroup><col style='background:#eee'><col style='background:#ddd'></colgroup><tr><th>A</th><th>B</th></tr></table>",
         "quiz": "Which tag defines column properties?",
         "answer": "col"
     },
     "acronym": {
         "title": "<acronym> (Deprecated)",
-        "history": "Old tag used to mark acronyms; replaced by <abbr> in modern HTML.",
+        "history": "<h1>Old tag used to mark acronyms; replaced by <abbr> in modern HTML.</h1>",
+        "tip": "The <code>&lt;acronym&gt;</code> tag is used to mark acronyms; use <code>&lt;abbr&gt;</code> in modern HTML.",
         "code": " \n\n\n  \n  <title>acronym Example</title>\n\n\n  <h1>&lt;acronym&gt; Example (Deprecated)</h1>\n  <p>This page shows the old &lt;acronym&gt; tag for learning only.</p>\n  <p><acronym title=\"World Wide Web\">WWW</acronym> was used to mark acronyms.</p>\n\n",
         "quiz": "Which deprecated tag defined acronyms?",
         "answer": "acronym"
     },
     "applet": {
         "title": "<applet> (Deprecated)",
-        "history": "Used to embed Java applets; modern browsers no longer support it.",
+        "history": "<h1>Used to embed Java applets; modern browsers no longer support it.</h1>",
+        "tip": "The <code>&lt;applet&gt;</code> tag is used to embed Java applets; modern browsers no longer support it.",
         "code": " \n\n\n  \n  <title>applet Example</title>\n\n\n  <h1>&lt;applet&gt; Example (Deprecated)</h1>\n  <p>This demonstrates the old applet tag (for historical learning only).</p>\n  <applet code=\"ExampleApplet.class\" width=\"300\" height=\"100\">Applet fallback content</applet>\n\n",
         "quiz": "Which deprecated tag was used to embed Java applets?",
         "answer": "applet"
     },
     "big": {
         "title": "<big> (Deprecated)",
-        "history": "Increased text size; use CSS font-size instead.",
+        "history": "<h1>Increased text size; use CSS font-size instead.</h1>",
+        "tip": "The <code>&lt;big&gt;</code> tag is used to increase text size; use CSS <code>font-size</code> instead.",
         "code": " \n\n\n  \n  <title>big Example</title>\n\n\n  <h1>&lt;big&gt; Example (Deprecated)</h1>\n  <p>Old usage: <big>This text is bigger</big></p>\n  <p>Modern: use CSS like <code>font-size</code>.</p>\n\n",
         "quiz": "Which deprecated tag increased text size?",
         "answer": "big"
     },
     "center": {
         "title": "<center> (Deprecated)",
-        "history": "Centered content; use CSS text-align:center instead.",
+        "history": "<h1>Centered content; use CSS text-align:center instead.</h1>",
+        "tip": "The <code>&lt;center&gt;</code> tag is used to center content; use CSS <code>text-align:center</code> instead.",
         "code": " \n\n\n  \n  <title>center Example</title>\n\n\n  <h1>&lt;center&gt; Example (Deprecated)</h1>\n  <center><p>This paragraph is centered using &lt;center&gt; (deprecated).</p></center>\n  <p>Modern approach: use <code>style=\"text-align:center\"</code> or CSS classes.</p>\n\n",
         "quiz": "Which deprecated tag centered content?",
         "answer": "center"
     },
     "font": {
         "title": "<font> (Deprecated)",
-        "history": "Inline font styling; replaced by CSS (font-family, color).",
+        "history": "<h1>Inline font styling; replaced by CSS (font-family, color).</h1>",
+        "tip": "The <code>&lt;font&gt;</code> tag is used for inline font styling; use CSS properties like <code>color</code> and <code>font-family</code> instead.",
         "code": " \n\n\n  \n  <title>font Example</title>\n\n\n  <h1>&lt;font&gt; Example (Deprecated)</h1>\n  <p><font face=\"Arial\" color=\"red\">This text uses the old &lt;font&gt; tag.</font></p>\n  <p>Modern: use CSS properties like <code>color</code> and <code>font-family</code>.</p>\n\n",
         "quiz": "Which deprecated tag was used for inline font styling?",
         "answer": "font"
     },
     "frame": {
         "title": "<frame> (Deprecated)",
-        "history": "Part of the frameset model; avoid using frames in modern layouts.",
+        "history": "<h1>Part of the frameset model; avoid using frames in modern layouts.</h1>",
+        "tip": "The <code>&lt;frame&gt;</code> tag is used to define a single frame inside a frameset; use CSS or other modern layout techniques instead.",
         "code": " \n\n\n  \n  <title>frame Example (Deprecated)</title>\n\n\n  <h1>&lt;frame&gt; Example (Deprecated)</h1>\n  <p>Frames are part of the old frameset model and are deprecated. Example shown as text only.</p>\n  <p>Old usage (not recommended): &lt;frame src=\"nav.html\"&gt;</p>\n\n",
         "quiz": "Which deprecated tag defined a single frame inside a frameset?",
         "answer": "frame"
     },
     "frameset": {
         "title": "<frameset> (Deprecated)",
-        "history": "Container for frames-based layouts; replaced by modern CSS layouts.",
+        "history": "<h1>Container for frames-based layouts; replaced by modern CSS layouts.</h1>",
+        "tip": "The <code>&lt;frameset&gt;</code> tag is used to define a set of frames; use CSS or other modern layout techniques instead.",
         "code": " \n\n\n  \n  <title>frameset Example (Deprecated)</title>\n\n\n  <h1>&lt;frameset&gt; Example (Deprecated)</h1>\n  <p>Frameset replaced &lt;body&gt; in old HTML to create frames. Do not use in modern pages.</p>\n  <p>Example concept: &lt;frameset cols=\"25%,75%\"&gt; &lt;frame src=\"nav.html\"&gt; &lt;frame src=\"main.html\"&gt; &lt;/frameset&gt;</p>\n\n",
         "quiz": "Which deprecated tag was used as a container for frames?",
         "answer": "frameset"
     },
     "dir": {
         "title": "<dir> (Deprecated)",
-        "history": "Directory-style list; use <ul> instead.",
+        "history": "<h1>Directory-style list; use <ul> instead.</h1>",
+        "tip": "The <code>&lt;dir&gt;</code> tag is used to define a directory-style list; use <code>&lt;ul&gt;</code> with <code>&lt;li&gt;</code> instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>dir Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;dir&gt; Example (Deprecated)</h1>\n  <p>Old usage:</p>\n  <dir>\n    <li>Item A</li>\n    <li>Item B</li>\n  </dir>\n  <p>Modern: use &lt;ul&gt; with &lt;li&gt;.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag created a directory-style list?",
         "answer": "dir"
     },
     "isindex": {
         "title": "<isindex> (Deprecated)",
-        "history": "Provided a single-line search prompt in very old HTML; replaced by forms and inputs.",
+        "history": "<h1>Provided a single-line search prompt in very old HTML; replaced by forms and inputs.</h1>",
+        "tip": "The <code>&lt;isindex&gt;</code> tag is used to provide a simple search input; use <code>&lt;form&gt;</code> and <code>&lt;input type=\"search\"&gt;</code> instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>isindex Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;isindex&gt; Example (Deprecated)</h1>\n  <p>The &lt;isindex&gt; tag provided a single-line search prompt in very old HTML.</p>\n  <p>Modern: use &lt;form&gt; and &lt;input type=\"search\"&gt;.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag provided a simple search input?",
         "answer": "isindex"
     },
     "keygen": {
         "title": "<keygen> (Deprecated)",
-        "history": "Generated client-side keys for certificates; deprecated for security and compatibility reasons.",
+        "history": "<h1>Generated client-side keys for certificates; deprecated for security and compatibility reasons.</h1>",
+        "tip": "The <code>&lt;keygen&gt;</code> tag is used to generate client-side keys for certificates; deprecated for security and compatibility reasons.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>keygen Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;keygen&gt; Example (Deprecated)</h1>\n  <p>Old usage: &lt;keygen name=\"key\"&gt; to generate client keys. Deprecated due to security and browser support.</p>\n  <p>Modern alternatives: use Web Crypto APIs or server-side key handling.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag was used for client-side key generation?",
         "answer": "keygen"
     },
     "menuitem": {
         "title": "<menuitem> (Deprecated)",
-        "history": "Intended for context menu items; had limited support and is deprecated.",
+        "history": "<h1>Intended for context menu items; had limited support and is deprecated.</h1>",
+        "tip": "The <code>&lt;menuitem&gt;</code> tag is used to represent an item in a context menu; deprecated for limited support.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>menuitem Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;menuitem&gt; Example (Deprecated)</h1>\n  <p>The &lt;menuitem&gt; element was intended for context menus but had poor support.</p>\n  <p>Use custom context menus via JavaScript and ARIA for accessibility.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag represented a context menu item?",
         "answer": "menuitem"
     },
     "marquee": {
         "title": "<marquee> (Deprecated)",
-        "history": "Creates scrolling text; use CSS animations instead.",
+        "history": "<h1>Creates scrolling text; use CSS animations instead.</h1>",
+        "tip": "The <code>&lt;marquee&gt;</code> tag is used to create scrolling text; use CSS animations instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>marquee Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;marquee&gt; Example (Deprecated)</h1>\n  <p><marquee>Scrolling text using &lt;marquee&gt; (deprecated)</marquee></p>\n  <p>Modern: use CSS animations for scrolling effects.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag created scrolling text?",
         "answer": "marquee"
     },
     "nobr": {
         "title": "<nobr> (Deprecated)",
-        "history": "Prevents line breaks inside content; use CSS white-space instead.",
+        "history": "<h1>Prevents line breaks inside content; use CSS white-space instead.</h1>",
+        "tip": "The <code>&lt;nobr&gt;</code> tag is used to prevent line breaks; use CSS <code>white-space: nowrap;</code> instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>nobr Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;nobr&gt; Example (Deprecated)</h1>\n  <p><nobr>This text will not wrap using &lt;nobr&gt; (deprecated)</nobr></p>\n  <p>Modern: use <code>white-space: nowrap;</code> in CSS.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag prevented line breaks?",
         "answer": "nobr"
     },
     "noembed": {
         "title": "<noembed> (Deprecated)",
-        "history": "Provided fallback content for embedded objects in very old browsers.",
+        "history": "<h1>Provided fallback content for embedded objects in very old browsers.</h1>",
+        "tip": "The <code>&lt;noembed&gt;</code> tag is used to provide fallback content for embedded objects in very old browsers.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>noembed Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;noembed&gt; Example (Deprecated)</h1>\n  <p>The &lt;noembed&gt; element provided fallback for embedded content in very old browsers.</p>\n  <p>Modern: use &lt;object&gt; fallback content or feature detection.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag provided fallback for embedded content?",
         "answer": "noembed"
     },
     "spacer": {
         "title": "<spacer> (Deprecated)",
-        "history": "Used to add layout spacing; use CSS margin/padding instead.",
+        "history": "<h1>Used to add layout spacing; use CSS margin/padding instead.</h1>",
+        "tip": "The <code>&lt;spacer&gt;</code> tag is used to add layout spacing; use CSS <code>margin</code> or <code>padding</code> instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>spacer Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;spacer&gt; Example (Deprecated)</h1>\n  <p>Old usage: &lt;spacer size=\"10\"&gt; to add space. Deprecated—use CSS spacing.</p>\n  <p>Modern: use <code>margin</code> or <code>padding</code>.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag was used as a layout spacer?",
         "answer": "spacer"
     },
     "strike": {
         "title": "<strike> (Deprecated)",
-        "history": "Old strikethrough tag; use <s> or CSS text-decoration instead.",
+        "history": "<h1>Old strikethrough tag; use <s> or CSS text-decoration instead.</h1>",
+        "tip": "The <code>&lt;strike&gt;</code> tag is used to show strikethrough text; use <code>&lt;s&gt;</code> or CSS <code>text-decoration: line-through;</code> instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>strike Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;strike&gt; Example (Deprecated)</h1>\n  <p><strike>Old strikethrough text</strike></p>\n  <p>Modern: use &lt;s&gt; or <code>text-decoration: line-through;</code>.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag showed strikethrough text?",
         "answer": "strike"
     },
     "tt": {
         "title": "<tt> (Deprecated)",
-        "history": "Teletype/monospace text; use CSS font-family: monospace instead.",
+        "history": "<h1>Teletype/monospace text; use CSS font-family: monospace instead.</h1>",
+        "tip": "The <code>&lt;tt&gt;</code> tag is used to display teletype/monospace text; use CSS <code>font-family: monospace;</code> instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>tt Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;tt&gt; Example (Deprecated)</h1>\n  <p><tt>Teletype monospace text</tt></p>\n  <p>Modern: use <code>font-family: monospace;</code> in CSS.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag displayed teletype/monospace text?",
         "answer": "tt"
     },
     "xmp": {
         "title": "<xmp> (Deprecated)",
-        "history": "Displayed raw preformatted HTML; replaced by <pre> with proper escaping.",
+        "history": "<h1>Displayed raw preformatted HTML; replaced by <pre> with proper escaping.</h1>",
+        "tip": "The <code>&lt;xmp&gt;</code> tag is used to display raw preformatted HTML; use <code>&lt;pre&gt;</code> with proper HTML escaping instead.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>xmp Example (Deprecated)</title>\n</head>\n<body>\n  <h1>&lt;xmp&gt; Example (Deprecated)</h1>\n  <p>The &lt;xmp&gt; tag showed raw HTML without parsing in very old browsers:</p>\n  <xmp><b>Raw bold text shown literally</b></xmp>\n  <p>Modern: use &lt;pre&gt; with HTML escaping or code blocks.</p>\n</body>\n</html>",
         "quiz": "Which deprecated tag displayed raw preformatted HTML?",
         "answer": "xmp"

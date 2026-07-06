@@ -17,7 +17,7 @@ async function loadTagWebData() {
         }
 
         window.tagData = await response.json();
-        console.log("🎉 Text tag data loaded successfully from: " + jsonPath);
+        console.log("🎉 Tag web main data loaded successfully from: " + jsonPath);
 
         // ─── MAGIC LINE: DATA DOWNLOAD HOTE HI SCREEN PAR FILL KAREIN ───
         if (window.location.pathname.includes('editor.html')) {

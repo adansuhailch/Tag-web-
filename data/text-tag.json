@@ -1,84 +1,96 @@
 {
     "All Headings": {
         "title": "All Headings",
-        "history": "Includes h1 to h6 tags used for headings.",
+        "history": "<h1>Includes h1 to h6 tags used for headings.</h1><p>Each heading tag serves a specific purpose in defining the document structure.</p>",
+        "tip": "Headings are used to define the structure of your content. h1 is the main heading, while h2 to h6 are subheadings.",
         "code": "<h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>",
         "quiz": "Which tags are used for headings?",
         "answer": "h1 to h6"
     },
     "em": {
         "title": "<em> Emphasis Tag",
-        "history": "Used to emphasize text. Usually italicized.",
+        "history": "<h1>Used to emphasize text. Usually italicized.</h1><p>It is semantically different from the <code>&lt;i&gt;</code> tag, which is used for styling purposes only.</p>",
+        "tip":"Use the <code>&lt;em&gt;</code> tag to indicate that the text has a different emphasis than the surrounding text.",
         "code": "<em>This text is emphasized</em>",
         "quiz": "Which tag is used for emphasis?",
         "answer": "em"
     },
     "hr": {
         "title": "<hr>Horizontal line Tag",
-        "history": "Used for draw a horizontal line",
+        "history": "<h1>Used for drawing a horizontal line.</h1><p>This tag creates a thematic break in the content.</p>",
+        "tip": "The <code>&lt;hr&gt;</code> tag is used to create a horizontal rule, which is a thematic break in the content.",
         "code": "Under this text there is a horizontall line.<hr>",
-        "quiz": "Which tag is used for draw horizontall line.",
+        "quiz": "Which tag is used for drawing a horizontal line?",
         "answer": "hr tag"
     },
     "h2": {
         "title": "<h2> Subheading Tag",
-        "history": "Used for subheadings. Smaller than h1.",
+        "history": "<h1>Used for subheadings. Smaller than h1.</h1><p>Subheadings are used to organize content into sections.</p>",
+        "tip": "The <code>&lt;h2&gt;</code> tag is used for subheadings, which are smaller than the main heading (<code>&lt;h1&gt;</code>) but still represent a section of the content.",
         "code": "<h2>This is a subheading</h2>",
         "quiz": "Which tag is smaller than h1 but still a heading?",
         "answer": "h2"
     },
     "p": {
         "title": "<p> Paragraph Tag",
-        "history": "Used to write paragraphs of text.",
+        "history": "<h1>Used to write paragraphs of text.</h1><p>Paragraphs are used to structure blocks of content.</p>",
+        "tip": "The <code>&lt;p&gt;</code> tag is used to define paragraphs of text.",
         "code": "<p>This is a paragraph.</p>",
         "quiz": "Which tag wraps a paragraph?",
         "answer": "p"
     },
     "br": {
         "title": "<br> Line Break Tag",
-        "history": "Used to insert a single line break in text content.",
+        "history": "<h1>Used to insert a single line break in text content.</h1><p>Line breaks are used to create new lines within a paragraph.</p>",
+        "tip": "The <code>&lt;br&gt;</code> tag is used to insert a line break in HTML.",
         "code": "<p>Hello World<br>Welcome to my website</p>",
         "quiz": "Which tag is used to insert a line break in HTML?",
         "answer": "br"
     },
     "i": {
         "title": "<i> Italic Tag",
-        "history": "Used to italicize text (without emphasis).",
+        "history": "<h1>Used to italicize text (without emphasis).</h1><p>The <code>&lt;i&gt;</code> tag is used for styling purposes only.</p>",
+        "tip": "The <code>&lt;i&gt;</code> tag is used to make text italic.",
         "code": "<i>This is italic text</i>",
         "quiz": "Which tag makes text italic?",
         "answer": "i"
     },
     "u": {
         "title": "<u> Underline Tag",
-        "history": "Used to underline text.",
+        "history": "<h1>Used to underline text.</h1><p>Underlining is used for stylistic purposes.</p>",
+        "tip": "The <code>&lt;u&gt;</code> tag is used to underline text.",
         "code": "<u>This is underlined text</u>",
         "quiz": "Which tag underlines text?",
         "answer": "u"
     },
     "mark": {
         "title": "<mark> Highlight Tag",
-        "history": "Used to highlight text.",
+        "history": "<h1>Used to highlight text.</h1><p>Highlighting is used to draw attention to specific parts of the content.</p>",
+        "tip": "The <code>&lt;mark&gt;</code> tag is used to highlight text.",
         "code": "<mark>This is highlighted</mark>",
         "quiz": "Which tag highlights text?",
         "answer": "mark"
     },
     "small": {
         "title": "<small> Small Text Tag",
-        "history": "Used to show smaller text.",
+        "history": "<h1>Used to show smaller text.</h1><p>The <code>&lt;small&gt;</code> tag is used to decrease the size of text.</p>",
+        "tip": "The <code>&lt;small&gt;</code> tag is used to show small text.",
         "code": "<small>This is small text</small>",
         "quiz": "Which tag shows small text?",
         "answer": "small"
     },
     "sup": {
         "title": "<sup> Superscript Tag",
-        "history": "Used for superscript (like math powers).",
+        "history": "<h1>Used for superscript (like math powers).</h1><p>The <code>&lt;sup&gt;</code> tag is used to create superscripted text.</p>",
+        "tip": "The <code>&lt;sup&gt;</code> tag is used to show superscript.",
         "code": "x<sup>2</sup>",
         "quiz": "Which tag shows superscript?",
         "answer": "sup"
     },
     "sub": {
         "title": "<sub> Subscript Tag",
-        "history": "Used for subscript (like chemical formulas).",
+        "history": "<h1>Used for subscript (like chemical formulas).</h1><p>The <code>&lt;sub&gt;</code> tag is used to create subscripted text.</p>",
+        "tip": "The <code>&lt;sub&gt;</code> tag is used to show subscript.",
         "code": "H<sub>2</sub>O",
         "quiz": "Which tag shows subscript?",
         "answer": "sub"
