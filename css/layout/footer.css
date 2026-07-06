@@ -66,6 +66,11 @@
     margin-bottom: 4px;
 }
 
+#gmial-a {
+    color: #bdbcdf;
+    text-decoration: none;
+}
+
 .social-icons {
     display: flex;
     gap: 20px;
@@ -125,6 +130,16 @@
 
 .icon[aria-label="YouTube"]::after {
     background-color: #ff0000;
+}
+
+.icon[aria-label="Discord"]:hover,
+.icon[aria-label="Discord"]:focus,
+.icon[aria-label="Discord"]:active {
+    color: #425492;
+}
+
+.icon[aria-label="Discord"]::after {
+    background-color: #425492;
 }
 
 .icon[aria-label="GitHub"]:hover,

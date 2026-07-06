@@ -57,6 +57,7 @@ function openModal(tag) {
     document.getElementById('modal').style.display = 'flex';
     document.getElementById('modal-title').innerHTML = tagData[tag].title;
     document.getElementById('modal-history').innerHTML = tagData[tag].history;
+    document.getElementById('modal-tip').innerHTML = tagData[tag].tip || "No tip available for this tag.";
     document.getElementById('modal-editor').value = tagData[tag].code;
     document.getElementById('live-preview').srcdoc = tagData[tag].code;
     document.getElementById('quiz-question').innerHTML = tagData[tag].quiz;
