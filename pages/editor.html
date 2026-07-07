@@ -47,7 +47,13 @@
         <!-- Top Toolbar / Breadcrumbs (Back button ab history ke sath chalega) -->
         <div class="modal-header-bar">
             <button id="close-modal" onclick="goBack()"><i class="fa-solid fa-arrow-left"></i> Back to Tags</button>
-            <div class="breadcrumbs">Documentation &gt; <span id="modal-title" style="color: #64ffda;">Loading...</span>
+            <!-- <div class="breadcrumbs">Documentation &gt; <span id="modal-title" style="color: #64ffda;">Loading...</span>
+            </div> -->
+            <div class="breadcrumbs">
+                <!-- Humne 'Documentation' hata kar dynamic text ke liye span tags laga diye -->
+                <span id="breadcrumb-parent" style="text-transform: capitalize;">Loading Category</span>
+                &gt;
+                <span id="modal-title" style="color: #64ffda;">Loading Tag</span>
             </div>
             <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
         </div>
@@ -78,10 +84,36 @@
                     </div>
                     <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
 
-                    <div class="editor-actions">
+                    <!-- <div class="editor-actions">
                         <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
                         <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                    </div> -->
+                    <div class="editor-actions">
+                        <!-- Run Code Button (Safe onclick with new UI) -->
+                        <button class="run-btn cssbuttons-io" onclick="runLiveCode()">
+                            <span>
+                                <!-- Run icon (Play Symbol) -->
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5v14l11-7z" fill="currentColor"></path>
+                                </svg>
+                                Run Code
+                            </span>
+                        </button>
+
+                        <!-- Copy Code Button (Safe onclick with new UI) -->
+                        <button class="copy-btn cssbuttons-io" onclick="copyCode()">
+                            <span>
+                                <!-- Copy icon (Clipboard) -->
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                Copy Code
+                            </span>
+                        </button>
                     </div>
+
                 </div>
 
                 <!-- Preview Output Window -->

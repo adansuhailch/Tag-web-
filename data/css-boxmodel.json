@@ -74,6 +74,7 @@
     "border": {
         "title": "border Property (Shorthand)",
         "history": "<h1>The border property is a shorthand that sets the width, style, and color of an element's border.</h1>",
+        "tip": "Employ the `border` shorthand property for concise and unified styling of element boundaries.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Border Example</title>\n<style>\n  .box {\n    width: 250px;\n    height: 100px;\n    background-color: lightblue;\n    border: 5px solid navy;\n  }\n</style>\n</head>\n<body>\n<h2>CSS border Property Example</h2>\n<div class=\"box\">This box has a 5px solid navy border.</div>\n</body>\n</html>",
         "quiz": "Which property sets width, style, and color of an element's border in one declaration?",
         "answer": "border"

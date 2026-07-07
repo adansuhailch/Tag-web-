@@ -56,7 +56,7 @@
 
 }
 
-#js-pg-link-a {
+/* #js-pg-link-a {
     display: inline-block;
     background: linear-gradient(135deg, #f59e0b, #d97706);
     color: #fff;
@@ -69,9 +69,43 @@
         transform 0.2s,
         box-shadow 0.2s;
     box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+} */
+
+/* #js-pg-link-a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+} */
+
+/* Isse aapka button page ke bilkul center (middle) mein aa jayega */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#js-pg-link-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    padding: 10px 20px;
+    max-width: 240px;
+    background-color: #212121;
+    color: #ff5733;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 0.3em;
+    border: 0.08em solid #2d395f;
+    box-shadow: 0 0.4em 0.1em 0.019em #0d1326;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #js-pg-link-a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+    transform: translateY(0.4em);
+    box-shadow: 0 0 0 0 #495270;
 }

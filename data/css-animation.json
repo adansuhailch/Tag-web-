@@ -65,7 +65,7 @@
     },
     "transform-3d": {
         "title": "3D Transforms (rotateX, rotateY, perspective)",
-        "history": "<h2>3D transforms let you rotate, translate, and scale elements in three-dimensional space. The <code>perspective</code> property (on a parent) controls the viewer distance and depth; <code>rotateX</code> and <code>rotateY</code> rotate elements around the X and Y axes respectively. Combine <code>transform-style: preserve-3d</code>, <code>backface-visibility</code>, and perspective to build realistic 3D UI effects and interactive cards.</h2>",
+        "history": "<h1><h2>3D transforms let you rotate, translate, and scale elements in three-dimensional space. The <code>perspective</code> property (on a parent) controls the viewer distance and depth; <code>rotateX</code> and <code>rotateY</code> rotate elements around the X and Y axes respectively. Combine <code>transform-style: preserve-3d</code>, <code>backface-visibility</code>, and perspective to build realistic 3D UI effects and interactive cards.</h2></h1>",
         "tip": "Use <code>perspective</code> on a parent container to control depth, and <code>rotateX</code>/<code>rotateY</code> for 3D rotation.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>3D Transforms Example</title>\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<style>\n  :root{ --bg:#071026; --cardA:#1b6cff; --cardB:#8b5cff; }\n  html,body{ height:100%; margin:0; font-family:system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#041022 0%, #071026 100%); color:#e6eef8; display:grid; place-items:center; }\n\n  /* Scene: perspective applied here */\n  .scene{\n    width:360px; height:240px; perspective:900px; /* smaller = stronger perspective */\n    display:flex; align-items:center; justify-content:center;\n  }\n\n  /* Card wrapper preserves 3D for children */\n  .card-wrap{\n    width:320px; height:200px; transform-style: preserve-3d; transition: transform 300ms cubic-bezier(.2,.9,.3,1);\n  }\n\n  /* The card itself */\n  .card{\n    width:100%; height:100%; border-radius:14px; overflow:hidden; position:relative;\n    background: linear-gradient(135deg, var(--cardA), var(--cardB));\n    box-shadow: 0 20px 50px rgba(2,8,20,0.6);\n    display:flex; align-items:center; justify-content:center; color:#041022; font-weight:700; font-size:18px;\n    backface-visibility: hidden; /* hide backside when rotated */\n  }\n\n  /* Back face to demonstrate rotateY 180deg */\n  .card-back{\n    position:absolute; inset:0; border-radius:14px; background: linear-gradient(135deg,#ffdca8,#ffb3a8); display:flex; align-items:center; justify-content:center; transform: rotateY(180deg); backface-visibility: hidden; color:#041022; font-weight:700;\n  }\n\n  /* small UI */\n  .controls{ margin-top:18px; text-align:center; color:#9fb3d0; font-size:13px; }\n  .range{ width:220px; }\n\n  /* responsive */\n  @media (max-width:420px){ .scene{ width:300px; height:200px; } .card-wrap{ width:280px; height:180px; } }\n</style>\n</head>\n<body>\n  <div style=\"text-align:center; margin-bottom:12px; color:#9fb3d0;\">Move the sliders or hover the card to see 3D transforms</div>\n\n  <div class=\"scene\" id=\"scene\">\n    <div class=\"card-wrap\" id=\"cardWrap\">\n      <div class=\"card\" id=\"cardFront\">Front Face</div>\n      <div class=\"card-back\" id=\"cardBack\">Back Face</div>\n    </div>\n  </div>\n\n  <div class=\"controls\">\n    <div style=\"margin-bottom:8px;\">\n      <label style=\"color:#9fb3d0;\">rotateX: <span id=\"rx\">0</span>°</label>\n      <input class=\"range\" id=\"rangeX\" type=\"range\" min=\"-60\" max=\"60\" value=\"0\">\n    </div>\n    <div>\n      <label style=\"color:#9fb3d0;\">rotateY: <span id=\"ry\">0</span>°</label>\n      <input class=\"range\" id=\"rangeY\" type=\"range\" min=\"-60\" max=\"60\" value=\"0\">\n    </div>\n    <div style=\"margin-top:10px; color:#9fb3d0; font-size:13px;\">Tip: <code>perspective</code> is set on the <strong>.scene</strong> element</div>\n  </div>\n\n<script>\n  // Elements\n  const cardWrap = document.getElementById('cardWrap');\n  const rangeX = document.getElementById('rangeX');\n  const rangeY = document.getElementById('rangeY');\n  const rxLabel = document.getElementById('rx');\n  const ryLabel = document.getElementById('ry');\n  const scene = document.getElementById('scene');\n\n  // Update transform from sliders\n  function updateTransform(x, y){\n    rxLabel.textContent = x;\n    ryLabel.textContent = y;\n    cardWrap.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;\n  }\n\n  rangeX.addEventListener('input', (e) => updateTransform(e.target.value, rangeY.value));\n  rangeY.addEventListener('input', (e) => updateTransform(rangeX.value, e.target.value));\n\n  // Hover tilt: subtle interactive effect using mouse position\n  scene.addEventListener('mousemove', (e) => {\n    const rect = scene.getBoundingClientRect();\n    const cx = rect.left + rect.width/2;\n    const cy = rect.top + rect.height/2;\n    const dx = e.clientX - cx;\n    const dy = e.clientY - cy;\n    const ry = Math.max(-30, Math.min(30, (dx / rect.width) * 60));\n    const rx = Math.max(-30, Math.min(30, -(dy / rect.height) * 60));\n    // apply but do not override slider values permanently\n    cardWrap.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;\n  });\n\n  scene.addEventListener('mouseleave', () => {\n    // reset to slider values when mouse leaves\n    updateTransform(rangeX.value, rangeY.value);\n  });\n\n  // Click to flip (rotateY 180deg) demonstrating backface-visibility\n  let flipped = false;\n  scene.addEventListener('click', () => {\n    flipped = !flipped;\n    if(flipped){\n      cardWrap.style.transform += ' rotateY(180deg)';\n    } else {\n      // reset to slider values\n      updateTransform(rangeX.value, rangeY.value);\n    }\n  });\n\n  // Initialize\n  updateTransform(0,0);\n</script>\n</body>\n</html>",
         "quiz": "Which properties are used to rotate elements in 3D and which property controls the viewer distance for perspective?",
@@ -73,7 +73,7 @@
     },
     "filter-animation": {
         "title": "filter + animation",
-        "history": "<h2>Animate filter effects (blur, hue-rotate, brightness) for creative image and UI transitions.</h2>",
+        "history": "<h1><h2>Animate filter effects (blur, hue-rotate, brightness) for creative image and UI transitions.</h2></h1>",
         "tip": "Use <code>filter</code> with <code>@keyframes</code> to animate visual effects like hue-rotate, blur, and brightness.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>filter + animation</title>\n<style>\n  @keyframes hue { to { filter: hue-rotate(360deg); } }\n  .photo { width:320px; height:180px; background:url('https://via.placeholder.com/320x180') center/cover; animation: hue 6s linear infinite; border-radius:8px; }\n  body { padding:24px; font-family: Arial, sans-serif; }\n</style>\n</head>\n<body>\n  <div class=\"photo\" aria-hidden=\"true\">Select this part with cursor and See the Magic of Css Animations.</div>\n</body>\n</html>",
         "quiz": "Which property group animates blur, brightness, and hue changes?",
@@ -81,7 +81,7 @@
     },
     "clip-path-animation": {
         "title": "clip-path + animation",
-        "history": "<h2>Animate clip-path to reveal or morph shapes for creative reveals and transitions.</h2>",
+        "history": "<h1><h2>Animate clip-path to reveal or morph shapes for creative reveals and transitions.</h2></h1>",
         "tip": "Use <code>clip-path</code> with <code>@keyframes</code> to animate shape reveals or morphing effects.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>clip-path animation</title>\n<style>\n  @keyframes reveal { from { clip-path: circle(0% at 50% 50%); } to { clip-path: circle(75% at 50% 50%); } }\n  .reveal { width:320px; height:160px; background:linear-gradient(90deg,#f97316,#fb7185); animation: reveal 1s ease forwards; border-radius:12px; }\n  body { padding:24px; font-family: Arial, sans-serif; }\n</style>\n</head>\n<body>\n  <div class=\"reveal\"></div>\n</body>\n</html>",
         "quiz": "Which property can be animated to morph or reveal shapes?",
@@ -89,7 +89,7 @@
     },
     "backdrop-animation": {
         "title": "backdrop-filter",
-        "history": "<h2>Animate backdrop-filter for glassmorphism effects (blur/saturate) on translucent panels; requires semi-transparent background.</h2>",
+        "history": "<h1><h2>Animate backdrop-filter for glassmorphism effects (blur/saturate) on translucent panels; requires semi-transparent background.</h2></h1>",
         "tip": "Use <code>backdrop-filter</code> with <code>@keyframes</code> to animate glassmorphism effects.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>backdrop-filter animation</title>\n<style>\n  body { background:url('https://via.placeholder.com/900x400') center/cover no-repeat; height:100vh; margin:0; display:flex; align-items:center; justify-content:center; }\n  .panel { width:320px; padding:18px; background: rgba(255,255,255,0.18); border-radius:12px; border:1px solid rgba(255,255,255,0.35); transition: backdrop-filter 0.4s ease; backdrop-filter: blur(6px) saturate(120%); }\n  .panel:hover { backdrop-filter: blur(12px) saturate(140%); }\n</style>\n</head>\n<body>\n  <div class=\"panel\">Glass panel (hover)</div>\n</body>\n</html>",
         "quiz": "Which property blurs or affects the area behind an element for glass effects?",
@@ -97,7 +97,7 @@
     },
     "will-change": {
         "title": "will-change",
-        "history": "<h2>Hint the browser about upcoming animated properties (transform, opacity) to optimize rendering. Use sparingly.</h2>",
+        "history": "<h1><h2>Hint the browser about upcoming animated properties (transform, opacity) to optimize rendering. Use sparingly.</h2></h1>",
         "tip": "Use <code>will-change</code> to hint the browser about upcoming changes and optimize performance.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>will-change example</title>\n<style>\n  .tile { width:120px; height:120px; background:#fca5a5; transition: transform 0.35s; will-change: transform; }\n  .tile:hover { transform: translateY(-10px) scale(1.03); }\n  body { padding:24px; font-family: Arial, sans-serif; }\n</style>\n</head>\n<body>\n  <div class=\"tile\"></div>\n</body>\n</html>",
         "quiz": "Which property hints the browser for upcoming changes to optimize performance?",
@@ -105,7 +105,7 @@
     },
     "blend-animation": {
         "title": "mix-blend-mode + animation",
-        "history": "<h2>Animate elements that use blend modes to create dynamic composite effects with the backdrop.</h2>",
+        "history": "<h1><h2>Animate elements that use blend modes to create dynamic composite effects with the backdrop.</h2></h1>",
         "tip": "Use <code>mix-blend-mode</code> with <code>@keyframes</code> to animate blending effects.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>mix-blend-mode animation</title>\n<style>\n  body { background: linear-gradient(90deg,#fde68a,#bfdbfe); height:100vh; margin:0; display:flex; align-items:center; justify-content:center; }\n  @keyframes move { to { transform: translateX(120px); } }\n  .shape { width:140px; height:140px; background:#ef4444; mix-blend-mode:multiply; animation: move 2s linear infinite alternate; border-radius:12px; }\n</style>\n</head>\n<body>\n  <div class=\"shape\"></div>\n</body>\n</html>",
         "quiz": "Which property blends an element with its backdrop and can be animated?",
@@ -113,7 +113,7 @@
     },
     "motion-path": {
         "title": "Motion path (offset-path)",
-        "history": "<h2>Animate elements along custom SVG or basic paths using offset-path and offset-distance for complex motion.</h2>",
+        "history": "<h1><h2>Animate elements along custom SVG or basic paths using offset-path and offset-distance for complex motion.</h2></h1>",
         "tip": "Use <code>offset-path</code> to define a path and <code>offset-distance</code> to animate along it.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>offset-path Example</title>\n<style>\n  .stage { height:220px; position:relative; margin:24px; }\n  .dot { width:20px; height:20px; background:#10b981; border-radius:50%; position:absolute; offset-path: path('M10 110 C 150 10, 250 210, 390 110'); animation: move 4s linear infinite; }\n  @keyframes move { to { offset-distance: 100%; } }\n</style>\n</head>\n<body>\n  <div class=\"stage\"><div class=\"dot\" aria-hidden=\"true\"></div></div>\n</body>\n</html>",
         "quiz": "Which property animates an element along a custom path?",
@@ -121,7 +121,7 @@
     },
     "scroll-snap-animation": {
         "title": "Scroll-snap + animation",
-        "history": "<h2>Combine scroll-snap with animations for smooth carousels and scroll-driven slide effects.</h2>",
+        "history": "<h1><h2>Combine scroll-snap with animations for smooth carousels and scroll-driven slide effects.</h2></h1>",
         "tip": "Use <code>scroll-snap-type</code> on the container and <code>scroll-snap-align</code> on the children, combined with <code>transition</code> or <code>@keyframes</code> for animated effects.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Scroll Snap + animation</title>\n<style>\n  .carousel { display:flex; overflow-x:auto; gap:12px; scroll-snap-type:x mandatory; padding:12px; }\n  .slide { flex:none; width:300px; height:160px; background:#93c5fd; scroll-snap-align:start; border-radius:8px; transition: transform .3s; }\n  .slide:focus, .slide:hover { transform: scale(1.03); }\n  body { font-family: Arial, sans-serif; padding:24px; }\n</style>\n</head>\n<body>\n  <div class=\"carousel\" tabindex=\"0\">\n    <div class=\"slide\" tabindex=\"0\">1</div><div class=\"slide\" tabindex=\"0\">2</div><div class=\"slide\" tabindex=\"0\">3</div>\n  </div>\n</body>\n</html>",
         "quiz": "Which features combine for smooth snapping carousels with animated slides?",
@@ -129,13 +129,13 @@
     },
     "shape-outside-animation": {
         "title": "shape-outside + animation",
-        "history": "<h2>Animate floated shapes to create dynamic text wrapping and magazine-style motion effects.</h2>",
+        "history": "<h1><h2>Animate floated shapes to create dynamic text wrapping and magazine-style motion effects.</h2></h1>",
         "tip": "Use <code>shape-outside</code> with <code>@keyframes</code> to animate the shape that text wraps around.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>shape-outside animation</title>\n<style>\n  .float { float:left; width:180px; height:180px; shape-outside: circle(50%); clip-path: circle(50%); background:#fca5a5; margin:12px; animation: bob 3s ease-in-out infinite; }\n  @keyframes bob { 0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)} }\n  .text { max-width:700px; font-family: Arial, sans-serif; padding:24px; }\n</style>\n</head>\n<body>\n  <div class=\"float\" aria-hidden=\"true\"></div>\n  <p class=\"text\">Animated float with text wrapping around the circular shape creates lively magazine layouts.</p>\n</body>\n</html>"
     },
     "scroll-driven": {
         "title": "Scroll-driven animations",
-        "history": "<h2>Bind animation progress to scroll position using @scroll-timeline and animation-timeline. Enables performant, declarative scroll-based effects without heavy JS.</h2>",
+        "history": "<h1><h2>Bind animation progress to scroll position using @scroll-timeline and animation-timeline. Enables performant, declarative scroll-based effects without heavy JS.</h2></h1>",
         "tip": "Use <code>@scroll-timeline</code> to define a scroll-based timeline and <code>animation-timeline</code> to bind animations to scroll progress.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Scroll-driven animation Example</title>\n<style>\n  body{ margin:0; font-family:system-ui,Arial; }\n  .spacer{ height:120vh; background:linear-gradient(#f7f9fc,#eef4ff); }\n\n  /* Define a scroll timeline named --main-timeline */\n  @scroll-timeline --main-timeline {\n    source: auto; /* use nearest scroll container / viewport */\n    orientation: block;\n  }\n\n  /* Animate the header background color based on scroll progress */\n  header{\n    position:sticky; top:0; padding:24px; font-weight:700; color:#042;\n    background: linear-gradient(90deg,#fff,#fff);\n    animation: headerColor 1s linear both;\n    animation-timeline: --main-timeline;\n  }\n\n  @keyframes headerColor{\n    0%{ background: linear-gradient(90deg,#ffffff,#ffffff); }\n    100%{ background: linear-gradient(90deg,#ffdca8,#ffb3a8); }\n  }\n\n  .panel{ height:60vh; display:grid; place-items:center; font-size:20px; }\n</style>\n</head>\n<body>\n  <div class=\"spacer\"></div>\n  <header>Scroll-driven header color</header>\n  <section class=\"panel\">Scroll to see the header change based on scroll progress</section>\n  <div class=\"spacer\"></div>\n</body>\n</html>",
         "quiz": "Which CSS at-rule defines a scroll-based timeline for animations?",
@@ -143,7 +143,7 @@
     },
     "anchor-position": {
         "title": "CSS Anchor Positioning (animate tooltips/popovers)",
-        "history": "<h2>Position and animate tooltips/popovers relative to another element using anchor positioning; syntax and support are evolving.</h2>",
+        "history": "<h1><h2>Position and animate tooltips/popovers relative to another element using anchor positioning; syntax and support are evolving.</h2></h1>",
         "tip": "Use <code>anchor-name</code> and <code>anchor-position</code> to position elements relative to an anchor element, combined with <code>@keyframes</code> for animation.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Anchor Positioning (concept)</title>\n<style>\n  /* Conceptual: actual anchor positioning syntax varies by spec and support */\n  .anchor { display:inline-block; margin:60px; }\n  .tooltip { position:absolute; background:#fff; border:1px solid #ddd; padding:8px; border-radius:6px; transform-origin: top center; transition: transform .2s ease; }\n</style>\n</head>\n<body>\n  <button class=\"anchor\">Anchor</button>\n  <div class=\"tooltip\">Tooltip near anchor (animated)</div>\n</body>\n</html>",
         "quiz": "Which experimental feature positions and animates tooltips relative to another element?",
@@ -151,7 +151,7 @@
     },
     "houdini-animation-worklets": {
         "title": "CSS Houdini Animation Worklets",
-        "history": "<h2>Animation Worklets let developers write JS-driven animations that run on a worklet thread (off the main thread) for high-performance, procedural animations. This API is experimental and may require a polyfill or a modern browser build to run.</h2>",
+        "history": "<h1><h2>Animation Worklets let developers write JS-driven animations that run on a worklet thread (off the main thread) for high-performance, procedural animations. This API is experimental and may require a polyfill or a modern browser build to run.</h2></h1>",
         "tip": "Use <code>CSS.animationWorklet.addModule()</code> to register a JS worklet that defines a custom animator, then use the animator name in <code>animation</code> shorthand for high-performance animations.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Houdini Animation Worklet Demo</title>\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<style>\n  :root{ --w:320px; }\n  body{ margin:0; min-height:100vh; display:grid; place-items:center; font-family:system-ui,Arial; background:#071026; color:#eaf4ff; }\n  .wrap{ display:flex; gap:20px; align-items:center; }\n  .box{\n    width:var(--w); height:140px; border-radius:12px; display:flex; align-items:center; justify-content:center;\n    background: linear-gradient(135deg,#1b6cff,#8b5cff); color:#041022; font-weight:700; box-shadow:0 18px 40px rgba(2,8,20,0.6);\n    /* Use the custom animator name 'wiggle' in the animation shorthand */\n    animation: wiggle 1200ms linear infinite;\n    will-change: transform;\n  }\n  .note{ margin-top:18px; color:#9fb3d0; font-size:13px; text-align:center; }\n</style>\n</head>\n<body>\n  <div class=\"wrap\">\n    <div class=\"box\">Houdini Worklet</div>\n  </div>\n  <div class=\"note\">If your browser does not support Animation Worklets, open the console for a message.</div>\n\n  <script>\n    // Register the animation worklet module (experimental API)\n    // The API is evolving; this code attempts to register the worklet when supported.\n    (async () => {\n      try {\n        if (CSS && CSS.animationWorklet && CSS.animationWorkletruntime helpers vary between implementations\n// and polyfills. The example below follows the common registerAnimator pattern\n// used by current examples and polyfills. If your environment uses a different\n/ the environment likely needs a polyfill.\n  // Throwing here will be visible in the console when loading the worklet.\n  throw new Error('registerAnimator not available in this environment. Use a polyfill or a compatible browser.');\n}\n",
         "quiz": "Which Houdini primitive lets you run JS-driven animations off the main thread for high-performance effects?",
@@ -159,7 +159,7 @@
     },
     "motion-path-l2": {
         "title": "CSS Motion Path Level 2",
-        "history": "<h2>Advanced motion path features (path syntax, offsets, rotation along path) for complex path-based animations.</h2>",
+        "history": "<h1><h2>Advanced motion path features (path syntax, offsets, rotation along path) for complex path-based animations.</h2></h1>",
         "tip": "Use <code>offset-path</code> with advanced path syntax and <code>offset-distance</code> to animate elements along complex paths, including curves and rotations.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Motion Path Level 2 (concept)</title>\n<style>\n  .stage { height:220px; position:relative; margin:24px; }\n  .dot { width:18px; height:18px; background:#f59e0b; border-radius:50%; position:absolute; offset-path: path('M10,80 C40,10 65,10 95,80'); animation: run 3s linear infinite; }\n  @keyframes run { to { offset-distance: 100%; } }\n</style>\n</head>\n<body>\n  <div class=\"stage\"><div class=\"dot\" aria-hidden=\"true\"></div></div>\n</body>\n</html>",
         "quiz": "Which spec expands path-based animations with advanced path features?",
@@ -167,7 +167,7 @@
     },
     "color-level4": {
         "title": "Color Level 4/5 animations",
-        "history": "<h2>Animate colors across perceptual color spaces (Lab, LCH, HWB) for smoother, more accurate transitions in design systems.</h2>",
+        "history": "<h1><h2>Animate colors across perceptual color spaces (Lab, LCH, HWB) for smoother, more accurate transitions in design systems.</h2></h1>",
         "tip": "Use <code>lch()</code>, <code>lab()</code>, or <code>hwb()</code> color functions in <code>@keyframes</code> to animate colors in perceptual color spaces.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Color Level Animations (example)</title>\n<style>\n  @keyframes colorShift { from { background: lch(60% 40 30); } to { background: lch(60% 40 300); } }\n  .swatch { width:220px; height:120px; border-radius:8px; animation: colorShift 3s linear infinite alternate; margin:24px; }\n  body { font-family: Arial, sans-serif; }\n</style>\n</head>\n<body>\n  <div class=\"swatch\"></div>\n</body>\n</html>",
         "quiz": "Which new color specs enable perceptual color animations like LCH?",

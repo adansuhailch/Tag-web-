@@ -151,6 +151,7 @@
     box-sizing: border-box;
 }
 
+/* 
 .editor-actions {
     padding: 10px 15px;
     display: flex;
@@ -185,6 +186,78 @@
 .quiz-btn:hover {
     background: var(--btn-run-hover, #2563eb);
     transform: translateY(-1px);
+} */
+.editor-actions {
+    padding: 10px 15px;
+    display: flex;
+    gap: 10px;
+    background: rgba(39, 38, 38, 0.1);
+}
+
+.cssbuttons-io {
+    position: relative;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    color: black;
+    overflow: hidden;
+    transition: transform 0.15s;
+    display: inline-block;
+}
+
+.run-btn {
+    background: linear-gradient(to right, #212b44, #7f879b);
+}
+
+/* Copy Button ka color theme (Dark/Purple Gradient jo coding screen par suit karega) */
+.copy-btn {
+    background: linear-gradient(to right, #4a5568, #2d3748);
+}
+
+/* Icons (SVGs) ki sizing */
+.cssbuttons-io svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+}
+
+/* Text and Icon container style */
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 16px;
+    /* Aapki safe padding */
+}
+
+/* Slide animation effect overlay */
+.cssbuttons-io::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.25);
+    /* Elegant dark shade on hover */
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+/* Click karne par active scale animation */
+.cssbuttons-io:active {
+    transform: scale(0.95);
 }
 
 /* 🖼️ Embedded window outputs view configurations */
