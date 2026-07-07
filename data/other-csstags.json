@@ -1,217 +1,248 @@
 {
     "positioning": {
         "title": "Positioning",
-        "history": "Place elements at exact coordinates using position: static | relative | absolute | fixed | sticky. Essential for overlays, tooltips, and precise layouts.",
+        "history": "<h1>Place elements at exact coordinates using position: static | relative | absolute | fixed | sticky. Essential for overlays, tooltips, and precise layouts.</h1>",
+        "tip": "Always set the parent element to <code>position: relative;</code> before using <code>position: absolute;</code> on a child, so the child is positioned relative to its container instead of the entire page.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Positioning Example</title>\n<style>\n  .container { position: relative; height: 220px; background:#f3f4f6; padding:16px; }\n  .absolute { position: absolute; top: 12px; right: 12px; background:#ef4444; color:#fff; padding:8px 12px; border-radius:6px; }\n</style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"absolute\">Absolutely positioned</div>\n    <p>Container with an absolutely positioned badge.</p>\n  </div>\n</body>\n</html>",
         "quiz": "Which CSS property family places elements at exact coordinates like top/left?",
         "answer": "position (absolute, relative, fixed, sticky)"
     },
     "z-index": {
         "title": "z-index",
-        "history": "Controls stacking order of positioned elements. Higher z-index appears above lower ones within the same stacking context.",
+        "history": "<h1>Controls stacking order of positioned elements. Higher z-index appears above lower ones within the same stacking context.</h1>",
+        "tip": "Elements with a higher z-index value will appear on top of elements with a lower z-index value within the same stacking context.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>z-index Example</title>\n<style>\n  .a { position: relative; z-index: 1; width:200px; height:120px; background:#60a5fa; }\n  .b { position: relative; margin-top:-60px; z-index: 10; width:200px; height:120px; background:#fb7185; }\n</style>\n</head>\n<body>\n  <div class=\"a\"></div>\n  <div class=\"b\"></div>\n</body>\n</html>",
         "quiz": "Which property controls which element appears on top?",
         "answer": "z-index"
     },
     "display": {
         "title": "display",
-        "history": "Defines how an element participates in layout: block, inline, inline-block, none, flex, grid, inline-grid, etc.",
+        "history": "<h1>Defines how an element participates in layout: block, inline, inline-block, none, flex, grid, inline-grid, etc.</h1>",
+        "tip": "The <code>display</code> property controls how an element is displayed and interacts with other elements.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>display Example</title>\n<style>\n  .row { display:flex; gap:12px; }\n  .box { padding:12px; background:#dbeafe; border-radius:6px; }\n</style>\n</head>\n<body>\n  <div class=\"row\">\n    <div class=\"box\">Flex item 1</div>\n    <div class=\"box\">Flex item 2</div>\n  </div>\n</body>\n</html>",
         "quiz": "Which property sets an element's layout behavior like block, inline, flex, or grid?",
         "answer": "display"
     },
     "visibility": {
         "title": "visibility",
-        "history": "Show or hide an element while preserving its layout space. visibility: hidden keeps the box but hides content.",
+        "history": "<h1>Show or hide an element while preserving its layout space. visibility: hidden keeps the box but hides content.</h1>",
+        "tip": "The <code>visibility</code> property controls whether an element is visible or hidden.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>visibility Example</title>\n<style>\n  .visible { background:#bbf7d0; padding:12px; }\n  .hidden { visibility: hidden; background:#fee2e2; padding:12px; }\n</style>\n</head>\n<body>\n  <div class=\"visible\">Visible box</div>\n  <div class=\"hidden\">Hidden but space reserved</div>\n</body>\n</html>",
         "quiz": "Which property hides an element but keeps its layout space?",
         "answer": "visibility"
     },
     "overflow": {
         "title": "overflow",
-        "history": "Controls what happens when content exceeds its container: visible, hidden, scroll, auto. Use overflow-x / overflow-y for axes.",
+        "history": "<h1>Controls what happens when content exceeds its container: visible, hidden, scroll, auto. Use overflow-x / overflow-y for axes.</h1>",
+        "tip": "The <code>overflow</code> property controls behavior when content overflows a box.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>overflow Example</title>\n<style>\n  .frame { width:300px; height:120px; border:1px solid #cbd5e1; overflow:auto; padding:8px; }\n  .content { height:240px; background:linear-gradient(#fff,#f0f9ff); }\n</style>\n</head>\n<body>\n  <div class=\"frame\"><div class=\"content\">Scrollable content</div></div>\n</body>\n</html>",
         "quiz": "Which property controls behavior when content overflows a box?",
         "answer": "overflow (auto, hidden, scroll, visible)"
     },
     "object-fit-object-position": {
         "title": "object-fit / object-position",
-        "history": "Control how replaced elements (images, videos) fill their container: cover, contain, fill, none, scale-down; object-position sets focal point.",
+        "history": "<h1>Control how replaced elements (images, videos) fill their container: cover, contain, fill, none, scale-down; object-position sets focal point.</h1>",
+        "tip": "The <code>object-fit</code> and <code>object-position</code> properties control how images fit and where they are positioned inside a container.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>object-fit Example</title>\n<style>\n  .thumb { width:320px; height:180px; overflow:hidden; border-radius:8px; }\n  .thumb img { width:100%; height:100%; object-fit: cover; object-position: center top; display:block; }\n</style>\n</head>\n<body>\n  <div class=\"thumb\"><img src=\"https://via.placeholder.com/640x360\" alt=\"Example\"></div>\n</body>\n</html>",
         "quiz": "Which properties control how images fit and where they are positioned inside a container?",
         "answer": "object-fit and object-position"
     },
     "pointer-events": {
         "title": "pointer-events",
-        "history": "Enable or disable mouse/touch interactions on an element. pointer-events: none lets events pass through to elements underneath.",
+        "history": "<h1>Enable or disable mouse/touch interactions on an element. pointer-events: none lets events pass through to elements underneath.</h1>",
+        "tip": "The <code>pointer-events</code> property controls mouse/touch interactions on an element.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>pointer-events Example</title>\n<style>\n  .overlay { position:fixed; inset:0; background:rgba(0,0,0,0.3); pointer-events:none; }\n  .btn { margin:40px; }\n</style>\n</head>\n<body>\n  <div class=\"overlay\"></div>\n  <button class=\"btn\">Clickable despite overlay</button>\n</body>\n</html>",
         "quiz": "Which property disables mouse/touch interactions on an element?",
         "answer": "pointer-events"
     },
     "user-select": {
         "title": "user-select",
-        "history": "Control whether text can be selected by the user. Useful for UI controls where selection is undesirable.",
+        "history": "<h1>Control whether text can be selected by the user. Useful for UI controls where selection is undesirable.</h1>",
+        "tip": "The <code>user-select</code> property prevents text selection by the user.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>user-select Example</title>\n<style>\n  .no-select { user-select: none; -webkit-user-select: none; padding:12px; background:#fef3c7; border-radius:6px; }\n</style>\n</head>\n<body>\n  <div class=\"no-select\">You cannot select this text.</div>\n</body>\n</html>",
         "quiz": "Which property prevents text selection by the user?",
         "answer": "user-select"
     },
     "isolation": {
         "title": "isolation",
-        "history": "Creates a new stacking context so blend modes and z-index behave predictably. Useful when using mix-blend-mode or complex overlays.",
+        "history": "<h1>Creates a new stacking context so blend modes and z-index behave predictably. Useful when using mix-blend-mode or complex overlays.</h1>",
+        "tip": "The <code>isolation</code> property creates a new stacking context for blend modes.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>isolation Example</title>\n<style>\n  .stack { position:relative; isolation:isolate; width:320px; height:160px; }\n  .a { position:absolute; inset:10px; background:#ffd6d6; mix-blend-mode:multiply; }\n  .b { position:absolute; inset:30px; background:#d6eaff; }\n</style>\n</head>\n<body>\n  <div class=\"stack\"><div class=\"a\"></div><div class=\"b\"></div></div>\n</body>\n</html>",
         "quiz": "Which property creates a new stacking context for blend modes?",
         "answer": "isolation"
     },
     "writing-mode-direction": {
         "title": "writing-mode / direction",
-        "history": "Support for vertical text and right-to-left scripts. writing-mode controls flow (horizontal-tb, vertical-rl, vertical-lr); direction sets inline direction (ltr/rtl).",
+        "history": "<h1>Support for vertical text and right-to-left scripts. writing-mode controls flow (horizontal-tb, vertical-rl, vertical-lr); direction sets inline direction (ltr/rtl).</h1>",
+        "tip": "The <code>writing-mode</code> property controls the direction of text flow.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>writing-mode Example</title>\n<style>\n  .vertical { writing-mode: vertical-rl; text-orientation: mixed; border:1px solid #c7d2fe; padding:12px; width:60px; }\n</style>\n</head>\n<body>\n  <div class=\"vertical\">Vertical text example</div>\n</body>\n</html>",
         "quiz": "Which properties enable vertical text and RTL support?",
         "answer": "writing-mode and direction"
     },
     "contain-will-change": {
         "title": "contain / will-change",
-        "history": "contain limits what the browser must consider for an element (layout, paint, size) improving performance; will-change hints upcoming changes (transform, opacity) to optimize rendering.",
+        "history": "<h1>contain limits what the browser must consider for an element (layout, paint, size) improving performance; will-change hints upcoming changes (transform, opacity) to optimize rendering.</h1>",
+        "tip": "The <code>contain</code> property limits what the browser must consider for an element.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>contain & will-change Example</title>\n<style>\n  .widget { contain: layout paint; width:300px; height:120px; background:#eef2ff; padding:12px; }\n  .anim { will-change: transform; transition: transform .3s; }\n  .anim:hover { transform: translateY(-8px); }\n</style>\n</head>\n<body>\n  <div class=\"widget\"><div class=\"anim\">Hover me (will-change)</div></div>\n</body>\n</html>",
         "quiz": "Which properties help with performance by limiting scope and hinting upcoming changes?",
         "answer": "contain and will-change"
     },
     "scroll-snap": {
         "title": "scroll-snap",
-        "history": "Create smooth snapping behavior for scroll containers (carousels, slides). Use scroll-snap-type on container and scroll-snap-align on children.",
+        "history": "<h1>Create smooth snapping behavior for scroll containers (carousels, slides). Use scroll-snap-type on container and scroll-snap-align on children.</h1>",
+        "tip": "The <code>scroll-snap</code> property enables snapping behavior for scrollable carousels.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>scroll-snap Example</title>\n<style>\n  .carousel { display:flex; overflow-x:auto; gap:12px; scroll-snap-type:x mandatory; padding:12px; }\n  .slide { flex:none; width:300px; height:160px; background:#c7f9cc; scroll-snap-align:start; border-radius:8px; }\n</style>\n</head>\n<body>\n  <div class=\"carousel\"><div class=\"slide\">1</div><div class=\"slide\">2</div><div class=\"slide\">3</div></div>\n</body>\n</html>",
         "quiz": "Which feature enables snapping behavior for scrollable carousels?",
         "answer": "scroll-snap"
     },
     "aspect-ratio": {
         "title": "aspect-ratio",
-        "history": "Maintain a fixed width-to-height ratio for elements, useful for responsive media and cards without extra wrappers.",
+        "history": "<h1>Maintain a fixed width-to-height ratio for elements, useful for responsive media and cards without extra wrappers.</h1>",
+        "tip": "The <code>aspect-ratio</code> property keeps an element's width/height ratio fixed.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>aspect-ratio Example</title>\n<style>\n  .card { width:320px; aspect-ratio: 16 / 9; background:#fff3cd; border-radius:8px; border:1px solid #f0e68c; }\n</style>\n</head>\n<body>\n  <div class=\"card\"></div>\n</body>\n</html>",
         "quiz": "Which property keeps an element's width/height ratio fixed?",
         "answer": "aspect-ratio"
     },
     "resize": {
         "title": "resize",
-        "history": "Allow users to resize elements (usually textareas) with the mouse: none, both, horizontal, vertical. Works when overflow is not visible.",
+        "history": "<h1>Allow users to resize elements (usually textareas) with the mouse: none, both, horizontal, vertical. Works when overflow is not visible.</h1>",
+        "tip": "The <code>resize</code> property enables user drag-resize of an element.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>resize Example</title>\n<style>\n  textarea { width:320px; height:120px; resize: both; padding:8px; }\n</style>\n</head>\n<body>\n  <textarea>Drag to resize me</textarea>\n</body>\n</html>",
         "quiz": "Which property enables user drag-resize of an element?",
         "answer": "resize"
     },
     "touch-action": {
         "title": "touch-action",
-        "history": "Control how touch gestures are handled (pan-x, pan-y, none, manipulation). Important for custom gesture handling and preventing browser defaults.",
+        "history": "<h1>Control how touch gestures are handled (pan-x, pan-y, none, manipulation). Important for custom gesture handling and preventing browser defaults.</h1>",
+        "tip": "The <code>touch-action</code> property controls how touch gestures are interpreted by the browser.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>touch-action Example</title>\n<style>\n  .swipe-area { width:320px; height:160px; background:#e0f2fe; touch-action: pan-x; display:flex; align-items:center; justify-content:center; }\n</style>\n</head>\n<body>\n  <div class=\"swipe-area\">Touch horizontally to pan</div>\n</body>\n</html>",
         "quiz": "Which property controls how touch gestures are interpreted by the browser?",
         "answer": "touch-action"
     },
     "typography-control": {
         "title": "Typography Control",
-        "history": "Properties like line-height, letter-spacing, word-spacing, and text-indent improve readability and spacing of text.",
+        "history": "<h1>Properties like line-height, letter-spacing, word-spacing, and text-indent improve readability and spacing of text.</h1>",
+        "tip": "The <code>line-height</code>, <code>letter-spacing</code>, <code>word-spacing</code>, and <code>text-indent</code> properties control line spacing and letter/word spacing.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Typography Example</title>\n<style>\n  p { line-height:1.7; letter-spacing:0.02em; word-spacing:0.12em; text-indent: 1.2em; max-width:640px; }\n</style>\n</head>\n<body>\n  <p>Line-height, letter-spacing, word-spacing and text-indent improve readability and typographic rhythm.</p>\n</body>\n</html>",
         "quiz": "Which properties control line spacing and letter/word spacing?",
         "answer": "line-height, letter-spacing, word-spacing, text-indent"
     },
     "font-management": {
         "title": "Font Management",
-        "history": "Advanced font features: font-variant, font-feature-settings, font-kerning allow control over ligatures, numeric styles, and kerning.",
+        "history": "<h1>Advanced font features: font-variant, font-feature-settings, font-kerning allow control over ligatures, numeric styles, and kerning.</h1>",
+        "tip": "The <code>font-variant</code>, <code>font-feature-settings</code>, and <code>font-kerning</code> properties enable advanced font rendering like ligatures and kerning.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Font Features Example</title>\n<style>\n  .text { font-variant: small-caps; font-feature-settings: 'liga' 1, 'kern' 1; font-kerning: normal; }\n</style>\n</head>\n<body>\n  <p class=\"text\">Advanced font rendering with font-feature-settings and font-variant.</p>\n</body>\n</html>",
         "quiz": "Which properties enable advanced font rendering like ligatures and kerning?",
         "answer": "font-variant, font-feature-settings, font-kerning"
     },
     "visibility-interaction": {
         "title": "Visibility & Interaction Utilities",
-        "history": "Group of properties (visibility, pointer-events, user-select, caret-color) to control how users interact with content and how it's presented.",
+        "history": "<h1>Group of properties (visibility, pointer-events, user-select, caret-color) to control how users interact with content and how it's presented.</h1>",
+        "tip": "The <code>visibility</code> property controls whether an element is visible or hidden.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Visibility & Interaction</title>\n<style>\n  .no-select { user-select:none; }\n  .hidden { visibility:hidden; }\n  .no-pointer { pointer-events:none; }\n  input { caret-color: transparent; }\n</style>\n</head>\n<body>\n  <div class=\"no-select\">Cannot select this text</div>\n  <div class=\"hidden\">Hidden text (space reserved)</div>\n  <div class=\"no-pointer\">This element ignores pointer events</div>\n  <input placeholder=\"caret hidden\" />\n</body>\n</html>",
         "quiz": "Which properties control selection, pointer interaction, and caret color?",
         "answer": "user-select, pointer-events, caret-color, visibility"
     },
     "scroll-behavior": {
         "title": "Scroll Behavior",
-        "history": "scroll-behavior, scroll-margin, and scroll-padding control smooth scrolling and alignment for in-page navigation and focus management.",
+        "history": "<h1>scroll-behavior, scroll-margin, and scroll-padding control smooth scrolling and alignment for in-page navigation and focus management.</h1>",
+        "tip": "The <code>scroll-behavior</code> property enables smooth in-page scrolling.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Scroll Behavior</title>\n<style>\n  html { scroll-behavior: smooth; }\n  section { height:80vh; padding:24px; border-bottom:1px solid #e5e7eb; }\n  h2 { scroll-margin-top: 80px; }\n</style>\n</head>\n<body>\n  <nav><a href=\"#s2\">Go to section 2</a></nav>\n  <section id=\"s1\"><h2>Section 1</h2></section>\n  <section id=\"s2\"><h2>Section 2</h2></section>\n</body>\n</html>",
         "quiz": "Which property enables smooth in-page scrolling?",
         "answer": "scroll-behavior"
     },
     "resize-overflow": {
         "title": "Resize & Overflow Utilities",
-        "history": "Control resizing and overflow behavior with resize, overflow-x/y, overflow-wrap, and word-break to handle long content gracefully.",
+        "history": "<h1>Control resizing and overflow behavior with resize, overflow-x/y, overflow-wrap, and word-break to handle long content gracefully.</h1>",
+        "tip": "The <code>resize</code> property enables user drag-resize of an element.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Resize & Overflow</title>\n<style>\n  .box { width:320px; overflow-wrap: break-word; word-break: break-word; border:1px solid #e2e8f0; padding:12px; }\n  textarea { resize: vertical; width:320px; height:80px; }\n</style>\n</head>\n<body>\n  <div class=\"box\">VeryLongWordWithoutSpacesThatWillBreakBecauseOf overflow-wrap and word-break.</div>\n  <textarea>Resize me vertically</textarea>\n</body>\n</html>",
         "quiz": "Which properties help control overflow and user resizing?",
         "answer": "resize, overflow-x/y, overflow-wrap, word-break"
     },
     "touch-gesture": {
         "title": "Touch & Gesture",
-        "history": "touch-action and -webkit-tap-highlight-color help manage mobile gestures and visual tap feedback for better touch UX.",
+        "history": "<h1>touch-action and -webkit-tap-highlight-color help manage mobile gestures and visual tap feedback for better touch UX.</h1>",
+        "tip": "The <code>touch-action</code> property controls how touch gestures are interpreted by the browser.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Touch & Gesture</title>\n<style>\n  .area { width:320px; height:160px; background:#eef2ff; touch-action: pan-x; -webkit-tap-highlight-color: rgba(0,0,0,0.1); display:flex; align-items:center; justify-content:center; }\n</style>\n</head>\n<body>\n  <div class=\"area\">Touch area (pan-x)</div>\n</body>\n</html>",
         "quiz": "Which properties control mobile gesture handling and tap highlight?",
         "answer": "touch-action and -webkit-tap-highlight-color"
     },
     "isolation-context": {
         "title": "Isolation & Context",
-        "history": "Use isolation, z-index, contain, and will-change to manage stacking contexts and performance for complex UIs.",
+        "history": "<h1>Use isolation, z-index, contain, and will-change to manage stacking contexts and performance for complex UIs.</h1>",
+        "tip": "The <code>isolation</code> property creates a new stacking context for blend modes.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Isolation & Context</title>\n<style>\n  .panel { position:relative; isolation:isolate; contain: layout paint; width:320px; padding:12px; background:#fff; border:1px solid #e6eef8; }\n</style>\n</head>\n<body>\n  <div class=\"panel\">Isolated stacking context with containment</div>\n</body>\n</html>",
         "quiz": "Which properties help manage stacking context and performance?",
         "answer": "isolation, z-index, contain, will-change"
     },
     "writing-modes-support": {
         "title": "Writing Modes Support",
-        "history": "writing-mode, direction, and text-orientation enable RTL and vertical text support for internationalization and creative layouts.",
+        "history": "<h1>writing-mode, direction, and text-orientation enable RTL and vertical text support for internationalization and creative layouts.</h1>",
+        "tip": "The <code>writing-mode</code> property controls the direction of text flow.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Writing Modes Support</title>\n<style>\n  .vertical { writing-mode: vertical-rl; text-orientation: upright; border:1px solid #c7f9cc; padding:12px; width:60px; }\n</style>\n</head>\n<body>\n  <div class=\"vertical\">垂直</div>\n</body>\n</html>",
         "quiz": "Which properties enable RTL and vertical text?",
         "answer": "writing-mode, direction, text-orientation"
     },
     "counter-content": {
         "title": "Counter & Content",
-        "history": "counter-reset, counter-increment, and content allow custom numbering and generated content for lists, steps, and UI counters.",
+        "history": "<h1>counter-reset, counter-increment, and content allow custom numbering and generated content for lists, steps, and UI counters.</h1>",
+        "tip": "The <code>counter-reset</code> property initializes a counter.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Counters Example</title>\n<style>\n  ol.custom { counter-reset: item; list-style:none; padding-left:0; }\n  ol.custom li::before { counter-increment: item; content: counter(item) \". \"; font-weight:bold; margin-right:6px; }\n</style>\n</head>\n<body>\n  <ol class=\"custom\"><li>First</li><li>Second</li><li>Third</li></ol>\n</body>\n</html>",
         "quiz": "Which properties create custom numbered lists and generated content?",
         "answer": "counter-reset, counter-increment, content"
     },
     "custom-properties": {
         "title": "Custom Properties (CSS variables)",
-        "history": "Define reusable values with --var-name and use them with var(). Great for theming and DRY CSS.",
+        "history": "<h1>Define reusable values with --var-name and use them with var(). Great for theming and DRY CSS.</h1>",
+        "tip": "The <code>--variable-name</code> syntax defines a CSS variable.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>CSS Variables</title>\n<style>\n  :root { --brand: #2563eb; --pad: 12px; }\n  .btn { background:var(--brand); color:#fff; padding:var(--pad); border-radius:8px; }\n</style>\n</head>\n<body>\n  <button class=\"btn\">Themed button</button>\n</body>\n</html>",
         "quiz": "Which syntax defines reusable CSS variables?",
         "answer": "--variable-name and var()"
     },
     "environment-units": {
         "title": "Environment Units",
-        "history": "env(safe-area-inset-*) exposes device safe-area insets (notch, rounded corners) for proper spacing on mobile devices.",
+        "history": "<h1>env(safe-area-inset-*) exposes device safe-area insets (notch, rounded corners) for proper spacing on mobile devices.</h1>",
+        "tip": "The <code>env(safe-area-inset-*)</code> function provides safe-area insets for devices with notches.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Environment Units</title>\n<style>\n  .safe { padding: calc(16px + env(safe-area-inset-top)); background:#f8fafc; min-height:100vh; }\n</style>\n</head>\n<body>\n  <div class=\"safe\">Content padded for safe area</div>\n</body>\n</html>",
         "quiz": "Which function provides safe-area insets for devices with notches?",
         "answer": "env(safe-area-inset-*)"
     },
     "container-queries": {
         "title": "Container Queries",
-        "history": "Style components based on their container size using @container, container-type, and container-name — enables component-level responsiveness.",
+        "history": "<h1>Style components based on their container size using @container, container-type, and container-name — enables component-level responsiveness.</h1>",
+        "tip": "The <code>@container</code> rule styles components based on their container size.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Container Queries Example</title>\n<style>\n  .card { container-type: inline-size; width:320px; border:1px solid #e5e7eb; padding:12px; }\n  .card .grid { display:grid; grid-template-columns: 1fr; gap:8px; }\n  @container (min-width: 500px) { .card .grid { grid-template-columns: 1fr 1fr; } }\n</style>\n</head>\n<body>\n  <div class=\"card\"><div class=\"grid\"><div>A</div><div>B</div><div>C</div></div></div>\n</body>\n</html>",
         "quiz": "Which feature allows styling based on parent container size?",
         "answer": "@container, container-type, container-name"
     },
     "view-transitions": {
         "title": "View Transitions (2025)",
-        "history": "View transitions provide page-level transitions without heavy JS using view-transition-name and @view-transition. Support is emerging.",
+        "history": "<h1>View transitions provide page-level transitions without heavy JS using view-transition-name and @view-transition. Support is emerging.</h1>",
+        "tip": "The <code>view-transition-name</code> and <code>@view-transition</code> rules enable page transitions without heavy JavaScript.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>View Transition (concept)</title>\n<style>\n  /* Conceptual: actual usage depends on browser support for view-transition APIs */\n  .page { view-transition-name: page; }\n</style>\n</head>\n<body>\n  <div class=\"page\">Page content for view transitions (browser support required)</div>\n</body>\n</html>",
         "quiz": "Which new feature enables page transitions without heavy JavaScript?",
         "answer": "view-transition-name and @view-transition"
     },
     "anchor-positioning": {
         "title": "Anchor Positioning (New)",
-        "history": "Position elements relative to another element using anchor-name and position-anchor — useful for tooltips/popovers with precise placement.",
+        "history": "<h1>Position elements relative to another element using anchor-name and position-anchor — useful for tooltips/popovers with precise placement.</h1>",
+        "tip": "The <code>anchor-name</code> and <code>position-anchor</code> properties enable precise element positioning.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Anchor Positioning (concept)</title>\n<style>\n  /* Conceptual example — syntax and support vary across browsers */\n  .anchor { display:inline-block; margin:60px; }\n  .popup { position: absolute; /* anchored to .anchor in supported specs */ background:#fff; border:1px solid #ddd; padding:8px; }\n</style>\n</head>\n<body>\n  <button class=\"anchor\">Anchor</button>\n  <div class=\"popup\">Tooltip anchored to button (spec support required)</div>\n</body>\n</html>",
         "quiz": "Which experimental feature positions elements relative to another element?",
         "answer": "anchor-name and position-anchor"
     },
     "motion-path": {
         "title": "Motion Path",
-        "history": "Animate elements along custom paths using offset-path, offset-distance, and offset-rotate for complex motion effects.",
+        "history": "<h1>Animate elements along custom paths using offset-path, offset-distance, and offset-rotate for complex motion effects.</h1>",
+        "tip": "The <code>offset-path</code>, <code>offset-distance</code>, and <code>offset-rotate</code> properties animate elements along custom paths.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Motion Path Example</title>\n<style>\n  .stage { height:220px; position:relative; margin:24px; }\n  .dot { width:18px; height:18px; background:#10b981; border-radius:50%; position:absolute; offset-path: path('M10 110 C 150 10, 250 210, 390 110'); animation: move 4s linear infinite; }\n  @keyframes move { to { offset-distance: 100%; } }\n</style>\n</head>\n<body>\n  <div class=\"stage\"><div class=\"dot\" aria-hidden=\"true\"></div></div>\n</body>\n</html>",
         "quiz": "Which properties animate an element along a custom path?",
         "answer": "offset-path, offset-distance, offset-rotate"
     },
     "color-levels": {
         "title": "Color Level 4/5",
-        "history": "New color spaces (Lab, LCH, HWB) and functions enable perceptually uniform color control and smoother color transitions for design systems.",
+        "history": "<h1>New color spaces (Lab, LCH, HWB) and functions enable perceptually uniform color control and smoother color transitions for design systems.</h1>",
+        "tip": "The <code>lch()</code>, <code>lab()</code>, and <code>hwb()</code> functions provide perceptual color control.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<title>Color Level Example</title>\n<style>\n  .swatch { width:220px; height:120px; background: lch(60% 40 270); border-radius:8px; }\n</style>\n</head>\n<body>\n  <div class=\"swatch\"></div>\n</body>\n</html>",
         "quiz": "Which new color specs provide perceptual color control like LCH and HWB?",
         "answer": "CSS Color Level 4/5 (Lab, LCH, HWB)"
