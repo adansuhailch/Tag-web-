@@ -362,13 +362,6 @@ html[data-theme="light"] #theme-switch svg:last-child {
 */
 
 /* responsive nav bar */
-.nav-container {
-    width: 100%;
-    margin: 16px 0 0;
-    position: relative;
-    background: var(--bg-nav);
-    box-shadow: 0 0 15px var(--shadow-card);
-}
 
 /* 🔴 DEFAULT: HIDE hamburger on desktop */
 .hamburger {
@@ -512,19 +505,6 @@ body.menu-open {
 
 
 /* DROPDOWN */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--bg-nav);
-    border: 1px solid var(--border-modal);
-    min-width: 220px;
-    border-radius: 8px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s;
-}
 
 /* Desktop dropdown */
 @media (min-width: 769px) {
@@ -580,12 +560,6 @@ body.menu-open {
     }
 
     /* Mobile dropdown */
-    .dropdown-menu {
-        position: static;
-        display: none;
-        background: rgba(255, 255, 255, 0.05);
-        padding-left: 10px;
-    }
 
     .dropdown.mobile-open .dropdown-menu {
         display: block;
@@ -1114,10 +1088,6 @@ textarea:focus {
     margin-bottom: 10px;
 }
 
-.CodeMirror-scroll {
-    min-height: 150px;
-    max-height: 400px;
-}
 
 /* ============================================================
 MODAL ACTION BUTTONS

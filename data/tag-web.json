@@ -131,7 +131,7 @@
         "title": "<audio> Audio Tag",
         "history": "<h1> Introduced in HTML5, used to embed audio files with optional controls.</h1>",
         "tip": "The <audio> tag is used to embed audio content in a webpage. It can include controls for play, pause, and volume.",
-        "code": "<audio controls>\n  <source src='assets/Believer.mp3' type='audio/mpeg'>\n  Your browser does not support the audio element.\n</audio>",
+        "code": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0FB5ILDICqwK6xj7W1RP9u?utm_source=generator&si=9f37f7f7b989411c\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
         "quiz": "Which tag is used to embed audio in HTML?",
         "answer": "audio"
     },

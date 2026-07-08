@@ -56,28 +56,7 @@
     justify-content: center;
 }
 
-.filter-pill {
-    padding: 6px 16px;
-    border-radius: 20px;
-    border: 1.5px solid var(--pill-color, #6b7280);
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.82rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s, transform 0.15s;
-}
 
-.filter-pill:hover {
-    background: var(--pill-color, #6b7280);
-    color: #fff;
-    transform: translateY(-1px);
-}
-
-.filter-pill.active {
-    background: var(--pill-color, #6b7280);
-    color: #fff;
-}
 
 /* Category section header */
 .js-category-section .group-title {
@@ -176,12 +155,6 @@
 }
 
 /* Modal navigation */
-.modal-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-    gap: 10px;
-}
 
 .modal-nav button {
     flex: 1;
