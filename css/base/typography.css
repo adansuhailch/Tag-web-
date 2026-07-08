@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: var(--text-primary);
+    transition: background-color .3s ease, color .3s ease;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-heading);
+}
+
+h2 {
+    color: var(--text-heading);
+    text-shadow: var(--glow-h2);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+p {
+    margin: 0 0 8px;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+a {
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a:not(.no-hover):hover {
+    color: var(--nav-link-hover);
+}

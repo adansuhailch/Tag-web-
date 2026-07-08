@@ -1,105 +1,120 @@
 {
     "floats-clearfix": {
         "title": "Floats + Clearfix",
-        "history": "Floats were used to place content side-by-side. Clearfix hack was needed to fix collapsing issues. Not flexible for modern responsive design.",
+        "history": "<h1>Floats were used to place content side-by-side. Clearfix hack was needed to fix collapsing issues. Not flexible for modern responsive design.</h1>",
+        "tip": "The clearfix hack is a CSS technique used to contain floated elements within a parent container.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Floats Example</title>\n<style>\n  .box { float: left; width: 45%; margin: 2%; background: lightblue; height: 100px; }\n  .clearfix::after { content: \"\"; display: block; clear: both; }\n</style>\n</head>\n<body>\n<h2>Floats + Clearfix Example</h2>\n<div class=\"clearfix\">\n  <div class=\"box\">Box 1</div>\n  <div class=\"box\">Box 2</div>\n</div>\n</body>\n</html>",
         "quiz": "Which legacy technique used float and clearfix hacks for side-by-side layouts?",
         "answer": "Floats + Clearfix"
     },
     "positioning": {
         "title": "Positioning (absolute, relative, fixed)",
-        "history": "Positioning allows placing elements at exact locations using absolute, relative, fixed, or sticky. Powerful but difficult for responsive design.",
+        "history": "<h1>Positioning allows placing elements at exact locations using absolute, relative, fixed, or sticky. Powerful but difficult for responsive design.</h1>",
+        "tip": "Positioning allows placing elements at exact locations using absolute, relative, fixed, or sticky.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Positioning Example</title>\n<style>\n  .box { position: absolute; top: 50px; left: 50px; width: 150px; height: 100px; background: lightgreen; }\n</style>\n</head>\n<body>\n<h2>Positioning Example</h2>\n<div class=\"box\">Absolutely Positioned Box</div>\n</body>\n</html>",
         "quiz": "Which layout technique places elements at exact coordinates but is hard for responsive design?",
         "answer": "Positioning"
     },
     "css-grid": {
         "title": "CSS Grid Layout",
-        "history": "CSS Grid is a two-dimensional layout system for rows and columns. Best for full page layouts and dashboards.",
+        "history": "<h1>CSS Grid is a two-dimensional layout system for rows and columns. Best for full page layouts and dashboards.</h1>",
+        "tip": "CSS Grid is a two-dimensional layout system for rows and columns.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>CSS Grid Example</title>\n<style>\n  .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }\n  .item { background: lightblue; height: 80px; }\n</style>\n</head>\n<body>\n<h2>CSS Grid Layout Example</h2>\n<div class=\"grid\">\n  <div class=\"item\">Sidebar</div>\n  <div class=\"item\">Main Content</div>\n</div>\n</body>\n</html>",
         "quiz": "Which modern layout system is two-dimensional and best for full page layouts?",
         "answer": "CSS Grid"
     },
     "responsive-units": {
         "title": "Responsive Units",
-        "history": "Responsive units like %, vh, vw, em, rem adapt element sizes to screen size or font size.",
+        "history": "<h1>Responsive units like %, vh, vw, em, rem adapt element sizes to screen size or font size.</h1>",
+        "tip": "Responsive units like %, vh, vw, em, rem adapt element sizes to screen size or font size.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Responsive Units Example</title>\n<style>\n  .box { width: 50%; height: 30vh; background: lightyellow; }\n</style>\n</head>\n<body>\n<h2>Responsive Units Example</h2>\n<div class=\"box\">This box uses % and vh units.</div>\n</body>\n</html>",
         "quiz": "Which units adapt element sizes to screen size or font size?",
         "answer": "%, vh, vw, em, rem"
     },
     "media-queries": {
         "title": "Media Queries",
-        "history": "Media queries allow applying different styles for different devices or screen sizes.",
+        "history": "<h1>Media queries allow applying different styles for different devices or screen sizes.</h1>",
+        "tip": "Media queries allow applying different styles for different devices or screen sizes.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Media Queries Example</title>\n<style>\n  .box { width: 100%; height: 100px; background: lightblue; }\n  @media (max-width: 768px) { .box { background: lightcoral; } }\n</style>\n</head>\n<body>\n<h2>Media Queries Example</h2>\n<div class=\"box\">Resize the window to see background change.</div>\n</body>\n</html>",
         "quiz": "Which feature applies different styles for different devices or screen sizes?",
         "answer": "Media Queries"
     },
     "container-queries": {
         "title": "Container Queries",
-        "history": "Container queries allow styling elements based on the size of their parent container, not the viewport.",
+        "history": "<h1>Container queries allow styling elements based on the size of their parent container, not the viewport.</h1>",
+        "tip": "Container queries allow styling elements based on the size of their parent container, not the viewport.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Container Queries Example</title>\n<style>\n  .card { container-type: inline-size; width: 300px; }\n  @container (min-width: 400px) { .card { background: lightgreen; } }\n</style>\n</head>\n<body>\n<h2>CSS Container Queries Example</h2>\n<div class=\"card\">Resize container to see style change.</div>\n</body>\n</html>",
         "quiz": "Which feature styles elements based on parent container size?",
         "answer": "Container Queries"
     },
     "container-units": {
         "title": "Container Units",
-        "history": "Container units (cqw, cqh, cqi, cqb) size elements relative to their container instead of viewport.",
+        "history": "<h1>Container units (cqw, cqh, cqi, cqb) size elements relative to their container instead of viewport.</h1>",
+        "tip": "Container units (cqw, cqh, cqi, cqb) size elements relative to their container instead of viewport.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Container Units Example</title>\n<style>\n  .container { width: 400px; height: 200px; border: 2px solid navy; }\n  .box { width: 50cqw; height: 50cqh; background: lightpink; }\n</style>\n</head>\n<body>\n<h2>CSS Container Units Example</h2>\n<div class=\"container\">\n  <div class=\"box\">Box sized with container units</div>\n</div>\n</body>\n</html>",
         "quiz": "Which units size elements relative to their container instead of viewport?",
         "answer": "Container Units"
     },
     "css-logical-properties": {
         "title": "CSS Logical Properties",
-        "history": "CSS logical properties adapt layout to writing modes (LTR, RTL, vertical). They replace physical properties like left/right with inline/block equivalents.",
+        "history": "<h1>CSS logical properties adapt layout to writing modes (LTR, RTL, vertical). They replace physical properties like left/right with inline/block equivalents.</h1>",
+        "tip": "CSS logical properties adapt layout to writing modes (LTR, RTL, vertical). They replace physical properties like left/right with inline/block equivalents.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>CSS Logical Properties Example</title>\n<style>\n  .box {\n    width: 200px;\n    height: 100px;\n    background: lightblue;\n    margin-inline-start: 40px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS Logical Properties Example</h2>\n<div class=\"box\">This box uses margin-inline-start instead of margin-left.</div>\n</body>\n</html>",
         "quiz": "Which CSS feature adapts layout to writing modes like LTR/RTL?",
         "answer": "CSS Logical Properties"
     },
     "css-regions": {
         "title": "CSS Regions (Experimental)",
-        "history": "CSS Regions allow content to flow across multiple containers, useful for magazine-style layouts. Still experimental and limited support.",
+        "history": "<h1>CSS Regions allow content to flow across multiple containers, useful for magazine-style layouts. Still experimental and limited support.</h1>",
+        "tip": "CSS Regions allow content to flow across multiple containers, useful for magazine-style layouts. Still experimental and limited support.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>CSS Regions Example</title>\n<style>\n  .region { flow-from: article; }\n</style>\n</head>\n<body>\n<h2>CSS Regions Example</h2>\n<div class=\"region\">Content flows into this region.</div>\n</body>\n</html>",
         "quiz": "Which experimental CSS feature allows content to flow across multiple containers?",
         "answer": "CSS Regions"
     },
     "css-anchor-positioning": {
         "title": "CSS Anchor Positioning",
-        "history": "CSS Anchor Positioning allows elements to be positioned relative to another element dynamically. Useful for tooltips and popovers.",
+        "history": "<h1>CSS Anchor Positioning allows elements to be positioned relative to another element dynamically. Useful for tooltips and popovers.</h1>",
+        "tip": "CSS Anchor Positioning allows elements to be positioned relative to another element dynamically. Useful for tooltips and popovers.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>CSS Anchor Positioning Example</title>\n<style>\n  .tooltip {\n    position: anchor(top);\n    background: lightyellow;\n    padding: 5px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS Anchor Positioning Example</h2>\n<button id=\"btn\">Hover me</button>\n<div class=\"tooltip\">Tooltip positioned relative to button.</div>\n</body>\n</html>",
         "quiz": "Which new CSS feature positions elements relative to another dynamically?",
         "answer": "CSS Anchor Positioning"
     },
     "writing-modes": {
         "title": "Writing Modes",
-        "history": "The writing-mode property allows vertical or horizontal text flow. Useful for Asian languages and creative layouts.",
+        "history": "<h1>The writing-mode property allows vertical or horizontal text flow. Useful for Asian languages and creative layouts.</h1>",
+        "tip": "The writing-mode property allows vertical or horizontal text flow. Useful for Asian languages and creative layouts.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Writing Modes Example</title>\n<style>\n  .vertical {\n    writing-mode: vertical-rl;\n    background: lightpink;\n    height: 150px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS Writing Modes Example</h2>\n<div class=\"vertical\">Vertical Text Example</div>\n</body>\n</html>",
         "quiz": "Which property allows vertical text flow for Asian languages?",
         "answer": "writing-mode"
     },
     "aspect-ratio-grid-flex": {
         "title": "Aspect-Ratio + Grid/Flex Combo",
-        "history": "Combining aspect-ratio with Grid or Flex ensures responsive cards and images maintain consistent proportions.",
+        "history": "<h1>Combining aspect-ratio with Grid or Flex ensures responsive cards and images maintain consistent proportions.</h1>",
+        "tip": "Combining aspect-ratio with Grid or Flex ensures responsive cards and images maintain consistent proportions.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Aspect-Ratio + Flex Example</title>\n<style>\n  .container { display: flex; gap: 10px; }\n  .card { flex: 1; aspect-ratio: 16/9; background: lightgreen; }\n</style>\n</head>\n<body>\n<h2>Aspect-Ratio + Flex Example</h2>\n<div class=\"container\">\n  <div class=\"card\">Card 1</div>\n  <div class=\"card\">Card 2</div>\n</div>\n</body>\n</html>",
         "quiz": "Which combination ensures responsive cards/images maintain consistent proportions?",
         "answer": "Aspect-ratio with Grid/Flex"
     },
     "scroll-snap": {
         "title": "Scroll Snap",
-        "history": "Scroll Snap allows smooth snapping of scrollable content, useful for carousels and sliders.",
+        "history": "<h1>Scroll Snap allows smooth snapping of scrollable content, useful for carousels and sliders.</h1>",
+        "tip": "Scroll Snap allows smooth snapping of scrollable content, useful for carousels and sliders.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Scroll Snap Example</title>\n<style>\n  .container { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; }\n  .item { flex: none; width: 200px; height: 100px; scroll-snap-align: start; background: lightblue; margin-right: 10px; }\n</style>\n</head>\n<body>\n<h2>CSS Scroll Snap Example</h2>\n<div class=\"container\">\n  <div class=\"container\">\n  <div class=\"item\">Slide 1</div>\n  <div class=\"item\">Slide 2</div>\n  <div class=\"item\">Slide 3</div>\n</div>\n</body>\n</html>",
         "quiz": "Which CSS feature enables smooth snapping for carousels and sliders?",
         "answer": "Scroll Snap"
     },
     "multi-column-layout": {
         "title": "Multi-column Layout",
-        "history": "The multi-column layout allows text content to be split into multiple columns, similar to newspapers or magazines. It is useful for long text content and provides easy multi-column formatting without complex grid setups.",
+        "history": "<h1>The multi-column layout allows text content to be split into multiple columns, similar to newspapers or magazines. It is useful for long text content and provides easy multi-column formatting without complex grid setups.</h1>",
+        "tip": "The multi-column layout allows text content to be split into multiple columns, similar to newspapers or magazines. It is useful for long text content and provides easy multi-column formatting without complex grid setups.",
         "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Multi-Column Layout Example</title>\n<style>\n  .text {\n    column-count: 3;\n    column-gap: 20px;\n    column-rule: 2px solid gray;\n  }\n</style>\n</head>\n<body>\n<h2>CSS Multi-Column Layout Example</h2>\n<div class=\"text\">\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n</div>\n</body>\n</html>",
         "quiz": "Which CSS feature creates newspaper-style multi-column layouts?",
         "answer": "Multi-column Layout"
     },
     "css-shapes": {
         "title": "CSS Shapes",
-        "history": "CSS Shapes allow text to wrap around custom shapes defined by paths or polygons.",
+        "history": "<h1>CSS Shapes allow text to wrap around custom shapes defined by paths or polygons.</h1>",
+        "tip": "CSS Shapes allow text to wrap around custom shapes defined by paths or polygons.",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>CSS Shapes Example</title>\n<style>\n  .shape {\n    float: left;\n    shape-outside: circle(50%);\n    clip-path: circle(50%);\n    width: 150px;\n    height: 150px;\n    background: lightcoral;\n    margin: 20px;\n  }\n</style>\n</head>\n<body>\n<h2>CSS Shapes Example</h2>\n<div class=\"shape\"></div>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Text wraps around the circular shape.</p>\n</body>\n</html>",
         "quiz": "Which CSS feature allows text to wrap around custom shapes?",
         "answer": "CSS Shapes"

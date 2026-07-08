@@ -1,0 +1,53 @@
+:root {
+    /* Backgrounds (Layered Deep Tech Dark) */
+    --bg-body: #050814;
+    --bg-header: #0b0f19;
+    --bg-nav: #0b0f19;
+    --bg-section: #080c16;
+    --bg-card: #0d1326;
+    --bg-modal: #0d1326;
+    --bg-entry: #060a12;
+    --bg-quiz: #060a12;
+    --bg-textarea: #02040a;
+    --bg-scrollbtn: #161f38;
+
+    /* Text (High Readability Hierarchy) */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-heading: #ffffff;
+    --text-modal-h3: #00ffaa;
+    --text-modal-h4: #6366f1;
+    --text-accent: #6366f1;
+    --text-code: #00ffaa;
+    --text-history: #64748b;
+
+    /* Borders & Shadows */
+    --border-card: rgba(255, 255, 255, 0.05);
+    --border-modal: rgba(255, 255, 255, 0.08);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --shadow-section: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-header: 0 4px 30px rgba(0, 0, 0, 0.7);
+
+    /* Cyber Glows ( Mockup Match) */
+    --glow-h2: 0 0 15px rgba(0, 255, 170, 0.25);
+    --glow-card-hover: 0 0 20px rgba(99, 102, 241, 0.15);
+
+    /* Interactive (Neon Accents) */
+    --btn-primary-bg: #6366f1;
+    --btn-primary-text: #ffffff;
+    --btn-run-bg: #1e293b;
+    --btn-run-hover: #00ffaa;
+    --nav-link: #94a3b8;
+    --nav-link-hover: #d3d5ee;
+
+    /* Misc */
+    --quiz-border: rgba(255, 255, 255, 0.05);
+    --toggle-bg: #1e293b;
+    --tooltip-bg: #0b0f19;
+    --search-bg: #02040a;
+    --search-text: #f8fafc;
+    --search-border: rgba(99, 102, 241, 0.3);
+    --link-more: #00ffaa;
+    --footer-text: #64748b;
+    --overlay-bg: rgba(3, 7, 18, 0.85);
+}

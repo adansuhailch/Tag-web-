@@ -1,0 +1,52 @@
+[
+    {
+        "key": "Basics",
+        "label": "⚡ Basics",
+        "color": "#3b82f6"
+    },
+    {
+        "key": "Operators",
+        "label": "➕ Operators",
+        "color": "#8b5cf6"
+    },
+    {
+        "key": "Control Flow",
+        "label": "🔀 Control Flow",
+        "color": "#ef4444"
+    },
+    {
+        "key": "Functions",
+        "label": "🔧 Functions",
+        "color": "#f59e0b"
+    },
+    {
+        "key": "Arrays",
+        "label": "📦 Arrays",
+        "color": "#10b981"
+    },
+    {
+        "key": "Objects",
+        "label": "🗂️ Objects",
+        "color": "#06b6d4"
+    },
+    {
+        "key": "DOM",
+        "label": "🌐 DOM",
+        "color": "#ec4899"
+    },
+    {
+        "key": "Events",
+        "label": "🎯 Events",
+        "color": "#f97316"
+    },
+    {
+        "key": "Async",
+        "label": "⏳ Async JS",
+        "color": "#a855f7"
+    },
+    {
+        "key": "Browser APIs",
+        "label": "🛠️ Browser APIs",
+        "color": "#14b8a6"
+    }
+]

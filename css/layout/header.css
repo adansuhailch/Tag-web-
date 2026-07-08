@@ -1,0 +1,76 @@
+/* header */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    background: var(--bg-header);
+    color: var(--text-primary);
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+header h1 {
+    font-size: 1.6rem;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(14, 34, 63, 0.4);
+
+    margin-bottom: 4px;
+}
+
+
+
+.logo {
+    margin-right: clamp(12px, 4vw, 12%);
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.tag-web-logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.tag-web-logo:hover,
+.logo:focus-within .dra-LOGO {
+    transform: scale(1.1);
+}
+
+.brand-wordmark {
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+}
+
+
+.logo:focus-visible {
+    outline: 3px solid rgba(34, 197, 94, 0.4);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+
+/* Responsive position */
+@media (max-width: 768px) {
+    #theme-switch {
+        top: auto;
+        bottom: 8rem;
+        right: 15px;
+        z-index: 1002;
+    }
+}
