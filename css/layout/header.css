@@ -45,7 +45,7 @@ header h1 {
 }
 
 .tag-web-logo:hover,
-.logo:focus-within .dra-LOGO {
+.logo:focus-within .tag-web-logo {
     transform: scale(1.1);
 }
 
