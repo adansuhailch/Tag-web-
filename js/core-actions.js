@@ -227,3 +227,65 @@ function fillEditorPageData(tag) {
 
     document.getElementById('quiz').setAttribute('data-tag', tag);
 }
+
+// ==========================================================================
+// 🎯 DYNAMIC W3SCHOOLS-STYLE CLICK ROUTER LAYER (CLASS INTEGRATION)
+// ==========================================================================
+
+// 📦 Centralized Routing Dictionary (W3Schools parameter structure setup)
+const routingTargetDB = {
+    "css-boxmodel": "/pages/quiz-section.html?category=css-boxmodel",
+    "css-animation": "/pages/quiz-section.html?category=css-animation",
+    "text-tag": "/pages/quiz-section.html?category=text-tag",
+    "form-tag": "/pages/quiz-section.html?category=form-tag"
+};
+
+// Listen for the DOM load event to safely bind elements
+document.addEventListener("DOMContentLoaded", () => {
+    initInstantClickRouting();
+});
+
+function initInstantClickRouting() {
+    // 1. ID ki jagah pooray page se saari quiz classes ko ek list mein save karein
+    const allQuizSections = document.querySelectorAll('.quiz-exercise-card');
+
+    // Agar page par ek bhi quiz box nahi hai, to silent exit ho jao
+    if (allQuizSections.length === 0) return;
+
+    // 2. Loop lagayein taake har ek quiz card alag se independent kaam kare
+    allQuizSections.forEach(currentCard => {
+
+        // Is makhsoos card ka apna 'data-page-target' nikalen (e.g. text-tag ya form-tag)
+        const currentTargetKey = currentCard.getAttribute('data-page-target');
+
+        // Sirf ISI card ke andar ke radio option buttons ko target karein
+        const optionBoxes = currentCard.querySelectorAll('.quizoption');
+
+        optionBoxes.forEach(box => {
+            // Trigger action instant redirection framework on single choice click interaction
+            box.addEventListener('click', (e) => {
+                // Prevent any native form submissions or page-locked interruptions
+                e.preventDefault();
+
+                // Auto check the inner native radio element input state toggle for accessibility
+                const radioInput = box.querySelector('input[type="radio"]');
+                if (radioInput) radioInput.checked = true;
+
+                // Fetch destination path from routing config map rules matrix
+                const finalDestinationURL = routingTargetDB[currentTargetKey];
+
+                if (finalDestinationURL) {
+                    // Micro delay (300ms) to let visual click select state render, then trigger routing!
+                    setTimeout(() => {
+
+                    window.open(`/pages/quiz-section.html?category=${currentTargetKey}`, '_blank');
+
+                    }, 300);
+                } else {
+                    // Fallback boundary safeguard if category string parameter mapping is undefined
+                    window.location.href = "/pages/quiz-section.html?category=all";
+                }
+            });
+        });
+    });
+}

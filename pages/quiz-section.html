@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://tag-web-digitaltest.netlify.app/">
+    <title>Tag Web's Knowledge Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome link if you want icons inside buttons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="/css/components/quiz-section.css">
+</head>
+
+<body>
+    <div class="card fade-in">
+        <!-- Topbar Area -->
+        <div class="topbar">
+            <div class="brand">
+                <h1>🎓 Tag Web's Mastery Test</h1>
+                <small>W3Schools Style Challenge Engine</small>
+            </div>
+            <div class="pill" id="live-counter">Topic Challenge</div>
+        </div>
+
+        <div class="content">
+            <!-- 1. QUIZ RUNNING VIEW -->
+            <div id="section-quiz">
+                <div class="quiz-top">
+                    <div>
+                        <strong id="quiz-question">Loading Quiz Node...</strong>
+                    </div>
+                </div>
+
+                <!-- Interactive Buttons Zone -->
+                <div class="options" id="quiz-options-group">
+                    <!-- JavaScript will dynamically inject option buttons here -->
+                </div>
+
+                <!-- Live Feedback Display (Correct / Wrong State messages) -->
+                <p id="quiz-feedback" class="note" aria-live="polite"></p>
+            </div>
+
+            <!-- 2. RESULT SUMMARY VIEW (Hidden by default) -->
+            <div id="section-result" class="hidden">
+                <div id="result-content">
+                    <!-- Final Scoreboard Card will render inside here via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script connection framework -->
+    <script src="/js/quiz-section.js"></script>
+</body>
+
+</html>

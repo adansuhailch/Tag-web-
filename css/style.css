@@ -15,6 +15,7 @@
 @import url('components/code-editor.css');
 @import url('components/modal.css');
 @import url('components/js-part.css');
+@import url('components/quiz-section-page.css');
 
 /*4. SECTIONS & RESPONSIVE (Agar in folders mein koi files hain to niche add karein)*/
 @import url('sections/section.css');
