@@ -156,23 +156,7 @@
 
 /* Modal navigation */
 
-.modal-nav button {
-    flex: 1;
-    padding: 8px 14px;
-    background: var(--btn-run-bg);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-}
 
-.modal-nav button:hover {
-    background: var(--btn-run-hover);
-    transform: translateY(-1px);
-}
 
 /* JS hero banner */
 .js-hero {

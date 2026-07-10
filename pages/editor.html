@@ -9,60 +9,24 @@
     <link rel="stylesheet" href="https://cloudflare.com">
     <!-- Aapki main style settings link -->
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        /* Is master full-screen page ko desktop par bina scroll ke fit rakhne ke liye settings */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            background: var(--bg-modal, #0a1120);
-            color: var(--text-primary, #ffffff);
-            font-family: 'Inter', system-ui, sans-serif;
-        }
-
-        .editor-page-container {
-            padding: 24px;
-            max-width: 1400px;
-            margin: 0 auto;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-
-        /* Grid sizes ko fullscreen ke liye optimize kiya */
-        #modal-editor {
-            height: 250px !important;
-            /* Editor ko full room diya coding ke liye */
-        }
-
-        #live-preview {
-            height: 300px !important;
-            /* Live test area bada kar diya */
-        }
-    </style>
 </head>
 
 <body>
-
     <div class="editor-page-container">
-        <!-- Top Toolbar / Breadcrumbs (Back button ab history ke sath chalega) -->
+        <!-- Top Toolbar / Breadcrumbs -->
         <div class="modal-header-bar">
-            <button id="close-modal" onclick="goBack()"><i class="fa-solid fa-arrow-left"></i> Back to Tags</button>
-            <!-- <div class="breadcrumbs">Documentation &gt; <span id="modal-title" style="color: #64ffda;">Loading...</span>
-            </div> -->
             <div class="breadcrumbs">
-                <!-- Humne 'Documentation' hata kar dynamic text ke liye span tags laga diye -->
                 <span id="breadcrumb-parent" style="text-transform: capitalize;">Loading Category</span>
                 &gt;
                 <span id="modal-title" style="color: #64ffda;">Loading Tag</span>
             </div>
-            <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
         </div>
 
-        <!-- Main Body Wrapper Grid (Aapka banaya hua split columns system) -->
+        <!-- Main Body Wrapper Grid -->
         <div class="modal-body-layout">
 
-            <!-- ⬅️ Left Panel: Text Information -->
-            <div class="modal-left">
+            <!-- NEW: Info Grid (About + Tip) Top Par Aa Gaya -->
+            <div class="info-top-grid">
                 <div class="info-block">
                     <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
                     <div id="modal-history">Loading history and usage notes...</div>
@@ -74,56 +38,52 @@
                 </div>
             </div>
 
-            <!-- ➡️ Right Panel: Editor & Quiz Tools -->
-            <div class="modal-right">
+            <!-- Middle: Editor & Preview Grid -->
+            <div class="editor-preview-grid">
+                <!-- Left: Editor -->
+                <div class="editor-panel">
+                    <div class="editor-wrapper">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                        </div>
+                        <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
 
-                <!-- Live Code Box -->
-                <div class="editor-wrapper">
-                    <div class="editor-header">
-                        <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                        <div class="editor-actions">
+                            <button class="run-btn cssbuttons-io" onclick="runLiveCode()">
+                                <span>
+                                    <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+                                        <path d="M8 5v14l11-7z" fill="currentColor"></path>
+                                    </svg>
+                                    Run Code
+                                </span>
+                            </button>
+
+                            <button class="copy-btn cssbuttons-io" onclick="copyCode()">
+                                <span>
+                                    <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+                                        <path
+                                            d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                    Copy Code
+                                </span>
+                            </button>
+                        </div>
                     </div>
-                    <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
-
-                    <!-- <div class="editor-actions">
-                        <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
-                        <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
-                    </div> -->
-                    <div class="editor-actions">
-                        <!-- Run Code Button (Safe onclick with new UI) -->
-                        <button class="run-btn cssbuttons-io" onclick="runLiveCode()">
-                            <span>
-                                <!-- Run icon (Play Symbol) -->
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"></path>
-                                </svg>
-                                Run Code
-                            </span>
-                        </button>
-
-                        <!-- Copy Code Button (Safe onclick with new UI) -->
-                        <button class="copy-btn cssbuttons-io" onclick="copyCode()">
-                            <span>
-                                <!-- Copy icon (Clipboard) -->
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
-                                        fill="currentColor"></path>
-                                </svg>
-                                Copy Code
-                            </span>
-                        </button>
-                    </div>
-
                 </div>
 
-                <!-- Preview Output Window -->
-                <div class="preview-wrapper">
-                    <div class="preview-header">Output</div>
-                    <iframe id="live-preview" title="Live code preview"
-                        sandbox="allow-scripts allow-same-origin"></iframe>
+                <!-- Right: Preview -->
+                <div class="preview-panel">
+                    <div class="preview-wrapper">
+                        <div class="preview-header">Output</div>
+                        <iframe id="live-preview" title="Live code preview"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Multiple Choice Quiz Box -->
+            <!-- Bottom: Quiz Section Only -->
+            <div class="below-panels">
                 <div class="quiz-section" id="quiz">
                     <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
                     <p id="quiz-question">Loading quiz question...</p>
@@ -135,8 +95,8 @@
                     </div>
                     <p id="quiz-feedback" aria-live="polite"></p>
                 </div>
-
             </div>
+
         </div>
     </div>
 

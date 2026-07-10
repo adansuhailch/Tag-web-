@@ -15,7 +15,7 @@
         "quiz": "Which properties set the minimum size of an element?",
         "answer": "min-width and min-height"
     },
-    "max-width-max-height": {
+    "max-width-height": {
         "title": "max-width / max-height Properties",
         "history": "<h1>The max-width and max-height properties set the maximum size of an element.</h1>",
         "tip": "Employ max-width and max-height to ensure elements responsively scale, preventing overflow and maintaining layout integrity across all viewports.",

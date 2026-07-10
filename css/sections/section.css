@@ -69,11 +69,6 @@ section {
     color: var(--btn-run-hover);
 }
 
-/* ── Blur when search active ── */
-.blur .tag-card {
-    filter: blur(3px);
-}
-
 .tag-card[style*="inline-block"] {
     filter: none !important;
 }

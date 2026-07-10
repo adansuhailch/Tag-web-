@@ -1,6 +1,13 @@
-/* ============================================================
-   MODAL / FULL-PAGE EDITOR BASE SETTINGS
-   ============================================================ */
+/* Model and editor page css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: var(--bg-modal, #0a1120);
+    color: var(--text-primary, #ffffff);
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
 #modal {
     display: block;
     /* Fixed popup ki jagah normal canvas kiya */
@@ -50,24 +57,6 @@
     line-height: 1.6;
 }
 
-.modal-toggle,
-#modalThemeBtn {
-    background: var(--toggle-bg);
-    border: 1px solid var(--border-modal);
-    color: var(--text-primary);
-    border-radius: 20px;
-    padding: 4px 12px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: background 0.25s;
-    margin-bottom: 10px;
-}
-
-.modal-toggle:hover,
-#modalThemeBtn:hover {
-    background: var(--btn-run-hover);
-    color: #fff;
-}
 
 .modal-header-bar {
     display: flex;
@@ -76,21 +65,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 15px;
     margin-bottom: 20px;
-}
-
-#close-modal {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#close-modal:hover {
-    color: #ff5555;
-    background: rgba(255, 85, 85, 0.1);
 }
 
 /* ============================================================
@@ -104,20 +78,8 @@
 }
 
 /* Left panel text management */
-.modal-left {
-    flex: 1 1 350px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /* Right panel interactive zone */
-.modal-right {
-    flex: 2 1 550px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /* 🎨 Live Code Box Textarea adjustments */
 .editor-wrapper {
@@ -125,15 +87,6 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     overflow: hidden;
-}
-
-.editor-header {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 10px 16px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #9ca3af;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #editor-page-container #modal-editor {
@@ -279,9 +232,10 @@
 #live-preview {
     width: 100%;
     height: 300px;
-    /* Badi window live code checking ke liye */
     border: none;
-    background: #0d1117;
+    background: #ffffff;
+    border-radius: 8px;
+    flex: 1 1 auto;
 }
 
 /* 💡 Tips framework container alignment */
@@ -325,4 +279,152 @@
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+}
+
+.editor-page-container {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* New responsive editor + preview grid */
+.modal-body-layout {
+    display: block;
+    gap: 18px;
+}
+
+.editor-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.editor-wrapper,
+.preview-wrapper {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    min-height: 28.125rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+}
+
+.preview-header {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+}
+
+/* Code textarea styling to feel like a modern editor */
+#modal-editor {
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 260px;
+    resize: vertical;
+    background: #071422;
+    color: #d6eef1;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+    font-size: 14px;
+    line-height: 1.45;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-sizing: border-box;
+}
+
+.editor-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Below panels area: quiz, about, tips */
+/* Main Layout Space Management */
+.modal-body-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 1. TOP INFO GRID (About + Tip) - 2 Equal Boxes */
+.info-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.info-block {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tip-box {
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.03), rgba(245, 158, 11, 0.01));
+    border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+/* 2. MIDDLE GRID (Editor + Preview) */
+.editor-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+/* 3. BOTTOM PANELS (Quiz Only) */
+.below-panels {
+    width: 100%;
+}
+
+.quiz-section {
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.9));
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.4);
+}
+
+/* Responsive configurations for mobile devices */
+@media (max-width: 900px) {
+
+    .info-top-grid,
+    .editor-preview-grid {
+        grid-template-columns: 1fr;
+    }
 }

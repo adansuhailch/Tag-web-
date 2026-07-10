@@ -131,6 +131,38 @@
                 </div>
             </section>
 
+            <section class="quiz quiz-exercise-card" data-page-target="text-tag">
+
+                <h2>Take a short quiz</h2>
+                <p>what is a correct syntax to insert h1 in a html page?</p>
+                <br>
+                <form action="" method="post" target="_blank" rel="opener">
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption1" value="1">
+                        <label for="quizoption1">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption2" value="1">
+                        <label for="quizoption2">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption3" value="1">
+                        <label for="quizoption3">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption4" value="1">
+                        <label for="quizoption4">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                </form>
+            </section>
             <!-- Forms Section -->
             <section id="forms">
                 <h2>Form Tags</h2>
@@ -213,6 +245,40 @@
             </section>
 
 
+
+            <section class="quiz quiz-exercise-card" data-page-target="form-tag">
+
+                <h2>Take a short quiz</h2>
+                <p>what is a correct syntax to insert h1 in a html page?</p>
+                <br>
+                <form action="" method="post" rel="opener">
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption1" value="1">
+                        <label for="quizoption1">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption2" value="1">
+                        <label for="quizoption2">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption3" value="1">
+                        <label for="quizoption3">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                    <div class="quizoption">
+                        <input type="radio" name="quizoption" id="quizoption4" value="1">
+                        <label for="quizoption4">
+                            <code>h2</code>
+                        </label>
+                    </div>
+                </form>
+            </section>
+
             <!-- Other HTML tags -->
             <section id="Other-tags">
                 <h2>Other HTML5 Tags</h2>
@@ -234,13 +300,19 @@
             <section id="Css-tags">
                 <h2>CSS Tags</h2>
                 <div class="cards-grid">
-                    <div class="tag-card">
-                        <a href="/pages/css-part.html" target="_blank" class="css-link"
-                            style="text-decoration: none; color: inherit;">
-                            <span class="css-icon">🎨</span> Explore CSS Tags
-                        </a>
+
+
+                    <!-- flexbox-grid-combo -->
+                    <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
+                        Flexbox + Grid Combo<span class="tooltip">Click for details</span>
                     </div>
+                    <div class="tag-card" data-tag="text-shadow" onclick="openModal('text-shadow')">text-shadow<span
+                            class="tooltip">Click for details</span></div>
                 </div>
+                <a href="/pages/css-part.html" target="_blank" class="css-link"
+                    style="text-decoration: none; color: inherit;">
+                    <span class="css-icon">🎨</span> Explore CSS Tags
+                </a>
 
             </section>
 

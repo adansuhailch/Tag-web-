@@ -1,0 +1,99 @@
+.quiz-exercise-card {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #080c16;
+    text-align: center;
+    padding: 20px 20px 40px 20px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 0;
+}
+
+.quiz-exercise-card h2 {
+    color: #fff;
+}
+
+.quiz-exercise-card p {
+    color: #fff;
+    font-size: 18px !important;
+    max-width: 600px !important;
+    margin: auto;
+}
+
+.quiz-exercise-card .quizoption {
+    position: relative;
+    font-family: 'Source Sans Pro Topnav', sans-serif;
+    background-color: rgb(161 161 161 / 20%);
+    color: #5d0c0c;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 650px !important;
+    padding: 8px 16px;
+    margin: auto;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.quiz-exercise-card .quizoption:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.quiz-exercise-card .quizoption [type=radio] {
+    position: absolute;
+    top: 33%;
+}
+
+.quiz-exercise-card .quizoption label {
+    display: inline-block;
+    margin-left: 16px;
+    margin-left: 29px;
+    cursor: pointer;
+}
+
+.quiz-exercise-card .questionmark {
+    font-family: 'Source Sans Pro Topnav', sans-serif;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 10px;
+    background-color: #424b5a;
+    border-radius: 15px;
+    max-width: 240px;
+    z-index: 1;
+}
+
+.quiz-exercise-card code,
+.quiz-exercise-card code.w3-codespan {
+    color: #fff !important;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    border-radius: 2px;
+}
+
+.quiz-exercise-card code.w3-codespan {
+    background-color: rgb(21, 32, 43) !important;
+}
+
+.quiz-exercise-card code.codeblock {
+    display: inline-block;
+    width: auto;
+    padding: 8px 16px;
+    text-align: left;
+    background-color: rgb(21, 32, 43) !important;
+    color: #fff !important;
+    border-radius: 5px;
+}
+
+#qobj_options code.codeblock,
+.quiz-exercise-card .quizoption code.codeblock {
+    background-color: #2D3748 !important;
+}
+
+#qobj_options .w3-codespan,
+.quiz-exercise-card .quizoption .w3-codespan {
+    background-color: #2D3748 !important;
+}
+
