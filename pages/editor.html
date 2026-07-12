@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Web - Documentation & Editor</title>
+    <!-- FontAwesome Icons Link -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Aapki main style settings link -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="editor-page-container">
+        <!-- Top Toolbar / Breadcrumbs -->
+        <div class="modal-header-bar">
+            <div class="breadcrumbs">
+                <span id="breadcrumb-parent" style="text-transform: capitalize;">Loading Category</span>
+                &gt;
+                <span id="modal-title" style="color: #64ffda;">Loading Tag</span>
+            </div>
+        </div>
+
+        <!-- Main Body Wrapper Grid -->
+        <div class="modal-body-layout">
+
+            <!-- NEW: Info Grid (About + Tip) Top Par Aa Gaya -->
+            <div class="info-top-grid">
+                <div class="info-block">
+                    <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
+                    <div id="modal-history">Loading history and usage notes...</div>
+                </div>
+
+                <div class="info-block tip-box">
+                    <h4>💡 Tip</h4>
+                    <p id="modal-tip">Loading tip information...</p>
+                </div>
+            </div>
+
+            <!-- Middle: Editor & Preview Grid -->
+            <div class="editor-preview-grid">
+                <!-- Left: Editor -->
+                <div class="editor-panel">
+                    <div class="editor-wrapper">
+                        <div class="editor-header">
+                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
+                        </div>
+                        <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
+
+                        <div class="editor-actions">
+                            <button class="run-btn cssbuttons-io" onclick="runLiveCode()">
+                                <span>
+                                    <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+                                        <path d="M8 5v14l11-7z" fill="currentColor"></path>
+                                    </svg>
+                                    Run Code
+                                </span>
+                            </button>
+
+                            <button class="copy-btn cssbuttons-io" onclick="copyCode()">
+                                <span>
+                                    <svg viewBox="0 0 24 24" xmlns="http://w3.org">
+                                        <path
+                                            d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                    Copy Code
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Preview -->
+                <div class="preview-panel">
+                    <div class="preview-wrapper">
+                        <div class="preview-header">Output</div>
+                        <iframe id="live-preview" title="Live code preview"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Quiz Section Only -->
+            <div class="below-panels">
+                <div class="quiz-section" id="quiz">
+                    <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
+                    <p id="quiz-question">Loading quiz question...</p>
+
+                    <div class="quiz-options-group">
+                        <input type="text" id="quiz-answer" placeholder="Type your answer here (e.g. h1)"
+                            aria-label="Quiz answer" />
+                        <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
+                    </div>
+                    <p id="quiz-feedback" aria-live="polite"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pehle core-actions.js lagayein kyunki isme functions hain -->
+    <script src="../js/core-actions.js"></script>
+
+    <!-- Phir tag-web.js lagayein kyunki yeh download ka engine hai -->
+    <script src="../js/tag-web.js"></script>
+</body>
+
+</html>

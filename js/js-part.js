@@ -16,41 +16,48 @@ let cmEditor = null; // CodeMirror instance
 /* ═══════════════════════════════════════════════
    INIT
 ═══════════════════════════════════════════════ */
-document.addEventListener('DOMContentLoaded', () => {
-    allTopicKeys = Object.keys(jsTopicData);
-    filteredKeys = [...allTopicKeys];
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('javascript-categories.json');
+        const jsTopicData = await response.json();
 
-    buildCategoryFilters();
-    updateProgress();
+        // 2. Kyunke ab yeh array hai, hum har object ke andar se uski "key" nikaal kar array banayein ge
+        allTopicKeys = jsTopicData.map(topic => topic.key);
+        filteredKeys = [...allTopicKeys];
 
-    // Keyboard shortcut: Ctrl+Enter runs code
-    document.addEventListener('keydown', e => {
-        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-            const modal = document.getElementById('modal');
-            if (modal && modal.style.display !== 'none') {
-                runLiveCode();
-            }
-        }
-    });
-
-    // Close modal on backdrop click
-    const modal = document.getElementById('modal');
-    if (modal) {
-        modal.addEventListener('click', e => {
-            if (e.target === modal) closeModal();
-        });
+        buildCategoryFilters();
+        updateProgress();
+    } catch (error) {
+        console.error("JSON file load karne mein masla aya:", error);
     }
 
-    // Scroll buttons
-    const topBtn = document.getElementById('scrollTopBtn');
-    const botBtn = document.getElementById('scrollBottomBtn');
-    if (topBtn) topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    if (botBtn) botBtn.addEventListener('click', () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }));
-
-    window.addEventListener('scroll', () => {
-        if (topBtn) topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
 });
+// // Keyboard shortcut: Ctrl+Enter runs code
+// document.addEventListener('keydown', e => {
+//     if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+//         const modal = document.getElementById('modal');
+//         if (modal && modal.style.display !== 'none') {
+//             runLiveCode();
+//         }
+//     }
+// });
+// // Close modal on backdrop click
+// const modal = document.getElementById('modal');
+// if (modal) {
+//     modal.addEventListener('click', e => {
+//         if (e.target === modal) closeModal();
+//     });
+// }
+
+// // Scroll buttons
+// const topBtn = document.getElementById('scrollTopBtn');
+// const botBtn = document.getElementById('scrollBottomBtn');
+// if (topBtn) topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+// if (botBtn) botBtn.addEventListener('click', () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }));
+
+// window.addEventListener('scroll', () => {
+//     if (topBtn) topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+// });
 
 /* ═══════════════════════════════════════════════
    MODAL

@@ -35,7 +35,7 @@ header h1 {
     text-decoration: none;
 }
 
-.dra-LOGO {
+.tag-web-logo {
     width: 55px;
     height: 55px;
     border-radius: 10px;
@@ -44,8 +44,8 @@ header h1 {
     display: block;
 }
 
-.dra-LOGO:hover,
-.logo:focus-within .dra-LOGO {
+.tag-web-logo:hover,
+.logo:focus-within .tag-web-logo {
     transform: scale(1.1);
 }
 

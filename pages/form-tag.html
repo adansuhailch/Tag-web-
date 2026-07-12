@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script>(function () { var t = localStorage.getItem('tagweb-theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); })();</script>
+
     <title>Form Tags — Tag Web</title>
 </head>
 
@@ -19,16 +19,7 @@
         <a href="../index.html" class="more-tags-link" style="display:inline-block; margin: 6px 0;">⬅ Back to Main
             Page</a>
 
-        <button id="theme-switch">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-                <path
-                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-                <path
-                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
-            </svg>
-        </button>
+
         <div class="search-container">
             <input type="text" id="searchBar" placeholder="🔍 Search tag..." onkeyup="searchTag()"
                 aria-label="Search tags">
@@ -79,81 +70,40 @@
         </div>
     </section>
 
-    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
-    <button id="scrollBottomBtn" aria-label="Scroll to bottom"><i class="fa-solid fa-angles-down fa-beat"></i></button>
+    <section class="quiz quiz-exercise-card" data-page-target="form-tag">
 
-    <!-- Modal -->
-    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div id="modal-content">
-            <!-- Top Toolbar / Breadcrumbs -->
-            <div class="modal-header-bar">
-                <button id="close-modal" onclick="closeModal()"><i class="fa-solid fa-arrow-left"></i> Back</button>
-                <div class="breadcrumbs">Text Tags &gt; <span id="modal-title" style="color: #64ffda;">&lt;h1&gt;
-                        Heading Tag</span></div>
-                <button class="modal-toggle" onclick="toggleModalTheme()">🌙 Theme</button>
+        <h2>Take a short quiz</h2>
+        <p>what is a correct syntax to insert h1 in a html page?</p>
+        <br>
+        <form action="" method="post" rel="opener">
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption1" value="1">
+                <label for="quizoption1">
+                    <code>h2</code>
+                </label>
             </div>
-
-            <!-- Main Body Wrapper Grid -->
-            <div class="modal-body-layout">
-
-                <!-- ⬅️ Left Panel: Text Information -->
-                <div class="modal-left">
-                    <div class="info-block">
-                        <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
-                        <div id="modal-history">Loading history and usage notes...</div>
-                    </div>
-
-                    <div class="info-block tip-box">
-                        <h4>💡 Tip</h4>
-                        <p>Use heading tags in order: &lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt; for better structure and SEO.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- ➡️ Right Panel: Editor & Quiz Tools -->
-                <div class="modal-right">
-
-                    <!-- Live Code Box -->
-                    <div class="editor-wrapper">
-                        <div class="editor-header">
-                            <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
-                        </div>
-                        <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
-
-                        <div class="editor-actions">
-                            <button class="run-btn" onclick="runLiveCode()">▶ Run Code</button>
-                            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
-                        </div>
-                    </div>
-
-                    <!-- Preview Output Window -->
-                    <div class="preview-wrapper">
-                        <div class="preview-header">Output</div>
-                        <iframe id="live-preview" title="Live code preview"
-                            sandbox="allow-scripts allow-same-origin"></iframe>
-                    </div>
-
-                    <!-- Multiple Choice Quiz Box -->
-                    <div class="quiz-section" id="quiz">
-                        <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
-                        <p id="quiz-question">Which tag is used for the most important heading in HTML?</p>
-
-                        <!-- 🛠️ Dynamic Quiz Input: Multiple choice system as requested in picture -->
-                        <div class="quiz-options-group">
-                            <input type="text" id="quiz-answer" placeholder="Type your answer here (e.g. h1)"
-                                aria-label="Quiz answer" />
-                            <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
-                        </div>
-                        <p id="quiz-feedback" aria-live="polite"></p>
-                    </div>
-
-                </div>
-
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption2" value="1">
+                <label for="quizoption2">
+                    <code>h2</code>
+                </label>
             </div>
-        </div>
-    </div>
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption3" value="1">
+                <label for="quizoption3">
+                    <code>h2</code>
+                </label>
+            </div>
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption4" value="1">
+                <label for="quizoption4">
+                    <code>h2</code>
+                </label>
+            </div>
+        </form>
+    </section>
 
-    <script src="/js/theme.js"></script>
+
     <script src="/js/form-tag.js"></script>
     <script src="/js/core-actions.js"></script>
 </body>

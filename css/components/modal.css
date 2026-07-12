@@ -1,33 +1,37 @@
-/* ============================================================
-   MODAL
-   ============================================================ */
+/* Model and editor page css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: var(--bg-modal, #0a1120);
+    color: var(--text-primary, #ffffff);
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
 #modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: block;
+    /* Fixed popup ki jagah normal canvas kiya */
+    position: static;
+    /* Poore page ke layout ke sath chalega */
     width: 100%;
-    height: 100%;
-    background: var(--overlay-bg);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    animation: fadeIn 0.25s ease;
+    height: auto;
+    background: none;
+    /* Black transparent background piche se hata diya */
+    animation: none;
+    z-index: auto;
 }
 
 #modal-content {
-    background: var(--bg-modal);
-    color: var(--text-primary);
-    padding: 24px;
-    max-width: 860px;
-    width: 92%;
-    border-radius: 12px;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-    animation: slideDown 0.25s ease;
-    border: 1px solid var(--border-modal);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+    background: transparent;
+    /* Background container ab editor.html khud handle karta hai */
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+    animation: none;
     transition: background 0.3s, color 0.3s;
 }
 
@@ -42,7 +46,6 @@
     margin: 16px 0 8px;
 }
 
-
 #modal-history {
     color: var(--text-history);
     background: none;
@@ -54,74 +57,6 @@
     line-height: 1.6;
 }
 
-#close-modal {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    font-size: 26px;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: color 0.2s;
-    line-height: 1;
-}
-
-#close-modal:hover {
-    color: #ff5555;
-}
-
-
-.modal-toggle,
-#modalThemeBtn {
-    background: var(--toggle-bg);
-    border: 1px solid var(--border-modal);
-    color: var(--text-primary);
-    border-radius: 20px;
-    padding: 4px 12px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: background 0.25s;
-    margin-bottom: 10px;
-}
-
-.modal-toggle:hover,
-#modalThemeBtn:hover {
-    background: var(--btn-run-hover);
-    color: #fff;
-}
-
-
-#modal-content.modal-dark {
-    background: #051c38;
-    color: #eaeaea;
-    border-color: #0a2a4f;
-}
-
-#modal-content.modal-dark h3 {
-    color: #64ffda;
-}
-
-#modal-content.modal-dark h4 {
-    color: #3fc1c9;
-}
-
-#modal-content.modal-dark #modal-history {
-    color: #a9bfd4;
-    border-left-color: #1e90ff;
-}
-
-#modal-content {
-    background: var(--bg-modal, #0a1120);
-    color: var(--text-primary, #ffffff);
-    padding: 24px;
-    max-width: 1200px;
-    width: min(95%, 1200px);
-    border-radius: 16px;
-    position: relative;
-    max-height: 92vh;
-    overflow-y: auto;
-    border: 1px solid var(--border-modal, rgba(255, 255, 255, 0.08));
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-}
 
 .modal-header-bar {
     display: flex;
@@ -132,48 +67,19 @@
     margin-bottom: 20px;
 }
 
-#close-modal {
-    position: static;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#close-modal:hover {
-    color: #ff5555;
-    background: rgba(255, 85, 85, 0.1);
-}
-
-/* 🚀 MAIN SPLIT SCREEN SYSTEM GRID */
+/* ============================================================
+   🚀 MAIN SPLIT SCREEN SYSTEM GRID (Aapka custom code)
+   ============================================================ */
 .modal-body-layout {
     display: flex;
     gap: 24px;
-    /* Space between columns */
     flex-wrap: wrap;
     /* Mobile friendly responsive behavior */
 }
 
 /* Left panel text management */
-.modal-left {
-    flex: 1 1 350px;
-    /* 35% minimum space distribution */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /* Right panel interactive zone */
-.modal-right {
-    flex: 2 1 550px;
-    /* 65% space distribution for editor tools */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /* 🎨 Live Code Box Textarea adjustments */
 .editor-wrapper {
@@ -183,29 +89,22 @@
     overflow: hidden;
 }
 
-.editor-header {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 10px 16px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #9ca3af;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-#modal-editor {
+#editor-page-container #modal-editor {
     width: 100%;
-    height: 140px;
+    height: 250px;
+    /* Is page par height thodi badi kar di code space ke liye */
     background: transparent;
     border: none;
     color: #38bdf8;
-    /* Coding cyan color */
     font-family: 'Courier New', Courier, monospace;
     padding: 15px;
     font-size: 15px;
     resize: vertical;
     outline: none;
+    box-sizing: border-box;
 }
 
+/* 
 .editor-actions {
     padding: 10px 15px;
     display: flex;
@@ -213,15 +112,15 @@
     background: rgba(0, 0, 0, 0.1);
 }
 
-/* Run & Copy sleek actions elements buttons */
 .run-btn,
 .copy-btn {
-    padding: 6px 14px;
-    font-size: 13px;
+    padding: 9px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    font-weight: 500;
+    transition: background 0.25s, transform 0.15s;
 }
 
 .run-btn {
@@ -235,12 +134,90 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.run-btn:hover,
+.copy-btn:hover,
+.quiz-btn:hover {
+    background: var(--btn-run-hover, #2563eb);
+    transform: translateY(-1px);
+} */
+.editor-actions {
+    padding: 10px 15px;
+    display: flex;
+    gap: 10px;
+    background: rgba(39, 38, 38, 0.1);
+}
+
+.cssbuttons-io {
+    position: relative;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    color: black;
+    overflow: hidden;
+    transition: transform 0.15s;
+    display: inline-block;
+}
+
+.run-btn {
+    background: linear-gradient(to right, #212b44, #7f879b);
+}
+
+/* Copy Button ka color theme (Dark/Purple Gradient jo coding screen par suit karega) */
+.copy-btn {
+    background: linear-gradient(to right, #4a5568, #2d3748);
+}
+
+/* Icons (SVGs) ki sizing */
+.cssbuttons-io svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+}
+
+/* Text and Icon container style */
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 16px;
+    /* Aapki safe padding */
+}
+
+/* Slide animation effect overlay */
+.cssbuttons-io::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.25);
+    /* Elegant dark shade on hover */
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+/* Click karne par active scale animation */
+.cssbuttons-io:active {
+    transform: scale(0.95);
+}
+
 /* 🖼️ Embedded window outputs view configurations */
 .preview-wrapper {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     background: #ffffff;
-    /* White document simulation box */
     overflow: hidden;
 }
 
@@ -254,9 +231,11 @@
 
 #live-preview {
     width: 100%;
-    height: 150px;
+    height: 300px;
     border: none;
     background: #ffffff;
+    border-radius: 8px;
+    flex: 1 1 auto;
 }
 
 /* 💡 Tips framework container alignment */
@@ -268,6 +247,13 @@
 }
 
 /* Quiz system optimization layout row */
+.quiz-section {
+    background: var(--bg-quiz, #111827);
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--quiz-border, rgba(255, 255, 255, 0.05));
+}
+
 .quiz-options-group {
     display: flex;
     gap: 10px;
@@ -278,8 +264,8 @@
 #quiz-answer {
     flex: 1;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-textarea, rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--border-modal, rgba(255, 255, 255, 0.1));
     color: white;
     border-radius: 8px;
     outline: none;
@@ -292,92 +278,153 @@
     padding: 0 18px;
     border-radius: 8px;
     cursor: pointer;
-}
-
-/* ============================================================
-MODAL ACTION BUTTONS
-============================================================ */
-
-.action-sm-btn:hover {
-    background: var(--btn-run-hover);
-    color: #fff;
-    border-color: var(--btn-run-hover);
-}
-
-button.run-btn,
-button.copy-btn,
-button.quiz-btn {
-    padding: 9px 16px;
-    background: var(--btn-run-bg);
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-right: 8px;
-    font-size: 0.85rem;
     font-weight: 600;
-    transition: background 0.25s, transform 0.15s;
 }
 
-button.run-btn:hover,
-button.copy-btn:hover,
-button.quiz-btn:hover {
-    background: var(--btn-run-hover);
-    transform: translateY(-1px);
-}
-
-/* live preview */
-iframe {
-    width: 100%;
-    height: 250px;
-    border: 1px solid var(--border-modal);
-    border-radius: 10px;
-    margin-top: 14px;
-    background: #ffffff;
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: height 0.3s ease;
-}
-
-iframe {
-    background: #0d1117;
-    border-color: #30363d;
-}
-
-/* quiz section */
-.quiz-section {
-    background: var(--bg-quiz);
-    padding: 14px 16px;
-    margin: 14px 0 0;
-    border-radius: 8px;
-    border: 1px solid var(--quiz-border);
-}
-
-.quiz-section h4 {
-    margin-top: 0;
-}
-
-.quiz-section p {
-    background: none;
-    color: var(--text-secondary);
-    padding: 0;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
-
-.quiz-section input[type="text"] {
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 1px solid var(--border-modal);
-    background: var(--bg-textarea);
-    color: var(--search-text);
-    font-size: 0.9rem;
+.editor-page-container {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
     box-sizing: border-box;
-    margin-bottom: 8px;
 }
 
-.quiz-section input[type="text"]:focus {
-    outline: none;
-    border-color: var(--btn-run-hover);
+/* New responsive editor + preview grid */
+.modal-body-layout {
+    display: block;
+    gap: 18px;
+}
+
+.editor-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.editor-wrapper,
+.preview-wrapper {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    min-height: 28.125rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+}
+
+.preview-header {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+}
+
+/* Code textarea styling to feel like a modern editor */
+#modal-editor {
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 260px;
+    resize: vertical;
+    background: #071422;
+    color: #d6eef1;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+    font-size: 14px;
+    line-height: 1.45;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-sizing: border-box;
+}
+
+.editor-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Below panels area: quiz, about, tips */
+/* Main Layout Space Management */
+.modal-body-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 1. TOP INFO GRID (About + Tip) - 2 Equal Boxes */
+.info-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.info-block {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tip-box {
+    background: linear-gradient(180deg, rgba(245, 158, 11, 0.03), rgba(245, 158, 11, 0.01));
+    border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+/* 2. MIDDLE GRID (Editor + Preview) */
+.editor-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+/* 3. BOTTOM PANELS (Quiz Only) */
+.below-panels {
+    width: 100%;
+}
+
+.quiz-section {
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.9));
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.4);
+}
+
+/* Responsive configurations for mobile devices */
+@media (max-width: 900px) {
+
+    .info-top-grid,
+    .editor-preview-grid {
+        grid-template-columns: 1fr;
+    }
 }
