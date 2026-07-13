@@ -1,0 +1,750 @@
+[
+    {
+        "q": "Which tag is used to define a section of a webpage that contains navigation links?",
+        "options": [
+            "header",
+            "section",
+            "nav",
+            "aside"
+        ],
+        "ans": 2
+    },
+    {
+        "q": "Which attribute is used to insert some links?",
+        "options": [
+            "src",
+            "link",
+            "href",
+            "target"
+        ],
+        "ans": 2
+    },
+    {
+        "q": "Which attribute is used to open a link of a webpage or anyother in new blank file.?",
+        "options": [
+            "src",
+            "href",
+            "target",
+            "rel"
+        ],
+        "ans": 2
+    },
+    {
+        "q": "Which tag defines a data cell in a table?",
+        "options": [
+            "tr",
+            "th",
+            "table",
+            "td"
+        ],
+        "ans": 3
+    },
+    {
+        "q": "Which tag defines a title for a table?",
+        "options": [
+            "title",
+            "head",
+            "caption",
+            "summary"
+        ],
+        "ans": 2
+    },
+    {
+        "q": "Which tag is used to specify a group of one or more columns in a table for formatting?",
+        "options": [
+            "colgroup",
+            "col",
+            "thead",
+            "tbody"
+        ],
+        "ans": 0
+    },
+    {
+        "q": "Which tag defines properties for a single column?",
+        "options": [
+            "colgroup",
+            "col",
+            "td",
+            "th"
+        ],
+        "ans": 1
+    },
+    {
+        "q": "Which tag defines a list item?",
+        "options": [
+            "ld",
+            "ti",
+            "li",
+            "dd"
+        ],
+        "ans": 2
+    },
+    {
+        "q": "Which tag defines the term in a description list?",
+        "options": [
+            "dt",
+            "dd",
+            "dl",
+            "list"
+        ],
+        "ans": 0
+    },
+    {
+        "q": "Which tag defines the description in a description list?",
+        "options": [
+            "dl",
+            "dt",
+            "dd",
+            "li"
+        ],
+        "ans": 2
+    },
+    {
+        "q": "Which HTML tag is used to define a paragraph?",
+        "options": [
+            "<para>",
+            "<p>",
+            "<text>",
+            "<paragraph>"
+        ],
+        "ans": 1,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag is used to navigate other files or pages?",
+        "options": [
+            "nav tag",
+            "link tag",
+            "anchor tag",
+            "button tag"
+        ],
+        "ans": 2
+    },
+    {
+        "q": "What does the declaration '<!DOCTYPE html>' do at the very beginning of a file?",
+        "options": [
+            "It represents the root HTML element of the page.",
+            "It informs the browser to render the page in standard mode instead of quirks mode.",
+            "It links an external JavaScript file to the web page.",
+            "It defines the metadata and title of the document."
+        ],
+        "ans": 1,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag defines the most important or highest-level heading on a webpage?",
+        "options": [
+            "<heading>",
+            "<h6>",
+            "<head>",
+            "<h1>"
+        ],
+        "ans": 3,
+        "category": "text-tag"
+    },
+    {
+        "q": "How does the browser handle margins automatically when you use the <p> tag?",
+        "options": [
+            "Browsers automatically add a small space (margin) before and after the element.",
+            "Browsers add a border around the text block.",
+            "Browsers force the text to align to the right side.",
+            "Browsers add a gray background color behind the block."
+        ],
+        "ans": 0,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which modern HTML tag should be used to define text with strong importance or urgency, which browsers display as bold by default?",
+        "options": [
+            "<b>",
+            "<strong>",
+            "<important>",
+            "<emp>"
+        ],
+        "ans": 1,
+        "category": "text-tag"
+    },
+    {
+        "q": "How many levels of headings does HTML provide to establish a proper content hierarchy?",
+        "options": [
+            "3",
+            "4",
+            "6",
+            "8"
+        ],
+        "ans": 2,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which element is used to mark text that has stress emphasis, typically rendered in italic?",
+        "options": [
+            "<i>",
+            "<em>",
+            "<cite>",
+            "<mark>"
+        ],
+        "ans": 1,
+        "category": "text-tag"
+    },
+    {
+        "q": "If h1 is the main title, which heading tag is semantically best suited for a secondary section title or subheading?",
+        "options": [
+            "<h2>",
+            "<h3>",
+            "<h0>",
+            "<subheading>"
+        ],
+        "ans": 0,
+        "category": "text-tag"
+    },
+    {
+        "q": "What is the semantic purpose of the <hr> tag in modern HTML5?",
+        "options": [
+            "To create a simple hard break between two inline words.",
+            "To display a high-resolution image link.",
+            "To represent a thematic break or transition between paragraphs or sections.",
+            "To force the text font to change to a monospace style."
+        ],
+        "ans": 2,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag produces a line break in text without starting a new paragraph block?",
+        "options": [
+            "<break>",
+            "<lb>",
+            "<p>",
+            "<br>"
+        ],
+        "ans": 3,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag is purely used for stylistic offset text (like technical terms or thoughts) without adding extra semantic importance, typically italicized?",
+        "options": [
+            "<em>",
+            "<i>",
+            "<dfn>",
+            "<var>"
+        ],
+        "ans": 1,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag should be used to represent unarticulated text, like misspelled words, which renders with a bottom underline?",
+        "options": [
+            "<u>",
+            "<ins>",
+            "<line>",
+            "<text-decoration>"
+        ],
+        "ans": 0,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which HTML tag is used to mark or highlight text for reference due to its relevance in a specific context?",
+        "options": [
+            "<highlight>",
+            "<high>",
+            "<mark>",
+            "<strong>"
+        ],
+        "ans": 2,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which element defines smaller text side-comments or legal fine print without dropping semantic value?",
+        "options": [
+            "<small>",
+            "<subtext>",
+            "<mini>",
+            "<light>"
+        ],
+        "ans": 0,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag is used to display characters slightly below the normal line, like in chemical formulas like H₂O?",
+        "options": [
+            "<sup>",
+            "<sub>",
+            "<below>",
+            "<under>"
+        ],
+        "ans": 1,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag is used to display characters slightly above the normal line, like in mathematical exponents like X²?",
+        "options": [
+            "<sup>",
+            "<sub>",
+            "<above>",
+            "<power>"
+        ],
+        "ans": 0,
+        "category": "text-tag"
+    },
+    {
+        "q": "Which tag is used to define a section of a webpage that contains navigation links?",
+        "options": [
+            "header",
+            "section",
+            "nav",
+            "aside"
+        ],
+        "ans": 2,
+        "category": "link-tag"
+    },
+    {
+        "q": "Which HTML tag is used to create an interactive form container?",
+        "options": [
+            "<input>",
+            "<action>",
+            "<form>",
+            "<fieldset>"
+        ],
+        "ans": 2,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which input type value is used for single selection round dots?",
+        "options": [
+            "type='checkbox'",
+            "type='radio'",
+            "type='button'",
+            "type='circle'"
+        ],
+        "ans": 1,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which HTML tag is used to create a multiline text input zone?",
+        "options": [
+            "<input type='text'>",
+            "<textbox>",
+            "<input type='textarea'>",
+            "<textarea>"
+        ],
+        "ans": 3,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which HTML tag is used to define a dropdown list selection container?",
+        "options": [
+            "<list>",
+            "<dropdown>",
+            "<select>",
+            "<option>"
+        ],
+        "ans": 2,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which element is used to represent an option inside a select dropdown menu?",
+        "options": [
+            "<opt>",
+            "<choice>",
+            "<item>",
+            "<option>"
+        ],
+        "ans": 3,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which attribute is used to provide a temporary hint text inside an input box?",
+        "options": [
+            "hint",
+            "placeholder",
+            "value",
+            "title"
+        ],
+        "ans": 1,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which input type is specifically optimized for entering passwords?",
+        "options": [
+            "type='secret'",
+            "type='hidden'",
+            "type='password'",
+            "type='text'"
+        ],
+        "ans": 2,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which attribute is used to combine multiple radio buttons into a single choice group?",
+        "options": [
+            "id",
+            "name",
+            "group",
+            "class"
+        ],
+        "ans": 1,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which HTML tag is used to group related elements inside a web form?",
+        "options": [
+            "<group>",
+            "<section>",
+            "<fieldset>",
+            "<legend>"
+        ],
+        "ans": 2,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which input type creates a clickable submission trigger for forms?",
+        "options": [
+            "type='click'",
+            "type='submit'",
+            "type='action'",
+            "type='send'"
+        ],
+        "ans": 1,
+        "category": "form-tag"
+    },
+    {
+        "q": "Which CSS at-rule is used to define the animation keyframe states?",
+        "options": [
+            "@animation",
+            "@keyframes",
+            "@frames",
+            "@motion"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which CSS property specifies the duration of an animation cycle?",
+        "options": [
+            "animation-time",
+            "animation-speed",
+            "animation-duration",
+            "transition-delay"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which value makes an animation loop indefinitely?",
+        "options": [
+            "loop",
+            "infinite",
+            "always",
+            "continuous"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which CSS property binds keyframe rules to a specific HTML element target?",
+        "options": [
+            "animation-name",
+            "animation-target",
+            "animation-link",
+            "keyframes-set"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property controls the speed curve or pacing of a CSS animation?",
+        "options": [
+            "animation-curve",
+            "animation-timing-function",
+            "animation-pace",
+            "transition-effect"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which CSS value plays the animation in reverse on alternate cycles?",
+        "options": [
+            "reverse",
+            "alternate",
+            "alternate-reverse",
+            "backwards"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property specifies what styles apply before or after an animation runs?",
+        "options": [
+            "animation-fill-mode",
+            "animation-state",
+            "animation-style",
+            "transition-behavior"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property specifies whether a CSS animation is running or paused?",
+        "options": [
+            "animation-status",
+            "animation-mode",
+            "animation-play-state",
+            "animation-control"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property sets a delay interval before the animation starts executing?",
+        "options": [
+            "animation-wait",
+            "animation-delay",
+            "delay-time",
+            "transition-pause"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "What is the shorthand property to configure all animation settings in one single line?",
+        "options": [
+            "css-animation",
+            "animate",
+            "animation",
+            "motion"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property sets how many times an animation repeats?",
+        "options": [
+            "animation-delay",
+            "animation-iteration-count",
+            "animation-duration",
+            "animation-repeat"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property sets animation playback direction including alternate?",
+        "options": [
+            "animation-fill-mode",
+            "animation-direction",
+            "animation-play-state",
+            "animation-timing-function"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property controls element state before/after animation?",
+        "options": [
+            "animation-fill-mode",
+            "animation-duration",
+            "animation-delay",
+            "animation-iteration-count"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property pauses or resumes an animation?",
+        "options": [
+            "animation-direction",
+            "animation-timing-function",
+            "animation-play-state",
+            "animation-name"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property controls the animation speed curve?",
+        "options": [
+            "animation-timing-function (including cubic-bezier)",
+            "animation-duration",
+            "animation-delay",
+            "animation-fill-mode"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which timing function creates discrete animation frames instead of smooth interpolation?",
+        "options": [
+            "linear",
+            "ease-in-out",
+            "cubic-bezier()",
+            "steps()"
+        ],
+        "ans": 3,
+        "category": "css-animation"
+    },
+    {
+        "q": "How do you run multiple animations on one element?",
+        "options": [
+            "Use multiple animation tags",
+            "Comma-separate animations in the animation shorthand",
+            "Space-separate animations in the animation shorthand",
+            "It is not possible to run multiple animations"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which CSS features are combined to create continuous 3D motion and interactive tilts?",
+        "options": [
+            "transform + animation (keyframes) and transition",
+            "display + position and float",
+            "flexbox + grid and opacity",
+            "filter + backdrop-filter and mix-blend-mode"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which properties are used to rotate elements in 3D and which property controls the viewer distance for perspective?",
+        "options": [
+            "rotate, scale and skew",
+            "translateX, translateY and translateZ",
+            "rotateX, rotateY and perspective",
+            "matrix, matrix3d and vector"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property group animates blur, brightness, and hue changes?",
+        "options": [
+            "transform with animation",
+            "filter with animation",
+            "mask with animation",
+            "opacity with animation"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property can be animated to morph or reveal shapes?",
+        "options": [
+            "clip-path",
+            "border-radius",
+            "box-shadow",
+            "shape-outside"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property blurs or affects the area behind an element for glass effects?",
+        "options": [
+            "filter",
+            "opacity",
+            "blur",
+            "backdrop-filter"
+        ],
+        "ans": 3,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property hints the browser for upcoming changes to optimize performance?",
+        "options": [
+            "transform",
+            "will-change",
+            "contain",
+            "visibility"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property blends an element with its backdrop and can be animated?",
+        "options": [
+            "background-blend-mode",
+            "opacity",
+            "mix-blend-mode",
+            "filter"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which property animates an element along a custom path?",
+        "options": [
+            "offset-path (Motion Path)",
+            "motion-trajectory",
+            "path-animation",
+            "animation-route"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which features combine for smooth snapping carousels with animated slides?",
+        "options": [
+            "flexbox with animations",
+            "grid with animations",
+            "scroll-snap with animations",
+            "overflow-x with animations"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which CSS at-rule defines a scroll-based timeline for animations?",
+        "options": [
+            "@keyframes",
+            "@scroll-timeline",
+            "@media",
+            "@supports"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which experimental feature positions and animates tooltips relative to another element?",
+        "options": [
+            "CSS Anchor Positioning",
+            "CSS Relative Layout",
+            "CSS Flexbox Level 2",
+            "CSS Absolute Positioning"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which Houdini primitive lets you run JS-driven animations off the main thread for high-performance effects?",
+        "options": [
+            "Layout Worklet",
+            "Paint Worklet",
+            "Animation Worklet (Houdini)",
+            "Audio Worklet"
+        ],
+        "ans": 2,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which spec expands path-based animations with advanced path features?",
+        "options": [
+            "CSS Motion Path Level 2",
+            "CSS Shapes Level 2",
+            "CSS SVG Level 3",
+            "CSS Transforms Level 2"
+        ],
+        "ans": 0,
+        "category": "css-animation"
+    },
+    {
+        "q": "Which new color specs enable perceptual color animations like LCH?",
+        "options": [
+            "CSS Color Level 3 (RGB, HSL)",
+            "CSS Color Level 4/5 (Lab, LCH, HWB)",
+            "CSS Gradient Level 2",
+            "CSS Palette Level 1"
+        ],
+        "ans": 1,
+        "category": "css-animation"
+    }
+]

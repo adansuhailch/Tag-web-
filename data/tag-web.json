@@ -35,33 +35,25 @@
         "title": "<a> Anchor tag",
         "history": "<h1> Used to navigate other files or pages</h1>",
         "tip": "The <a> tag is used to create hyperlinks. The href attribute specifies the URL of the page the link goes to.",
-        "code": "<a href='https://www.w3schools.com/' target='_blank' >This is Anchor tag</a><br><br><a href='https://www.google.com' target='_blank'>Go to Google</a>",
-        "quiz": "Which tag is used to navigate other files or pages?",
-        "answer": "anchor tag"
+        "code": "<a href='https://adandev.is-a.dev' target='_blank' >This is Anchor tag</a><br><br><a href='https://open.spotify.com/playlist/5soTKGT2XDVBy1uj9tlb8z?si=nZ76AP_kTziQ4BhDKKsn8w' target='_blank'>Go to Spotify</a>"
     },
     "nav": {
         "title": "<nav> Navigation Bar",
         "history": "<h1> Navigation bars are typically located at the top or at the side of a webpage.</h1>",
         "tip": "The <nav> tag is used to define a section of a webpage that contains navigation links.",
-        "code": "<ul><li><a href='tagweb.html'>Home</a></li><li><a href='news.asp'>News</a></li><li><a href='contact.asp'>Contact</a></li><li><a href='about.asp'>About</a></li></ul>",
-        "quiz": "Which tag is used to define a section of a webpage that contains navigation links.?",
-        "answer": "nav"
+        "code": "<ul><li><a href='tagweb.html'>Home</a></li><li><a href='news.asp'>News</a></li><li><a href='contact.asp'>Contact</a></li><li><a href='about.asp'>About</a></li></ul>"
     },
     "href": {
         "title": "href Attribute",
         "history": "<h1> It specifies the destination URL (Uniform Resource Locator) or the path to the resource that the hyperlink points to.</h1>",
         "tip": "The href attribute is used to specify the URL of the page the link goes to.",
-        "code": "<a href=''>Link</a>",
-        "quiz": "Which attribute is used to insert some links.?",
-        "answer": "href"
+        "code": "<a href=''>Link</a>"
     },
     "target": {
         "title": "target Attribute",
         "history": "<h1> It jumps the link into new webpage without opening the link in the same page</h1>",
         "tip": "The target attribute is used to specify where to open the linked document.",
-        "code": "<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools!</a>",
-        "quiz": "Which attribute is used to open a link of a webpage or anyother in new blank file.?",
-        "answer": "target"
+        "code": "<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools!</a>"
     },
     "ul": {
         "title": "<ul> Unordered List",
@@ -81,11 +73,9 @@
     },
     "li": {
         "title": "<li> List Item",
-        "history": "<h1> Defines an item inside <ul> or <ol></h1>",
-        "tip": "The <li> tag is used to define a list item.",
-        "code": "<ul><li>First item</li><li>Second item</li></ul>",
-        "quiz": "Which tag defines a list item?",
-        "answer": "li"
+        "history": "<h1> Defines an item inside or ordered list or un-ordered list</h1>",
+        "tip": "The li tag is used to define a list item.",
+        "code": "<ul><li>First item</li><li>Second item</li></ul>"
     },
     "dl": {
         "title": "<dl> Description List",
@@ -99,17 +89,13 @@
         "title": "<dt> Description Term",
         "history": "<h1> Defines a term in a description list</h1>",
         "tip": "The <dt> tag is used to define a term in a description list.",
-        "code": "<dl><dt>CSS</dt><dd>Cascading Style Sheets</dd></dl>",
-        "quiz": "Which tag defines the term in a description list?",
-        "answer": "dt"
+        "code": "<dl><dt>CSS</dt><dd>Cascading Style Sheets</dd></dl>"
     },
     "dd": {
         "title": "<dd> Description Definition",
         "history": "<h1> Defines the description or value of a term in a description list</h1>",
         "tip": "The <dd> tag is used to define the description or value of a term in a description list.",
-        "code": "<dl><dt>JavaScript</dt><dd>A programming language for the web</dd></dl>",
-        "quiz": "Which tag defines the description in a description list?",
-        "answer": "dd"
+        "code": "<dl><dt>JavaScript</dt><dd>A programming language for the web</dd></dl>"
     },
     "form": {
         "title": "<form> Form Container",
@@ -171,9 +157,7 @@
         "title": "<caption> Table Caption Tag",
         "history": "<h1> Defines a title or caption for a table.</h1>",
         "tip": "The <caption> tag is used to define a caption for a table.",
-        "code": "<table border='1'>\n  <caption>Student Marks</caption>\n  <tr><th>Name</th><th>Marks</th></tr>\n  <tr><td>Ali</td><td>90</td></tr>\n</table>",
-        "quiz": "Which tag defines a title for a table?",
-        "answer": "caption"
+        "code": "<table border='1'>\n  <caption>Student Marks</caption>\n  <tr><th>Name</th><th>Marks</th></tr>\n  <tr><td>Ali</td><td>90</td></tr>\n</table>"
     },
     "thead": {
         "title": "<thead> Table Head Tag",
@@ -211,9 +195,7 @@
         "title": "<td> Table Data Cell Tag",
         "history": "<h1> Defines a standard data cell in a table.</h1>",
         "tip": "The <td> tag is used to define a data cell in a table.",
-        "code": "<table border='1'>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>",
-        "quiz": "Which tag defines a data cell in a table?",
-        "answer": "td"
+        "code": "<table border='1'>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
     },
     "th": {
         "title": "<th> Table Header Cell Tag",
@@ -227,17 +209,13 @@
         "title": "<colgroup> Column Group Tag",
         "history": "<h1> Defines a group of columns in a table for styling.</h1>",
         "tip": "The <colgroup> tag is used to group columns in a table.",
-        "code": "<table border='1'>\n  <colgroup>\n    <col span='2' style='background:#f9f9f9'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>",
-        "quiz": "Which tag groups columns in a table?",
-        "answer": "colgroup"
+        "code": "<table border='1'>\n  <colgroup>\n    <col span='2' style='background:#f9f9f9'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
     },
     "col": {
         "title": "<col> Column Tag",
         "history": "<h1> Defines column properties inside a <colgroup>.</h1>",
         "tip": "The <col> tag is used to define properties for a single column.",
-        "code": "<table border='1'>\n  <colgroup>\n    <col style='background:#eee'>\n    <col style='background:#ddd'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>",
-        "quiz": "Which tag defines properties for a single column?",
-        "answer": "col"
+        "code": "<table border='1'>\n  <colgroup>\n    <col style='background:#eee'>\n    <col style='background:#ddd'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
     },
     "cite": {
         "title": "<cite> Citation Tag",
