@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Cheatsheet</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #171a21;
+      --card-border: #262a33;
+      --code-bg: #12141a;
+      --text: #d7dae0;
+      --text-dim: #8a8f9c;
+      --accent: #ff7a45;
+      --accent-soft: rgba(255, 122, 69, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ===== Top nav ===== */
+    /* .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .topbar .logo {
+      font-weight: 700;
+      font-size: 16px;
+    } */
+
+    .title span {
+      color: var(--accent);
+    }
+
+    /* .topbar nav a {
+      text-decoration: none;
+      color: var(--text-dim);
+      font-size: 14px;
+      margin-left: 22px;
+    }
+
+    .topbar nav a:hover {
+      color: var(--text);
+    } */
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* ===== Header ===== */
+    h1.title {
+      text-align: center;
+      font-size: 30px;
+      margin: 30px 0 10px;
+    }
+
+    p.tagline {
+      text-align: center;
+      font-style: italic;
+      color: var(--text-dim);
+      margin: 0 0 8px;
+    }
+
+    p.byline {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin: 0 0 34px;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      margin-bottom: 44px;
+    }
+
+    h2.section-title {
+      font-size: 20px;
+      margin: 0 0 6px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 10px;
+    }
+
+    h3.sub-title {
+      font-size: 16px;
+      color: var(--accent);
+      margin: 22px 0 8px;
+    }
+
+    p.section-desc {
+      color: var(--text-dim);
+      font-size: 14.5px;
+      margin: 8px 0 14px;
+    }
+
+    code.inline {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Menlo, monospace;
+      font-size: 13px;
+    }
+
+    /* ===== Code box ===== */
+    .codebox {
+      position: relative;
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 16px 44px 16px 18px;
+      margin-bottom: 6px;
+    }
+
+    .codebox pre {
+      margin: 0;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #dcdfe4;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .codebox .tag {
+      color: #7aa2f7;
+    }
+
+    .codebox .attr {
+      color: #e0af68;
+    }
+
+    .codebox .str {
+      color: #9ece6a;
+    }
+
+    .codebox .cm {
+      color: #565f77;
+      font-style: italic;
+    }
+
+    .copy-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 5px;
+      display: flex;
+    }
+
+    .copy-icon:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .copy-icon.done {
+      color: #9ece6a;
+    }
+
+    .copy-icon svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* ===== Footer ===== */
+    .tags {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tags span {
+      font-size: 12px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      padding: 4px 10px;
+      border-radius: 14px;
+      color: var(--text-dim);
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      margin-top: 60px;
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    ol.tips,
+    ul.tips {
+      color: var(--text-dim);
+      font-size: 14.5px;
+      padding-left: 22px;
+    }
+
+    ol.tips li,
+    ul.tips li {
+      margin: 4px 0;
+    }
+
+    /* Base Layout Controller Wrapper */
+    .button-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .download-btn {
+      background-color: #e2e8f0;
+      color: #0f172a;
+      border: none;
+    }
+
+    .share-btn {
+      background-color: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #334155;
+    }
+
+    /* Modal Background Overlay Layer Blur Engine */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      /* Screen blurs like code-with-harry layout */
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Modal Structural Content Card Shape Window */
+    .modal-content-card {
+      background-color: #111827;
+      border: 1px solid #1f2937;
+      width: 90%;
+      max-width: 440px;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      color: #f3f4f6;
+      font-size: 1.25rem;
+      font-family: sans-serif;
+    }
+
+    .close-modal-btn {
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .close-modal-btn:hover {
+      color: #ffffff;
+    }
+
+    /* Input field Link Group Container Box layout */
+    .modal-input-group {
+      display: flex;
+      background-color: #030712;
+      border: 1px solid #374151;
+      border-radius: 6px;
+      padding: 4px 8px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-input-group input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      padding: 8px;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .modal-copy-btn {
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .modal-copy-btn:hover {
+      color: #ffffff;
+    }
+
+    /* Social Icons Tray Grid Row Style */
+    .social-share-tray {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .social-icon-anchor {
+      color: #9ca3af;
+      transition: color 0.2s;
+    }
+
+    .social-icon-anchor:hover {
+      color: #ffffff;
+    }
+
+
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- <div class="topbar">
+    <div class="logo">Tag-Web <span>List Tags</span> Cheatsheet</div>
+  </div> -->
+
+  <div class="wrap">
+
+    <h1 class="title"><span>List Tags</span> Cheatsheet</h1>
+    <p class="tagline">"A quick reference for List tags you'll actually use"</p>
+    <p class="byline">Updated July 2026</p>
+
+    <!-- <section id="boilerplate">
+      <h2 class="section-title">Boilerplate</h2>
+      <p class="section-desc">The basic skeleton every HTML page starts from.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">!DOCTYPE html</span>&gt;
+&lt;<span class="tag">html</span> <span class="attr">lang</span>=<span class="str">"en"</span>&gt;
+&lt;<span class="tag">head</span>&gt;
+  &lt;<span class="tag">meta</span> <span class="attr">charset</span>=<span class="str">"UTF-8"</span>&gt;
+  &lt;<span class="tag">title</span>&gt;My Page&lt;/<span class="tag">title</span>&gt;
+&lt;/<span class="tag">head</span>&gt;
+&lt;<span class="tag">body</span>&gt;
+
+&lt;/<span class="tag">body</span>&gt;
+&lt;/<span class="tag">html</span>&gt;</pre>
+      </div>
+    </section>
+
+    <section id="headings">
+      <h2 class="section-title">Headings</h2>
+      <p class="section-desc">There are six levels of headings — <code class="inline">&lt;h1&gt;</code> is the biggest,
+        <code class="inline">&lt;h6&gt;</code> is the smallest.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">h1</span>&gt;Heading 1&lt;/<span class="tag">h1</span>&gt;
+&lt;<span class="tag">h2</span>&gt;Heading 2&lt;/<span class="tag">h2</span>&gt;
+&lt;<span class="tag">h3</span>&gt;Heading 3&lt;/<span class="tag">h3</span>&gt;
+&lt;<span class="tag">h4</span>&gt;Heading 4&lt;/<span class="tag">h4</span>&gt;</pre>
+      </div>
+    </section>
+
+    <section id="text-formatting">
+      <h2 class="section-title">Text Formatting</h2>
+      <p class="section-desc">Tags for emphasis, style, and small inline changes to text.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">strong</span>&gt;Bold text&lt;/<span class="tag">strong</span>&gt;
+&lt;<span class="tag">em</span>&gt;Italic text&lt;/<span class="tag">em</span>&gt;
+&lt;<span class="tag">u</span>&gt;Underlined&lt;/<span class="tag">u</span>&gt;
+&lt;<span class="tag">small</span>&gt;Smaller text&lt;/<span class="tag">small</span>&gt;
+&lt;<span class="tag">mark</span>&gt;Highlighted&lt;/<span class="tag">mark</span>&gt;</pre>
+      </div>
+    </section> -->
+
+    <section id="lists">
+      <!-- <h2 class="section-title">Lists</h2> -->
+      <p class="section-desc">Ordered, unordered, List Items, Description List, Description Term, Description Details
+      </p>
+
+      <h3 class="sub-title">Ordered List</h3>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">ol</span>&gt;
+  &lt;<span class="tag">li</span>&gt;First&lt;/<span class="tag">li</span>&gt;
+  &lt;<span class="tag">li</span>&gt;Second&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ol</span>&gt;</pre>
+      </div>
+
+      <h3 class="sub-title">Unordered List</h3>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">ul</span>&gt;
+  &lt;<span class="tag">li</span>&gt;Item A&lt;/<span class="tag">li</span>&gt;
+  &lt;<span class="tag">li</span>&gt;Item B&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ul</span>&gt;</pre>
+      </div>
+
+      <!-- List Item Tag (li) -->
+      <h3 class="sub-title">List Item</h3>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">ul</span>&gt;
+  &lt;<span class="tag">li</span>&gt;Item Text Here&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ul</span>&gt;</pre>
+      </div>
+
+      <!-- Description List Tag (dl) -->
+      <h3 class="sub-title">Description List</h3>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">dl</span>&gt;
+  &lt;<span class="tag">dt</span>&gt;Term&lt;/<span class="tag">dt</span>&gt;
+  &lt;<span class="tag">dd</span>&gt;Description&lt;/<span class="tag">dd</span>&gt;
+&lt;/<span class="tag">dl</span>&gt;</pre>
+      </div>
+
+      <!-- Description Term Tag (dt) -->
+      <h3 class="sub-title">Description Term</h3>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">dt</span>&gt;HTML&lt;/<span class="tag">dt</span>&gt;</pre>
+      </div>
+
+      <!-- Description Details Tag (dd) -->
+      <h3 class="sub-title">Description Details</h3>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">dd</span>&gt;HyperText Markup Language&lt;/<span class="tag">dd</span>&gt;</pre>
+      </div>
+
+      <!-- <h3 class="sub-title">Definition List</h3>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">dl</span>&gt;
+  &lt;<span class="tag">dt</span>&gt;HTML&lt;/<span class="tag">dt</span>&gt;
+  &lt;<span class="tag">dd</span>&gt;HyperText Markup Language&lt;/<span class="tag">dd</span>&gt;
+&lt;/<span class="tag">dl</span>&gt;</pre>
+      </div> -->
+    </section>
+
+    <!-- <section id="media">
+      <h2 class="section-title">Media</h2>
+      <p class="section-desc">Embedding images, audio, video, and other pages.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">img</span> <span class="attr">src</span>=<span class="str">"photo.jpg"</span> <span class="attr">alt</span>=<span class="str">"Description"</span>&gt;
+
+&lt;<span class="tag">audio</span> <span class="attr">controls</span>&gt;
+  &lt;<span class="tag">source</span> <span class="attr">src</span>=<span class="str">"audio.mp3"</span>&gt;
+&lt;/<span class="tag">audio</span>&gt;
+
+&lt;<span class="tag">video</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="str">"400"</span>&gt;
+  &lt;<span class="tag">source</span> <span class="attr">src</span>=<span class="str">"video.mp4"</span>&gt;
+&lt;/<span class="tag">video</span>&gt;</pre>
+      </div>
+    </section>
+
+    <section id="tables">
+      <h2 class="section-title">Tables</h2>
+      <p class="section-desc">Rows and columns of tabular data.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">table</span>&gt;
+  &lt;<span class="tag">tr</span>&gt;
+    &lt;<span class="tag">th</span>&gt;Name&lt;/<span class="tag">th</span>&gt;
+    &lt;<span class="tag">th</span>&gt;Age&lt;/<span class="tag">th</span>&gt;
+  &lt;/<span class="tag">tr</span>&gt;
+  &lt;<span class="tag">tr</span>&gt;
+    &lt;<span class="tag">td</span>&gt;Sam&lt;/<span class="tag">td</span>&gt;
+    &lt;<span class="tag">td</span>&gt;24&lt;/<span class="tag">td</span>&gt;
+  &lt;/<span class="tag">tr</span>&gt;
+&lt;/<span class="tag">table</span>&gt;</pre>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2 class="section-title">Links</h2>
+      <p class="section-desc">Anchor tags for navigation and email links.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">a</span> <span class="attr">href</span>=<span class="str">"https://example.com"</span> <span class="attr">target</span>=<span class="str">"_blank"</span>&gt;Visit site&lt;/<span class="tag">a</span>&gt;
+
+&lt;<span class="tag">a</span> <span class="attr">href</span>=<span class="str">"mailto:hello@example.com"</span>&gt;Send email&lt;/<span class="tag">a</span>&gt;</pre>
+      </div>
+    </section>
+
+    <section id="forms">
+      <h2 class="section-title">Forms &amp; Inputs</h2>
+      <p class="section-desc">Collecting user input with forms and different input types.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">form</span> <span class="attr">action</span>=<span class="str">"/submit"</span> <span class="attr">method</span>=<span class="str">"post"</span>&gt;
+  &lt;<span class="tag">label</span> <span class="attr">for</span>=<span class="str">"name"</span>&gt;Name&lt;/<span class="tag">label</span>&gt;
+  &lt;<span class="tag">input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">id</span>=<span class="str">"name"</span>&gt;
+
+  &lt;<span class="tag">input</span> <span class="attr">type</span>=<span class="str">"email"</span> <span class="attr">placeholder</span>=<span class="str">"Email"</span>&gt;
+  &lt;<span class="tag">input</span> <span class="attr">type</span>=<span class="str">"checkbox"</span>&gt; Subscribe
+
+  &lt;<span class="tag">button</span> <span class="attr">type</span>=<span class="str">"submit"</span>&gt;Send&lt;/<span class="tag">button</span>&gt;
+&lt;/<span class="tag">form</span>&gt;</pre>
+      </div>
+    </section>
+
+    <section id="semantic">
+      <h2 class="section-title">Semantic Elements</h2>
+      <p class="section-desc">Tags that describe the meaning of a page's structure, not just its look.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre>&lt;<span class="tag">header</span>&gt;Page header&lt;/<span class="tag">header</span>&gt;
+&lt;<span class="tag">nav</span>&gt;Site navigation&lt;/<span class="tag">nav</span>&gt;
+&lt;<span class="tag">main</span>&gt;Main content&lt;/<span class="tag">main</span>&gt;
+&lt;<span class="tag">article</span>&gt;Article content&lt;/<span class="tag">article</span>&gt;
+&lt;<span class="tag">footer</span>&gt;Page footer&lt;/<span class="tag">footer</span>&gt;</pre>
+      </div>
+    </section>
+
+    <section id="comments">
+      <h2 class="section-title">Comments</h2>
+      <p class="section-desc">Notes in your code that the browser ignores.</p>
+      <div class="codebox">
+        <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+            <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+              stroke-width="1.2" />
+          </svg></button>
+        <pre><span class="cm">&lt;!-- this is a comment --&gt;</span></pre>
+      </div>
+    </section> -->
+    <h3 class="sub-title">HTML Lists Complete Core Snippet</h3>
+    <div class="codebox">
+      <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+          <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+          <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12" stroke="currentColor"
+            stroke-width="1.2" />
+        </svg></button>
+      <pre>&lt;!-- 1. Unordered List --&gt;
+&lt;<span class="tag">ul</span>&gt;
+  &lt;<span class="tag">li</span>&gt;Unordered List Item&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ul</span>&gt;
+
+&lt;!-- 2. Ordered List --&gt;
+&lt;<span class="tag">ol</span>&gt;
+  &lt;<span class="tag">li</span>&gt;Ordered List Item&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ol</span>&gt;
+
+&lt;!-- 3. Description List with Term and Details --&gt;
+&lt;<span class="tag">dl</span>&gt;
+  &lt;<span class="tag">dt</span>&gt;Description Term (HTML)&lt;/<span class="tag">dt</span>&gt;
+  &lt;<span class="tag">dd</span>&gt;Description Details (HyperText Markup Language)&lt;/<span class="tag">dd</span>&gt;
+&lt;/<span class="tag">dl</span>&gt;</pre>
+    </div>
+    `
+
+    <section id="tips">
+      <h2 class="section-title">Beginner Tips</h2>
+      <ol class="tips">
+        <li>Use semantic list tags (ul, ol, dl) instead of formatting plain text manually with breaks.</li>
+        <li>Always nest your list items (<code class="inline">li</code>) directly inside a parent <code
+            class="inline">ul</code> or <code class="inline">ol</code> container.</li>
+        <li>Keep nested or multi-level sub-lists properly indented so the structural hierarchy stays clean and readable.
+        </li>
+        <li>Always configure a valid <code class="inline">href</code> destination and a clear semantic anchor text
+          inside your links.</li>
+        <li>Use the <code class="inline">target="_blank"</code> attribute safely alongside <code
+            class="inline">rel="noopener"</code> when opening external links in a new tab.</li>
+        <li>Ensure your description lists (<code class="inline">dl</code>) always maintain a correct sequence pairing of
+          <code class="inline">dt</code> and <code class="inline">dd</code> elements.</li>
+
+      </ol>
+    </section>
+
+    <!-- <div class="tags">
+      <span>html</span>
+      <span>cheatsheet</span>
+      <span>reference</span>
+    </div> -->
+    <div class="button-wrapper">
+      <!-- Left Side: Download Button (Opens PDF link in a new tab) -->
+      <a href="/pdf-pages/list_removed.pdf"
+        target="_blank" class="action-btn download-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+        </svg>
+        Download HTML CheatSheet
+      </a>
+
+      <!-- Right Side: Share Button -->
+      <button class="action-btn share-btn" onclick="openShareModal()">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98" />
+        </svg>
+        Share
+      </button>
+    </div>
+
+    <!-- ==========================================
+     SHARE MODAL POPUP FRAMEWORK
+     ========================================== -->
+    <div id="shareModalOverlay" class="modal-overlay" onclick="closeShareModalExternal(event)">
+      <div class="modal-content-card">
+        <div class="modal-header">
+          <h3>Share</h3>
+          <button class="close-modal-btn" onclick="toggleModalDisplay(false)">&times;</button>
+        </div>
+
+        <!-- Link Copier Input Field Bar Container -->
+        <div class="modal-input-group">
+          <input type="text" id="sharePageUrlField" readonly>
+          <button class="modal-copy-btn" onclick="copyModalLinkText(this)">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Social Media Links Sharing Tray Grid Layout -->
+        <div class="social-share-tray">
+          <!-- Twitter/X -->
+          <a id="shareTwitterLink" href="#" target="_blank" class="social-icon-anchor">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a id="shareFacebookLink" href="#" target="_blank" class="social-icon-anchor">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a id="shareLinkedInLink" href="#" target="_blank" class="social-icon-anchor">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Made for quick reference — bookmark this page and come back whenever you forget a tag.
+  </footer>
+
+  <script>
+    function copyBox(btn) {
+      const pre = btn.parentElement.querySelector('pre');
+      const text = pre.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add('done');
+        setTimeout(() => btn.classList.remove('done'), 1200);
+      });
+    }
+    // Modal Visibility Matrix Controller State Changer
+    function toggleModalDisplay(shouldOpen) {
+      const modal = document.getElementById('shareModalOverlay');
+      modal.style.display = shouldOpen ? 'flex' : 'none';
+    }
+
+    function openShareModal() {
+      const currentUrl = window.location.href;
+
+      // 1. Input Box field URL assign matrix populate
+      document.getElementById('sharePageUrlField').value = currentUrl;
+
+      // 2. Set dynamic parameters for social platform direct redirection anchors
+      document.getElementById('shareTwitterLink').href = `https://twitter.com{encodeURIComponent(currentUrl)}`;
+      document.getElementById('shareFacebookLink').href = `https://facebook.com{encodeURIComponent(currentUrl)}`;
+      document.getElementById('shareLinkedInLink').href = `https://linkedin.com{encodeURIComponent(currentUrl)}`;
+
+      toggleModalDisplay(true);
+    }
+
+    // User click on black overlay outside modal panel box template framework
+    function closeShareModalExternal(event) {
+      if (event.target.id === 'shareModalOverlay') {
+        toggleModalDisplay(false);
+      }
+    }
+
+    // Internal link copy click control pipeline implementation
+    function copyModalLinkText(buttonEl) {
+      const inputEl = document.getElementById('sharePageUrlField');
+
+      navigator.clipboard.writeText(inputEl.value).then(() => {
+        const originalSvg = buttonEl.innerHTML;
+        // Changing button inside box structure to check mark green icon frame matrix
+        buttonEl.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4ade80" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+        setTimeout(() => {
+          buttonEl.innerHTML = originalSvg;
+        }, 2000);
+      }).catch(err => {
+        console.error("Link capture execution pipeline runtime crash error:", err);
+      });
+    }
+
+  </script>
+
+</body>
+
+</html>
