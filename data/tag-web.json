@@ -1,11 +1,67 @@
 {
     "!doctype": {
-        "title": "<!doctype>",
-        "history": "<h1>&lt;!DOCTYPE html&gt;</h1> is used to specify that the document is an HTML5 document. It helps browsers render the page correctly.",
-        "tip": "The &lt;!DOCTYPE&gt; declaration must be the very first line of your HTML document, before any tags.",
-        "code": "<!DOCTYPE html>\n<html>\n<head>\n<title>Title of the document</title>\n</head>\n<body>\n<p>The content of the document goes here.</p>\n</body>\n</html>",
-        "quiz": "Which is the tag that tells the browser which version of HTML user used?",
+        "title": "&lt;!DOCTYPE html&gt; — The Browser's Instruction Manual",
+        "history": "<h1>It tells the browser exactly how to render your page.</h1><p>The <code>&lt;!DOCTYPE html&gt;</code> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in. Without it, browsers might enter 'Quirks Mode' and display your website incorrectly.</p>",
+        "tip": "<strong>VS Code Shortcut:</strong> Open a blank HTML file, press <code>Shift + 1</code> (to type an exclamation mark <code>!</code>), and hit <code>Enter</code>. VS Code will instantly generate the entire standard HTML5 boilerplate code for you.",
+        "code": "\n<!-- Hey browser, this is a modern HTML5 document! -->\n <!DOCTYPE html> \n<html lang=\"en\"> <!-- Sets the global language to English for accessibility -->\n<head>\n    <meta charset=\"UTF-8\"> <!-- Allows the page to display almost all languages/symbols correctly -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <!-- Makes sure your website layout scales perfectly on mobile screens -->\n    <title>My First Professional Web Page</title>\n</head>\n<body>\n    <!-- Main website content starts right here -->\n    <h1>Hello World!</h1>\n</body>\n</html>",
+        "quiz": "Which declaration sets the HTML document type?",
         "answer": "doctype"
+    },
+    "html": {
+        "title": "&lt;html&gt; — The Root Container of Everything",
+        "history": "<h1>The mother of all HTML elements on your webpage.</h1><p>The <code>&lt;html&gt;</code> tag acts as the ultimate container (root element) that wraps your entire web document. Every single tag, image, script, or style you write must live inside this element. It officially marks where the web page code begins and where it ends.</p>",
+        "tip": "<strong>SEO & Accessibility Tip:</strong> Always include the <code>lang=\"en\"</code> attribute inside your opening <code>&lt;html&gt;</code> tag. It tells Google Search and screen readers what language your content is in, which massively improves your website's search engine ranking.",
+        "code": "<html lang=\"en\"> <!-- The root starts here. Always set the language for better SEO! -->\n\n<head>\n    <!-- All behind-the-scenes data and metadata live here -->\n    <title>Root Element Guide</title>\n</head>\n\n<body>\n    <!-- Everything the user actually sees on their screen goes here -->\n    <h1>The root tag controls everything!</h1>\n</body>\n\n</html> <!-- The root ends here. Absolutely nothing should be written after this line! -->",
+        "quiz": "Which is the root element of HTML?",
+        "answer": "html"
+    },
+    "head": {
+        "title": "&lt;head&gt; — The Brain Behind the Web Page",
+        "history": "<h1>The invisible control center that manages your site's data.</h1><p>The <code>&lt;head&gt;</code> element is a machine-readable container that sits right between <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code>. Everything written inside this tag is completely invisible to the website visitors. Instead, it holds critical metadata, character sets, search engine keywords, scripts, and CSS stylesheets that control how the page behaves, links, and ranks on Google.</p>",
+        "tip": "<strong>Performance Tip:</strong> Always keep your <code>&lt;head&gt;</code> section clean. Loading too many massive JavaScript files inside the head can slow down your website layout. Try to load heavy scripts at the bottom of the <code>&lt;body&gt;</code> instead to speed up page loading.",
+        "code": "<head>\n    <!-- Tells the browser to support all international characters and emojis -->\n    <meta charset=\"UTF-8\">\n\n    <!-- Critical for mobile devices! Forces the layout to scale perfectly on phones -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n    <!-- This text shows up on the browser tab and Google search results -->\n    <title>Mastering the Head Element</title>\n\n    <!-- Linking an external CSS file to style the entire website -->\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>",
+        "quiz": "Which element contains metadata?",
+        "answer": "head"
+    },
+    "meta": {
+        "title": "&lt;meta&gt; — The Invisible Powerhouse of SEO & Layouts",
+        "history": "<h1>The hidden labels that control how search engines and screen resolutions treat your website.</h1><p>The <code>&lt;meta&gt;</code> element is a self-closing tag that lives inside the <code>&lt;head&gt;</code>. It acts as an identity badge for web crawlers and browsers. It provides background details about your page—such as character translation rules, description summaries for Google results, or exact scaling instructions for responsive mobile views. It doesn't paint anything on the screen, but it completely alters how the page loads and ranks.</p>",
+        "tip": "<strong>Social Media Optimization:</strong> Look up <code>og:title</code> and <code>og:image</code> (Open Graph meta tags). When you paste your website link on WhatsApp, Discord, or X (Twitter), these exact meta tags control the beautiful preview thumbnail image and link text that pops up!",
+        "code": "<head>\n    <!-- 1. The Universal Translator: Ensures all emojis and unique fonts display cleanly without breaking -->\n    <meta charset=\"UTF-8\">\n\n    <!-- 2. The Mobile Lifesaver: Prevents your site from shrinking down to a microscopic layout on mobile screens -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n    <!-- 3. The SEO Billboard: The exact 1-2 sentence pitch that Google displays right beneath your clickable title link -->\n    <meta name=\"description\" content=\"Master the core buniyaad of web development with our interactive HTML fundamentals playground.\">\n\n    <!-- 4. The Bot Directive: Tells search engine spiders to map out and index your link for organic web traffic -->\n    <meta name=\"robots\" content=\"index, follow\">\n</head>",
+        "quiz": "Which tag sets metadata like viewport?",
+        "answer": "meta"
+    },
+    "title": {
+        "title": "&lt;title&gt; — The Identity Maker",
+        "history": "<h1>The single most important tag for SEO and user recognition.</h1><p>The <code>&lt;title&gt;</code> element defines the official name of your webpage. Even though it does not appear on the actual page content canvas, it is absolutely mandatory for every HTML document. It dictates what text shows up on the browser tab, what name is saved when a user bookmarks your site, and the main clickable headline displayed on Google Search results.</p>",
+        "tip": "<strong>SEO Gold Mine:</strong> Keep your titles under 60 characters! If your title is longer, Google will cut it off with '...' in search results. Make sure to put your main target keyword right at the beginning of the title text for maximum organic traffic.",
+        "code": "<head>\n    <!-- Good Title: Short, descriptive, and perfect for SEO ranking -->\n    <title>Learn HTML Fast | Ultimate Beginner's Crash Course</title>\n\n    <!-- Pro Tip: This is how you add that cool little brand icon right next to your tab title -->\n    <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">\n</head>",
+        "quiz": "Which tag sets the page title?",
+        "answer": "title"
+    },
+    "link": {
+        "title": "&lt;link&gt; — The Relationship Bridge",
+        "history": "<h1>Connects your raw HTML bone structure with external styles and assets.</h1><p>The <code>&lt;link&gt;</code> element is a self-closing structural tag that lives strictly inside the <code>&lt;head&gt;</code> block. Its primary job is to establish a connection between your HTML document and external resources. Without this tag, you cannot import global CSS spreadsheets, third-party frameworks, or web typography like Google Fonts.</p>",
+        "tip": "<strong>Dynamic Preloading:</strong> You can speed up your webpage drastically by using <code>rel=\"preload\"</code>. This tells the browser to start downloading heavy fonts or background assets early, before it even starts parsing the rest of your styles!",
+        "code": "<head>\n    <!-- 1. Connecting Global Styles: Imports the layout stylesheet to paint your website -->\n    <link rel=\"stylesheet\" href=\"styles.css\">\n\n    \n    <link rel=\"icon\" type=\"image/png\" href=\"assets/favicon.png\">\n\n    <!-- 3. Typography Import: Pulling premium modern text profiles from Google's cloud servers -->\n    <link rel=\"preconnect\" href=\"https://googleapis.com\">\n    <link rel=\"stylesheet\" href=\"https://googleapis.com/css2?family=Inter:wght@400;600&display=swap\">\n</head>",
+        "quiz": "Which tag links external styles?",
+        "answer": "link"
+    },
+    "body": {
+        "title": "&lt;body&gt; — The Visual Presentation Layer",
+        "history": "<h1>The stage where all your visible user interface (UI) items perform.</h1><p>The <code>&lt;body&gt;</code> tag acts as the ultimate structural envelope for everything a human interaction module experiences. While the head manages the logic, the body rules the display. Every single header, layout node, card grid, vector icon, text component, and interactive button must be nested right inside this tag to be painted on the screen container.</p>",
+        "tip": "<strong>Clean DOM Architecture:</strong> Keep your body root clean! Avoid dumping loose text directly inside the <code>&lt;body&gt;</code> tag. Always wrap your text elements in proper parent blocks like <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, or <code>&lt;p&gt;</code> tags for better control over CSS spacing.",
+        "code": "<body> <!-- The entire visual window of your app starts right here! -->\n\n    <header>\n        <nav>Navbar Links Here</nav>\n    </header>\n\n    <main>\n        <h1>Welcome to Tag-Web</h1>\n        <p>This layout container is perfectly accessible to your users.</p>\n    </main>\n\n    <footer>\n        <p>&copy; 2026 Developer Portfolio</p>\n    </footer>\n\n</body> <!-- Everything below this line is completely hidden from view! -->",
+        "quiz": "Which tag holds the visible content of an HTML document?",
+        "answer": "body"
+    },
+    "script": {
+        "title": "&lt;script&gt; — The Engine of Interactivity",
+        "history": "<h1>Injects logical behavior, calculations, and modern interaction loops into your static page.</h1><p>The <code>&lt;script&gt;</code> element embeds or links client-side JavaScript. It handles event listeners, modal triggers, and async animations. By default, browsers read HTML from top to bottom. If you place a heavy script inside the head, it can block the entire page from rendering until it finishes downloading, causing a noticeable delay.</p>",
+        "tip": "<strong>The Modern Approach:</strong> If you ever have to link external script resources inside the <code>&lt;head&gt;</code>, make sure to add the <code>defer</code> keyword like this: <code>&lt;script src=\"app.js\" defer&gt;&lt;/script&gt;</code>. This prevents the script from blocking the page layout rendering!",
+        "code": "<body>\n    <!-- 1. All UI structure must render first for maximum speed -->\n    <div class=\"app-grid\">\n        <button id=\"trigger-btn\">Click Me</button>\n    </div>\n\n    <!-- 2. ALWAYS place your interaction script tags at the very bottom of the page, right before the closing body tag. This guarantees that your HTML markup and CSS layouts load instantly without freeze glitches! -->\n    <script>\n        // Human Dev Note: Target the layout node directly once the DOM is safely mapped out\n        const actionBtn = document.getElementById('trigger-btn');\n        actionBtn.addEventListener('click', () => {\n            console.log('Interactivity activated smoothly!');\n        });\n    </script>\n</body>",
+        "quiz": "Which tag embeds JavaScript?",
+        "answer": "script"
     },
     "h1": {
         "title": " Heading Tag",
@@ -18,8 +74,8 @@
     "p": {
         "title": "<p> Paragraph Tag",
         "history": "<h1> Used for paragraphs of text</h1>",
-        "tip": "Paragraph tag is used to write some paragraph in a web page or HTML. Avoid nesting structural block elements inside <p>.",
-        "code": "<p>This is a paragraph.</p>",
+        "tip": "Paragraph tag is used to write some paragraph in a web page or HTML. Avoid nesting structural block elements inside. <p>",
+        "code": "<p>This is a simple paragraph</p>",
         "quiz": "Which tag wraps a paragraph?",
         "answer": "p"
     },

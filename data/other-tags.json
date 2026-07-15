@@ -457,7 +457,7 @@
     },
     "embed": {
         "title": "<embed>",
-        "history": "<h1>Embeds external content.</h1>",
+        "history": "<b>The <code>&lt;embed&gt;</code> tag is a simple container used to insert external files like videos, flash games, or PDF documents directly into your webpage.<br><code>&lt;embed type='video/mp4' src='my-videos' width='500' height='300'&gt;</code>",
         "tip": "The <code>&lt;embed&gt;</code> tag is used to embed external content.",
         "code": "<embed src='file.pdf' width='300' height='200'>",
         "quiz": "Which tag embeds external content?",
@@ -513,17 +513,17 @@
     },
     "dt": {
         "title": "<dt>",
-        "history": "<h1>Term.</h1>",
+        "history": "<h1>Description Term.</h1>",
         "tip": "The <code>&lt;dt&gt;</code> tag is used to define a term in a description list.",
-        "code": "<dt>Term</dt>",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>HTML Description Term Example</title>\n</head>\n<body>\n  <dl>\n <!-- The <dt> tag defines the term/name in a description list -->\n    <dt>Description Term</dt>\n    <dd>This is the definition or description of the term above.</dd>\n  </dl>\n\n</body>\n</html>",
         "quiz": "Which tag defines term?",
         "answer": "dt"
     },
     "dd": {
         "title": "<dd>",
-        "history": "<h1>Definition.</h1>",
-        "tip": "The <code>&lt;dd&gt;</code> tag is used to define the description of a term.",
-        "code": "<dd>Definition</dd>",
+        "history": "<h1>Description Details</h1>",
+        "tip": "The <code>&lt;dd&gt;</code> tag is used to provide the definition, description, or explanation for the preceding term (<code>&lt;dt&gt;</code>) inside a description list.",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>HTML Description Details Example</title>\n</head>\n<body>\n\n  <dl>\n    <dt>JavaScript</dt>\n    <!-- The <dd> tag defines the description or definition of the term above -->\n    <dd>A programming language used to make web pages interactive and dynamic.</dd>\n  </dl>\n\n</body>\n</html>",
         "quiz": "Which tag defines description?",
         "answer": "dd"
     },
