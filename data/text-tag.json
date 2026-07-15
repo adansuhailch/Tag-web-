@@ -1,18 +1,18 @@
 {
     "All Headings": {
-        "title": "All Headings",
-        "history": "<h1>Includes h1 to h6 tags used for headings.</h1><p>Each heading tag serves a specific purpose in defining the document structure.</p>",
-        "tip": "Headings are used to define the structure of your content. h1 is the main heading, while h2 to h6 are subheadings.",
-        "code": "<h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>",
+        "title": "&lt;h1&gt; to &lt;h6&gt; — The Content Hierarchy Blueprint",
+        "history": "<h1>The foundational roadmap that structures your website's topics for readers and search bots.</h1><p>Heading tags range from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important). They are not meant to make text look big or bold—that is CSS's job. Instead, they act as the index of your page, mapping out sections so web crawlers and screen readers can instantly digest the logical architecture of your content layout.</p>",
+        "tip": "<strong>The Strict SEO Golden Rule:</strong> Never use more than one <code>&lt;h1&gt;</code> tag on a single webpage! Think of your <code>&lt;h1&gt;</code> as the book title, and <code>&lt;h2&gt;</code> through <code>&lt;h6&gt;</code> as chapters and sub-sections. Breaking this order confuses Google's indexing spiders and hurts your ranking.",
+        "code": "<!-- 1. The Main Umbrella: The absolute main title of your document (Use only ONCE per page) -->\n<h1>Mastering Modern Frontend Engineering</h1>\n\n<!-- 2. Primary Sections: Breaks down the core chapters or major topics -->\n<h2>Chapter 1: Learning the Core Markups</h2>\n<p>HTML is the skeleton structure of your site layout canvas.</p>\n\n<!-- 3. Sub-topics: Deep dives inside a primary section -->\n<h3>Understanding Semantic Structure</h3>\n<p>Semantic layouts separate layouts from visual styling scripts.</p>\n\n<!-- 4. Deep sub-points: Fine details within a sub-topic nested sequence -->\n<h4>The Role of Heading Trees</h4>\n<h6>Deepest Subsection Element</h6> <!-- Rarely used, but perfect for highly nested documentation trees -->",
         "quiz": "Which tags are used for headings?",
         "answer": "h1 to h6"
     },
     "em": {
-        "title": "<em> Emphasis Tag",
-        "history": "<h1>Used to emphasize text. Usually italicized.</h1><p>It is semantically different from the <code>&lt;i&gt;</code> tag, which is used for styling purposes only.</p>",
-        "tip":"Use the <code>&lt;em&gt;</code> tag to indicate that the text has a different emphasis than the surrounding text.",
-        "code": "<em>This text is emphasized</em>",
-        "quiz": "Which tag is used for emphasis?",
+        "title": "&lt;em&gt; — The Voice Stress & Emphasis Tag",
+        "history": "<h1>Tells browsers, screen readers, and search engines where to put the acoustic weight in a sentence.</h1><p>The <code>&lt;em&gt;</code> element is a semantic formatting tag used to emphasize words. While it physically renders text in italics by default, its true purpose is programmatic. It visually changes the tone of the sentence, changing how a text-to-speech screen reader verbally pronounces the word to a visually impaired user.</p>",
+        "tip": "<strong>The Semantics Rule (em vs. i):</strong> Never use <code>&lt;em&gt;</code> just to make text look pretty and slanted—use CSS <code>font-style: italic;</code> or the <code>&lt;i&gt;</code> tag for that! Use <code>&lt;em&gt;</code> only when changing the word's stress actually changes the meaning of the spoken sentence.",
+        "code": "<!-- Example 1: Standard paragraph with no specific emphasis -->\n<p>I love building beautiful website grids.</p>\n\n<!-- Example 2: Changing the meaning of a sentence by stressing a specific word -->\n<p>I <em>really</em> love building beautiful website grids!</p> \n<!-- Screen readers will verbally emphasize the word 'really' with an altered vocal tone -->\n\n<!-- Example 3: Proper nesting inside structural typography layouts -->\n<p>When writing technical documentation, always <em>double-check</em> your opening and closing tags.</p>",
+        "quiz": "Which tag is used for semantic text emphasis?",
         "answer": "em"
     },
     "hr": {
