@@ -2,16 +2,16 @@
 
 .site-footer {
     background: linear-gradient(180deg, #0f1419 0%, #1a202c 100%);
-    border-top: 1px solid rgba(99, 102, 241, 0.1);
-    margin-top: 60px;
+    border-top: 1px solid rgba(65, 66, 99, 0.1);
+    /* margin-top: 60px; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Accent bar at top */
+/* Accent bar at top
 .footer-accent-bar {
     height: 3px;
     background: linear-gradient(90deg, #6366f1 0%, #10b981 50%, #06b6d4 100%);
-}
+} */
 
 /* Main footer content */
 .footer-main {
@@ -40,11 +40,6 @@
     margin-bottom: 8px;
 }
 
-.footer-logo-img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
 
 .footer-brand-name {
     font-size: 24px;
@@ -106,6 +101,7 @@
 }
 
 /* Social Icons (kept from before) */
+/* Social Icons Container */
 .social-icons {
     display: flex;
     gap: 8px;
@@ -113,28 +109,116 @@
     margin-top: 12px;
 }
 
+/* Base Icon Style */
 .social-icons .icon {
+    position: relative;
+    /* Tooltip position karne ke liye zaroori hai */
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    color: #d1d5db;
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    font-size: 22px;
+    color: #ffffff;
+    background: rgb(233 233 233 / 10%);
+    border: 1px solid #6366f1;
     border-radius: 8px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     cursor: pointer;
 }
 
+/* Base Hover Effect */
 .social-icons .icon:hover {
-    color: #6366f1;
-    background: rgba(99, 102, 241, 0.2);
+    background: rgba(99, 102, 241, 0.3);
     border-color: rgba(99, 102, 241, 0.4);
-    transform: translateY(-3px);
+    transform: translateY(-8px);
 }
+
+/* Tooltip Default Setup (Hidden) */
+.social-icons .icon::after {
+    content: attr(aria-label);
+    /* HTML se label text uthayega */
+    position: absolute;
+    bottom: 50px;
+    /* Icon ke upar show karne ke liye */
+    left: 50px;
+    transform: translateX(-50%) scale(0.8);
+    padding: 4px 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip Hover Effect (Visible) */
+.social-icons .icon:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* Brand Colors on Hover & Tooltip Backgrounds */
+
+/* Discord */
+.social-icons .icon[aria-label="Discord"]:hover {
+    color: #5865F2;
+}
+
+.social-icons .icon[aria-label="Discord"]::after {
+    background-color: #5865F2;
+}
+
+/* YouTube */
+.social-icons .icon[aria-label="YouTube"]:hover {
+    color: #ff0000;
+}
+
+.social-icons .icon[aria-label="YouTube"]::after {
+    background-color: #ff0000;
+}
+
+/* GitHub */
+.social-icons .icon[aria-label="GitHub"]:hover {
+    color: #24292e;
+}
+
+.social-icons .icon[aria-label="GitHub"]::after {
+    background-color: #24292e;
+}
+
+/* Instagram */
+.social-icons .icon[aria-label="Instagram"]:hover {
+    color: #e1306c;
+}
+
+.social-icons .icon[aria-label="Instagram"]::after {
+    background-color: #e1306c;
+}
+
+/* LinkedIn */
+.social-icons .icon[aria-label="LinkedIn"]:hover {
+    color: #0077b5;
+}
+
+.social-icons .icon[aria-label="LinkedIn"]::after {
+    background-color: #0077b5;
+}
+
+/* WhatsApp */
+.social-icons .icon[aria-label="WhatsApp"]:hover {
+    color: #25d366;
+}
+
+.social-icons .icon[aria-label="WhatsApp"]::after {
+    background-color: #25d366;
+}
+
+
 
 /* ======== COLUMNS 2-4: LINKS ======== */
 .footer-col {
@@ -230,7 +314,7 @@
 }
 
 /* Newsletter */
-.footer-newsletter {
+/* .footer-newsletter {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(99, 102, 241, 0.1);
@@ -287,7 +371,7 @@
 .footer-newsletter-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
-}
+} */
 
 /* ======== FOOTER BOTTOM ======== */
 .footer-bottom {
@@ -383,7 +467,7 @@
         padding: 30px 20px;
     }
 
-    .footer-accent-bar {
+    /* .footer-accent-bar {
         height: 2px;
-    }
+    } */
 }

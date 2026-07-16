@@ -6,7 +6,7 @@ async function loadOtherCssTags() {
 
         tagData = await response.json();
 
-        console.log("🚀 Media & Semantic Tags architecture initialized successfully!");
+        console.log("🚀 Other Css Tags are architecture initialized successfully!");
     } catch (error) {
         console.error("❌ Data sync broken inside layout container:", error);
     }
