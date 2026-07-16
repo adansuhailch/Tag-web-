@@ -1,10 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<!-- Home Page -->
+  <url>
+       <loc>https://tag-web.is-cool.dev/</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+
+  <!-- Core Topics -->
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/css-part.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8500</priority>
+  </url>
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/javascript-part.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8500</priority>
+  </url>
+
+  <!-- this is for other css tags page -->
+  <url>
+  <loc>https://tag-web.is-cool.dev/pages/other-csstags.html</loc>
+  <lastmod>2026-07-16</lastmod>
+  <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Lessons & Cheatsheets (Aap ke Baqi Saare Pages) -->
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/text-tag.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/form-tag.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/css-flex.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/css-grid.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.7000</priority>
+  </url>
+  <url>
+  <loc>https://tag-web.is-cool.dev/pages/css-animation.html</loc>
+  <lastmod>2026-07-16</lastmod>
+  <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+  <loc>https://tag-web.is-cool.dev/pages/css-boxmodel.html</loc>
+  <lastmod>2026-07-16</lastmod>
+  <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+  <loc>https://tag-web.is-cool.dev/pages/css-background.html</loc>
+  <lastmod>2026-07-16</lastmod>
+  <changefreq>daily</changefreq>
+  </url>
+
+<!-- This is for css dimension and size page  -->
+  <url>
+  <loc>https://tag-web.is-cool.dev/pages/css-dimension-size.html</loc>
+  <lastmod>2026-07-16</lastmod>
+  <changefreq>daily</changefreq>
+  </url>
+
+  <!-- this is for css effects -->
 <url>
-<loc>https://tag-web.is-a.dev</loc>
-<lastmod>2026-06-26</lastmod>
+<loc>https://tag-web.is-cool.dev/pages/css-effects.html</loc>
+<lastmod>2026-07-16</lastmod>
 <changefreq>daily</changefreq>
-<priority>1.0</priority>
 </url>
+
+<!-- this is for css layout -->
+<url>
+<loc>https://tag-web.is-cool.dev/pages/css-layout.html</loc>
+<lastmod>2026-07-16</lastmod>
+<changefreq>daily</changefreq>
+</url>
+
+<!-- this is for css text and fonts -->
+<url>
+<loc>https://tag-web.is-cool.dev/pages/css-text-fonts.html</loc>
+<lastmod>2026-07-16</lastmod>
+<changefreq>daily</changefreq>
+</url>
+
+<!-- This is for other tags for html -->
+<url>
+<loc>https://tag-web.is-cool.dev/pages/other-tags.html</loc>
+<lastmod>2026-07-16</lastmod>
+<changefreq>daily</changefreq>
+</url>
+
+<!-- this is for semantic media tags in html -->
+<url>
+<loc>https://tag-web.is-cool.dev/pages/semantic-media.html</loc>
+<lastmod>2026-07-16</lastmod>
+<changefreq>daily</changefreq>
+</url>
+
+  <!-- Legal Pages (Low Priority but Required) -->
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/privacy-policy.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.3000</priority>
+  </url>
+  <url>
+       <loc>https://tag-web.is-cool.dev/pages/terms-of-service.html</loc>
+       <lastmod>2026-07-16T10:32:25+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.3000</priority>
+  </url>
+
+</urlset>
