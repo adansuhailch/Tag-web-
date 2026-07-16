@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tag Web - Documentation & Editor</title>
-    <!-- FontAwesome Icons Link -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <!-- Aapki main style settings link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/material-palenight.min.css"
+        integrity="sha512-uIAyXysSwPKYTS4BrBQGkt7i9ozdNjNA4jXfjFDl6fWIc2zDllleoiY5EkH7Ib2j+Qb8YJx4a5qy192JZqxqVg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/lint.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="editor-page-container">
-        <!-- Top Toolbar / Breadcrumbs -->
         <div class="modal-header-bar">
             <div class="breadcrumbs">
                 <span id="breadcrumb-parent" style="text-transform: capitalize;">Loading Category</span>
@@ -22,10 +26,7 @@
             </div>
         </div>
 
-        <!-- Main Body Wrapper Grid -->
         <div class="modal-body-layout">
-
-            <!-- NEW: Info Grid (About + Tip) Top Par Aa Gaya -->
             <div class="info-top-grid">
                 <div class="info-block">
                     <h3><i class="fa-solid fa-circle-info"></i> About Tag</h3>
@@ -38,14 +39,13 @@
                 </div>
             </div>
 
-            <!-- Middle: Editor & Preview Grid -->
             <div class="editor-preview-grid">
-                <!-- Left: Editor -->
                 <div class="editor-panel">
                     <div class="editor-wrapper">
                         <div class="editor-header">
                             <span><i class="fa-solid fa-code"></i> Live Code Editor</span>
                         </div>
+
                         <textarea id="modal-editor" aria-label="Editable code example" spellcheck="false"></textarea>
 
                         <div class="editor-actions">
@@ -72,7 +72,6 @@
                     </div>
                 </div>
 
-                <!-- Right: Preview -->
                 <div class="preview-panel">
                     <div class="preview-wrapper">
                         <div class="preview-header">Output</div>
@@ -82,7 +81,6 @@
                 </div>
             </div>
 
-            <!-- Bottom: Quiz Section Only -->
             <div class="below-panels">
                 <div class="quiz-section" id="quiz">
                     <h4><i class="fa-solid fa-graduation-cap"></i> Quick Quiz</h4>
@@ -93,17 +91,33 @@
                             aria-label="Quiz answer" />
                         <button class="quiz-btn" onclick="checkAnswer()">Check Answer ✓</button>
                     </div>
+
                     <p id="quiz-feedback" aria-live="polite"></p>
                 </div>
             </div>
-
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closetag.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/comment/comment.min.js"
+        integrity="sha512-UaJ8Lcadz5cc5mkWmdU8cJr0wMn7d8AZX5A24IqVGUd1MZzPJTq9dLLW6I102iljTcdB39YvVcCgBhM0raGAZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.20/keymap/sublime.min.js"
+        integrity="sha512-SV3qeFFtzcmGtUQPLM7HLy/7GKJ/x3c2PdiF5GZQnbHzIlI2q7r77y0IgLLbBDeHiNfCSBYDQt898Xp0tcZOeA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.0/jshint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/csslint/1.0.5/csslint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmlhint/1.1.0/htmlhint.min.js"></script>
 
-    <!-- Pehle core-actions.js lagayein kyunki isme functions hain -->
+
     <script src="../js/core-actions.js"></script>
-
-    <!-- Phir tag-web.js lagayein kyunki yeh download ka engine hai -->
     <script src="../js/tag-web.js"></script>
 </body>
 
