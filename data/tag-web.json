@@ -59,7 +59,7 @@
         "title": "&lt;script&gt; — The Engine of Interactivity",
         "history": "<h1>Injects logical behavior, calculations, and modern interaction loops into your static page.</h1><p>The <code>&lt;script&gt;</code> element embeds or links client-side JavaScript. It handles event listeners, modal triggers, and async animations. By default, browsers read HTML from top to bottom. If you place a heavy script inside the head, it can block the entire page from rendering until it finishes downloading, causing a noticeable delay.</p>",
         "tip": "<strong>The Modern Approach:</strong> If you ever have to link external script resources inside the <code>&lt;head&gt;</code>, make sure to add the <code>defer</code> keyword like this: <code>&lt;script src=\"app.js\" defer&gt;&lt;/script&gt;</code>. This prevents the script from blocking the page layout rendering!",
-        "code": "<body>\n    <!-- 1. All UI structure must render first for maximum speed -->\n    <div class=\"app-grid\">\n        <button id=\"trigger-btn\">Click Me</button>\n    </div>\n\n    <!-- 2. ALWAYS place your interaction script tags at the very bottom of the page, right before the closing body tag. This guarantees that your HTML markup and CSS layouts load instantly without freeze glitches! -->\n    <script>\n        // Human Dev Note: Target the layout node directly once the DOM is safely mapped out\n        const actionBtn = document.getElementById('trigger-btn');\n        actionBtn.addEventListener('click', () => {\n            console.log('Interactivity activated smoothly!');\n        });\n    </script>\n</body>",
+        "code": "<body>\n    <!-- 1. All UI structure must render first for maximum speed -->\n    <div class=\"app-grid\">\n        <button id=\"trigger-btn\">Click Me</button>\n    </div>\n\n    <!-- 2. ALWAYS place your interaction script tags at the very bottom of the page, right before the closing body tag. This guarantees that your HTML markup and CSS layouts load instantly without freeze glitches! -->\n    <script>\n        const actionBtn = document.getElementById('trigger-btn');\n        actionBtn.addEventListener('click', () => {\nconsole.log('Interactivity activated smoothly!');\n        });\n    </script>\n<!--Press Ctrl+Shift+I and click the 'Click me' Button and then  check the script magic in the console-->\n</body>",
         "quiz": "Which tag embeds JavaScript?",
         "answer": "script"
     },
@@ -67,7 +67,7 @@
         "title": " Heading Tag",
         "history": "<h1> The tag defines the most important heading on the page. Search engines use headings to index the structure of your web pages. Always use exactly one h1 per page.</h1>",
         "tip": "The <h1> tag is used to define the main heading of a webpage. It is important for SEO and accessibility, as it helps search engines and screen readers understand the content hierarchy.",
-        "code": "<h1>Hello World</h1>\n<p>Welcome to Tag Web! Start learning code.</p>",
+        "code": "<h1>Hello World</h1>\n<p>Welcome to Tag Web! Start learning code.</p>\n<!--Write something you want inside the <h1> and <p> tags and make your own heading and paragraphs-->",
         "quiz": "Which tag creates the highest level system document heading hierarchy?",
         "answer": "h1"
     },

@@ -1,0 +1,360 @@
+:root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --card-border: #262a33;
+    --code-bg: #12141a;
+    --text: #d7dae0;
+    --text-dim: #8a8f9c;
+    --accent: #ff7a45;
+    --accent-soft: rgba(255, 122, 69, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+/* ===== Top nav ===== */
+/* .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .topbar .logo {
+      font-weight: 700;
+      font-size: 16px;
+    } */
+
+.title span {
+    color: var(--accent);
+}
+
+/* .topbar nav a {
+      text-decoration: none;
+      color: var(--text-dim);
+      font-size: 14px;
+      margin-left: 22px;
+    }
+
+    .topbar nav a:hover {
+      color: var(--text);
+    } */
+
+.wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+/* ===== Header ===== */
+h1.title {
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0 10px;
+}
+
+p.tagline {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-dim);
+    margin: 0 0 8px;
+}
+
+p.byline {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0 0 34px;
+}
+
+/* ===== Sections ===== */
+section {
+    margin-bottom: 44px;
+}
+
+h2.section-title {
+    font-size: 20px;
+    margin: 0 0 6px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 10px;
+}
+
+h3.sub-title {
+    font-size: 16px;
+    color: var(--accent);
+    margin: 22px 0 8px;
+}
+
+p.section-desc {
+    color: var(--text-dim);
+    font-size: 14.5px;
+    margin: 8px 0 14px;
+}
+
+code.inline {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, Menlo, monospace;
+    font-size: 13px;
+}
+
+/* ===== Code box ===== */
+.codebox {
+    position: relative;
+    background: var(--code-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 16px 44px 16px 18px;
+    margin-bottom: 6px;
+}
+
+.codebox pre {
+    margin: 0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #dcdfe4;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.codebox .tag {
+    color: #7aa2f7;
+}
+
+.codebox .attr {
+    color: #e0af68;
+}
+
+.codebox .str {
+    color: #9ece6a;
+}
+
+.codebox .cm {
+    color: #565f77;
+    font-style: italic;
+}
+
+.copy-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.copy-icon:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.copy-icon.done {
+    color: #9ece6a;
+}
+
+.copy-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+/* ===== Footer ===== */
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tags span {
+    font-size: 12px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    padding: 4px 10px;
+    border-radius: 14px;
+    color: var(--text-dim);
+}
+
+footer {
+    border-top: 1px solid var(--card-border);
+    margin-top: 60px;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+}
+
+ol.tips,
+ul.tips {
+    color: var(--text-dim);
+    font-size: 14.5px;
+    padding-left: 22px;
+}
+
+ol.tips li,
+ul.tips li {
+    margin: 4px 0;
+}
+
+/* Base Layout Controller Wrapper */
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download-btn {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    border: none;
+}
+
+.share-btn {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+}
+
+/* Modal Background Overlay Layer Blur Engine */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    /* Screen blurs like code-with-harry layout */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Structural Content Card Shape Window */
+.modal-content-card {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    width: 90%;
+    max-width: 440px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #f3f4f6;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+}
+
+.close-modal-btn {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-modal-btn:hover {
+    color: #ffffff;
+}
+
+/* Input field Link Group Container Box layout */
+.modal-input-group {
+    display: flex;
+    background-color: #030712;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 4px 8px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-input-group input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    padding: 8px;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.modal-copy-btn {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.modal-copy-btn:hover {
+    color: #ffffff;
+}
+
+/* Social Icons Tray Grid Row Style */
+.social-share-tray {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.social-icon-anchor {
+    color: #9ca3af;
+    transition: color 0.2s;
+}
+
+.social-icon-anchor:hover {
+    color: #ffffff;
+}
+
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
