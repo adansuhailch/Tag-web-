@@ -114,6 +114,21 @@
 <changefreq>daily</changefreq>
 </url>
 
+<!-- For Pdf-Pages folder cause google also crawl pdf pages and show it on searches -->
+<!-- For List Tags pdf  -->
+     <url>
+          <loc>https://tag-web.is-cool.dev/pdf-files/list-tags-pdf.pdf</loc>
+          <lastmod>2026-07-17</lastmod>
+          <changefreq>weekly</changefreq>
+     </url>
+
+<!-- For table-tag pdf -->
+     <url>
+          <loc>https://tag-web.is-cool.dev/pdf-files/table-tags-pdf.pdf</loc>
+          <lastmod>2026-07-17</lastmod>
+          <changefreq>weekly</changefreq>
+     </url>
+
   <!-- Legal Pages (Low Priority but Required) -->
   <url>
        <loc>https://tag-web.is-cool.dev/pages/privacy-policy.html</loc>

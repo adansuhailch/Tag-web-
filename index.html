@@ -45,28 +45,8 @@
                 <i class="fa-brands fa-discord"></i>Join Community
             </a>
         </div>
-        <!-- <button id="menu-btn" class="hamburger" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button> -->
     </header>
     <div class="page-container">
-        <!-- <aside class="sidebar-panel" id="sidebar">
-            <ul class="nav-list">
-                <li class="active"><a href="#text">📝 <span>Text Tags</span></a></li>
-                <li><a href="#links">🔗 <span>Links Tags</span></a></li>
-                <li><a href="#lists">📋 <span>List Tags</span></a></li>
-                <li><a href="#forms">📰 <span>Form Tags</span></a></li>
-                <li><a href="#media">🖼️ <span>Media Tags</span></a></li>
-                <li><a href="#Semantic-Tags">📦 <span>Semantic Tags</span></a></li>
-                <li><a href="#tables">🧮 <span>Table Tags</span></a></li>
-                <li><a href="#Other-tags">🛡️ <span>HTML5 Tags</span></a></li>
-                <li><a href="/pages/css-part.html">🧬 <span>CSS Tags</span></a></li>
-                <li><a href="/pages/javascript-part.html">⚡ <span>JavaScript</span></a></li>
-            </ul>
-        </aside> -->
-
         <main class="content-panel">
 
             <!-- HTML STRUCTURE -->
@@ -193,158 +173,166 @@
                     <div class="tag-card" data-tag="tables" onclick="openModal('table')">
                         &lt;table&gt; Table<span class="tooltip">Click for details</span>
                     </div>
+
+                    <div class="tag-card" data-tag="caption" onclick="openModal('caption')">
+                        &lt;caption&gt; Table Caption<span class="tooltip">Click for details</span>
+                    </div>
+
+                    <div class="tag-card" data-tag="column group" onclick="openModal('colgroup')">
+                        &lt;colgroup&gt; Column Group<span class="tooltip">Click for details</span>
+                    </div>
+
+                    <div class="tag-card" data-tag="column" onclick="openModal('col')">
+                        &lt;col&gt; Column<span class="tooltip">Click for details</span>
+                    </div>
+
+                    <div class="tag-card" data-tag="table body" onclick="openModal('tbody')">
+                        &lt;tbody&gt; Table Body<span class="tooltip">Click for details</span>
+                    </div>
                     <div class="tag-card" data-tag="tr" onclick="openModal('tr')">
                         &lt;tr&gt; Table Row<span class="tooltip">Click for details</span>
+                    </div>
+
+                    <div class="tag-card" data-tag="Table header" onclick="openModal('th')">
+                        &lt;th&gt; Table Header Cell<span class="tooltip">Click for details</span>
                     </div>
                     <div class="tag-card" data-tag="td" onclick="openModal('td')">
                         &lt;td&gt; Table Data Cell<span class="tooltip">Click for details</span>
                     </div>
-                    <div class="tag-card" data-tag="Table header" onclick="openModal('th')">
-                        &lt;th&gt; Table Header Cell<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="caption" onclick="openModal('caption')">
-                        &lt;caption&gt; Table Caption<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="table body" onclick="openModal('tbody')">
-                        &lt;tbody&gt; Table Body<span class="tooltip">Click for details</span>
-                    </div>
                     <div class="tag-card" data-tag="table foot" onclick="openModal('tfoot')">
                         &lt;tfoot&gt; Table Footer<span class="tooltip">Click for details</span>
                     </div>
-                    <div class="tag-card" data-tag="column group" onclick="openModal('colgroup')">
-                        &lt;colgroup&gt; Column Group<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="column" onclick="openModal('col')">
-                        &lt;col&gt; Column<span class="tooltip">Click for details</span>
-                    </div>
-                </div>
-            </section>
 
-
-
-            <!-- LISTS SECTION -->
-            <section id="lists">
-                <h2>List Tags</h2>
-                <div class="cards-grid">
-                    <div class="tag-card" data-tag="ul" onclick="openModal('ul')">
-                        &lt;ul&gt; Unordered List<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="ol" onclick="openModal('ol')">
-                        &lt;ol&gt; Ordered List<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="li" onclick="openModal('li')">
-                        &lt;li&gt; List Item<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="dl" onclick="openModal('dl')">
-                        &lt;dl&gt; Description List<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="dt" onclick="openModal('dt')">
-                        &lt;dt&gt; Description Term<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="dd" onclick="openModal('dd')">
-                        &lt;dd&gt; Description Definition<span class="tooltip">Click for details</span>
-                    </div>
-
-                    <div class="tag-card"><a href="/cheatsheets-html/listtags-cheatsheet.html" target="_blank"> Checkout
+                    <div class="tag-card"><a href="/cheatsheets/tabletags-cheatsheet.html" target="_blank"> Checkout
                             The List Tags CheatSheet</a></div>
                 </div>
-            </section>
+    </div>
+    </section>
 
 
 
-            <section class="quiz quiz-exercise-card">
+    <!-- LISTS SECTION -->
+    <section id="lists">
+        <h2>List Tags</h2>
+        <div class="cards-grid">
+            <div class="tag-card" data-tag="ul" onclick="openModal('ul')">
+                &lt;ul&gt; Unordered List<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="ol" onclick="openModal('ol')">
+                &lt;ol&gt; Ordered List<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="li" onclick="openModal('li')">
+                &lt;li&gt; List Item<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="dl" onclick="openModal('dl')">
+                &lt;dl&gt; Description List<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="dt" onclick="openModal('dt')">
+                &lt;dt&gt; Description Term<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="dd" onclick="openModal('dd')">
+                &lt;dd&gt; Description Definition<span class="tooltip">Click for details</span>
+            </div>
 
-                <h2>Take a short quiz</h2>
-                <p>Which tag is used to navigate other files or pages?</p>
-                <br>
-                <form action="" method="post" target="_blank" rel="opener">
-                    <div class="quizoption">
-                        <input type="radio" name="quizoption" id="quizoption1" value="1">
-                        <label for="quizoption1">
-                            <code>link-tag</code>
-                        </label>
-                    </div>
-                    <div class="quizoption">
-                        <input type="radio" name="quizoption" id="quizoption2" value="1">
-                        <label for="quizoption2">
-                            <code>anchor-tag</code>
-                        </label>
-                    </div>
-                    <div class="quizoption">
-                        <input type="radio" name="quizoption" id="quizoption3" value="1">
-                        <label for="quizoption3">
-                            <code>nav-tag</code>
-                        </label>
-                    </div>
-                    <div class="quizoption">
-                        <input type="radio" name="quizoption" id="quizoption4" value="1">
-                        <label for="quizoption4">
-                            <code>button-tag</code>
-                        </label>
-                    </div>
-                </form>
-            </section>
-
-            <!-- Other HTML tags -->
-            <section id="Other-tags">
-                <h2>Other HTML5 Tags</h2>
-                <div class="cards-grid">
-                    <div class="tag-card" data-tag="Citation" onclick="openModal('cite')">
-                        &lt;cite&gt; Citation<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="inline quote" onclick="openModal('q')">
-                        &lt;q&gt; Inline Quote<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="blockquote" onclick="openModal('blockquote')">
-                        &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
-                    </div>
-                </div>
-                <a href="/pages/other-tags.html" class="more-tags-link" target="_blank">➕ Click here to view and enjoy
-                    more tags</a>
-            </section>
-
-            <section id="Css-tags">
-                <h2>CSS Tags</h2>
-                <div class="cards-grid">
+            <div class="tag-card"><a href="/cheatsheets/listtags-cheatsheet.html" target="_blank"> Checkout
+                    The List Tags CheatSheet</a></div>
+        </div>
+    </section>
 
 
-                    <!-- flexbox-grid-combo -->
-                    <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
-                        Flexbox + Grid Combo<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="text-shadow" onclick="openModal('text-shadow')">text-shadow<span
-                            class="tooltip">Click for details</span></div>
-                </div>
-                <a href="/pages/css-part.html" target="_blank" class="css-link"
-                    style="text-decoration: none; color: inherit;">
-                    <span class="css-icon">🎨</span> Explore CSS Tags
-                </a>
 
-            </section>
+    <section class="quiz quiz-exercise-card">
 
-            <!-- Learn JavaScript Section -->
-            <section id="javascript-tags" style="text-align: center">
-                <h2>Learn JavaScript <span style="color: #f59e0b">⚡</span></h2>
-                <p id="js-des">
-                    Master JavaScript from scratch — variables, functions, DOM, async/await
-                    and more. Interactive cards, live code editor, and quizzes await you!
-                </p>
-                <div id="main-div">
-                    <span id="topic-span">⚡ 40+ Topics</span>
-                    <span id="live-code-span">▶ Live Code Runner</span>
-                    <span id="quizzes-span">📝 Quizzes</span>
-                    <span id="category-filter-span">🔀 Category Filters</span>
-                </div>
-                <div class="button-container">
-                    <a href="/pages/javascript-part.html" target="_blank" id="js-pg-link-a">
-                        ⚡ Start Learning JavaScript →
-                    </a>
-                </div>
+        <h2>Take a short quiz</h2>
+        <p>Which tag is used to navigate other files or pages?</p>
+        <br>
+        <form action="" method="post" target="_blank" rel="opener">
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption1" value="1">
+                <label for="quizoption1">
+                    <code>link-tag</code>
+                </label>
+            </div>
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption2" value="1">
+                <label for="quizoption2">
+                    <code>anchor-tag</code>
+                </label>
+            </div>
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption3" value="1">
+                <label for="quizoption3">
+                    <code>nav-tag</code>
+                </label>
+            </div>
+            <div class="quizoption">
+                <input type="radio" name="quizoption" id="quizoption4" value="1">
+                <label for="quizoption4">
+                    <code>button-tag</code>
+                </label>
+            </div>
+        </form>
+    </section>
 
-            </section>
+    <!-- Other HTML tags -->
+    <section id="Other-tags">
+        <h2>Other HTML5 Tags</h2>
+        <div class="cards-grid">
+            <div class="tag-card" data-tag="Citation" onclick="openModal('cite')">
+                &lt;cite&gt; Citation<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="inline quote" onclick="openModal('q')">
+                &lt;q&gt; Inline Quote<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="blockquote" onclick="openModal('blockquote')">
+                &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
+            </div>
+        </div>
+        <a href="/pages/other-tags.html" class="more-tags-link" target="_blank">➕ Click here to view and enjoy
+            more tags</a>
+    </section>
+
+    <section id="Css-tags">
+        <h2>CSS Tags</h2>
+        <div class="cards-grid">
 
 
-        </main>
+            <!-- flexbox-grid-combo -->
+            <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
+                Flexbox + Grid Combo<span class="tooltip">Click for details</span>
+            </div>
+            <div class="tag-card" data-tag="text-shadow" onclick="openModal('text-shadow')">text-shadow<span
+                    class="tooltip">Click for details</span></div>
+        </div>
+        <a href="/pages/css-part.html" target="_blank" class="css-link" style="text-decoration: none; color: inherit;">
+            <span class="css-icon">🎨</span> Explore CSS Tags
+        </a>
+
+    </section>
+
+    <!-- Learn JavaScript Section -->
+    <section id="javascript-tags" style="text-align: center">
+        <h2>Learn JavaScript <span style="color: #f59e0b">⚡</span></h2>
+        <p id="js-des">
+            Master JavaScript from scratch — variables, functions, DOM, async/await
+            and more. Interactive cards, live code editor, and quizzes await you!
+        </p>
+        <div id="main-div">
+            <span id="topic-span">⚡ 40+ Topics</span>
+            <span id="live-code-span">▶ Live Code Runner</span>
+            <span id="quizzes-span">📝 Quizzes</span>
+            <span id="category-filter-span">🔀 Category Filters</span>
+        </div>
+        <div class="button-container">
+            <a href="/pages/javascript-part.html" target="_blank" id="js-pg-link-a">
+                ⚡ Start Learning JavaScript →
+            </a>
+        </div>
+
+    </section>
+
+
+    </main>
 
     </div>
     <footer class="site-footer">
@@ -440,16 +428,6 @@
                         <li><a href="/pages/terms-of-service.html"><i class="fa-solid fa-file-contract"></i> Terms of
                                 Service</a></li>
                     </ul>
-
-                    <!-- <div class="footer-newsletter">
-                        <p class="footer-newsletter-label">Stay updated</p>
-                        <div class="footer-newsletter-row">
-                            <input type="email" placeholder="your@email.com" class="footer-newsletter-input" aria-label="Subscribe email" />
-                            <button class="footer-newsletter-btn" aria-label="Subscribe">
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
