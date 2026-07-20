@@ -4,243 +4,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Table Tags Cheatsheet</title>
+    <title>HTML Form Tags Cheatsheet</title>
     <link rel="stylesheet" href="./cheatsheets-css/main.css">
+
 </head>
 
 <body>
+
+
     <div class="wrap">
 
-        <h1 class="title"><span>Table Tags</span> Cheatsheet</h1>
-        <p class="tagline">"A quick reference for Table tags you'll actually use"</p>
+        <h1 class="title"><span>Form Tags</span> Cheatsheet</h1>
+        <p class="tagline">"A quick reference for Form tags you'll actually use"</p>
         <p class="byline">Updated July 2026</p>
         <section id="lists">
             <!-- <h2 class="section-title">Lists</h2> -->
-            <p class="section-desc">Table, Table Caption, Column Group, Column, Table Body, Table Row, Table Header
-                Cell, Table Data Cell,<br> Table Footer
+            <p class="section-desc">Form, Fieldset, Legend, Label, Input, Textarea, Select, Optgroup, Option, Datalist,
+                Progress, Meter, Output.
             </p>
 
-            <h3 class="sub-title">Table</h3>
+            <!-- ==========================================
+     HTML5 FORM CATEGORY INDIVIDUAL BLOCKS
+     ========================================== -->
+
+            <!-- 1. Form Tag -->
+            <h3 class="sub-title">Form</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">caption</span>&gt;Monthly Expenses&lt;/<span class="tag">caption</span>&gt;
-    &lt;<span class="tag">thead</span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">th</span>&gt;Item&lt;/<span class="tag">th</span>&gt;
-            &lt;<span class="tag">th</span>&gt;Price&lt;/<span class="tag">th</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-    &lt;/<span class="tag">thead</span>&gt;
-    &lt;<span class="tag">tbody</span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">td</span>&gt;Internet&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;$30&lt;/<span class="tag">td</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-    &lt;/<span class="tag">tbody</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+                <pre>&lt;<span class="tag">form</span> action="/api/v1/auth" method="POST" autocomplete="on"&gt;
+    &lt;!-- Interactive fields go directly inside this master wrapper --&gt;
+&lt;/<span class="tag">form</span>&gt;</pre>
             </div>
 
-            <!-- Table Caption -->
-            <h3 class="sub-title">Table Caption</h3>
+            <!-- 2. Fieldset Tag -->
+            <h3 class="sub-title">Fieldset</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">caption</span>&gt;Student Exam Results 2026&lt;/<span class="tag">caption</span>&gt;
-    &lt;<span class="tag">tr</span>&gt;
-        &lt;<span class="tag">th</span>&gt;Name&lt;/<span class="tag">th</span>&gt;
-        &lt;<span class="tag">th</span>&gt;Grade&lt;/<span class="tag">th</span>&gt;
-    &lt;/<span class="tag">tr</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+                <pre>&lt;<span class="tag">fieldset</span> name="user-credentials"&gt;
+    &lt;label for="pass"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="pass" /&gt;
+&lt;/<span class="tag">fieldset</span>&gt;</pre>
             </div>
 
-
-            <!-- Table column group-->
-            <h3 class="sub-title">Column Group</h3>
+            <!-- 3. Legend Tag -->
+            <h3 class="sub-title">Legend</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">colgroup</span>&gt;
-        &lt;<span class="tag">col</span> span="2" class="highlight-group" /&gt;
-    &lt;/<span class="tag">colgroup</span>&gt;
-    &lt;<span class="tag">tr</span>&gt;
-        &lt;<span class="tag">td</span>&gt;ID&lt;/<span class="tag">td</span>&gt;
-        &lt;<span class="tag">td</span>&gt;User&lt;/<span class="tag">td</span>&gt;
-    &lt;/<span class="tag">tr</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+                <pre>&lt;<span class="tag">fieldset</span>&gt;
+    &lt;<span class="tag">legend</span>&gt;Security Parameters&lt;/<span class="tag">legend</span>&gt;
+    &lt;!-- Subsequent child inputs populate here --&gt;
+&lt;/<span class="tag">fieldset</span>&gt;</pre>
             </div>
 
-
-            <!-- Table Column -->
-            <h3 class="sub-title">Column</h3>
+            <!-- 4. Label Tag -->
+            <h3 class="sub-title">Label</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">colgroup</span>&gt;
-        &lt;<span class="tag">col</span> class="hero-column" /&gt;
-        &lt;<span class="tag">col</span> class="data-column" /&gt;
-    &lt;/<span class="tag">colgroup</span>&gt;
-    &lt;<span class="tag">tr</span>&gt;
-        &lt;<span class="tag">td</span>&gt;Product&lt;/<span class="tag">td</span>&gt;
-        &lt;<span class="tag">td</span>&gt;Active&lt;/<span class="tag">td</span>&gt;
-    &lt;/<span class="tag">tr</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+                <pre>&lt;<span class="tag">label</span> for="userToken"&gt;Secure Matrix Token:&lt;/<span class="tag">label</span>&gt;
+&lt;input type="text" id="userToken" /&gt;</pre>
             </div>
 
-            <!-- Table Body  -->
-            <h3 class="sub-title">Table Body</h3>
+            <!-- 5. Input Tag -->
+            <h3 class="sub-title">Input</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">tbody</span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">td</span>&gt;John Doe&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;Developer&lt;/<span class="tag">td</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-    &lt;/<span class="tag">tbody</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+                <pre>&lt;<span class="tag">input</span> type="email" id="email" placeholder="dev@domain.com" required /&gt;</pre>
             </div>
 
-            <!-- Table Row -->
-            <h3 class="sub-title">Table Row</h3>
+            <!-- 6. Textarea Tag -->
+            <h3 class="sub-title">Textarea</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">tr</span>&gt;
-        &lt;<span class="tag">td</span>&gt;Row Data 1&lt;/<span class="tag">td</span>&gt;
-        &lt;<span class="tag">td</span>&gt;Row Data 2&lt;/<span class="tag">td</span>&gt;
-    &lt;/<span class="tag">tr</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+                <pre>&lt;<span class="tag">textarea</span> id="userBio" rows="5" placeholder="Write development matrix history..."&gt;&lt;/<span class="tag">textarea</span>&gt;</pre>
             </div>
 
-            <!-- Table header cell -->
-            <h3 class="sub-title">Table Header Cell</h3>
+            <!-- 7. Select Tag -->
+            <h3 class="sub-title">Select</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">tr</span>&gt;
-    &lt;<span class="tag">th</span>&gt;Heading 1&lt;/<span class="tag">th</span>&gt;
-    &lt;<span class="tag">th</span>&gt;Heading 2&lt;/<span class="tag">th</span>&gt;
-&lt;/<span class="tag">tr</span>&gt;</pre>
-            </div>
-            <h3 class="sub-title">Table Data Cell</h3>
-            <div class="codebox">
-                <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
-                        <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
-                        <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
-                            stroke="currentColor" stroke-width="1.2" />
-                    </svg></button>
-                <pre>&lt;<span class="tag">tr</span>&gt;
-    &lt;<span class="tag">td</span>&gt;Data Value 1&lt;/<span class="tag">td</span>&gt;
-    &lt;<span class="tag">td</span>&gt;Data Value 2&lt;/<span class="tag">td</span>&gt;
-&lt;/<span class="tag">tr</span>&gt;</pre>
+                <pre>&lt;<span class="tag">select</span> id="frameworkSelector" name="framework"&gt;
+    &lt;option value="vanilla"&gt;Native JavaScript&lt;/option&gt;
+&lt;/<span class="tag">select</span>&gt;</pre>
             </div>
 
-            <!-- Table footer -->
-            <h3 class="sub-title">Table Footer</h3>
+            <!-- 8. Optgroup Tag -->
+            <h3 class="sub-title">Optgroup</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">tfoot</span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">td</span>&gt;Total&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;$150&lt;/<span class="tag">td</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-    &lt;/<span class="tag">tfoot</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+                <pre>&lt;select id="techStack"&gt;
+    &lt;<span class="tag">optgroup</span> label="Backend Services"&gt;
+        &lt;option value="node"&gt;Node.js Runtime&lt;/option&gt;
+    &lt;/<span class="tag">optgroup</span>&gt;
+&lt;/select&gt;</pre>
             </div>
 
-            <h3 class="sub-title">HTML Table Complete Core Snippet</h3>
+            <!-- 9. Option Tag -->
+            <h3 class="sub-title">Option</h3>
             <div class="codebox">
                 <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
                         <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
                         <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
                             stroke="currentColor" stroke-width="1.2" />
                     </svg></button>
-                <pre>&lt;<span class="tag">table</span>&gt;
-    &lt;<span class="tag">caption</span>&gt;Enterprise Financial Metrics&lt;/<span class="tag">caption</span>&gt;
-    
-    &lt;<span class="tag">colgroup</span>&gt;
-        &lt;<span class="tag">col</span> class="col-id" /&gt;
-        &lt;<span class="tag">col</span> span="2" class="col-metrics" /&gt;
-    &lt;/<span class="tag">colgroup</span>&gt;
+                <pre>&lt;<span class="tag">option</span> value="git-cloud" selected&gt;GitHub Cloud Delivery&lt;/<span class="tag">option</span>&gt;</pre>
+            </div>
 
-    &lt;<span class="tag">thead</span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">th</span> scope="col"&gt;ID&lt;/<span class="tag">th</span>&gt;
-            &lt;<span class="tag">th</span> scope="col"&gt;Quarter&lt;/<span class="tag">th</span>&gt;
-            &lt;<span class="tag">th</span> scope="col"&gt;Revenue&lt;/<span class="tag">th</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-    &lt;/<span class="tag">thead</span>&gt;
+            <!-- 10. Datalist Tag -->
+            <h3 class="sub-title">Datalist</h3>
+            <div class="codebox">
+                <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+                        <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
+                            stroke="currentColor" stroke-width="1.2" />
+                    </svg></button>
+                <pre>&lt;input list="cloudProviders" /&gt;
+&lt;<span class="tag">datalist</span> id="cloudProviders"&gt;
+    &lt;option value="GitHub Releases" /&gt;
+    &lt;option value="Firebase Spark" /&gt;
+&lt;/<span class="tag">datalist</span>&gt;</pre>
+            </div>
 
-    &lt;<span class="tag">tbody</span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">td</span>&gt;#01&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;Q1 2026&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;$45,000&lt;/<span class="tag">td</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">td</span>&gt;#02&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;Q2 2026&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;$52,000&lt;/<span class="tag">td</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-    &lt;/<span class="tag">tbody</span>&gt;
+            <!-- 11. Progress Tag -->
+            <h3 class="sub-title">Progress</h3>
+            <div class="codebox">
+                <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+                        <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
+                            stroke="currentColor" stroke-width="1.2" />
+                    </svg></button>
+                <pre>&lt;<span class="tag">progress</span> value="85" max="100"&gt;85%&lt;/<span class="tag">progress</span>&gt;</pre>
+            </div>
 
-    &lt;<span class="tag"><tfoot></span>&gt;
-        &lt;<span class="tag">tr</span>&gt;
-            &lt;<span class="tag">td</span> colspan="2"&gt;Gross Total&lt;/<span class="tag">td</span>&gt;
-            &lt;<span class="tag">td</span>&gt;$97,000&lt;/<span class="tag">td</span>&gt;
-        &lt;/<span class="tag">tr</span>&gt;
-    &lt;/<span class="tag">tfoot</span>&gt;
-&lt;/<span class="tag">table</span>&gt;</pre>
+            <!-- 12. Meter Tag -->
+            <h3 class="sub-title">Meter</h3>
+            <div class="codebox">
+                <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+                        <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
+                            stroke="currentColor" stroke-width="1.2" />
+                    </svg></button>
+                <pre>&lt;<span class="tag">meter</span> min="0" max="100" low="30" high="75" optimum="20" value="15"&gt;Safe Load&lt;/<span class="tag">meter</span>&gt;</pre>
+            </div>
+
+            <!-- 13. Output Tag -->
+            <h3 class="sub-title">Output</h3>
+            <div class="codebox">
+                <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+                        <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
+                            stroke="currentColor" stroke-width="1.2" />
+                    </svg></button>
+                <pre>&lt;<span class="tag">output</span> name="result" for="paramA paramB"&gt;Calculated Secure Output&lt;/<span class="tag">output</span>&gt;</pre>
+            </div>
+            <!-- Form tags full core snipet -->
+            <h3 class="sub-title">HTML Form Complete Core Snippet</h3>
+            <div class="codebox">
+                <button class="copy-icon" onclick="copyBox(this)"><svg viewBox="0 0 16 16" fill="none">
+                        <rect x="2" y="4" width="9" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+                        <path d="M5 4V3C5 2.4 5.4 2 6 2H13C13.6 2 14 2.4 14 3V11C14 11.6 13.6 12 13 12H12"
+                            stroke="currentColor" stroke-width="1.2" />
+                    </svg></button>
+                <pre>&lt;<span class="tag">form</span> action="/api/v1/auth" method="POST" autocomplete="on"&gt;
+    &lt;<span class="tag">fieldset</span>&gt;
+        &lt;<span class="tag">legend</span>&gt;Developer Security Registry&lt;/<span class="tag">legend</span>&gt;
+
+        &lt;!-- 1. Text Inputs with Labels --&gt;
+        &lt;<span class="tag">label</span> for="devToken"&gt;Secure Matrix Token:&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">input</span> type="text" id="devToken" placeholder="Enter API Key" required /&gt;
+
+        &lt;!-- 2. Multi-line Text Area --&gt;
+        &lt;<span class="tag">label</span> for="devBio"&gt;Project Deployment Bio:&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">textarea</span> id="devBio" rows="4" placeholder="Describe tracking matrix..."&gt;&lt;/<span class="tag">textarea</span>&gt;
+
+        &lt;!-- 3. Dropdown Group Selection --&gt;
+        &lt;<span class="tag">label</span> for="cloudPlatform"&gt;Cloud Delivery Source:&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">select</span> id="cloudPlatform" name="platform"&gt;
+            &lt;<span class="tag">optgroup</span> label="Free Cloud Storages"&gt;
+                &lt;<span class="tag">option</span> value="github-releases" selected&gt;GitHub Releases CDN&lt;/<span class="tag">option</span>&gt;
+                &lt;<span class="tag">option</span> value="firebase-spark"&gt;Firebase Spark Plan&lt;/<span class="tag">option</span>&gt;
+            &lt;/<span class="tag">optgroup</span>&gt;
+        &lt;/<span class="tag">select</span>&gt;
+
+        &lt;!-- 4. Input with Data List Suggestions --&gt;
+        &lt;<span class="tag">label</span> for="ideChoice"&gt;Preferred IDE Editor:&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">input</span> list="editors" id="ideChoice" /&gt;
+        &lt;<span class="tag">datalist</span> id="editors"&gt;
+            &lt;<span class="tag">option</span> value="VS Code" /&gt;
+            &lt;<span class="tag">option</span> value="Cursor AI" /&gt;
+        &lt;/<span class="tag">datalist</span>&gt;
+
+        &lt;!-- 5. Status Graphics and Calculations --&gt;
+        &lt;<span class="tag">label</span>&gt;Server Assets Sync Progress:&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">progress</span> value="85" max="100"&gt;85%&lt;/<span class="tag">progress</span>&gt;
+
+        &lt;<span class="tag">label</span>&gt;Cloud Bandwidth Usage Load:&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">meter</span> min="0" max="100" low="30" high="75" optimum="20" value="15"&gt;Safe&lt;/<span class="tag">meter</span>&gt;
+
+        &lt;<span class="tag">label</span>&gt;Generated Matrix Key Output:&lt;/<span class="tag">label</span>&gt;
+        &lt;<span class="tag">output</span> name="result"&gt;SYS-8821&lt;/<span class="tag">output</span>&gt;
+
+        &lt;!-- 6. Submission Control Trigger --&gt;
+        &lt;<span class="tag">button</span> type="submit"&gt;Deploy Parameters&lt;/<span class="tag">button</span>&gt;
+    &lt;/fieldset&gt;
+&lt;/<span class="tag">form</span>&gt;</pre>
             </div>
 
             <section id="tips">
                 <h2 class="section-title">Beginner Tips</h2>
                 <ol class="tips">
-                    <li>Always use the <code class="inline">scope="col"</code> or <code
-                            class="inline">scope="row"</code> attribute on headers so screen readers can interpret
-                        layouts.</li>
-                    <li>Utilize <code class="inline">colgroup</code> to write CSS targeting entire data columns globally
-                        instead of styling individual column cells.</li>
-                    <li>Apply a structural <code class="inline">tfoot</code> component to handle summaries cleanly so
-                        multi-page prints repeat totals gracefully.</li>
-                    <li>Inject <code class="inline">data-*</code> attributes into cell markups to make modern responsive
-                        layouts stack effortlessly via pure CSS.</li>
-                    <li>Ensure your <code class="inline">caption</code> tags directly follow parent wrappers to
-                        instantly bridge accessibility gaps.</li>
-                    <li>Combine horizontal cell distributions safely using standard structural parameters like <code
-                            class="inline">colspan</code> for complex rows.</li>
+                    <li>Always bind <code class="inline">label</code> tags to inputs using matching <code
+                            class="inline">for</code> and <code class="inline">id</code> attributes to maximize
+                        screen reader accessibility and touch target hitboxes.</li>
+                    <li>Utilize <code class="inline">optgroup</code> arrays to logically structure huge dropdown
+                        choices, which makes mobile selector grids much cleaner to navigate.</li>
+                    <li>Choose semantic <code class="inline">progress</code> bars purely for continuous
+                        real-time
+                        tasks (like file uploads), while reserving <code class="inline">meter</code> graphics
+                        for
+                        scalar values within defined min/max limits (like storage spaces).</li>
+                    <li>Prefer setting up native validation parameters like <code class="inline">required</code>,
+                        <code class="inline">pattern</code>, and specific input types rather than executing
+                        basic
+                        verification validation loops via heavy JavaScript.
+                    </li>
+                    <li>Avoid adding plain layout text strings directly inside form grids; always wrap label
+                        contexts inside descriptive structural blocks to retain screen semantic scores.</li>
+                    <li>Always explicitly configure the <code class="inline">type="submit"</code> or <code
+                            class="inline">type="button"</code> attribute on buttons to prevent web browsers
+                        from
+                        executing unexpected default form submissions.</li>
                 </ol>
             </section>
 
@@ -251,7 +275,7 @@
     </div> -->
             <div class="button-wrapper">
                 <!-- Left Side: Download Button (Opens PDF link in a new tab) -->
-                <a href="/pdf-files/table-tags-pdf.pdf" target="_blank" class="action-btn download-btn">
+                <a href="/pdf-files/form-tags-pdf.pdf" target="_blank" class="action-btn download-btn">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                     </svg>
@@ -292,6 +316,7 @@
                         </button>
                     </div>
 
+                    <!-- Social Media Links Sharing Tray Grid Layout -->
                     <!-- Social Media Links Sharing Tray Grid Layout -->
                     <div class="social-share-tray">
 
@@ -334,7 +359,6 @@
     <footer>
         Made for quick reference — bookmark this page and come back whenever you forget a tag.
     </footer>
-
     <script src="./cheatsheets-js/main.js"></script>
 </body>
 
