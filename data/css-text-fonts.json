@@ -151,14 +151,6 @@
         "quiz": "Which property sets the vertical alignment of inline or table-cell elements?",
         "answer": "vertical-align"
     },
-    "text-shadow": {
-        "title": "text-shadow Property",
-        "history": "<h1>The text-shadow property adds shadow effects to text.</h1>",
-        "tip": "You can use values like 2px 2px 5px gray to specify the text shadow.",
-        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Shadow Example</title>\n  <style>\n    .text {\n      font-size: 30px;\n      text-shadow: 2px 2px 5px gray;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-shadow Property Example</h2>\n  <p class=\"text\">This text has a shadow using text-shadow.</p>\n</body>\n</html>",
-        "quiz": "Which property adds shadow effects to text?",
-        "answer": "text-shadow"
-    },
     "overflow-wrap": {
         "title": "overflow-wrap Property",
         "history": "<h1>The overflow-wrap property specifies whether text should break when it overflows its container.</h1>",

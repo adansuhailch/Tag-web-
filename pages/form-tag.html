@@ -50,11 +50,10 @@
             <div class="tag-card" onclick="openModal('label')">&lt;label&gt;<span class="tooltip">Click for
                     datails</span>
                 Label</div>
-            <div class="tag-card" onclick="openModal('fieldset')">&lt;fieldset&gt;<span class="tooltip">Click for
-                    datails</span> Fieldset</div>
-            <div class="tag-card" onclick="openModal('legend')">&lt;legend&gt;<span class="tooltip">Click for
-                    datails</span>
-                Legend</div>
+
+            <div class="tag-card" data-tag="input" onclick="openModal('input')">
+                &lt;input&gt; Input<span class="tooltip">Click for details</span>
+            </div>
             <div class="tag-card" onclick="openModal('datalist')">&lt;datalist&gt;<span class="tooltip">Click for
                     datails</span> Data List</div>
             <div class="tag-card" onclick="openModal('output')">&lt;output&gt;<span class="tooltip">Click for
@@ -67,6 +66,8 @@
             <div class="tag-card" onclick="openModal('meter')">&lt;meter&gt;<span class="tooltip">Click for
                     details</span>
             </div>
+
+            <div class="tag-card"><a href="/cheatsheets/formtags-cheatsheet.html" target="_blank"> Checkout The For Tags CheatSheet</a></div>
         </div>
     </section>
 
@@ -103,8 +104,8 @@
         </form>
     </section>
 
-
-    <script src="/js/form-tag.js"></script>
+<!-- 
+    <script src="/js/form-tag.js"></script> -->
     <script src="/js/core-actions.js"></script>
 </body>
 

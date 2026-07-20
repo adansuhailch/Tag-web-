@@ -87,6 +87,70 @@
         "quiz": "Which tag is used to make text bold?",
         "answer": "b"
     },
+    "fieldset": {
+        "title": "<fieldset> Fieldset Tag",
+        "history": "<h1>Groups related interactive input parameters inside a form grid.</h1>",
+        "tip": "Always group form fields with a unique <code class='inline'>&lt;fieldset&gt;</code> container to enhance accessibility scores for screen readers.",
+        "code": "<fieldset>\n  <!-- Fieldset focus: Is visually drawing the outer border box container -->\n    <label for='email'>Email:</label>\n    <legend>Account Security</legend>\n    <label for='pass'>Password:</label>\n    <input type='password' id='pass' required>\n</fieldset>",
+        "quiz": "Which tag groups related elements and sets visual boundaries inside a form layout?",
+        "answer": "fieldset"
+    },
+    "legend": {
+        "title": "<legend> Legend Tag",
+        "history": "<h1>Establishes a semantic caption heading for a parent fieldset element.</h1>",
+        "tip": "The <code class='inline'>&lt;legend&gt;</code> tag must be nested immediately after the opening fieldset tag to work properly.",
+        "code": "<fieldset>\n    <legend>Account Security</legend>\n  <!-- Legend focus: Is cutting the border to write the title text here -->  \n <label for='pass'>Password:</label>\n    <input type='password' id='pass' required>\n</fieldset>",
+        "quiz": "Which operational HTML tag acts as the explicit heading caption for a fieldset box?",
+        "answer": "legend"
+    },
+    "form": {
+        "title": "<form> Form Container",
+        "history": "<h1> Forms for user input</h1>",
+        "tip": "The <form> tag is used to create an HTML form for user input.",
+        "code": "<form><input type='text' placeholder='Name'><button>Submit</button></form>",
+        "quiz": "Which tag wraps form elements?",
+        "answer": "form"
+    },
+    "input": {
+        "title": "<input> Input Field",
+        "history": "<h1> For text, radio, checkbox, etc.</h1>",
+        "tip": "The <input> tag is used to create interactive controls for web-based forms to accept data from the user.",
+        "code": "<input type='text' placeholder='Name'>",
+        "quiz": "Which tag is used for input fields?",
+        "answer": "input"
+    },
+    "header": {
+        "title": "<header> Header Tag",
+        "history": "<h1> Defines a container for introductory content or navigation links in HTML.</h1>",
+        "tip": "The <header> tag is used to define the header of a webpage. It typically contains the website's title, navigation links, or other introductory content.",
+        "code": "<header>\n  <h1>My Website</h1>\n  <nav>\n    <a href='#home'>Home</a>\n    <a href='#about'>About</a>\n    <a href='#contact'>Contact</a>\n  </nav>\n</header>",
+        "quiz": "Which tag is used to define the top section of a webpage?",
+        "answer": "header"
+    },
+    "footer": {
+        "title": "<footer> Footer Tag",
+        "history": "<h1> Defines a container for footer content like author info, copyright, or links.</h1>",
+        "tip": "The <footer> tag is used to define the footer of a webpage. It typically contains copyright information, author info, or other supplementary content.",
+        "code": "<footer>\n  <p>© 2025 My Website. All rights reserved.</p>\n  <a href='#privacy'>Privacy Policy</a>\n</footer>",
+        "quiz": "Which tag is used to define the bottom section of a webpage?",
+        "answer": "footer"
+    },
+    "img": {
+        "title": "<img> Image",
+        "history": "<h1> For embedding images</h1>",
+        "tip": "The <img> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image file.",
+        "code": "<img src='https://i.pinimg.com/474x/9a/f0/36/9af036b6c356add9971cae4ba9e1058a.jpg' alt='img sample' width='100%'>",
+        "quiz": "Which tag is used to show image?",
+        "answer": "img"
+    },
+    "audio": {
+        "title": "<audio> Audio Tag",
+        "history": "<h1> Introduced in HTML5, used to embed audio files with optional controls.</h1>",
+        "tip": "The <audio> tag is used to embed audio content in a webpage. It can include controls for play, pause, and volume.",
+        "code": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0FB5ILDICqwK6xj7W1RP9u?utm_source=generator&si=9f37f7f7b989411c\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+        "quiz": "Which tag is used to embed audio in HTML?",
+        "answer": "audio"
+    },
     "a": {
         "title": "<a> Anchor tag",
         "history": "<h1> Used to navigate other files or pages</h1>",
@@ -109,7 +173,79 @@
         "title": "target Attribute",
         "history": "<h1> It jumps the link into new webpage without opening the link in the same page</h1>",
         "tip": "The target attribute is used to specify where to open the linked document.",
-        "code": "<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools!</a>"
+        "code": "<a href='https://adandev.is-a.dev' target='_blank'>Visit My Portfolio!</a>\n<!--If the web not open when you click the link then try Ctrl+Click on the link and then web perfectly open in the next window of your browser. thank me later:) -->"
+    },
+    "table": {
+        "title": "<table> Table Tag",
+        "history": "<h1> Defines a table structure in HTML.</h1>",
+        "tip": "The <table> tag is used to create an HTML table.",
+        "code": "<table border='1'>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>",
+        "quiz": "Which tag defines a table in HTML?",
+        "answer": "table"
+    },
+    "caption": {
+        "title": "<caption> Table Caption Tag",
+        "history": "<h1> Defines a title or caption for a table.</h1>",
+        "tip": "The <caption> tag is used to define a caption for a table.",
+        "code": "<table border='1'>\n  <caption>Student Marks</caption>\n  <tr><th>Name</th><th>Marks</th></tr>\n  <tr><td>Ali</td><td>90</td></tr>\n</table>"
+    },
+    "colgroup": {
+        "title": "<colgroup> Column Group Tag",
+        "history": "<h1> Defines a group of columns in a table for styling.</h1>",
+        "tip": "The <colgroup> tag is used to group columns in a table.",
+        "code": "<table border='1'>\n  <colgroup>\n    <col span='2' style='background:#f9f9f9'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
+    },
+    "col": {
+        "title": "<col> Column Tag",
+        "history": "<h1> Defines column properties inside a <colgroup>.</h1>",
+        "tip": "The <col> tag is used to define properties for a single column.",
+        "code": "<table border='1'>\n  <colgroup>\n    <col style='background:#eee'>\n    <col style='background:#ddd'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
+    },
+    "tbody": {
+        "title": "<tbody> Table Body Tag",
+        "history": "<h1> Groups the main body content in a table.</h1>",
+        "tip": "The <tbody> tag is used to group the main body content in a table.",
+        "code": "<table border='1'>\n  <thead><tr><th>Name</th><th>Age</th></tr></thead>\n  <tbody>\n    <tr><td>Ali</td><td>20</td></tr>\n    <tr><td>Sara</td><td>22</td></tr>\n  </tbody>\n</table>",
+        "quiz": "Which tag groups the main body rows in a table?",
+        "answer": "tbody"
+    },
+    "tr": {
+        "title": "<tr> Table Row Tag",
+        "history": "<h1> Defines a row of cells in a table.</h1>",
+        "tip": "The <tr> tag is used to define a row in a table.",
+        "code": "<table border='1'>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>",
+        "quiz": "Which tag defines a row in a table?",
+        "answer": "tr"
+    },
+    "th": {
+        "title": "<th> Table Header Cell Tag",
+        "history": "<h1> Defines a header cell in a table.</h1>",
+        "tip": "The <th> tag is used to define a header cell in a table.",
+        "code": "<table border='1'>\n  <tr><th>Name</th><th>Age</th></tr>\n</table>",
+        "quiz": "Which tag defines a header cell in a table?",
+        "answer": "th"
+    },
+    "thead": {
+        "title": "<thead> Table Head Tag",
+        "history": "<h1> Groups the header content in a table.</h1>",
+        "tip": "The <thead> tag is used to group the header content in a table.",
+        "code": "<table border='1'>\n  <thead>\n    <tr><th>Name</th><th>Age</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Ali</td><td>20</td></tr>\n  </tbody>\n</table>",
+        "quiz": "Which tag groups the header rows in a table?",
+        "answer": "thead"
+    },
+    "td": {
+        "title": "<td> Table Data Cell Tag",
+        "history": "<h1> Defines a standard data cell in a table.</h1>",
+        "tip": "The <td> tag is used to define a data cell in a table.",
+        "code": "<table border='1'>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
+    },
+    "tfoot": {
+        "title": "<tfoot> Table Footer Tag",
+        "history": "<h1> Groups the footer content in a table, often for totals.</h1>",
+        "tip": "The <tfoot> tag is used to group the footer content in a table.",
+        "code": "<table border='1'>\n  <thead><tr><th>Item</th><th>Price</th></tr></thead>\n  <tbody>\n    <tr><td>Apple</td><td>$2</td></tr>\n    <tr><td>Banana</td><td>$1</td></tr>\n  </tbody>\n  <tfoot>\n    <tr><td>Total</td><td>$3</td></tr>\n  </tfoot>\n</table>",
+        "quiz": "Which tag groups the footer rows in a table?",
+        "answer": "tfoot"
     },
     "ul": {
         "title": "<ul> Unordered List",
@@ -153,126 +289,6 @@
         "tip": "The <dd> tag is used to define the description or value of a term in a description list.",
         "code": "<dl><dt>JavaScript</dt><dd>A programming language for the web</dd></dl>"
     },
-    "form": {
-        "title": "<form> Form Container",
-        "history": "<h1> Forms for user input</h1>",
-        "tip": "The <form> tag is used to create an HTML form for user input.",
-        "code": "<form><input type='text' placeholder='Name'><button>Submit</button></form>",
-        "quiz": "Which tag wraps form elements?",
-        "answer": "form"
-    },
-    "input": {
-        "title": "<input> Input Field",
-        "history": "<h1> For text, radio, checkbox, etc.</h1>",
-        "tip": "The <input> tag is used to create interactive controls for web-based forms to accept data from the user.",
-        "code": "<input type='text' placeholder='Name'>",
-        "quiz": "Which tag is used for input fields?",
-        "answer": "input"
-    },
-    "audio": {
-        "title": "<audio> Audio Tag",
-        "history": "<h1> Introduced in HTML5, used to embed audio files with optional controls.</h1>",
-        "tip": "The <audio> tag is used to embed audio content in a webpage. It can include controls for play, pause, and volume.",
-        "code": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0FB5ILDICqwK6xj7W1RP9u?utm_source=generator&si=9f37f7f7b989411c\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
-        "quiz": "Which tag is used to embed audio in HTML?",
-        "answer": "audio"
-    },
-    "img": {
-        "title": "<img> Image",
-        "history": "<h1> For embedding images</h1>",
-        "tip": "The <img> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image file.",
-        "code": "<img src='https://i.pinimg.com/474x/9a/f0/36/9af036b6c356add9971cae4ba9e1058a.jpg' alt='img sample' width='100%'>",
-        "quiz": "Which tag is used to show image?",
-        "answer": "img"
-    },
-    "header": {
-        "title": "<header> Header Tag",
-        "history": "<h1> Defines a container for introductory content or navigation links in HTML.</h1>",
-        "tip": "The <header> tag is used to define the header of a webpage. It typically contains the website's title, navigation links, or other introductory content.",
-        "code": "<header>\n  <h1>My Website</h1>\n  <nav>\n    <a href='#home'>Home</a>\n    <a href='#about'>About</a>\n    <a href='#contact'>Contact</a>\n  </nav>\n</header>",
-        "quiz": "Which tag is used to define the top section of a webpage?",
-        "answer": "header"
-    },
-    "footer": {
-        "title": "<footer> Footer Tag",
-        "history": "<h1> Defines a container for footer content like author info, copyright, or links.</h1>",
-        "tip": "The <footer> tag is used to define the footer of a webpage. It typically contains copyright information, author info, or other supplementary content.",
-        "code": "<footer>\n  <p>© 2025 My Website. All rights reserved.</p>\n  <a href='#privacy'>Privacy Policy</a>\n</footer>",
-        "quiz": "Which tag is used to define the bottom section of a webpage?",
-        "answer": "footer"
-    },
-    "table": {
-        "title": "<table> Table Tag",
-        "history": "<h1> Defines a table structure in HTML.</h1>",
-        "tip": "The <table> tag is used to create an HTML table.",
-        "code": "<table border='1'>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>",
-        "quiz": "Which tag defines a table in HTML?",
-        "answer": "table"
-    },
-    "caption": {
-        "title": "<caption> Table Caption Tag",
-        "history": "<h1> Defines a title or caption for a table.</h1>",
-        "tip": "The <caption> tag is used to define a caption for a table.",
-        "code": "<table border='1'>\n  <caption>Student Marks</caption>\n  <tr><th>Name</th><th>Marks</th></tr>\n  <tr><td>Ali</td><td>90</td></tr>\n</table>"
-    },
-    "thead": {
-        "title": "<thead> Table Head Tag",
-        "history": "<h1> Groups the header content in a table.</h1>",
-        "tip": "The <thead> tag is used to group the header content in a table.",
-        "code": "<table border='1'>\n  <thead>\n    <tr><th>Name</th><th>Age</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Ali</td><td>20</td></tr>\n  </tbody>\n</table>",
-        "quiz": "Which tag groups the header rows in a table?",
-        "answer": "thead"
-    },
-    "tbody": {
-        "title": "<tbody> Table Body Tag",
-        "history": "<h1> Groups the main body content in a table.</h1>",
-        "tip": "The <tbody> tag is used to group the main body content in a table.",
-        "code": "<table border='1'>\n  <thead><tr><th>Name</th><th>Age</th></tr></thead>\n  <tbody>\n    <tr><td>Ali</td><td>20</td></tr>\n    <tr><td>Sara</td><td>22</td></tr>\n  </tbody>\n</table>",
-        "quiz": "Which tag groups the main body rows in a table?",
-        "answer": "tbody"
-    },
-    "tfoot": {
-        "title": "<tfoot> Table Footer Tag",
-        "history": "<h1> Groups the footer content in a table, often for totals.</h1>",
-        "tip": "The <tfoot> tag is used to group the footer content in a table.",
-        "code": "<table border='1'>\n  <thead><tr><th>Item</th><th>Price</th></tr></thead>\n  <tbody>\n    <tr><td>Apple</td><td>$2</td></tr>\n    <tr><td>Banana</td><td>$1</td></tr>\n  </tbody>\n  <tfoot>\n    <tr><td>Total</td><td>$3</td></tr>\n  </tfoot>\n</table>",
-        "quiz": "Which tag groups the footer rows in a table?",
-        "answer": "tfoot"
-    },
-    "tr": {
-        "title": "<tr> Table Row Tag",
-        "history": "<h1> Defines a row of cells in a table.</h1>",
-        "tip": "The <tr> tag is used to define a row in a table.",
-        "code": "<table border='1'>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>",
-        "quiz": "Which tag defines a row in a table?",
-        "answer": "tr"
-    },
-    "td": {
-        "title": "<td> Table Data Cell Tag",
-        "history": "<h1> Defines a standard data cell in a table.</h1>",
-        "tip": "The <td> tag is used to define a data cell in a table.",
-        "code": "<table border='1'>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
-    },
-    "th": {
-        "title": "<th> Table Header Cell Tag",
-        "history": "<h1> Defines a header cell in a table.</h1>",
-        "tip": "The <th> tag is used to define a header cell in a table.",
-        "code": "<table border='1'>\n  <tr><th>Name</th><th>Age</th></tr>\n</table>",
-        "quiz": "Which tag defines a header cell in a table?",
-        "answer": "th"
-    },
-    "colgroup": {
-        "title": "<colgroup> Column Group Tag",
-        "history": "<h1> Defines a group of columns in a table for styling.</h1>",
-        "tip": "The <colgroup> tag is used to group columns in a table.",
-        "code": "<table border='1'>\n  <colgroup>\n    <col span='2' style='background:#f9f9f9'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
-    },
-    "col": {
-        "title": "<col> Column Tag",
-        "history": "<h1> Defines column properties inside a <colgroup>.</h1>",
-        "tip": "The <col> tag is used to define properties for a single column.",
-        "code": "<table border='1'>\n  <colgroup>\n    <col style='background:#eee'>\n    <col style='background:#ddd'>\n  </colgroup>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Ali</td><td>20</td></tr>\n</table>"
-    },
     "cite": {
         "title": "<cite> Citation Tag",
         "history": "<h1> Used to define the title of a creative work (book, website, movie, etc.).</h1>",
@@ -296,5 +312,21 @@
         "code": "<blockquote>\n  Success is not final, failure is not fatal: it is the courage to continue that counts.\n</blockquote>",
         "quiz": "Which tag is used for block-level quotations?",
         "answer": "blockquote"
+    },
+    "flexbox-grid-combo": {
+        "title": "Flexbox + Grid Combo Layout",
+        "history": "<h1>Combining modern CSS layout tools gives you full control: Grid handles complex page dimensions, while Flexbox aligns content elements inside components.</h1>",
+        "tip": "Always use Grid for outer page scaffolding (rows and sidebars) and switch to Flexbox inside your navbar or cards for fluid content packing and gap controls.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Modern Hybrid Layout System</title>\n<style>\n  body {\n    font-family: system-ui, sans-serif;\n    margin: 0;\n    background: #0f172a;\n    color: #e2e8f0;\n    padding: 20px;\n  }\n  /* 1. Flexbox Component (Best for linear, 1D rows) */\n  .navbar {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background: #1e293b;\n    padding: 15px 20px;\n    border-radius: 8px;\n  }\n  .nav-links {\n    display: flex;\n    gap: 15px;\n  }\n  /* 2. Grid Container (Best for 2D macro layout structures) */\n  .main-dashboard {\n    display: grid;\n    grid-template-columns: 240px 1fr;\n    gap: 20px;\n    margin-top: 20px;\n  }\n  .sidebar { background: #1e293b; padding: 20px; border-radius: 8px; min-height: 200px; }\n  .content { background: #334155; padding: 20px; border-radius: 8px; }\n  .badge { background: #38bdf8; color: #0f172a; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; }\n</style>\n</head>\n<body>\n\n<header class=\"navbar\">\n  <div style=\"font-weight: bold;\">Your Website</div>\n  <div class=\"nav-links\">\n    <span>Home</span>\n    <span>Docs</span>\n  </div>\n</header>\n\n<main class=\"main-dashboard\">\n  <aside class=\"sidebar\">\n    <span class=\"badge\">Grid Sidebar</span>\n    <p style=\"margin-top:10px;\">Navigation Links</p>\n  </aside>\n  <section class=\"content\">\n    <span class=\"badge\">Grid Content Window</span>\n    <h2>Welcome to the Hybrid Layout Engine</h2>\n  </section>\n</main>\n\n</body>\n</html>",
+        "quiz": "Which combined web structure applies Grid for global page columns and Flexbox for simple alignment layout rows?",
+        "answer": "Flexbox + Grid Combo"
+    },
+    "text-shadow": {
+        "title": "CSS text-shadow Property",
+        "history": "<h1>The text-shadow property applies soft, dynamic, or layered shadow effects to text headers and headings.</h1>",
+        "tip": "Use a subtle blur (e.g., 4px) with a semi-transparent color like rgba(0,0,0,0.2) for a smooth, premium look instead of solid opaque colors.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Modern Text-Shadow Preview</title>\n  <style>\n    body {\n      font-family: system-ui, sans-serif;\n      background-color: #0f172a;\n      color: #f8fafc;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      height: 80vh;\n    }\n    .glowing-text {\n      font-size: 48px;\n      font-weight: 800;\n      /* Offset-X, Offset-Y, Blur-Radius, Color */\n      text-shadow: 2px 4px 10px rgba(99, 102, 241, 0.4);\n      color: #6366f1;\n    }\n  </style>\n</head>\n<body>\n  <h1 class=\"glowing-text\">Premium Text Shadow</h1>\n</body>\n</html>",
+        "quiz": "Which CSS property is specifically used to add shadow and glow effects directly to web typography?",
+        "answer": "text-shadow"
     }
 }

@@ -337,6 +337,10 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+
+        if (typeof loadDynamicEditorData === 'function') {
+            loadDynamicEditorData();
+        }
         initializeCodeEditor();
         initInstantClickRouting();
         refreshEditorLayout();

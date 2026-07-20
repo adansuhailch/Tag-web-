@@ -47,22 +47,6 @@
         "quiz": "Which tag defines a label for an input element?",
         "answer": "label"
     },
-    "fieldset": {
-        "title": "<fieldset> Fieldset Tag",
-        "history": "<h1>Used to group related elements in a form.</h1>",
-        "tip": "Use the <code>&lt;fieldset&gt;</code> tag to group related elements in a form.",
-        "code": "<fieldset><legend>Personal Info</legend><input type='text' placeholder='Name'></fieldset>",
-        "quiz": "Which tag groups related elements in a form?",
-        "answer": "fieldset"
-    },
-    "legend": {
-        "title": "<legend> Legend Tag",
-        "history": "<h1>Defines a caption for a <fieldset> element.</h1>",
-        "tip": "Use the <code>&lt;legend&gt;</code> tag to define a caption for a fieldset.",
-        "code": "<fieldset><legend>Personal Info</legend><input type='text' placeholder='Name'></fieldset>",
-        "quiz": "Which tag defines a caption for a fieldset?",
-        "answer": "legend"
-    },
     "option": {
         "title": "<option> Option Tag",
         "history": "<h1>Defines an option in a <select> dropdown.</h1>",

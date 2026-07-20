@@ -2,23 +2,54 @@
 <html lang="en" data-theme="dark">
 
 <head>
-
     <meta charset="UTF-8" />
-    <title>Tag Web</title>
-    <!-- Place to write all meta tags -->
-    <meta name="google-site-verification" content="XLfrzxEuL6an8gio5RLJykIMb5_RGxiCh6NvhLKWBKE" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Tag Web — The ultimate HTML & CSS learning playground. Explore tags interactively with live code editors, quizzes, and examples." />
 
-    <!-- Place to write all links -->
-    <link rel="canonical" href="https://tag-web.is-a.dev/">
+    <title>Tag Web | Web Development Learning Platform</title>
+
+    <!-- All imp meta tags are written in here -->
+    <meta name="description"
+        content="Tag Web — The ultimate HTML, CSS & JS learning playground. Explore tags interactively with live code editors, quizzes, Usefull Examples, Cheatsheets and many more." />
+    <link rel="canonical" href="https://tag-web.is-cool.dev">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph AKA og-->
+    <meta property="og:title" content="Tag Web | Learn Web Development and more!">
+    <meta property="og:description"
+        content="Ultimate Html,Css & Js learning playground with code editors,quizzes and Cheatsheets.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="#">
+    <meta property="og:url" content="https://tag-web.is-cool.dev">
+    <meta property="og:site_name" content="Tag Web">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tag Web | Learn Web Development">
+    <meta name="twitter:description"
+        content="Tag Web — The ultimate HTML, CSS & JS learning playground. Explore tags interactively with live code editors, quizzes, Usefull Examples, Cheatsheets and many more.">
+    <meta name="twitter:image" content="/assets/tag-web-logo.png">
+
+    <!-- not enough imp but anyways i write it -->
+    <meta name="keywords"
+        content="Tag web, Educational Playground, HTML,Css & Js Tags, Html Tags, Css Properties, Javascript Functions, Cheatsheets, Html Quizzes.">
+    <meta name="author" content="Hafiz Muhammad Adan">
+
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png" />
-    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Performance or pre connectors -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link to css files and other But just for tag web css not other! -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!--google search console verification link -->
+    <meta name="google-site-verification" content="XLfrzxEuL6an8gio5RLJykIMb5_RGxiCh6NvhLKWBKE" />
+
 </head>
 
 <body>
@@ -54,28 +85,28 @@
                 <h2>The HTML Structure</h2>
                 <div class="cards-grid">
                     <div class="tag-card" data-tag="!DOCTYPE" onclick="openModal('!doctype')">
-                        &lt;!doctype&gt;<span class="tooltip">Click for more details</span>
+                        &lt;!doctype&gt;<br>Document Type Declaration<span class="tooltip">Click for more details</span>
                     </div>
                     <div class="tag-card" data-tag="html" onclick="openModal('html')">
-                        &lt;html&gt;<span class="tooltip">Click for more details</span>
+                        &lt;html&gt;<br>html<span class="tooltip">Click for more details</span>
                     </div>
                     <div class="tag-card" data-tag="head" onclick="openModal('head')">
-                        &lt;head&gt;<span class="tooltip">Click for more details</span>
+                        &lt;head&gt;<br>head<span class="tooltip">Click for more details</span>
                     </div>
                     <div class="tag-card" data-tag="meta" onclick="openModal('meta')">
-                        &lt;meta&gt;<span class="tooltip">Click for more details</span>
+                        &lt;meta&gt;<br>meta<span class="tooltip">Click for more details</span>
                     </div>
                     <div class="tag-card" data-tag="title" onclick="openModal('title')">
-                        &lt;title&gt;<span class="tooltip">Click for more details</span>
+                        &lt;title&gt;<br>title<span class="tooltip">Click for more details</span>
                     </div>
                     <div class="tag-card" data-tag="link" onclick="openModal('link')">
-                        &lt;link&gt;<span class="tooltip">Click for more details</span>
+                        &lt;link&gt;<br>link<span class="tooltip">Click for more details</span>
                     </div>
                     <div class="tag-card" data-tag="body" onclick="openModal('body')">
-                        &lt;body&gt;<span class="tooltip">Click for more details</span>
+                        &lt;body&gt;<br>body<span class="tooltip">Click for more details</span>
                     </div>
                     <div class="tag-card" data-tag="script" onclick="openModal('script')">
-                        &lt;script&gt;<span class="tooltip">Click for more details</span>
+                        &lt;script&gt;<br>script<span class="tooltip">Click for more details</span>
                     </div>
                 </div>
 
@@ -106,9 +137,14 @@
                     <div class="tag-card" data-tag="form" onclick="openModal('form')">
                         &lt;form&gt; Form<span class="tooltip">Click for details</span>
                     </div>
-                    <div class="tag-card" data-tag="input" onclick="openModal('input')">
-                        &lt;input&gt; Input<span class="tooltip">Click for details</span>
-                    </div>
+
+                    <div class="tag-card" onclick="openModal('fieldset')">&lt;fieldset&gt;<span class="tooltip">Click
+                            for
+                            datails</span> Fieldset</div>
+
+                    <div class="tag-card" onclick="openModal('legend')">&lt;legend&gt;<span class="tooltip">Click for
+                            datails</span>
+                        Legend</div>
                 </div>
                 <a href="/pages/form-tag.html" class="more-tags-link" target="_blank">➕ Click here to view and enjoy
                     more tags</a>
@@ -196,7 +232,7 @@
                     </div>
 
                     <div class="tag-card"><a href="/cheatsheets/tabletags-cheatsheet.html" target="_blank"> Checkout
-                            The List Tags CheatSheet</a></div>
+                            The Table Tags CheatSheet</a></div>
                 </div>
     </div>
     </section>
@@ -376,6 +412,7 @@
                         <li><a href="/pages/javascript-part.html"><i class="fa-brands fa-js"></i> JavaScript</a></li>
                         <li><a href="https://amazing-color-picker.vercel.app/" target="_blank"><i
                                     class="fa-solid fa-droplet"></i> Color Lab</a></li>
+                        <li><a href="/pdf-files"><i class="fa-solid fa-graduation-cap"></i>Cheatsheets</a></li>
                         <li><a href="/pages/quiz-section.html"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
                         </li>
                         <li><a href="/pages/editor.html"><i class="fa-solid fa-terminal"></i> Code Editor</a></li>
@@ -428,7 +465,7 @@
             <div class="footer-bottom-inner">
                 <p class="footer-copyright">&copy; 2025 <strong>Tag Web</strong> &mdash; Built by Hafiz Muhammad Adan.
                     All rights reserved.</p>
-                <div class="footer-bottom-links">
+                    <div class="footer-bottom-links">
                     <a href="/pages/privacy-policy.html">Privacy Policy</a>
                     <span class="footer-dot">&bull;</span>
                     <a href="/pages/terms-of-service.html">Terms of Service</a>

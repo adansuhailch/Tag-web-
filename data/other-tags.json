@@ -1,9 +1,9 @@
 {
-    "doctype": {
-        "title": "<!DOCTYPE html> Document type",
-        "history": "<h1>Declares the HTML document type and version.</h1>",
-        "tip": "The <code>&lt;!DOCTYPE html&gt;</code> declaration defines the HTML version.",
-        "code": "<!DOCTYPE html>\n<html>\n<head><title>Doc</title></head>\n<body>Content</body>\n</html>",
+    "!doctype": {
+        "title": "&lt;!DOCTYPE html&gt; — The Browser's Instruction Manual",
+        "history": "<h1>It tells the browser exactly how to render your page.</h1><p>The <code>&lt;!DOCTYPE html&gt;</code> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in. Without it, browsers might enter 'Quirks Mode' and display your website incorrectly.</p>",
+        "tip": "<strong>VS Code Shortcut:</strong> Open a blank HTML file, press <code>Shift + 1</code> (to type an exclamation mark <code>!</code>), and hit <code>Enter</code>. VS Code will instantly generate the entire standard HTML5 boilerplate code for you.",
+        "code": "\n<!-- Hey browser, this is a modern HTML5 document! -->\n <!DOCTYPE html> \n<html lang=\"en\"> <!-- Sets the global language to English for accessibility -->\n<head>\n    <meta charset=\"UTF-8\"> <!-- Allows the page to display almost all languages/symbols correctly -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <!-- Makes sure your website layout scales perfectly on mobile screens -->\n    <title>My First Professional Web Page</title>\n</head>\n<body>\n    <!-- Main website content starts right here -->\n    <h1>Hello World!</h1>\n</body>\n</html>",
         "quiz": "Which declaration sets the HTML document type?",
         "answer": "doctype"
     },
@@ -46,14 +46,6 @@
         "code": "<link rel='stylesheet' href='styles.css'>",
         "quiz": "Which tag links external styles?",
         "answer": "link"
-    },
-    "style": {
-        "title": "<style> CSS",
-        "history": "<h1>Embeds CSS styles.</h1>",
-        "tip": "The <code>&lt;style&gt;</code> tag is used to embed CSS styles within the HTML document.",
-        "code": "<style>body{font-family:Segoe UI}</style>",
-        "quiz": "Which tag embeds CSS?",
-        "answer": "style"
     },
     "script": {
         "title": "<script> JS",

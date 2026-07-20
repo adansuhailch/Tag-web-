@@ -1,109 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tag Web — All HTML5 text tags with live examples and quizzes." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Text Tags — Tag Web</title>
+  </head>
 
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Tag Web — All HTML5 text tags with live examples and quizzes.">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-                integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-                crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Text Tags — Tag Web</title>
-</head>
+  <body>
+    <header>
+      <h1>All Text Tags</h1>
+      <a href="../index.html" class="more-tags-link" style="display: inline-block; margin: 6px 0">⬅ Back to Main Page</a>
+      <div class="search-container">
+        <input type="text" id="searchBar" placeholder="🔍 Search tag..." onkeyup="searchTag()" aria-label="Search tags" />
+      </div>
+    </header>
 
-<body>
-        <header>
-                <h1>All Text Tags</h1>
-                <a href="../index.html" class="more-tags-link" style="display:inline-block; margin: 6px 0;">⬅ Back to
-                        Main Page</a>
-                <div class="search-container">
-                        <input type="text" id="searchBar" placeholder="🔍 Search tag..." onkeyup="searchTag()"
-                                aria-label="Search tags">
-                </div>
-        </header>
+    <section>
+      <div class="cards-grid">
+        <div class="tag-card" data-tag="All Headings" onclick="openModal('All Headings')">
+          All Headings
+          <span class="tooltip"> Click For more Info</span>
+        </div>
+        <div class="tag-card" onclick="openModal('em')">&lt;em&gt; em <span class="tooltip"> Click For more Info</span></div>
+        <div class="tag-card" onclick="openModal('h2')">
+          &lt;h2&gt; Subheading
+          <span class="tooltip"> Click For more Info</span>
+        </div>
+        <div class="tag-card" onclick="openModal('hr')">&lt;hr&gt; hr <span class="tooltip"> Click For more Info</span></div>
+        <div class="tag-card" onclick="openModal('br')">&lt;br&gt; br <span class="tooltip"> Click For more Info</span></div>
+        <div class="tag-card" onclick="openModal('i')">&lt;i&gt; Italic <span class="tooltip"> Click For more Info</span></div>
+        <div class="tag-card" onclick="openModal('u')">&lt;u&gt; Underline <span class="tooltip"> Click For more Info</span></div>
+        <div class="tag-card" onclick="openModal('mark')">
+          &lt;mark&gt; Highlight
+          <span class="tooltip"> Click For more Info</span>
+        </div>
+        <div class="tag-card" onclick="openModal('small')">
+          &lt;small&gt; Small Text
+          <span class="tooltip"> Click For more Info</span>
+        </div>
+        <div class="tag-card" onclick="openModal('sup')">
+          &lt;sup&gt; Superscript
+          <span class="tooltip"> Click For more Info</span>
+        </div>
+        <div class="tag-card" onclick="openModal('sub')">
+          &lt;sub&gt; Subscript
+          <span class="tooltip"> Click For more Info</span>
+        </div>
 
-        <section>
-                <div class="cards-grid">
-                        <div class="tag-card" data-tag="All Headings" onclick="openModal('All Headings')">All Headings
-                                <span class="tooltip"> Click For more Info</span>
-                        </div>
-                        <div class="tag-card" onclick="openModal('em')">&lt;em&gt; em <span class="tooltip"> Click For
-                                        more Info</span>
-                        </div>
-                        <div class="tag-card" onclick="openModal('h2')">&lt;h2&gt; Subheading <span class="tooltip">
-                                        Click For
-                                        more
-                                        Info</span></div>
-                        <div class="tag-card" onclick="openModal('hr')">&lt;hr&gt; hr <span class="tooltip"> Click For
-                                        more
-                                        Info</span>
-                        </div>
-                        <div class="tag-card" onclick="openModal('br')">&lt;br&gt; br <span class="tooltip"> Click For
-                                        more
-                                        Info</span>
-                        </div>
-                        <div class="tag-card" onclick="openModal('i')">&lt;i&gt; Italic <span class="tooltip"> Click For
-                                        more
-                                        Info</span></div>
-                        <div class="tag-card" onclick="openModal('u')">&lt;u&gt; Underline <span class="tooltip"> Click
-                                        For more
-                                        Info</span></div>
-                        <div class="tag-card" onclick="openModal('mark')">&lt;mark&gt; Highlight <span class="tooltip">
-                                        Click
-                                        For more
-                                        Info</span></div>
-                        <div class="tag-card" onclick="openModal('small')">&lt;small&gt; Small Text <span
-                                        class="tooltip"> Click
-                                        For
-                                        more Info</span></div>
-                        <div class="tag-card" onclick="openModal('sup')">&lt;sup&gt; Superscript <span class="tooltip">
-                                        Click
-                                        For more
-                                        Info</span></div>
-                        <div class="tag-card" onclick="openModal('sub')">&lt;sub&gt; Subscript <span class="tooltip">
-                                        Click For
-                                        more
-                                        Info</span>
-                        </div>
+        <div class="tag-card">
+          <a href="/cheatsheets/texttags-cheatsheet.html" target="_blank"> Checkout The Text Tags CheatSheet</a>
+        </div>
+      </div>
+    </section>
 
-                </div>
-        </section>
-
-        <section class="quiz quiz-exercise-card" data-page-target="text-tag">
-
-                <h2>Take a short quiz</h2>
-                <p>Which tag is used to display characters slightly below the normal line, like in chemical formulas like H₂O?</p>
-                <br>
-                <form action="" method="post" rel="opener">
-                        <div class="quizoption">
-                                <input type="radio" name="quizoption" id="quizoption1" value="1">
-                                <label for="quizoption1">
-                                        <code>sup</code>
-                                </label>
-                        </div>
-                        <div class="quizoption">
-                                <input type="radio" name="quizoption" id="quizoption2" value="1">
-                                <label for="quizoption2">
-                                        <code>sub</code>
-                                </label>
-                        </div>
-                        <div class="quizoption">
-                                <input type="radio" name="quizoption" id="quizoption3" value="1">
-                                <label for="quizoption3">
-                                        <code>below</code>
-                                </label>
-                        </div>
-                        <div class="quizoption">
-                                <input type="radio" name="quizoption" id="quizoption4" value="1">
-                                <label for="quizoption4">
-                                        <code>under</code>
-                                </label>
-                        </div>
-                </form>
-        </section>
-        <script src="/js/text-tag.js"></script>
-        <script src="/js/core-actions.js"></script>
-</body>
-
+    <section class="quiz quiz-exercise-card" data-page-target="text-tag">
+      <h2>Take a short quiz</h2>
+      <p>Which tag is used to display characters slightly below the normal line, like in chemical formulas like H₂O?</p>
+      <br />
+      <form action="" method="post" rel="opener">
+        <div class="quizoption">
+          <input type="radio" name="quizoption" id="quizoption1" value="1" />
+          <label for="quizoption1">
+            <code>sup</code>
+          </label>
+        </div>
+        <div class="quizoption">
+          <input type="radio" name="quizoption" id="quizoption2" value="1" />
+          <label for="quizoption2">
+            <code>sub</code>
+          </label>
+        </div>
+        <div class="quizoption">
+          <input type="radio" name="quizoption" id="quizoption3" value="1" />
+          <label for="quizoption3">
+            <code>below</code>
+          </label>
+        </div>
+        <div class="quizoption">
+          <input type="radio" name="quizoption" id="quizoption4" value="1" />
+          <label for="quizoption4">
+            <code>under</code>
+          </label>
+        </div>
+      </form>
+    </section>
+    <script src="/js/text-tag.js"></script>
+    <script src="/js/core-actions.js"></script>
+  </body>
 </html>
