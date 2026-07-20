@@ -48,11 +48,11 @@
         "answer": "link"
     },
     "style": {
-        "title": "<style> CSS",
-        "history": "<h1>Embeds CSS styles.</h1>",
-        "tip": "The <code>&lt;style&gt;</code> tag is used to embed CSS styles within the HTML document.",
-        "code": "<style>body{font-family:Segoe UI}</style>",
-        "quiz": "Which tag embeds CSS?",
+        "title": "&lt;style&gt; Internal Style Tag",
+        "history": "<h1>Injects internal CSS layout rules directly inside an HTML file architecture.</h1>",
+        "tip": "Avoid embedding huge CSS bulks via <code class='inline'>&lt;style&gt;</code> tags on production nodes; always prioritize external style sheets for heavy custom builds.",
+        "code": "&lt;style&gt;\n    body {\n        background-color: var(--code-bg);\n        color: #dcdfe4;\n    }\n&lt;/style&gt;",
+        "quiz": "Which operational tag embeds local inline-document CSS rules inside the HTML head section?",
         "answer": "style"
     },
     "script": {

@@ -296,5 +296,21 @@
         "code": "<blockquote>\n  Success is not final, failure is not fatal: it is the courage to continue that counts.\n</blockquote>",
         "quiz": "Which tag is used for block-level quotations?",
         "answer": "blockquote"
+    },
+    "flexbox-grid-combo": {
+        "title": "Flexbox + Grid Combo",
+        "history": "<h1>Flexbox is ideal for small components, while Grid is best for full page layouts.</h1>",
+        "tip": "",
+        "code": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"UTF-8\">\n<title>Flexbox + Grid Combo Example</title>\n<style>\n  .navbar { display: flex; gap: 10px; background: lightblue; padding: 10px; }\n  .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; margin-top: 20px; }\n  .item { background: lightcoral; padding: 20px; }\n</style>\n</head>\n<body>\n<h2>Flexbox + Grid Combo Example</h2>\n<div class=\"navbar\">\n  <div class=\"item\">Home</div>\n  <div class=\"item\">About</div>\n  <div class=\"item\">Contact</div>\n</div>\n<div class=\"grid\">\n  <div class=\"item\">Sidebar</div>\n  <div class=\"item\">Main Content</div>\n</div>\n</body>\n</html>",
+        "quiz": "Which combo uses Flexbox for small components and Grid for full layouts?",
+        "answer": "Flexbox + Grid Combo"
+    },
+    "text-shadow": {
+        "title": "text-shadow Property",
+        "history": "<h1>The text-shadow property adds shadow effects to text.</h1>",
+        "tip": "You can use values like 2px 2px 5px gray to specify the text shadow.",
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Text-Shadow Example</title>\n  <style>\n    .text {\n      font-size: 30px;\n      text-shadow: 2px 2px 5px gray;\n    }\n  </style>\n</head>\n<body>\n  <h2>CSS text-shadow Property Example</h2>\n  <p class=\"text\">This text has a shadow using text-shadow.</p>\n</body>\n</html>",
+        "quiz": "Which property adds shadow effects to text?",
+        "answer": "text-shadow"
     }
 }
