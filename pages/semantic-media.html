@@ -2,123 +2,120 @@
 <html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tag Web — HTML5 semantic and media tags with live examples.">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tag Web — HTML5 semantic and media tags with live examples.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Semantic &amp; Media Tags — Tag Web</title>
+  <title>Semantic &amp; Media Tags — Tag Web</title>
 </head>
 
 <body>
-    <header>
-        <h1>Semantic &amp; Media Tags</h1>
-        <a href="../index.html" class="more-tags-link" style="display:inline-block; margin: 6px 0;">⬅ Back to Main
-            Page</a>
+  <header>
+    <h1>Semantic &amp; Media Tags</h1>
+    <a href="../index.html" class="more-tags-link" style="display:inline-block; margin: 6px 0;">⬅ Back to Main
+      Page</a>
 
 
-        <div class="search-container">
-            <input type="text" id="searchBar" placeholder="🔍 Search tag..." onkeyup="searchTag()"
-                aria-label="Search tags">
-        </div>
-    </header>
-    <!-- Media tags -->
-    <section id="media">
-        <h2>Media Tags</h2>
-        <div class="cards-grid">
-            <div class="tag-card" onclick="openModal('video')">&lt;video&gt;<span class="tooltip">Click for
-                    details</span>
-                Video
-            </div>
-            <div class="tag-card" onclick="openModal('source')">&lt;source&gt;<span class="tooltip">Click for
-                    details</span>
-                Media Source</div>
-            <div class="tag-card" onclick="openModal('track')">&lt;track&gt;<span class="tooltip">Click for
-                    details</span>
-                Text
-                Tracks</div>
-            <div class="tag-card" onclick="openModal('figure')">&lt;figure&gt;<span class="tooltip">Click for
-                    details</span>
-                Figure</div>
-            <div class="tag-card" onclick="openModal('figcaption')">&lt;figcaption&gt;<span class="tooltip">Click for
-                    details</span> Figure Caption</div>
-        </div>
-    </section>
-    <!-- Semantic tags -->
-    <section id="Semantic Tags">
-        <h2>Semantic tags(modern HTML5)</h2>
-        <div class="cards-grid">
-            <div class="tag-card" onclick="openModal('nav')">&lt;nav&gt;<span class="tooltip">Click for details</span>
-                Navigation</div>
-            <div class="tag-card" onclick="openModal('section')">&lt;section&gt;<span class="tooltip">Click for
-                    details</span>
-                Section</div>
-            <div class="tag-card" onclick="openModal('article')">&lt;article&gt;<span class="tooltip">Click for
-                    details</span>
-                Article</div>
-            <div class="tag-card" onclick="openModal('aside')">&lt;aside&gt;<span class="tooltip">Click for
-                    details</span>
-                Aside tag
-            </div>
-            <div class="tag-card" onclick="openModal('main')">&lt;main&gt;<span class="tooltip">Click for details</span>
-                Main
-                Content</div>
-            <div class="tag-card" onclick="openModal('div')">&lt;div&gt;<span class="tooltip">Click for details</span>
-                Division
-            </div>
-            <div class="tag-card" onclick="openModal('span')">&lt;span&gt;<span class="tooltip">Click for details</span>
-                Span
-            </div>
-            <div class="tag-card" datav-tag="header" onclick="openModal('header')">&lt;header&gt;<span
-                    class="tooltip">Click
-                    for details</span>header</div>
-            <div class="tag-card" data-tag="address" onclick="openModal('address')">&lt;address&gt;<span
-                    class="tooltip">Click for details</span>address</div>
-            <div class="tag-card" data-tag="time" onclick="openModal('time')">&lt;time&gt;<span class="tooltip">Click
-                    for
-                    details</span>time</div>
-        </div>
-    </section>
+    <div class="search-container">
+      <input type="text" id="searchBar" placeholder="🔍 Search tag..." onkeyup="searchTag()" aria-label="Search tags">
+    </div>
+  </header>
+  <!-- Media tags -->
+  <section id="media">
+    <h2>Media Tags</h2>
+    <div class="cards-grid">
+      <div class="tag-card" onclick="openModal('video')">&lt;video&gt;<span class="tooltip">Click for
+          details</span>
+        Video
+      </div>
+      <div class="tag-card" onclick="openModal('source')">&lt;source&gt;<span class="tooltip">Click for
+          details</span>
+        Media Source</div>
+      <div class="tag-card" onclick="openModal('track')">&lt;track&gt;<span class="tooltip">Click for
+          details</span>
+        Text
+        Tracks</div>
+      <div class="tag-card" onclick="openModal('figure')">&lt;figure&gt;<span class="tooltip">Click for
+          details</span>
+        Figure</div>
+      <div class="tag-card" onclick="openModal('figcaption')">&lt;figcaption&gt;<span class="tooltip">Click for
+          details</span> Figure Caption</div>
+    </div>
+  </section>
+  <!-- Semantic tags -->
+  <section id="Semantic Tags">
+    <h2>Semantic tags(modern HTML5)</h2>
+    <div class="cards-grid">
+      <div class="tag-card" onclick="openModal('nav')">&lt;nav&gt;<span class="tooltip">Click for details</span>
+        Navigation</div>
+      <div class="tag-card" onclick="openModal('section')">&lt;section&gt;<span class="tooltip">Click for
+          details</span>
+        Section</div>
+      <div class="tag-card" onclick="openModal('article')">&lt;article&gt;<span class="tooltip">Click for
+          details</span>
+        Article</div>
+      <div class="tag-card" onclick="openModal('aside')">&lt;aside&gt;<span class="tooltip">Click for
+          details</span>
+        Aside tag
+      </div>
+      <div class="tag-card" onclick="openModal('main')">&lt;main&gt;<span class="tooltip">Click for details</span>
+        Main
+        Content</div>
+      <div class="tag-card" onclick="openModal('div')">&lt;div&gt;<span class="tooltip">Click for details</span>
+        Division
+      </div>
+      <div class="tag-card" onclick="openModal('span')">&lt;span&gt;<span class="tooltip">Click for details</span>
+        Span
+      </div>
+      <div class="tag-card" datav-tag="header" onclick="openModal('header')">&lt;header&gt;<span class="tooltip">Click
+          for details</span>header</div>
+      <div class="tag-card" data-tag="address" onclick="openModal('address')">&lt;address&gt;<span class="tooltip">Click
+          for details</span>address</div>
+      <div class="tag-card" data-tag="time" onclick="openModal('time')">&lt;time&gt;<span class="tooltip">Click
+          for
+          details</span>time</div>
+    </div>
+  </section>
 
-    <section class="quiz quiz-exercise-card" data-page-target="semantic-media">
+  <section class="quiz quiz-exercise-card" data-page-target="semantic-media">
 
-        <h2>Take a short quiz</h2>
-        <p>Which tag is used to display characters slightly below the normal line, like in chemical formulas like H₂O?
-        </p>
-        <br>
-        <form action="" method="post" rel="opener">
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption1" value="1">
-                <label for="quizoption1">
-                    <code>sup</code>
-                </label>
-            </div>
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption2" value="1">
-                <label for="quizoption2">
-                    <code>sub</code>
-                </label>
-            </div>
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption3" value="1">
-                <label for="quizoption3">
-                    <code>below</code>
-                </label>
-            </div>
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption4" value="1">
-                <label for="quizoption4">
-                    <code>under</code>
-                </label>
-            </div>
-        </form>
-    </section>
+    <h2>Take a short quiz</h2>
+    <p>Which tag is used to display characters slightly below the normal line, like in chemical formulas like H₂O?
+    </p>
+    <br>
+    <form action="" method="post" rel="opener">
+      <div class="quizoption">
+        <input type="radio" name="quizoption" id="quizoption1" value="1">
+        <label for="quizoption1">
+          <code>sup</code>
+        </label>
+      </div>
+      <div class="quizoption">
+        <input type="radio" name="quizoption" id="quizoption2" value="1">
+        <label for="quizoption2">
+          <code>sub</code>
+        </label>
+      </div>
+      <div class="quizoption">
+        <input type="radio" name="quizoption" id="quizoption3" value="1">
+        <label for="quizoption3">
+          <code>below</code>
+        </label>
+      </div>
+      <div class="quizoption">
+        <input type="radio" name="quizoption" id="quizoption4" value="1">
+        <label for="quizoption4">
+          <code>under</code>
+        </label>
+      </div>
+    </form>
+  </section>
 
-<script src="/js/semantic-mediatag.js"></script>
-<script src="/js/core-actions.js"></script>
+  <script src="/js/core-actions.js"></script>
 </body>
 
 </html>
