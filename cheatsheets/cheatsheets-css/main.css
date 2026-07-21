@@ -130,8 +130,10 @@ code.inline {
     font-size: 13px;
     line-height: 1.6;
     color: #dcdfe4;
-    white-space: pre;
-    overflow-x: auto;
+    /* FIXED: auto wrap rules applied instead of clipping */
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-x: hidden;
 }
 
 .codebox .tag {
