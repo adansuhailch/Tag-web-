@@ -11,6 +11,13 @@ section {
     transition: background 0.3s;
 }
 
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
 /* cards-grid */
 .cards-grid {
     display: grid;

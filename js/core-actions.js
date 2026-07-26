@@ -300,10 +300,11 @@
     }
 
     const routingTargetDB = {
-        'css-boxmodel': '/pages/quiz-section.html?category=css-boxmodel',
-        'css-animation': '/pages/quiz-section.html?category=css-animation',
         'text-tag': '/pages/quiz-section.html?category=text-tag',
         'form-tag': '/pages/quiz-section.html?category=form-tag',
+        'semantic-media': '/pages/quiz-section.html?category=semantic-media',
+        'css-boxmodel': '/pages/quiz-section.html?category=css-boxmodel',
+        'css-animation': '/pages/quiz-section.html?category=css-animation',
         'link-tag': '/pages/quiz-section.html?category=link-tag'
     };
 

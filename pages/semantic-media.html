@@ -50,6 +50,9 @@
   <section id="Semantic Tags">
     <h2>Semantic tags(modern HTML5)</h2>
     <div class="cards-grid">
+
+      <div class="tag-card" datav-tag="header" onclick="openModal('header')">&lt;header&gt;<span class="tooltip">Click
+          for details</span>header</div>
       <div class="tag-card" onclick="openModal('nav')">&lt;nav&gt;<span class="tooltip">Click for details</span>
         Navigation</div>
       <div class="tag-card" onclick="openModal('section')">&lt;section&gt;<span class="tooltip">Click for
@@ -62,54 +65,58 @@
           details</span>
         Aside tag
       </div>
-      <div class="tag-card" onclick="openModal('main')">&lt;main&gt;<span class="tooltip">Click for details</span>
-        Main
-        Content</div>
-      <div class="tag-card" onclick="openModal('div')">&lt;div&gt;<span class="tooltip">Click for details</span>
-        Division
+
+      <div class="tag-card" data-tag="footer" onclick="openModal('footer')">
+        &lt;footer&gt; Footer<span class="tooltip">Click for details</span>
       </div>
+
+      <div class="tag-card" data-tag="address" onclick="openModal('address')">&lt;address&gt;<span class="tooltip">Click
+          for details</span>address</div>
       <div class="tag-card" onclick="openModal('span')">&lt;span&gt;<span class="tooltip">Click for details</span>
         Span
       </div>
-      <div class="tag-card" datav-tag="header" onclick="openModal('header')">&lt;header&gt;<span class="tooltip">Click
-          for details</span>header</div>
-      <div class="tag-card" data-tag="address" onclick="openModal('address')">&lt;address&gt;<span class="tooltip">Click
-          for details</span>address</div>
+
       <div class="tag-card" data-tag="time" onclick="openModal('time')">&lt;time&gt;<span class="tooltip">Click
           for
           details</span>time</div>
+
     </div>
+  </section>
+  <section>
+    <h2>Semantic and Media Tags Cheatsheet</h2>
+    <div class="tag-card center"><a href="/cheatsheets/semantic-media-cheatsheet.html" target="_blank"> Checkout
+        The Text Tags CheatSheet</a></div>
+
   </section>
 
   <section class="quiz quiz-exercise-card" data-page-target="semantic-media">
 
     <h2>Take a short quiz</h2>
-    <p>Which tag is used to display characters slightly below the normal line, like in chemical formulas like H₂O?
-    </p>
+    <p>Which tag is used to embed audio in HTML?</p>
     <br>
     <form action="" method="post" rel="opener">
       <div class="quizoption">
         <input type="radio" name="quizoption" id="quizoption1" value="1">
         <label for="quizoption1">
-          <code>sup</code>
+          <code>&lt;sound&gt;</code>
         </label>
       </div>
       <div class="quizoption">
         <input type="radio" name="quizoption" id="quizoption2" value="1">
         <label for="quizoption2">
-          <code>sub</code>
+          <code>&lt;audio&gt;</code>
         </label>
       </div>
       <div class="quizoption">
         <input type="radio" name="quizoption" id="quizoption3" value="1">
         <label for="quizoption3">
-          <code>below</code>
+          <code>&lt;music&gt;</code>
         </label>
       </div>
       <div class="quizoption">
         <input type="radio" name="quizoption" id="quizoption4" value="1">
         <label for="quizoption4">
-          <code>under</code>
+          <code>&lt;mp3&gt;</code>
         </label>
       </div>
     </form>

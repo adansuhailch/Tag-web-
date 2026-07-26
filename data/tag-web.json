@@ -169,37 +169,29 @@
         "quiz": "Which tag is used for input fields?",
         "answer": "input"
     },
+    "main": {
+        "title": "<main> Main Tag",
+        "history": "<h1>Specifies the main content of a document.</h1><p>The <code>&lt;main&gt;</code> tag is used to specify the main content of a document.</p>",
+        "tip": "The <code>&lt;main&gt;</code> tag is used to specify the main content of a document.",
+        "code": "<main><h1>Welcome to My Website</h1><p>This is the main content area.</p></main>"
+    },
+    "div": {
+        "title": "<div> Division Tag",
+        "history": "<h1>A generic container for flow content.</h1><p>The <code>&lt;div&gt;</code> tag is used as a generic container for flow content.</p>",
+        "tip": "The <code>&lt;div&gt;</code> tag is used as a generic container for flow content.",
+        "code": "<div style='border:1px solid black; padding:10px;'><h2>Section Title</h2><p>This is a section inside a div.</p></div>"
+    },
     "audio": {
         "title": "<audio> Audio Tag",
         "history": "<h1> Introduced in HTML5, used to embed audio files with optional controls.</h1>",
         "tip": "The <audio> tag is used to embed audio content in a webpage. It can include controls for play, pause, and volume.",
-        "code": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0FB5ILDICqwK6xj7W1RP9u?utm_source=generator&si=9f37f7f7b989411c\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
-        "quiz": "Which tag is used to embed audio in HTML?",
-        "answer": "audio"
+        "code": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0FB5ILDICqwK6xj7W1RP9u?utm_source=generator&si=9f37f7f7b989411c\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
     },
     "img": {
         "title": "<img> Image",
         "history": "<h1> For embedding images</h1>",
         "tip": "The <img> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image file.",
-        "code": "<img src='https://i.pinimg.com/474x/9a/f0/36/9af036b6c356add9971cae4ba9e1058a.jpg' alt='img sample' width='100%'>",
-        "quiz": "Which tag is used to show image?",
-        "answer": "img"
-    },
-    "header": {
-        "title": "<header> Header Tag",
-        "history": "<h1> Defines a container for introductory content or navigation links in HTML.</h1>",
-        "tip": "The <header> tag is used to define the header of a webpage. It typically contains the website's title, navigation links, or other introductory content.",
-        "code": "<header>\n  <h1>My Website</h1>\n  <nav>\n    <a href='#home'>Home</a>\n    <a href='#about'>About</a>\n    <a href='#contact'>Contact</a>\n  </nav>\n</header>",
-        "quiz": "Which tag is used to define the top section of a webpage?",
-        "answer": "header"
-    },
-    "footer": {
-        "title": "<footer> Footer Tag",
-        "history": "<h1> Defines a container for footer content like author info, copyright, or links.</h1>",
-        "tip": "The <footer> tag is used to define the footer of a webpage. It typically contains copyright information, author info, or other supplementary content.",
-        "code": "<footer>\n  <p>© 2025 My Website. All rights reserved.</p>\n  <a href='#privacy'>Privacy Policy</a>\n</footer>",
-        "quiz": "Which tag is used to define the bottom section of a webpage?",
-        "answer": "footer"
+        "code": "<img src='https://i.pinimg.com/474x/9a/f0/36/9af036b6c356add9971cae4ba9e1058a.jpg' alt='img sample' width='100%'>"
     },
     "table": {
         "title": "<table> Table Tag",

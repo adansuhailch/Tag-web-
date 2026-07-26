@@ -1,7 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
 <head>
+    <!-- Google Search Central Official Site Name Schema Markup -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Tag Web",
+  "alternateName": "TagWeb Learning Hub",
+  "url": "https://tag-web.is-cool.dev/"
+}
+</script>
+
 
     <meta charset="UTF-8" />
     <title>Tag Web</title>
@@ -119,12 +130,16 @@
                 <h2>Semantic and Media Tags</h2>
                 <div class="cards-grid">
 
-                    <div class="tag-card" data-tag="header" onclick="openModal('header')">
-                        &lt;header&gt; Header<span class="tooltip">Click for details</span>
+
+                    <div class="tag-card" onclick="openModal('main')">&lt;main&gt;<span class="tooltip">Click for
+                            details</span>
+                        Main
+                        Content</div>
+                    <div class="tag-card" onclick="openModal('div')">&lt;div&gt;<span class="tooltip">Click for
+                            details</span>
+                        Division
                     </div>
-                    <div class="tag-card" data-tag="footer" onclick="openModal('footer')">
-                        &lt;footer&gt; Footer<span class="tooltip">Click for details</span>
-                    </div>
+
                     <div class="tag-card" data-tag="img" onclick="openModal('img')">
                         &lt;img&gt; Image<span class="tooltip">Click for details</span>
                     </div>
