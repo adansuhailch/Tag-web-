@@ -22,6 +22,7 @@ async function startNewQuiz(limit = "all", targetCategory = "all") {
     // 🌟 HAR CATEGORY KI CUSTOM LIMIT KA MATRIX
     const categoryLimits = {
         "text-tag": 15,       // text-tag ke hamesha 15 show honge
+        "semantic-media": 18,
         // "css-animation": 10,  // css-animation ke hamesha 10 show honge
         // "html-elements": 20,  // html-elements ke hamesha 20 show honge
         // "all": "all"          // default mix data ke liye saare load honge

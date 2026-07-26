@@ -223,30 +223,6 @@
         "quiz": "Which tag marks a variable?",
         "answer": "var"
     },
-    "cite": {
-        "title": "<cite> Citation",
-        "history": "<h1>Title of a work.</h1>",
-        "tip": "The <code>&lt;cite&gt;</code> tag is used to indicate the title of a work, such as a book, article, or research paper.",
-        "code": "<cite>Thinking, Fast and Slow</cite>",
-        "quiz": "Which tag cites a work title?",
-        "answer": "cite"
-    },
-    "q": {
-        "title": "<q> Quote",
-        "history": "<h1>Short inline quote.</h1>",
-        "tip": "The <code>&lt;q&gt;</code> tag is used to indicate a short inline quotation.",
-        "code": "<q>Be yourself.</q>",
-        "quiz": "Which tag shows an inline quote?",
-        "answer": "q"
-    },
-    "blockquote": {
-        "title": "<blockquote> Block quote",
-        "history": "<h1>Extended quotation.</h1>",
-        "tip": "The <code>&lt;blockquote&gt;</code> tag is used to indicate a longer quotation, typically displayed as a block.",
-        "code": "<blockquote>Long quote</blockquote>",
-        "quiz": "Which tag shows a block quote?",
-        "answer": "blockquote"
-    },
     "span": {
         "title": "<span> Inline",
         "history": "<h1>Generic inline container.</h1>",
@@ -286,6 +262,70 @@
         "code": "<s>Old price</s>",
         "quiz": "Which tag marks inaccurate text?",
         "answer": "s"
+    },
+    "details": {
+        "title": "<details> Expandable Details",
+        "history": "<h1>Creates a native interactive accordion widget that the user can open or close.</h1>",
+        "tip": "Add the <code>open</code> attribute directly inside the tag (e.g., &lt;details open&gt;) if you want the panel to be open by default on document load.",
+        "code": "<details>\n    <summary>View Database Script</summary>\n    <p>All core actions trace through standard unified modules.</p>\n</details>",
+        "quiz": "Which structural container establishes native toggle elements that expand or collapse content visibility?",
+        "answer": "details"
+    },
+    "summary": {
+        "title": "<summary> Details Summary",
+        "history": "<h1>Specifies a visible, clickable heading label for a parent details widget.</h1>",
+        "tip": "The <code>&lt;summary&gt;</code> tag must be the absolute first child element inside a &lt;details&gt; component to properly trigger interaction logic.",
+        "code": "<details>\n    <summary>Advanced GIT Push Tricks</summary>\n    <p>Reset system proxies using global global unsets when host resolves crash.</p>\n</details>",
+        "quiz": "Which sub-tag builds the visible clickable caption or handle for an expanding details widget?",
+        "answer": "summary"
+    },
+    "dialog": {
+        "title": "<dialog> Dialog Box",
+        "history": "<h1>Defines a native interactive overlay window component, like a popup model.</h1>",
+        "tip": "Leverage the native JavaScript invocation method <code>dialogElement.showModal()</code> to automatically display target content centered over backdrop matrices.",
+        "code": "<dialog id='shareModalOverlay'>\n    <h3>Share Analytics</h3>\n    <button onclick='this.parentElement.close()'>Close</button>\n</dialog>",
+        "quiz": "Which modern HTML5 element builds native sub-window dialog boards or overlay boxes without tracking custom flex logic?",
+        "answer": "dialog"
+    },
+    "search": {
+        "title": "<search> Search Section",
+        "history": "<h1>Specifies a dedicated structural block containing input parameters for lookups.</h1>",
+        "tip": "The modern <code>&lt;search&gt;</code> element cleanly wraps search inputs, form containers, or buttons to isolate site search functions from standard form structures.",
+        "code": "<search>\n    <form action='/query'>\n        <input type='search' id='searchBar' placeholder='Find layout tag...'>\n        <button type='submit'>Search</button>\n    </form>\n</search>",
+        "quiz": "Which elite modern semantic element groups lookup components, input filters, and validation query tools?",
+        "answer": "search"
+    },
+    "hgroup": {
+        "title": " Heading Group",
+        "history": "Groups a single multi-level heading grouping consisting of an h1-h6 along with subheadings.",
+        "tip": "Use <hgroup> to bundle main headings directly alongside secondary description paragraphs or subtitles without breaking automated search outlines.",
+        "code": "\n    hellodevs channel\n    Web Development, Made Simple from absolute scratch.\n",
+        "quiz": "Which semantic component bundles primary article titles together alongside subheadings or paragraph captions?",
+        "answer": "hgroup"
+    },
+    "cite": {
+        "title": "<cite> Citation",
+        "history": "<h1>Title of a work.</h1>",
+        "tip": "The <code>&lt;cite&gt;</code> tag is used to indicate the title of a work, such as a book, article, or research paper.",
+        "code": "<cite>Thinking, Fast and Slow</cite>",
+        "quiz": "Which tag cites a work title?",
+        "answer": "cite"
+    },
+    "q": {
+        "title": "<q> Quote",
+        "history": "<h1>Short inline quote.</h1>",
+        "tip": "The <code>&lt;q&gt;</code> tag is used to indicate a short inline quotation.",
+        "code": "<q>Be yourself.</q>",
+        "quiz": "Which tag shows an inline quote?",
+        "answer": "q"
+    },
+    "blockquote": {
+        "title": "<blockquote> Block quote",
+        "history": "<h1>Extended quotation.</h1>",
+        "tip": "The <code>&lt;blockquote&gt;</code> tag is used to indicate a longer quotation, typically displayed as a block.",
+        "code": "<blockquote>Long quote</blockquote>",
+        "quiz": "Which tag shows a block quote?",
+        "answer": "blockquote"
     },
     "header": {
         "title": "<header>",

@@ -100,6 +100,16 @@
         "ans": 2
     },
     {
+        "q": "Which tag is used to navigate other files or pages?",
+        "options": [
+            "nav tag",
+            "link tag",
+            "anchor tag",
+            "button tag"
+        ],
+        "ans": 2
+    },
+    {
         "q": "Which HTML tag is used to define a paragraph?",
         "options": [
             "<para>",
@@ -109,16 +119,6 @@
         ],
         "ans": 1,
         "category": "text-tag"
-    },
-    {
-        "q": "Which tag is used to navigate other files or pages?",
-        "options": [
-            "nav tag",
-            "link tag",
-            "anchor tag",
-            "button tag"
-        ],
-        "ans": 2
     },
     {
         "q": "What does the declaration '<!DOCTYPE html>' do at the very beginning of a file?",
@@ -286,17 +286,6 @@
         "category": "text-tag"
     },
     {
-        "q": "Which tag is used to define a section of a webpage that contains navigation links?",
-        "options": [
-            "header",
-            "section",
-            "nav",
-            "aside"
-        ],
-        "ans": 2,
-        "category": "link-tag"
-    },
-    {
         "q": "Which HTML tag is used to create an interactive form container?",
         "options": [
             "<input>",
@@ -407,344 +396,201 @@
         "category": "form-tag"
     },
     {
-        "q": "Which CSS at-rule is used to define the animation keyframe states?",
+        "q": "Which tag is used to define the top section of a webpage?",
         "options": [
-            "@animation",
-            "@keyframes",
-            "@frames",
-            "@motion"
-        ],
-        "ans": 1,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which CSS property specifies the duration of an animation cycle?",
-        "options": [
-            "animation-time",
-            "animation-speed",
-            "animation-duration",
-            "transition-delay"
+            "<head>",
+            "<top>",
+            "<header>",
+            "<navbar>"
         ],
         "ans": 2,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which value makes an animation loop indefinitely?",
+        "q": "Which tag is used to define the bottom section of a webpage?",
         "options": [
-            "loop",
-            "infinite",
-            "always",
-            "continuous"
+            "<bottom>",
+            "<footer>",
+            "<end>",
+            "<base>"
         ],
         "ans": 1,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which CSS property binds keyframe rules to a specific HTML element target?",
+        "q": "Which tag is used to show image?",
         "options": [
-            "animation-name",
-            "animation-target",
-            "animation-link",
-            "keyframes-set"
-        ],
-        "ans": 0,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property controls the speed curve or pacing of a CSS animation?",
-        "options": [
-            "animation-curve",
-            "animation-timing-function",
-            "animation-pace",
-            "transition-effect"
-        ],
-        "ans": 1,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which CSS value plays the animation in reverse on alternate cycles?",
-        "options": [
-            "reverse",
-            "alternate",
-            "alternate-reverse",
-            "backwards"
-        ],
-        "ans": 1,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property specifies what styles apply before or after an animation runs?",
-        "options": [
-            "animation-fill-mode",
-            "animation-state",
-            "animation-style",
-            "transition-behavior"
-        ],
-        "ans": 0,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property specifies whether a CSS animation is running or paused?",
-        "options": [
-            "animation-status",
-            "animation-mode",
-            "animation-play-state",
-            "animation-control"
+            "<image>",
+            "<src>",
+            "<img>",
+            "<picture>"
         ],
         "ans": 2,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which property sets a delay interval before the animation starts executing?",
+        "q": "Which tag is used to embed audio in HTML?",
         "options": [
-            "animation-wait",
-            "animation-delay",
-            "delay-time",
-            "transition-pause"
+            "<sound>",
+            "<audio>",
+            "<music>",
+            "<mp3>"
         ],
         "ans": 1,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "What is the shorthand property to configure all animation settings in one single line?",
+        "q": "Which tag is used to embed video?",
         "options": [
-            "css-animation",
-            "animate",
-            "animation",
-            "motion"
+            "<movie>",
+            "<media>",
+            "<video>",
+            "<screen>"
         ],
         "ans": 2,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which property sets how many times an animation repeats?",
+        "q": "Which tag specifies multiple media resources for media elements?",
         "options": [
-            "animation-delay",
-            "animation-iteration-count",
-            "animation-duration",
-            "animation-repeat"
-        ],
-        "ans": 1,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property sets animation playback direction including alternate?",
-        "options": [
-            "animation-fill-mode",
-            "animation-direction",
-            "animation-play-state",
-            "animation-timing-function"
-        ],
-        "ans": 1,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property controls element state before/after animation?",
-        "options": [
-            "animation-fill-mode",
-            "animation-duration",
-            "animation-delay",
-            "animation-iteration-count"
+            "<source>",
+            "<src>",
+            "<resource>",
+            "<file>"
         ],
         "ans": 0,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which property pauses or resumes an animation?",
+        "q": "Which tag is used to specify text tracks for media elements?",
         "options": [
-            "animation-direction",
-            "animation-timing-function",
-            "animation-play-state",
-            "animation-name"
-        ],
-        "ans": 2,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property controls the animation speed curve?",
-        "options": [
-            "animation-timing-function (including cubic-bezier)",
-            "animation-duration",
-            "animation-delay",
-            "animation-fill-mode"
-        ],
-        "ans": 0,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which timing function creates discrete animation frames instead of smooth interpolation?",
-        "options": [
-            "linear",
-            "ease-in-out",
-            "cubic-bezier()",
-            "steps()"
+            "<caption>",
+            "<subtitle>",
+            "<vtt>",
+            "<track>"
         ],
         "ans": 3,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "How do you run multiple animations on one element?",
+        "q": "Which tag is used to group media content with a caption?",
         "options": [
-            "Use multiple animation tags",
-            "Comma-separate animations in the animation shorthand",
-            "Space-separate animations in the animation shorthand",
-            "It is not possible to run multiple animations"
-        ],
-        "ans": 1,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which CSS features are combined to create continuous 3D motion and interactive tilts?",
-        "options": [
-            "transform + animation (keyframes) and transition",
-            "display + position and float",
-            "flexbox + grid and opacity",
-            "filter + backdrop-filter and mix-blend-mode"
+            "<figure>",
+            "<media-group>",
+            "<picture>",
+            "<gallery>"
         ],
         "ans": 0,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which properties are used to rotate elements in 3D and which property controls the viewer distance for perspective?",
+        "q": "Which tag defines a caption for a figure?",
         "options": [
-            "rotate, scale and skew",
-            "translateX, translateY and translateZ",
-            "rotateX, rotateY and perspective",
-            "matrix, matrix3d and vector"
+            "<caption>",
+            "<title>",
+            "<figcaption>",
+            "<label>"
         ],
         "ans": 2,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which property group animates blur, brightness, and hue changes?",
+        "q": "Which tag defines a set of navigation links?",
         "options": [
-            "transform with animation",
-            "filter with animation",
-            "mask with animation",
-            "opacity with animation"
+            "<links>",
+            "<nav>",
+            "<menu>",
+            "<navbar>"
         ],
         "ans": 1,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which property can be animated to morph or reveal shapes?",
+        "q": "Which tag defines a section in a document?",
         "options": [
-            "clip-path",
-            "border-radius",
-            "box-shadow",
-            "shape-outside"
+            "<div>",
+            "<block>",
+            "<section>",
+            "<part>"
         ],
-        "ans": 0,
-        "category": "css-animation"
+        "ans": 2,
+        "category": "semantic-media"
     },
     {
-        "q": "Which property blurs or affects the area behind an element for glass effects?",
+        "q": "Which tag represents a self-contained composition in a document?",
         "options": [
-            "filter",
-            "opacity",
-            "blur",
-            "backdrop-filter"
+            "<post>",
+            "<article>",
+            "<section>",
+            "<body>"
+        ],
+        "ans": 1,
+        "category": "semantic-media"
+    },
+    {
+        "q": "Which tag defines content aside from the page content?",
+        "options": [
+            "<sidebar>",
+            "<aside>",
+            "<secondary>",
+            "<margin>"
+        ],
+        "ans": 1,
+        "category": "semantic-media"
+    },
+    {
+        "q": "Which tag specifies the main content of a document?",
+        "options": [
+            "<body>",
+            "<content>",
+            "<container>",
+            "<main>"
         ],
         "ans": 3,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which property hints the browser for upcoming changes to optimize performance?",
+        "q": "Which tag is a generic container for flow content?",
         "options": [
-            "transform",
-            "will-change",
-            "contain",
-            "visibility"
-        ],
-        "ans": 1,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property blends an element with its backdrop and can be animated?",
-        "options": [
-            "background-blend-mode",
-            "opacity",
-            "mix-blend-mode",
-            "filter"
-        ],
-        "ans": 2,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which property animates an element along a custom path?",
-        "options": [
-            "offset-path (Motion Path)",
-            "motion-trajectory",
-            "path-animation",
-            "animation-route"
+            "<div>",
+            "<span>",
+            "<section>",
+            "<box>"
         ],
         "ans": 0,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which features combine for smooth snapping carousels with animated slides?",
+        "q": "Which tag is a generic inline container for phrasing content?",
         "options": [
-            "flexbox with animations",
-            "grid with animations",
-            "scroll-snap with animations",
-            "overflow-x with animations"
+            "<div>",
+            "<a>",
+            "<span>",
+            "<text>"
         ],
         "ans": 2,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which CSS at-rule defines a scroll-based timeline for animations?",
+        "q": "Which tag is used to define contact information in HTML?",
         "options": [
-            "@keyframes",
-            "@scroll-timeline",
-            "@media",
-            "@supports"
+            "<contact>",
+            "<address>",
+            "<info>",
+            "<mail>"
         ],
         "ans": 1,
-        "category": "css-animation"
+        "category": "semantic-media"
     },
     {
-        "q": "Which experimental feature positions and animates tooltips relative to another element?",
+        "q": "Which tag is used to represent time or date in HTML?",
         "options": [
-            "CSS Anchor Positioning",
-            "CSS Relative Layout",
-            "CSS Flexbox Level 2",
-            "CSS Absolute Positioning"
+            "<date>",
+            "<clock>",
+            "<calendar>",
+            "<time>"
         ],
-        "ans": 0,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which Houdini primitive lets you run JS-driven animations off the main thread for high-performance effects?",
-        "options": [
-            "Layout Worklet",
-            "Paint Worklet",
-            "Animation Worklet (Houdini)",
-            "Audio Worklet"
-        ],
-        "ans": 2,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which spec expands path-based animations with advanced path features?",
-        "options": [
-            "CSS Motion Path Level 2",
-            "CSS Shapes Level 2",
-            "CSS SVG Level 3",
-            "CSS Transforms Level 2"
-        ],
-        "ans": 0,
-        "category": "css-animation"
-    },
-    {
-        "q": "Which new color specs enable perceptual color animations like LCH?",
-        "options": [
-            "CSS Color Level 3 (RGB, HSL)",
-            "CSS Color Level 4/5 (Lab, LCH, HWB)",
-            "CSS Gradient Level 2",
-            "CSS Palette Level 1"
-        ],
-        "ans": 1,
-        "category": "css-animation"
+        "ans": 3,
+        "category": "semantic-media"
     }
 ]
