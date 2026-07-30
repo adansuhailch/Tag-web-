@@ -50,10 +50,10 @@ header h1 {
 }
 
 .brand-wordmark {
-    color: #fff;
-    font-weight: 700;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 1.05rem;
+    color: #fffafa;
+    font-weight: 800;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 1.20rem;
     letter-spacing: 0.02em;
 }
 

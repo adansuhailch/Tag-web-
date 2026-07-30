@@ -1,7 +1,5 @@
-/* ============================================================
-   CODE EDITOR (CodeMirror 5 playground styling)
-   ============================================================ */
-textarea {
+/* code editor */
+/* textarea {
     width: 100%;
     height: 150px;
     font-family: 'Courier New', Courier, monospace;
@@ -19,7 +17,7 @@ textarea {
 textarea:focus {
     outline: none;
     border-color: var(--btn-run-hover);
-}
+} */
 
 /* CodeMirror overrides */
 .CodeMirror {
@@ -42,15 +40,15 @@ textarea:focus {
 }
 
 .CodeMirror-linenumber {
-    color: #64748b;
+    color: #e8eef7;
 }
 
-.CodeMirror-lint-marker-warning,
+/* .CodeMirror-lint-marker-warning,
 .CodeMirror-lint-marker-error {
     cursor: pointer;
-}
+} */
 
-.CodeMirror-focused {
+/* .CodeMirror-focused {
     border-color: rgba(100, 255, 218, 0.45);
     box-shadow: 0 0 0 1px rgba(100, 255, 218, 0.18);
 }

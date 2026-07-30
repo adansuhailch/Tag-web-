@@ -1,0 +1,160 @@
+/* contact section */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    background: #010125;
+    color: #f5f5f5;
+    font-family: 'Roboto', serif;
+    line-height: 1.6;
+} */
+
+
+.contact-section {
+    padding: 4rem 6vw;
+    font-size: 2rem;
+    text-align: center;
+    background: #080c16;
+    color: #f5f5f5;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* h1 {
+    font-family: 'Roboto', 'Ubuntu', serif;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 400;
+} */
+
+form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-section form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-section form .input-box input,
+.contact-section form .input-box textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: blueviolet;
+    background: #0d1326;
+    border-radius: 1.2rem;
+    margin: 0.7rem 0;
+    border: 2px groove #c5c0c0;
+}
+
+.contact-section form textarea {
+    min-height: 200px;
+    resize: none;
+}
+
+.contact form .input-box {
+    border: 2px groove #fffafa;
+}
+
+@media (max-width: 768px) {
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+/* Button base */
+.cont-btn {
+    width: 190px;
+    max-width: 100%;
+    height: 52px;
+    border-radius: 14px;
+    border: 4px groove #370d5e;
+    background: linear-gradient(135deg, #5a189a, #370d5e);
+    position: relative;
+    cursor: pointer;
+    font-weight: 800;
+    font-family: 'Ubuntu', 'Roboto', sans-serif;
+    font-size: 18px;
+    transform-style: preserve-3d;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    box-shadow:
+        0 10px 0 #32055a,
+        0 18px 30px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+
+/* 3D base layer */
+.cont-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #9d4edd, #7b2cbf);
+    transform: translateZ(-14px);
+}
+
+/* Light reflection */
+.cont-btn::after {
+    content: "";
+    position: absolute;
+    top: -70%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: linear-gradient(120deg,
+            transparent 35%,
+            rgba(255, 255, 255, 0.22),
+            transparent 65%);
+    transition: transform 0.6s ease;
+}
+
+/* Hover */
+.cont-btn:hover {
+    transform: translateY(-6px) rotateX(14deg);
+    box-shadow:
+        0 16px 0 #12001f,
+        0 28px 45px rgba(0, 0, 0, 0.45);
+}
+
+.cont-btn:hover::after {
+    transform: translateX(50%);
+}
+
+/* Click */
+.cont-btn:active {
+    transform: translateY(3px);
+    box-shadow:
+        0 6px 0 #12001f,
+        0 12px 20px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cont-btn {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    .cont-btn:hover {
+        transform: translateY(-6px);
+        /* less tilt on mobile */
+    }
+}

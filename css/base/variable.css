@@ -17,7 +17,7 @@
     --text-heading: #ffffff;
     --text-modal-h3: #00ffaa;
     --text-modal-h4: #6366f1;
-    --text-accent: #6366f1;
+    --text-accent: #161877;
     --text-code: #00ffaa;
     --text-history: #64748b;
 
@@ -29,7 +29,7 @@
     --shadow-header: 0 4px 30px rgba(0, 0, 0, 0.7);
 
     /* Cyber Glows ( Mockup Match) */
-    --glow-h2: 0 0 15px rgba(0, 255, 170, 0.25);
+    --glow-h2: 5px 0px 0px rgb(255 255 255 / 25%);
     --glow-card-hover: 0 0 20px rgba(99, 102, 241, 0.15);
 
     /* Interactive (Neon Accents) */

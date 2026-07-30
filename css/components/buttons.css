@@ -1,11 +1,9 @@
-/* header buttons */
 .button-group {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
     margin-left: auto;
-
 }
 
 .btn {
@@ -13,24 +11,88 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 18px;
-    font-size: 1rem;
+    padding: 8px 16px;
+    font-size: 14px;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', 'Outfit', sans-serif;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.3s ease;
+    box-sizing: border-box;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.color-lab {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fffafa;
+}
+
+.color-lab .icon-palette {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.color-lab:hover {
+    border-color: #d4c08d;
+    background: rgba(255, 183, 3, 0.08);
+    box-shadow: 0 0 12px rgba(255, 183, 3, 0.15);
+}
+
+.color-lab:hover .icon-palette {
+    transform: scale(1.2) rotate(-10deg);
+
 }
 
 .btn-discord {
-    background: linear-gradient(135deg, #2c37ad, #2b37b4);
+    background: #232fb9;
+    border: 1px solid rgba(88, 101, 242, 0.4);
     color: #ffffff;
-    border: none;
-    box-shadow: 0 4px 12px rgba(29, 39, 153, 0.3);
+    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.15);
+}
+
+.btn-discord i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
 }
 
 .btn-discord:hover {
-    background: linear-gradient(135deg, #252d86, #212b97);
-    transform: translateY(-1px);
+    background: #232fb9;
+    border-color: #232fb9;
+    box-shadow: 0 0 14px rgba(88, 101, 242, 0.35);
+}
+
+.btn-discord:hover i {
+    transform: scale(1.15) translateY(-1px);
+}
+
+.contact-btn {
+    background: rgba(202, 177, 177, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-btn i {
+    font-size: 14px;
+    color: #7aa2f7;
+    transition: transform 0.25s ease;
+}
+
+.contact-btn .icon-palette{
+    color: #fffafa;
+}
+
+.contact-btn:hover {
+    border-color: #fffafa;
+    background: rgba(122, 162, 247, 0.08);
+    box-shadow: 0 0 12px rgba(122, 162, 247, 0.2);
+}
+
+.contact-btn:hover i {
+    transform: scale(1.1) rotate(15deg);
+    color: #e0af68;
+}
+
+.btn:active,
+.contact-btn:active {
+    transform: scale(0.96);
 }

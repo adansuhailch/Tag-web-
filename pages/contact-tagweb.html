@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Tag-Web</title>
+    <link rel="stylesheet" href="../css/components/contact-tagweb.css">
+</head>
+
+<body>
+    <section class="contact-section" id="contactMe">
+        <h1 class="heading">
+            Contact <span style="color: blueviolet">Me!</span>
+        </h1>
+        <form id="contactForm" name="contact" method="POST" data-netlify="true">
+            <!-- Hidden input for Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div class="input-box">
+                <input type="text" name="full_name" placeholder="Full Name" required />
+                <input type="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-box">
+                <input  name="phone" placeholder="Phone Number" required />
+                <input type="text" name="subject" placeholder="Email Subject" required />
+            </div>
+            <div class="input-box">
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message to me..." required></textarea>
+            </div>
+
+            <input type="submit" value="Send Message" class="cont-btn" />
+        </form>
+    </section>
+
+</body>
+
+</html>
