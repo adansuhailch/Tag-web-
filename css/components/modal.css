@@ -1,13 +1,3 @@
-/* Model and editor page css */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    /* background: var(--bg-modal, #0a1120); */
-    color: var(--text-primary, #ffffff);
-    font-family: 'Inter', system-ui, sans-serif;
-}
-
 #modal {
     display: block;
     /* Fixed popup ki jagah normal canvas kiya */

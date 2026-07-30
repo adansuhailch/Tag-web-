@@ -1,7 +1,7 @@
 /*1. BASE STYLES (Sab se pehle variables aur resets aayenge) */
+@import url('base/typography.css');
 @import url('base/variable.css');
 @import url('base/reset.css');
-@import url('base/typography.css');
 @import url('base/background.css');
 
 /* 2. LAYOUT STYLES (Page ka outer dhancha)*/
@@ -16,6 +16,7 @@
 @import url('components/modal.css');
 @import url('components/js-part.css');
 @import url('components/quiz-section-page.css');
+@import url('components/contact-tagweb.css');
 
 /*4. SECTIONS & RESPONSIVE (Agar in folders mein koi files hain to niche add karein)*/
 @import url('sections/section.css');

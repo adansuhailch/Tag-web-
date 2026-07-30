@@ -1,6 +1,4 @@
-/* ============================================================
-SECTIONS
-============================================================ */
+/* section section */
 section {
     margin: 24px auto;
     padding: 24px;
@@ -11,7 +9,7 @@ section {
     transition: background 0.3s;
 }
 
-.center{
+.center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,14 +32,16 @@ section {
     border: 1px solid var(--border-card);
     margin: 0;
     padding: 16px 20px;
-    border-radius: 14px;
+    border-radius: 15px;
     cursor: pointer;
+    border: 2px groove #fffafa;
+    box-shadow: 4px 4px 0px #fffafa;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
     box-shadow: 0 4px 12px var(--shadow-card);
     position: relative;
-    font-weight: 500;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    font-weight: 700;
+    font-size: 19px;
+    font-family: 'Roboto', 'Ubuntu', serif;
     /* extra code */
     min-height: 100px;
     display: flex;
