@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Tag-Web</title>
     <link rel="stylesheet" href="../css/components/contact-tagweb.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- 2. EmailJS Official Production Framework Core Driver -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- 3. Your Custom Contact Functionality Code Logic (FIXED PATH: Added folder escape '../') -->
+    <script src="../js/contact-tagweb.js" defer></script>
+
 </head>
 
 <body>
+    <!-- FIXED: Removed duplicate ids and cleared Netlify parameters -->
     <section class="contact-section" id="contactMe">
         <h1 class="heading">
             Contact <span style="color: blueviolet">Me!</span>
         </h1>
-        <form id="contactForm" name="contact" method="POST" data-netlify="true">
-            <!-- Hidden input for Netlify -->
-            <input type="hidden" name="form-name" value="contact" />
 
+        <form id="contact-form-element" name="contact">
             <div class="input-box">
                 <input type="text" name="full_name" placeholder="Full Name" required />
                 <input type="email" name="email" placeholder="Email Address" required />
+                <input type="text" name="subject" placeholder="Email Subject" required>
             </div>
-            <div class="input-box">
-                <input  name="phone" placeholder="Phone Number" required />
-                <input type="text" name="subject" placeholder="Email Subject" required />
-            </div>
+
             <div class="input-box">
                 <textarea name="message" cols="30" rows="10" placeholder="Your Message to me..." required></textarea>
             </div>
