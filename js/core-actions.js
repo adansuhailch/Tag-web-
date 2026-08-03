@@ -215,6 +215,83 @@
         document.getElementById('quiz-feedback').innerHTML = '';
         document.getElementById(quizContainerId).setAttribute('data-tag', tag);
 
+        /* ==========================================================================
+           DYNAMIC LAZY-LOADING VIDEO ENGINE INJECTION START 🎥
+           ========================================================================== */
+        const accordion = document.getElementById("video-accordion-container");
+        const iframeSlot = document.getElementById("dynamic-iframe-slot");
+
+        if (accordion && iframeSlot) {
+            // 1. Purani loaded video ko clean karein aur accordion close kar dein
+            accordion.removeAttribute('open');
+            iframeSlot.innerHTML = '';
+
+            // 2. Check karein kya current JSON entry ke andar video ID majood hai?
+            const videoID = currentEntry.yt_video_id;
+            const tagTitle = currentEntry.title || tag;
+
+            // Har single tag par accordion element ko interface par active (block) rakhein
+            accordion.style.display = 'block';
+
+            // Multi-Click Event Listener Crash se bachne ke liye summary node ko clean aur refresh karein
+            const summary = accordion.querySelector('.video-summary-trigger');
+            const spanText = summary.querySelector('span'); // Target standard text inside summary
+            const newSummary = summary.cloneNode(true);
+            summary.parentNode.replaceChild(newSummary, summary);
+
+            // Clean encoding structures for titles nodes
+            const cleanTitle = tagTitle.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+
+            if (videoID && videoID.trim() !== "") {
+                /* ==========================================================================
+                   STATE A: VIDEO IS LIVE AND VERIFIED 📺
+                   ========================================================================== */
+                // Default reset elements inside viewports handles
+                newSummary.querySelector('span').innerHTML = "Watch Live Code Explanation";
+                newSummary.querySelector('i.fa-youtube').style.color = "#ea4335"; // Bright YouTube Red
+
+                newSummary.addEventListener('click', function (e) {
+                    if (!accordion.hasAttribute('open')) {
+                        if (iframeSlot.innerHTML === '') {
+                            iframeSlot.innerHTML = `
+                                <iframe src="https://youtube.com/embed/${videoID}" 
+                                        title="Tag Web Tutorial: ${cleanTitle}" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen>
+                                </iframe>`;
+                        }
+                    }
+                });
+            } else {
+                /* ==========================================================================
+                   STATE B: VIDEO COMING SOON - DYNAMIC RETENTION ENGINE 🚀🔥
+                   ========================================================================== */
+                // Tag ka clean visual string extract karein (e.g. <!DOCTYPE html> ya <html>)
+                const visibleTagName = tag.startsWith('!') ? `&lt;${tag}&gt;` : `&lt;${tag}&gt;`;
+                const safeBadge = visibleTagName.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+
+                // Dynamic banner injection based on active template parameters string
+                newSummary.querySelector('span').innerHTML = `<code>${safeBadge}</code> Guide Coming Soon! Stay Connected ⚡`;
+                newSummary.querySelector('i.fa-youtube').style.color = "#ff0000"; // Dim icon color to specify inactive stream
+
+                newSummary.addEventListener('click', function (e) {
+                    if (!accordion.hasAttribute('open')) {
+                        iframeSlot.innerHTML = `
+                            <div style="padding: 24px; text-align: center; font-family: 'Outfit', sans-serif; color: #fffafa;">
+                                <div style="font-size: 32px; margin-bottom: 12px;">🎬</div>
+                                <h3 style="margin: 0 0 8px 0; color: #fffafa; font-size: 16px;">We are baking this video guide right now!</h3>
+                                <p style="margin: 0; font-size: 13px; opacity: 0.8; line-height: 1.5;">
+                                    The deep dive code breakdown for <strong style="color: #7aa2f7;">${safeBadge}</strong> is inside our production pipeline.<br>
+                                    Subscribe to <strong style="color: #ea4335;">hellodevs</strong> channel so you don't miss the deployment crunch drops!
+                                </p>
+                            </div>`;
+                    }
+                });
+            }
+
+        }
         const code = getEditorContentFromEntry(currentEntry);
         setEditorValue(code);
         document.getElementById(previewFrameId).srcdoc = code;

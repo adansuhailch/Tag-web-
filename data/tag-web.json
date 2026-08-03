@@ -5,7 +5,8 @@
         "tip": "<strong>VS Code Shortcut:</strong> Open a blank HTML file, press <code>Shift + 1</code> (to type an exclamation mark <code>!</code>), and hit <code>Enter</code>. VS Code will instantly generate the entire standard HTML5 boilerplate code for you.",
         "code": "\n<!-- Hey browser, this is a modern HTML5 document! -->\n <!DOCTYPE html> \n<html lang=\"en\"> <!-- Sets the global language to English for accessibility -->\n<head>\n    <meta charset=\"UTF-8\"> <!-- Allows the page to display almost all languages/symbols correctly -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <!-- Makes sure your website layout scales perfectly on mobile screens -->\n    <title>My First Professional Web Page</title>\n</head>\n<body>\n    <!-- Main website content starts right here -->\n    <h1>Hello World!</h1>\n</body>\n</html>",
         "quiz": "Which declaration sets the HTML document type?",
-        "answer": "doctype"
+        "answer": "doctype",
+        "yt_video_id": "Yihh6SMvBrM"
     },
     "html": {
         "title": "&lt;html&gt; — The Root Container of Everything",
