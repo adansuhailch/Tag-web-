@@ -52,3 +52,112 @@ textarea:focus {
     border-color: rgba(100, 255, 218, 0.45);
     box-shadow: 0 0 0 1px rgba(100, 255, 218, 0.18);
 }
+/* Embed video of every tag */
+.tag-video-accordion {
+    margin-top: 20px;
+    border-top: 2px dashed #fffafa;
+    padding-top: 16px;
+    width: 100%;
+}
+
+/* Clickable Trigger Handle Bar - Converted to an Eye-Catching Banner Button 🚀 */
+.video-summary-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    /* FIXED: Increased text size so it is highly visible */
+    font-weight: 600;
+    color: #fffafa;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    /* Premium Minimal Tab Styling */
+    background: #080c16;
+    border: 2px groove #fffafa;
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Firefox specific default summary arrow cleanup */
+.video-summary-trigger::-webkit-details-marker {
+    display: none;
+}
+
+/* YouTube Icon Pop Glow */
+.video-summary-trigger i.fa-youtube {
+    color: #ea4335;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+/* Rotating Micro Arrow Icon */
+.video-summary-trigger .arrow-icon {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-left: 4px;
+    transition: transform 0.25s ease;
+}
+
+/* Interactive Hover State: Becomes crisp tech blue on hover 🔥 */
+.video-summary-trigger:hover {
+    color: #ffffff;
+    border-color: #ff0000;
+    /* YouTube red boundary highlights */
+    background: #080c16;
+    /* Soft red visual accent tint */
+    box-shadow: 0 0 12px rgba(234, 67, 53, 0.15);
+}
+
+.video-summary-trigger:hover i.fa-youtube {
+    transform: scale(1.6);
+}
+
+/* When the accordion is OPEN, rotate arrow and color it custom blue */
+.tag-video-accordion[open] .video-summary-trigger {
+    border-color: #071422;
+    background: #080c16;
+}
+
+.tag-video-accordion[open] .arrow-icon {
+    transform: rotate(180deg);
+    color: #7aa2f7;
+    opacity: 1;
+}
+
+/*    VIDEO CONTAINER: 16:9 Aspect Ratio with STRICT WIDTH CONTROL 📺 */
+.video-iframe-wrapper {
+    position: relative;
+    max-width: 700px;
+    /* FIXED: Restricted width so it stays compact and doesn't stretch */
+    width: 100%;
+    padding-bottom: 31.5%;
+    /* Calculated 16:9 padding math for 560px max-width wrapper bounds */
+    height: 0;
+    overflow: hidden;
+    margin-top: 16px;
+    border: 2px groove #05070e;
+    border-radius: 20px;
+    background: #080c16;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Handle Mobile Responsive Padding Ratios dynamic shifts */
+@media screen and (max-width: 640px) {
+    .video-iframe-wrapper {
+        padding-bottom: 56.25%;
+        /* Returns to full 100% fluid fluid sizing on small mobile viewports */
+    }
+}
+
+.video-iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

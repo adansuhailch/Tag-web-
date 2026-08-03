@@ -13,6 +13,10 @@
         integrity="sha512-uIAyXysSwPKYTS4BrBQGkt7i9ozdNjNA4jXfjFDl6fWIc2zDllleoiY5EkH7Ib2j+Qb8YJx4a5qy192JZqxqVg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/lint.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -95,6 +99,20 @@
                     <p id="quiz-feedback" aria-live="polite"></p>
                 </div>
             </div>
+            <!-- Interactive Video Accordion Component -->
+            <!-- Interactive Video Accordion Component (Fully Synced with JS Brain) -->
+            <details class="tag-video-accordion" id="video-accordion-container" style="display: none;">
+                <summary class="video-summary-trigger">
+                    <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
+                    <span>Watch Live Code Explanation</span>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </summary>
+
+                <!-- JS will automatically build and inject the responsive iframe inside this empty container -->
+                <div class="video-iframe-wrapper" id="dynamic-iframe-slot"></div>
+            </details>
+
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
