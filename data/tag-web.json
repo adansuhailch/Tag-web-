@@ -14,7 +14,8 @@
         "tip": "<strong>SEO & Accessibility Tip:</strong> Always include the <code>lang=\"en\"</code> attribute inside your opening <code>&lt;html&gt;</code> tag. It tells Google Search and screen readers what language your content is in, which massively improves your website's search engine ranking.",
         "code": "<html lang=\"en\"> <!-- The root starts here. Always set the language for better SEO! -->\n\n<head>\n    <!-- All behind-the-scenes data and metadata live here -->\n    <title>Root Element Guide</title>\n</head>\n\n<body>\n    <!-- Everything the user actually sees on their screen goes here -->\n    <h1>The root tag controls everything!</h1>\n</body>\n\n</html> <!-- The root ends here. Absolutely nothing should be written after this line! -->",
         "quiz": "Which is the root element of HTML?",
-        "answer": "html"
+        "answer": "html",
+        "yt_video_id": "c6Wtc9gbaJ8"
     },
     "head": {
         "title": "&lt;head&gt; — The Brain Behind the Web Page",
