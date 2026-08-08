@@ -2,18 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Tag-Web</title>
-    <link rel="stylesheet" href="../css/components/contact-tagweb.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- 1: Core Meta Tags (Browsers ke liye) -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- 2. EmailJS Official Production Framework Core Driver -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- 3. Your Custom Contact Functionality Code Logic (FIXED PATH: Added folder escape '../') -->
+    <!-- 2: SEO Meta Tags (Contact Specific) -->
+    <title>Contact Us | Tag Web Learning Platform</title>
+    <meta name="description"
+        content="Have questions or feedback about Tag Web? Get in touch with us through our contact form. We are here to help you learn HTML, CSS, and JavaScript." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tag-web.is-cool.dev/pages/contact-tagweb.html" />
+
+    <!-- 3: Open Graph / Social Media Tags (Agar koi contact page share kare) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tag-web.is-cool.dev/pages/contact-tagweb.html" />
+    <meta property="og:title" content="Contact Us | Tag Web" />
+    <meta property="og:description" content="Get in touch with the Tag Web team for support, feedback, or queries." />
+    <meta property="og:image" content="https://tag-web.is-cool.dev/assets/tag-web-ogimage.png" />
+
+    <!-- 4: PWA / Theme Details -->
+    <meta name="theme-color" content="#080C16" />
+    <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png" />
+
+    <!-- 5: Contact Page Schema Markup (Google Search Engine ke liye sab se important) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Tag Web",
+      "description": "Contact page of Tag Web platform for support and feedback.",
+      "url": "https://tag-web.is-cool.dev/pages/contact-tagweb.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Tag Web",
+        "url": "https://tag-web.is-cool.dev/",
+        "logo": "https://tag-web.is-cool.dev/assets/tag-web-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "adansuhailch@gmail.com"
+        }
+      }
+    }
+    </script>
+
+    <!-- 6: Third-Party JS Drivers & Libraries (SweetAlert aur EmailJS) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+
+    <!-- 7: Your Custom Scripts (defer lagaya hai taake form pehle load ho) -->
     <script src="../js/contact-tagweb.js" defer></script>
 
+    <!-- 8: External Stylesheets (Loading optimization ke liye aakhir me) -->
+    <link rel="stylesheet" href="https://cloudflare.com"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/components/contact-tagweb.css" />
 </head>
 
 <body>
