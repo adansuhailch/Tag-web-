@@ -54,7 +54,7 @@ To mirror or test this interactive platform on your local configuration workspac
 
 1. **Clone the Tree**:
    ```bash
-   git clone https://github.com.git
+   git clone [https://github.com.git](https://github.com/adansuhailch/Tag-web-.git)
    ```
 2. **Access Project Directory**:
    ```bash
