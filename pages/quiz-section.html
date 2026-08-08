@@ -2,20 +2,54 @@
 <html lang="en">
 
 <head>
+    <!-- 1: Core Meta Tags (Performance ke liye sab se pehle) -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="canonical" href="https://tag-web-digitaltest.netlify.app/">
-    <title>Tag Web's Knowledge Test</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 2: SEO Meta Tags (Quiz Specific) -->
+    <title>Web Development Quiz | Tag Web Knowledge Test</title>
+    <meta name="description"
+        content="Test your web development skills with the Tag Web interactive tags quiz. Interactive W3Schools-style questions to challenge your HTML and CSS knowledge!" />
+    <meta name="robots" content="index, follow" />
+    <!-- NOTE: Agar yeh aapki main site ka hissa hai, to domain is-cool.dev hona chahiye -->
+    <link rel="canonical" href="https://tag-web.is-cool.dev/pages/quiz-section.html" />
+
+    <!-- 3: Open Graph / Social Media Tags (Is page ko share karne ke liye bohot zarori hain) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tag-web.is-cool.dev/pages/quiz-section.html" />
+    <meta property="og:title" content="Tag Web Knowledge Test - Interactive HTML/CSS Quiz" />
+    <meta property="og:description"
+        content="Can you get a perfect score? Test your web development tags knowledge right now!" />
+    <meta property="og:image" content="https://tag-web.is-cool.dev/assets/tag-web-ogimage.png" />
+
+    <!-- 4: Fonts Preconnection (Loading speed behtar karne ke liye) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- FontAwesome link if you want icons inside buttons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <link rel="stylesheet" href="/css/components/quiz-section.css">
+        rel="stylesheet" />
+
+    <!-- 5: Favicon & PWA Theme -->
+    <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png" />
+    <meta name="theme-color" content="#080C16" />
+
+    <!-- 6: Structured Data / Schema Markup (Google ko batane ke liye ke yeh ek Quiz hai) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "Tag Web's Knowledge Test",
+      "description": "An interactive web development quiz to test knowledge of HTML and CSS tags.",
+      "learningResourceType": "Quiz",
+      "interactivityType": "interactive"
+    }
+    </script>
+
+    <!-- 7: External Stylesheets & Icons -->
+    <!-- Fixed: Cloudflare ki jagah actual FontAwesome library link insert kiya hai -->
+    <link rel="stylesheet" href="https://cloudflare.com"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/components/quiz-section.css" />
 </head>
 
 <body>

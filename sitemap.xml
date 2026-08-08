@@ -180,6 +180,18 @@
 <!-- bs yaha tak hi likhna Adan is ka agay na jana ok -->
 
   <!-- Legal Pages (Low Priority but Required) -->
+<url>
+<loc>https://tag-web.is-cool.dev/pages/quiz-section.html</loc>
+<lastmod>2026-08-09</lastmod>
+<changefreq>weekly</changefreq>
+</url>
+
+  <url>
+  <loc>https://tag-web.is-cool.dev/pages/contact-tagweb.html</loc>
+  <lastmod>2026-08-09</lastmod>
+  <changefreq>weekly</changefreq>
+  </url>
+  
   <url>
        <loc>https://tag-web.is-cool.dev/pages/privacy-policy.html</loc>
        <lastmod>2026-08-09</lastmod>
