@@ -136,10 +136,13 @@ function showQuizSummaryReport() {
         <div class="quiz-result-card" style="width:100%; padding:15px; text-align:center;">
             <h3 style="margin:0; font-size:1.5rem; color:#64ffda;">Score: ${score} / ${quizQuestions.length}</h3>
             <p style="margin:8px 0; color:#cbd5e1;">Success Rate Matrix: <strong>${pct}%</strong></p>
-            <p style="font-size:0.9rem; color:#94a3b8; margin-bottom:15px;">
+            <p style="font-size:1rem; color:#fffafa; margin-bottom:15px;">
                 ${pct >= 70 ? "🎉 Outstanding work! Concept successfully retained." : "💡 Good attempt! Re-read documentation tips and re-verify your targets."}
             </p>
-            <button class="quiz-btn" style="width:100%;" onclick="resetToDocumentationView()">Back to Course Content ↩</button>
+            <button class="quiz-btn summary-back-btn" onclick="resetToDocumentationView()">
+    Back to Course Content ↩
+</button>
+
         </div>
     `;
 }
