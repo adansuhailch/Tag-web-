@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://tag-web.is-cool.dev">
-    <img src="https://shields.io" alt="Live Website" />
+    [![Website](https://img.shields.io/badge/Website-Tag_Web-080C16?style=for-the-badge&logo=googlechrome&logoColor=white)](https://tag-web.is-cool.dev/)
   </a>
   <a href="https://github.com">
     <img src="https://shields.io" alt="My Portfolio" />
