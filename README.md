@@ -5,13 +5,13 @@
   <img src="https://tag-web.is-cool.dev/assets/tag-web-logo.png" alt="Tag Web Logo" width="120" height="auto" />
 </p>
 
-<p align="center">
+<!-- <p align="center">
     [![Website](https://img.shields.io/badge/Website-Tag_Web-080C16?style=for-the-badge&logo=googlechrome&logoColor=white)](https://tag-web.is-cool.dev/)
  
   <a href="https://github.com">
     <img src="https://shields.io" alt="My Portfolio" />
   </a>
-</p>
+</p> -->
 
 
 **Tag Web** is a modern, high-performance, and interactive web development learning platform designed specifically for students and beginner developers. It serves as a visual, real-time index and cheatsheet manager for mastering HTML5 structure elements, advanced CSS formatting parameters, and native modular JavaScript core concepts.
