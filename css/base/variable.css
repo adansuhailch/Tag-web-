@@ -36,7 +36,7 @@
     --btn-primary-bg: #6366f1;
     --btn-primary-text: #ffffff;
     --btn-run-bg: #1e293b;
-    --btn-run-hover: #00ffaa;
+    --btn-run-hover: #fffafa;
     --nav-link: #94a3b8;
     --nav-link-hover: #d3d5ee;
 
@@ -47,7 +47,8 @@
     --search-bg: #02040a;
     --search-text: #f8fafc;
     --search-border: rgba(99, 102, 241, 0.3);
-    --link-more: #00ffaa;
+    --link-more: #152db4;
     --footer-text: #64748b;
     --overlay-bg: rgba(3, 7, 18, 0.85);
+    --youtube-clr: #ff0000;
 }
