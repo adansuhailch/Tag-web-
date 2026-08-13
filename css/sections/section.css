@@ -56,7 +56,7 @@ section {
 }
 
 .tag-card.highlight {
-    background: var(--btn-run-hover);
+    background: #1b1b1c;
     color: #fff;
     border-color: transparent;
 }
@@ -65,9 +65,9 @@ section {
 .more-tags-link {
     display: block;
     margin-top: 12px;
-    color: var(--link-more);
+    color:var(--link-more);
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: color 0.2s;
 }
