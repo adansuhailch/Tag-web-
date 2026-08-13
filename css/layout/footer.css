@@ -185,6 +185,17 @@
     background-color: #24292e;
 }
 
+/* Spotify */
+.icon[aria-label="Spotify"]:hover,
+.icon[aria-label="Spotify"]:focus,
+.icon[aria-label="Spotify"]:active {
+    color: #1ED760;
+}
+
+.icon[aria-label="Spotify"]::after {
+    background-color: #1DB954;
+}
+
 /* Instagram */
 .social-icons .icon[aria-label="Instagram"]:hover {
     color: #e1306c;
@@ -204,14 +215,16 @@
 }
 
 /* WhatsApp */
-.social-icons .icon[aria-label="WhatsApp"]:hover {
+
+.icon[aria-label="whatsapp"]:hover,
+.icon[aria-label="whatsapp"]:focus,
+.icon[aria-label="whatsapp"]:active {
     color: #25d366;
 }
 
-.social-icons .icon[aria-label="WhatsApp"]::after {
+.icon[aria-label="whatsapp"]::after {
     background-color: #25d366;
 }
-
 
 
 /* ======== COLUMNS 2-4: LINKS ======== */
