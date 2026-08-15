@@ -6,7 +6,13 @@ header {
     flex-wrap: wrap;
     gap: 12px;
     width: 100%;
-    background: var(--bg-header);
+    /* 1. Niche se guzarne wale element ko blur karne ke liye */
+    backdrop-filter: blur(5px);
+    /* Safari browser ke liye */
+    -webkit-backdrop-filter: blur(12px);
+    /* 2. Zaroori: Background ko bilkul transparent ki jagah thoda sa opaque (rgba) rakhein */
+    /* background-color: rgba(13, 18, 32, 0.75) !important; */
+    background-color: rgba(10, 10, 26, -0.25) !important;
     color: var(--text-primary);
     padding: 10px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);

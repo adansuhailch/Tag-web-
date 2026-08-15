@@ -2,6 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
 
+::selection {
+    background: #2d395f;
+    color: #fffafa;
+}
+
 * {
     margin: 0;
     padding: 0;
