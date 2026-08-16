@@ -65,8 +65,9 @@
 .sidebar-panel {
     width: calc(100% - 40px);
     margin: 20px auto;
-    background-color: #0d1220;
-    border: 3px solid rgba(255, 255, 255, 0.05);
+    background-color: #080c16;
+    /* border: 3px solid rgba(255, 255, 255, 0.05); */
+    border: 1px groove #fffafa;
     margin: 20px auto;
     border-radius: 16px;
     height: fit-content;
@@ -101,7 +102,7 @@
     font-weight: 500;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid #fffafa;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -116,7 +117,7 @@
 /* Active ya hover state */
 .nav-list li a:hover,
 .nav-list li.active a {
-    background-color: #1e293b;
+    background-color: #080c16;
     color: #ffffff;
 }
 
