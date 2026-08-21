@@ -23,7 +23,8 @@
         "tip": "<strong>Performance Tip:</strong> Always keep your <code>&lt;head&gt;</code> section clean. Loading too many massive JavaScript files inside the head can slow down your website layout. Try to load heavy scripts at the bottom of the <code>&lt;body&gt;</code> instead to speed up page loading.",
         "code": "<head>\n    <!-- Tells the browser to support all international characters and emojis -->\n    <meta charset=\"UTF-8\">\n\n    <!-- Critical for mobile devices! Forces the layout to scale perfectly on phones -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n    <!-- This text shows up on the browser tab and Google search results -->\n    <title>Mastering the Head Element</title>\n\n    <!-- Linking an external CSS file to style the entire website -->\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>",
         "quiz": "Which element contains metadata?",
-        "answer": "head"
+        "answer": "head",
+        "yt_video_id":"dTBLb99nKBY"
     },
     "meta": {
         "title": "&lt;meta&gt; — The Invisible Powerhouse of SEO & Layouts",
