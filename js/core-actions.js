@@ -441,3 +441,75 @@
         });
     }
 })();
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector('.sidebar-panel');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let isDragging = false; // Yeh track karega ke drag ho raha hai ya nahi
+
+    if (slider) {
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            isDragging = false; // Click start hotay hi drag false ho ga
+            slider.style.cursor = 'grabbing';
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.style.cursor = 'pointer';
+        });
+
+        slider.addEventListener('mouseup', (e) => {
+            isDown = false;
+            slider.style.cursor = 'pointer';
+
+            // Agar user ne mouse hilaya tha (drag kiya tha), toh link khulne se roko
+            if (isDragging) {
+                e.preventDefault();
+            }
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+
+            // Agar mouse thoda sa bhi hila hai (let's say 3 pixels se zyada), toh isay drag samjho
+            isDragging = true;
+
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // 🎯 CHOR CHAKKAR FIX: Links par direct click hone se rokne ka logic
+        slider.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (isDragging) {
+                    e.preventDefault(); // Agar drag ho raha tha toh page change nahi hoga!
+                }
+            });
+        });
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const navInfoBtn = document.getElementById('navInfoBtn');
+    const navInfoPopover = document.getElementById('navInfoPopover');
+
+    if (navInfoBtn && navInfoPopover) {
+        // Icon click par toggle show/hide class
+        navInfoBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Bubbling roko taake document click trigger na ho
+            navInfoPopover.classList.toggle('active');
+        });
+
+        // Bahar click karne par automatic popup hide karne ka premium handle
+        document.addEventListener('click', (e) => {
+            if (!navInfoPopover.contains(e.target) && e.target !== navInfoBtn) {
+                navInfoPopover.classList.remove('active');
+            }
+        });
+    }
+});

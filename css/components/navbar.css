@@ -61,24 +61,6 @@
     background-color: #0b0f19;
 }
 
-/* ⬅️ Horizontal Top Bar Layout (Desktop & General) */
-.sidebar-panel {
-    width: calc(100% - 40px);
-    margin: 20px auto;
-    background-color: #080c16;
-    /* border: 3px solid rgba(255, 255, 255, 0.05); */
-    border: 1px groove #fffafa;
-    margin: 20px auto;
-    border-radius: 16px;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    overflow-x: auto;
-    white-space: nowrap;
-}
 
 /* List ko horizontal line mein set karne ke liye */
 .nav-list {
@@ -121,6 +103,25 @@
     color: #ffffff;
 }
 
+/* ⬅️ Horizontal Top Bar Layout (Desktop & General) */
+.sidebar-panel {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    background-color: #080c16;
+    /* border: 3px solid rgba(255, 255, 255, 0.05); */
+    border: 1px groove #fffafa;
+    margin: 20px auto;
+    border-radius: 16px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 /* Scrollbar chupane ke liye taake clean lage */
 .sidebar-panel::-webkit-scrollbar {
     display: none;
@@ -131,6 +132,113 @@
     scrollbar-width: none;
 }
 
+/* info icon code */
+/* Header structure bar ke upar content lane ke liye */
+.nav-header-wrapper {
+    width: calc(100% - 40px);
+    margin: 20px auto 0 auto;
+    /* Sidebar ke sath alignment match */
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.nav-title-zone {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* Text left me, Icon right me */
+    color: #8892b0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+/* Info Icon Settings */
+.info-help-container {
+    position: relative;
+    display: inline-block;
+}
+
+.info-trigger-btn {
+    color: #fffaff;
+    cursor: help;
+    font-size: 16px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.8;
+}
+
+.info-trigger-btn:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Beautiful Translucent Dark Popover Box */
+.nav-info-popover {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    /* Right side par open hoga clean spaces ke sath */
+    width: 280px;
+    background: #0d0e10;
+    /* Backdrop blur blend */
+    backdrop-filter: blur(8px);
+    border: 2px groove #fffafa;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+/* Active State to Toggle Display */
+.nav-info-popover.active {
+    display: block;
+    animation: fadeInPopup 0.2s ease-out;
+}
+
+.nav-info-popover h4 {
+    margin: 0 0 10px 0;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.nav-info-popover ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style-type: disc;
+}
+
+.nav-info-popover li {
+    font-size: 14px;
+    color: #e1f0f2;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.nav-info-popover li:last-child {
+    margin-bottom: 0;
+}
+
+.nav-info-popover code {
+    background: #1e293b;
+    padding: 1px 4px;
+    border-radius: 4px;
+    color: #ff79c6;
+}
+
+/* Animation effect */
+@keyframes fadeInPopup {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* 📱 ➡️ NEW RESPONSIVE MOBILE LAYOUT (Navbar Ke Niche Horizontal) */
 @media screen and (max-width: 768px) {
