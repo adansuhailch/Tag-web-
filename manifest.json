@@ -1,0 +1,68 @@
+{
+    "name": "Tag Web Learning Platform",
+    "short_name": "Tag Web",
+    "description": "A platform for learning and mastering web development skills.",
+    "start_url": "/index.html",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#050814",
+    "theme_color": "#02040a",
+    "lang": "en",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "/assets/tag-web-logo.png",
+            "sizes": "1024x1024",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "categories": [
+        "education",
+        "technology"
+    ],
+    "screenshots": [
+        {
+            "src": "/assets/tag-web-ogimage.png",
+            "sizes": "1536x1024",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Learn HTML",
+            "url": "/pages/other-tags.html",
+            "description": "Start learning HTML basics",
+            "icons": [
+                {
+                    "src": "/assets/tag-web-logo.png",
+                    "sizes": "1024x1024"
+                }
+            ]
+        },
+        {
+            "name": "Learn CSS",
+            "url": "/pages/css-part.html",
+            "description": "Explore CSS styling techniques",
+            "icons": [
+                {
+                    "src": "/assets/tag-web-logo.png",
+                    "sizes": "1024x1024"
+                }
+            ]
+        },
+        {
+            "name": "Learn JavaScript",
+            "url": "/pages/javascript-part.html",
+            "description": "Master JavaScript programming",
+            "icons": [
+                {
+                    "src": "/assets/tag-web-logo.png",
+                    "sizes": "1024x1024"
+                }
+            ]
+        }
+    ]
+}

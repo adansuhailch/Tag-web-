@@ -30,6 +30,8 @@
 
     <!-- 5: Favicon & PWA Theme -->
     <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png" />
+    <!-- manifest file  -->
+    <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#080C16" />
 
     <!-- 6: Structured Data / Schema Markup (Google ko batane ke liye ke yeh ek Quiz hai) -->
@@ -92,6 +94,21 @@
 
     <!-- Script connection framework -->
     <script src="/js/quiz-section.js"></script>
+    <script>
+        // Check karo ke kya browser service worker support karta hai
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('❌ ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+
 </body>
 
 </html>
