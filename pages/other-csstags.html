@@ -46,6 +46,8 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png">
+    <!-- manifest file  -->
+    <link rel="manifest" href="./manifest.json" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
@@ -225,6 +227,22 @@
     <!-- Sab pages ka new modal ab editor.html ma function ho gya ha is liyay ab har file ka alag alag modal code hona zarurii nhi ha !! -->
     <script src="/js/core-actions.js"></script>
 
+    <script>
+        // Check karo ke kya browser service worker support karta hai
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('❌ ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+
 </body>
+
 
 </html>

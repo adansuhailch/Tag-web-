@@ -10,8 +10,8 @@
     <link rel="canonical" href="https://tag-web.is-cool.dev/pages/form-tag.html">
     <!-- Fav icon -->
     <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png" />
-
-
+    <!-- manifest file  -->
+    <link rel="manifest" href="./manifest.json" />
     <!-- Open graph og title -->
     <meta property="og:title" content="HTML Form Tags | Elements, Form Structure, Syntax, Usage & Details | Tag Web">
     <meta property="og:description"
@@ -137,6 +137,22 @@
 
 
     <script src="/js/core-actions.js"></script>
+    <script>
+        // Check karo ke kya browser service worker support karta hai
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('❌ ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+
 </body>
+
 
 </html>
