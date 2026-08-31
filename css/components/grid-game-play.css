@@ -1,0 +1,126 @@
+/* Upgraded Enterprise Grid Playground */
+.grid-game-playground {
+    background: var(--bg-nav);
+    border: 1px solid #fffafa;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 35px auto;
+    max-width: 950px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.grid-game-playground h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 22px;
+    font-family: 'Outfit', 'Roboto', sans-serif;
+}
+
+.grid-game-playground p {
+    color: #a0a4b1;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Controllers Alignment Rows */
+.grid-control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.01);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.group-label {
+    color: #a42b70;
+    /* Your customized structural pink tint */
+    font-family: 'Outfit', 'Roboto', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 180px;
+}
+
+/* Premium Buttons Layout Synchronization */
+.grid-game-playground .flex-btn {
+    background: rgba(100, 255, 218, 0.04);
+    border: 1px solid #fffafa;
+    color: var(--text-primary);
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: monospace;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grid-game-playground .flex-btn:hover {
+    background: rgba(100, 255, 218, 0.15);
+    color: var(--nav-link);
+    transform: translateY(-1px);
+}
+
+.grid-game-playground .flex-btn.active {
+    background: var(--nav-link);
+    color: #050814;
+    font-weight: bold;
+    border-color: var(--nav-link);
+    box-shadow: 0 0 12px rgba(100, 255, 218, 0.3);
+}
+
+/* 📺 THE LIVE GRID CONTAINER STAGE */
+.grid-visual-stage {
+    background: rgba(2, 12, 27, 0.7);
+    border: 2px solid var(--btn-primary-text);
+    border-radius: 10px;
+    min-height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Active Initial Grid Rules Engine */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: stretch;
+}
+
+/* Grid Matrix Child Items */
+.grid-stage-item {
+    background: rgba(5, 8, 20, 0.85);
+    border: 1px solid var(--btn-primary-text);
+    color: var(--text-primary);
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-stage-item:hover {
+    border-color: var(--nav-link);
+    color: var(--nav-link);
+    transform: scale(1.02);
+}
+
+/* 💻 TECHNICAL LIVE CODEBOX CONTAINER */
+.grid-code-box {
+    background: #020c1b;
+    border-left: 4px solid var(--nav-link);
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #8892b0;
+    line-height: 1.7;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+}

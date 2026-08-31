@@ -3,7 +3,7 @@
 
   <url>
        <loc>https://tag-web.is-cool.dev/</loc>
-       <lastmod>2026-08-30</lastmod>
+       <lastmod>2026-09-01</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
@@ -17,7 +17,7 @@
   </url>
   <url>
        <loc>https://tag-web.is-cool.dev/pages/form-tag.html</loc>
-       <lastmod>2026-08-30</lastmod>
+       <lastmod>2026-09-01</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.7000</priority>
   </url>
@@ -43,7 +43,7 @@
 
   <url>
   <loc>https://tag-web.is-cool.dev/pages/css-boxmodel.html</loc>
-  <lastmod>2026-08-30</lastmod>
+  <lastmod>2026-09-01</lastmod>
   <changefreq>daily</changefreq>
   </url>
   
@@ -57,19 +57,19 @@
 <!-- this is for css layout -->
 <url>
 <loc>https://tag-web.is-cool.dev/pages/css-layout.html</loc>
-<lastmod>2026-08-30</lastmod>
+<lastmod>2026-09-01</lastmod>
 <changefreq>daily</changefreq>
 </url>
 
   <url>
        <loc>https://tag-web.is-cool.dev/pages/css-flex.html</loc>
-       <lastmod>2026-08-30</lastmod>
+       <lastmod>2026-09-01</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.7000</priority>
   </url>
   <url>
        <loc>https://tag-web.is-cool.dev/pages/css-grid.html</loc>
-       <lastmod>2026-08-30</lastmod>
+       <lastmod>2026-09-01</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.7000</priority>
   </url>
@@ -98,7 +98,7 @@
   <!-- Core Topics -->
   <url>
        <loc>https://tag-web.is-cool.dev/pages/css-part.html</loc>
-       <lastmod>2026-08-30</lastmod>
+       <lastmod>2026-09-01</lastmod>
        <changefreq>daily</changefreq>
   </url>
   <url>

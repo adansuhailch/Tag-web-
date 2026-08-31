@@ -101,6 +101,79 @@
                     The Form Tags CheatSheet</a></div>
         </div>
     </section>
+    <!-- Interactive HTML5 Form Input Matrix Simulator -->
+    <div class="form-matrix-playground">
+        <h3>🕹️ HTML5 Input Matrix Simulator: Break the Static Myth!</h3>
+        <p>Who says HTML is static? Mutate the structural data matrix attributes below to witness how browsers interpret
+            dynamic native rendering layers live! 🧬⚡</p>
+
+        <!-- 🕹️ CONTROLLERS LAYER -->
+        <div class="matrix-control-panel">
+
+            <!-- Row 1: The Core Type Controller -->
+            <div class="control-group">
+                <span class="group-label">type="..." (Input States):</span>
+                <button class="flex-btn active" onclick="mutateInputType('text', this)">text</button>
+                <button class="flex-btn" onclick="mutateInputType('password', this)">password</button>
+                <button class="flex-btn" onclick="mutateInputType('color', this)">color</button>
+                <button class="flex-btn" onclick="mutateInputType('date', this)">date</button>
+                <button class="flex-btn" onclick="mutateInputType('range', this)">range</button>
+                <button class="flex-btn" onclick="mutateInputType('file', this)">file</button>
+            </div>
+
+            <!-- Row 2: Validation Constraint State Injectors -->
+            <div class="control-group">
+                <span class="group-label">Validation Constraints:</span>
+                <label class="matrix-checkbox-container">
+                    <input type="checkbox" id="chk-required" onchange="toggleFormConstraint('required', this.checked)">
+                    <span class="custom-checkbox"></span> required
+                </label>
+                <label class="matrix-checkbox-container">
+                    <input type="checkbox" id="chk-disabled" onchange="toggleFormConstraint('disabled', this.checked)">
+                    <span class="custom-checkbox"></span> disabled
+                </label>
+                <label class="matrix-checkbox-container">
+                    <input type="checkbox" id="chk-readonly" onchange="toggleFormConstraint('readOnly', this.checked)">
+                    <span class="custom-checkbox"></span> readonly
+                </label>
+            </div>
+        </div>
+
+        <!-- 📺 LIVE VIEWPORT BROWSER STAGE -->
+        <div class="matrix-viewport-wrapper">
+            <form id="matrixFormEngine"
+                onsubmit="event.preventDefault(); alert('🚀 HTML Validation Passed! Data Form Dispatched.');">
+                <div class="form-element-container">
+                    <label for="dynamicInput" id="fieldLabel" class="stage-field-label">User Entry Node:</label>
+
+                    <!-- The Active Mutating Node Element -->
+                    <input type="text" id="dynamicInput" class="matrix-native-input"
+                        placeholder="Type something here...">
+
+                    <button type="submit" class="matrix-submit-btn">Test Validation & Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 💻 REAL-TIME EXPANDING CODEBOX UTILITY -->
+        <div class="grid-code-box">
+            <span style="color: #ff79c6;">&lt;form</span> <span style="color: #64ffda;">action</span>=<span
+                style="color: #fffafa;">"/submit"</span><span style="color: #ff79c6;">&gt;</span><br>
+            &nbsp;&nbsp;<span style="color: #ff79c6;">&lt;label</span> <span style="color: #64ffda;">for</span>=<span
+                style="color: #fffafa;">"user-node"</span><span style="color: #ff79c6;">&gt;</span>User Entry Node:<span
+                style="color: #ff79c6;">&lt;/label&gt;</span><br>
+            &nbsp;&nbsp;<span style="color: #ff79c6;">&lt;input</span>
+            <span style="color: #64ffda;">type</span>=<span style="color: #fffafa;">"<span
+                    id="code-type">text</span>"</span>
+            <span style="color: #64ffda;">id</span>=<span style="color: #fffafa;">"user-node"</span>
+            <span id="code-constraints" style="color: #ffb86c;"></span><span style="color: #ff79c6;">&gt;</span><br>
+            &nbsp;&nbsp;<span style="color: #ff79c6;">&lt;button</span> <span style="color: #64ffda;">type</span>=<span
+                style="color: #fffafa;">"submit"</span><span style="color: #ff79c6;">&gt;</span>Submit<span
+                style="color: #ff79c6;">&lt;/button&gt;</span><br>
+            <span style="color: #ff79c6;">&lt;/form&gt;</span>
+        </div>
+    </div>
+
 
     <section class="quiz quiz-exercise-card" data-page-target="form-tag">
 
@@ -137,6 +210,7 @@
 
 
     <script src="/js/core-actions.js"></script>
+    <script src="/js/gameplay.js"></script>
     <script>
         // Check karo ke kya browser service worker support karta hai
         if ('serviceWorker' in navigator) {

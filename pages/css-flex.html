@@ -85,6 +85,42 @@
             </div>
         </div>
     </section>
+    <!-- Interactive Flexbox Game Container -->
+    <div class="flex-game-playground">
+        <h3>Let's Play with Flexbox!</h3>
+        <p>No complex coding required here, bro! Just click the properties below to instantly arrange your items like a
+            pro.</p>
+
+        <!-- Control Panel Buttons Area -->
+        <div class="control-panel">
+            <div class="control-group">
+                <span class="group-label">justify-content:</span>
+                <button class="flex-btn active"
+                    onclick="updateFlex('justifyContent', 'flex-start', this)">flex-start</button>
+                <button class="flex-btn" onclick="updateFlex('justifyContent', 'center', this)">center</button>
+                <button class="flex-btn" onclick="updateFlex('justifyContent', 'flex-end', this)">flex-end</button>
+                <button class="flex-btn"
+                    onclick="updateFlex('justifyContent', 'space-between', this)">space-between</button>
+                <button class="flex-btn"
+                    onclick="updateFlex('justifyContent', 'space-around', this)">space-around</button>
+            </div>
+
+            <div class="control-group">
+                <span class="group-label">align-items:</span>
+                <button class="flex-btn active"
+                    onclick="updateFlex('alignItems', 'flex-start', this)">flex-start</button>
+                <button class="flex-btn" onclick="updateFlex('alignItems', 'center', this)">center</button>
+                <button class="flex-btn" onclick="updateFlex('alignItems', 'flex-end', this)">flex-end</button>
+            </div>
+        </div>
+
+        <!-- Live Visual Stage -->
+        <div class="visual-stage" id="flexStage">
+            <div class="stage-item item-1">⚡ Item 1</div>
+            <div class="stage-item item-2">🔥 Item 2</div>
+            <div class="stage-item item-3">🚀 Item 3</div>
+        </div>
+    </div>
     <section>
         <h2>Flex Item-Level Properties</h2>
         <!-- flex-grow -->
@@ -163,6 +199,7 @@
         </div>
     </section>
     <script src="/js/core-actions.js"></script>
+    <script src="/js/gameplay.js"></script>
     <script>
         // Check karo ke kya browser service worker support karta hai
         if ('serviceWorker' in navigator) {

@@ -106,6 +106,71 @@
             </div>
         </div>
     </section>
+    <!-- Interactive CSS Grid Sandbox Game -->
+    <div class="grid-game-playground">
+        <h3>⚡ Grid Matrix Architect: Build Your Layout!</h3>
+        <p>Ready to fragment space? Tap the structural control matrices below to manipulate the dimensions of our layout
+            mesh live! 🕹️🧬</p>
+
+        <!-- 🕹️ CONTROLLERS LAYER -->
+        <div class="grid-control-panel">
+
+            <!-- Row 1: Grid Columns Configuration -->
+            <div class="control-group">
+                <span class="group-label">grid-template-columns:</span>
+                <button class="flex-btn active"
+                    onclick="updateGrid('gridTemplateColumns', 'repeat(3, 1fr)', this)">repeat(3, 1fr)</button>
+                <button class="flex-btn" onclick="updateGrid('gridTemplateColumns', '1fr 2fr 1fr', this)">1fr 2fr
+                    1fr</button>
+                <button class="flex-btn" onclick="updateGrid('gridTemplateColumns', '200px 1fr', this)">200px 1fr
+                    (Sidebar)</button>
+                <button class="flex-btn"
+                    onclick="updateGrid('gridTemplateColumns', 'repeat(auto-fit, minmax(150px, 1fr))', this)">auto-fit
+                    (Responsive)</button>
+            </div>
+
+            <!-- Row 2: Gap Mesh Configurations -->
+            <div class="control-group">
+                <span class="group-label">gap (Spacing):</span>
+                <button class="flex-btn active" onclick="updateGrid('gap', '10px', this)">10px</button>
+                <button class="flex-btn" onclick="updateGrid('gap', '25px', this)">25px</button>
+                <button class="flex-btn" onclick="updateGrid('gap', '0px', this)">0px (Packed)</button>
+            </div>
+
+            <!-- Row 3: Alignment Controls -->
+            <div class="control-group">
+                <span class="group-label">justify-items:</span>
+                <button class="flex-btn active" onclick="updateGrid('justifyItems', 'stretch', this)">stretch</button>
+                <button class="flex-btn" onclick="updateGrid('justifyItems', 'center', this)">center</button>
+                <button class="flex-btn" onclick="updateGrid('justifyItems', 'start', this)">start</button>
+                <button class="flex-btn" onclick="updateGrid('justifyItems', 'end', this)">end</button>
+            </div>
+        </div>
+
+        <!-- 📺 LIVE VIEWPORT GRID WINDOW -->
+        <div class="grid-visual-stage" id="gridStage">
+            <div class="grid-stage-item">📦 Node 1</div>
+            <div class="grid-stage-item">📦 Node 2</div>
+            <div class="grid-stage-item">📦 Node 3</div>
+            <div class="grid-stage-item">📦 Node 4</div>
+            <div class="grid-stage-item">📦 Node 5</div>
+            <div class="grid-stage-item">📦 Node 6</div>
+        </div>
+
+        <!-- 💻 REAL-TIME EXPANDING CODEBOX UTILITY -->
+        <div class="grid-code-box">
+            <span style="color: #ff79c6;">.grid-container</span> {<br>
+            &nbsp;&nbsp;<span style="color: #64ffda;">display</span>: grid;<br>
+            &nbsp;&nbsp;<span style="color: #64ffda;">grid-template-columns</span>: <span id="code-columns"
+                style="color: #fffafa;">repeat(3, 1fr)</span>;<br>
+            &nbsp;&nbsp;<span style="color: #64ffda;">gap</span>: <span id="code-gap"
+                style="color: #fffafa;">10px</span>;<br>
+            &nbsp;&nbsp;<span style="color: #64ffda;">justify-items</span>: <span id="code-justify"
+                style="color: #fffafa;">stretch</span>;<br>
+            }
+        </div>
+    </div>
+
     <section>
         <h2>🔹 Advanced Features</h2>
         <!-- fr-unit -->
@@ -209,6 +274,7 @@
         </div>
     </section>
     <script src="/js/core-actions.js"></script>
+    <script src="/js/gameplay.js"></script>
     <script>
         // Check karo ke kya browser service worker support karta hai
         if ('serviceWorker' in navigator) {
