@@ -17,6 +17,10 @@
 @import url('components/js-part.css');
 @import url('components/quiz-section-page.css');
 @import url('components/contact-tagweb.css');
+@import url('components/flex-game-play.css');
+@import url('components/grid-game-play.css');
+@import url('components/boxmodel-game-play.css');
+@import url('components/form-game-play.css');
 
 /*4. SECTIONS & RESPONSIVE (Agar in folders mein koi files hain to niche add karein)*/
 @import url('sections/section.css');

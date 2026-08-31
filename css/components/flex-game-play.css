@@ -1,0 +1,92 @@
+.flex-game-playground {
+    background: var(--bg-nav);
+    border: 1px solid #fffafa;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.flex-game-playground h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.flex-game-playground p {
+    color: #a0a4b1;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Control Row Items */
+.control-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.group-label {
+    color: #a42b70;
+    /* Pink property tint */
+    font-family: 'Roboto', 'Outfit', Arial, sans-serif;
+    font-size: 16px;
+    min-width: 140px;
+}
+
+/* Premium Interactive Buttons */
+.flex-btn {
+    background: rgba(100, 255, 218, 0.05);
+    border: 1px solid #fffafa;
+    font-size: 16px;
+    font-family: 'Roboto', 'Outfit', Arial, sans-serif;
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.flex-btn:hover {
+    background: var(--bg-nav);
+    color: var(--text-primary);
+}
+
+.flex-btn.active {
+    background: var(--nav-link);
+    color: #080d14;
+    font-weight: bold;
+}
+
+/* Live Viewport Stage Box */
+.visual-stage {
+    background: var(--bg-nav);
+    border: 2px solid var(--btn-primary-text);
+    border-radius: 8px;
+    height: 220px;
+    display: flex;
+    /* <-- Asli structural alignment toggle target */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+}
+
+/* Moving Elements */
+.stage-item {
+    background: var(--bg-nav);
+    border: 1px solid var(--btn-primary-text);
+    color: var(--text-primary);
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}

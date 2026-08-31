@@ -1,0 +1,182 @@
+/* Box Model Enterprise Playground Styling */
+.box-model-playground {
+    background: var(--bg-nav);
+    border: 1px solid #fffafa;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 35px auto;
+    max-width: 950px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.box-model-playground h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 22px;
+    font-family: 'Outfit', 'Roboto', sans-serif;
+}
+
+.box-model-playground p {
+    color: #a0a4b1;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Control Panel Grid Configuration */
+.box-control-panel {
+    background: rgba(255, 255, 255, 0.01);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box-model-playground .group-label {
+    color: #a42b70;
+    /* Your designated pink property color signature */
+    font-family: 'Outfit', 'Roboto', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 160px;
+    display: inline-block;
+}
+
+.val-tint {
+    color: var(--text-primary);
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* Premium Range Sliders */
+.slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.box-slider {
+    flex-grow: 1;
+    accent-color: var(--nav-link);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    height: 6px;
+    border-radius: 4px;
+}
+
+/* Premium Navigation Trigger Buttons Linkage */
+.box-model-playground .flex-btn {
+    background: rgba(100, 255, 218, 0.04);
+    border: 1px solid #fffafa;
+    color: var(--text-primary);
+    padding: 7px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: monospace;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box-model-playground .flex-btn:hover {
+    background: rgba(100, 255, 218, 0.15);
+    color: var(--nav-link);
+}
+
+.box-model-playground .flex-btn.active {
+    background: var(--nav-link);
+    color: #050814;
+    font-weight: bold;
+    border-color: var(--nav-link);
+    box-shadow: 0 0 12px rgba(100, 255, 218, 0.3);
+}
+
+/* 📺 THE LIVE CONTAINER VIEWPORT STAGE */
+.stage-viewport-wrapper {
+    background: rgba(2, 12, 27, 0.7);
+    border: 2px solid var(--btn-primary-text);
+    border-radius: 10px;
+    min-height: 280px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* The Live Recalculating Matrix Node Box */
+.box-visual-stage {
+    background: #020c1b;
+    border: 4px solid var(--nav-link);
+    /* Controlled via JS slider */
+    padding: 20px;
+    /* Controlled via JS slider */
+    margin: 15px;
+    /* Controlled via JS slider */
+    width: 250px;
+    /* Fixed Content Width Base */
+    height: 120px;
+    /* Fixed Content Height Base */
+    box-sizing: border-box;
+    /* Controlled via JS toggles */
+    transition: box-sizing 0.2s ease, border-color 0.2s ease;
+}
+
+.box-inner-content {
+    background: rgba(100, 255, 218, 0.08);
+    border: 1px dashed var(--nav-link);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.box-inner-content h4 {
+    margin: 0 0 5px 0;
+    color: var(--nav-link);
+    font-size: 16px;
+}
+
+.box-inner-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #8892b0;
+}
+
+/* 📊 MATHEMATICAL COMPUTED ENGINE PANEL */
+.computed-calculator-box {
+    background: rgba(164, 43, 112, 0.08);
+    border: 1px dashed #a42b70;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-top: 25px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+/* 💻 TECHNICAL LIVE CODEBOX CONTAINER */
+.grid-code-box {
+    background: #020c1b;
+    border-left: 4px solid var(--nav-link);
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #8892b0;
+    line-height: 1.7;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+}

@@ -101,6 +101,88 @@
                                         details</span></div>
                 </div>
         </section>
+        <!-- Interactive CSS Box Model Sandbox -->
+        <div class="box-model-playground">
+                <h3>📦 Box-Model Inspector Engine: Master the Spacing!</h3>
+                <p>Ready to manipulate physical layouts? Adjust the spatial layers below to inspect how padding,
+                        borders, and margins recalculate container bounds live! 🕹️📐</p>
+
+                <!-- 🕹️ CONTROLLERS LAYER -->
+                <div class="box-control-panel">
+
+                        <!-- Row 1: Sizing Rule Toggle (The Core Concept) -->
+                        <div class="control-group">
+                                <span class="group-label">box-sizing:</span>
+                                <button class="flex-btn active"
+                                        onclick="updateBoxSizing('border-box', this)">border-box</button>
+                                <button class="flex-btn"
+                                        onclick="updateBoxSizing('content-box', this)">content-box</button>
+                        </div>
+
+                        <!-- Row 2: Dynamic Layer Sliders -->
+                        <div class="slider-group">
+                                <div class="slider-row">
+                                        <label class="group-label">Padding: <span id="val-padding"
+                                                        class="val-tint">20px</span></label>
+                                        <input type="range" min="0" max="60" value="20" class="box-slider"
+                                                oninput="updateBoxModel('padding', this.value + 'px')">
+                                </div>
+
+                                <div class="slider-row">
+                                        <label class="group-label">Border Width: <span id="val-border"
+                                                        class="val-tint">4px</span></label>
+                                        <input type="range" min="0" max="20" value="4" class="box-slider"
+                                                oninput="updateBoxModel('borderWidth', this.value + 'px')">
+                                </div>
+
+                                <div class="slider-row">
+                                        <label class="group-label">Margin: <span id="val-margin"
+                                                        class="val-tint">15px</span></label>
+                                        <input type="range" min="0" max="50" value="15" class="box-slider"
+                                                oninput="updateBoxModel('margin', this.value + 'px')">
+                                </div>
+                        </div>
+                </div>
+
+                <!-- 📺 LIVE VIEWPORT STAGE -->
+                <div class="stage-viewport-wrapper">
+                        <div class="box-visual-stage" id="mainBoxCard">
+                                <div class="box-inner-content">
+                                        <h4>⚡ Core Content</h4>
+                                        <p>Width: 250px | Height: 120px</p>
+                                </div>
+                        </div>
+                </div>
+
+                <!-- 📊 REAL-TIME CALCULATED CALCULATOR NODE -->
+                <div class="computed-calculator-box">
+                        <span>📐 Browser Computed Math:</span>
+                        Total Rendered Width = <span id="math-display"
+                                style="color: #64ffda; font-weight: bold;">250px</span>
+                        <small id="math-explanation" style="display:block; color: #8892b0; margin-top: 5px;">(In
+                                border-box, explicit width includes padding and border!)</small>
+                </div>
+
+                <!-- 💻 REAL-TIME EXPANDING CODEBOX UTILITY -->
+                <div class="grid-code-box">
+                        <span style="color: #ff79c6;">.target-box</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #64ffda;">width</span>: <span
+                                style="color: #fffafa;">250px</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #64ffda;">height</span>: <span
+                                style="color: #fffafa;">120px</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #64ffda;">box-sizing</span>: <span id="code-boxsizing"
+                                style="color: #fffafa;">border-box</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #64ffda;">padding</span>: <span id="code-padding"
+                                style="color: #fffafa;">20px</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #64ffda;">border</span>: <span id="code-border"
+                                style="color: #fffafa;">4px</span> solid <span
+                                style="color: var(--nav-link);">var(--nav-link)</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #64ffda;">margin</span>: <span id="code-margin"
+                                style="color: #fffafa;">15px</span>;<br>
+                        }
+                </div>
+        </div>
+
         <section>
                 <h2>🔹Padding</h2>
                 <div class="cards-grid">
@@ -266,6 +348,7 @@
                 </div>
         </section>
         <script src="/js/core-actions.js"></script>
+        <script src="/js/gameplay.js"></script>
 
         <script>
                 // Check karo ke kya browser service worker support karta hai
