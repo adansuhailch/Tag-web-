@@ -1,3 +1,29 @@
+// ⚡ AUTOMATIC SKELETON INJECTOR FOR CARDS
+(function () {
+    // 1. Saare tag-cards ko auto target karo
+    const allCards = document.querySelectorAll('.tag-card');
+    allCards.forEach(card => card.classList.add('skeleton-shimmer'));
+
+    // 2. 🎯 THE HEADINGS FIX: Saari h1 aur h2 headings ko bhi auto target karo!
+    const allHeadings = document.querySelectorAll('h1, h2');
+    allHeadings.forEach(heading => {
+        heading.classList.add('skeleton-shimmer');
+    });
+    const allhref = document.querySelectorAll('a');
+    allhref.forEach(a => {
+        a.classList.add('skeleton-shimmer');
+    });
+    const allpar = document.querySelectorAll('p');
+    allpar.forEach(p => {
+        p.classList.add('skeleton-shimmer');
+    });
+    const allquizopt = document.querySelectorAll('.quizoption');
+    allquizopt.forEach(quizoption => {
+        quizoption.classList.add('skeleton-shimmer');
+    });
+})();
+
+
 (function () {
     const editorTextAreaId = 'modal-editor';
     const previewFrameId = 'live-preview';
@@ -512,4 +538,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+});
+
+// loading screen js 
+// ⚡ GLOBAL SKELETON REVEAL SYSTEM
+window.addEventListener('load', () => {
+    // Dunya ke saare elements dhoondo jin par shimmer chal raha hai
+    const shimmerElements = document.querySelectorAll('.skeleton-shimmer');
+
+    // Ek snap action me sab se loading screen ka asar khatam kar do
+    shimmerElements.forEach(element => {
+        element.classList.remove('skeleton-shimmer');
+    });
 });
