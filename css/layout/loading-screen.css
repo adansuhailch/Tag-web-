@@ -1,0 +1,81 @@
+/* ⚡ UPGRADED STRICT SKELETON ENGINE */
+
+/* 1. Force fully hide everything inside the container using multiple safety nets */
+.skeleton-shimmer * {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    color: transparent !important;
+    text-shadow: none !important;
+}
+
+/* 2. Asli container core settings */
+.skeleton-shimmer {
+    background-color: #0d1220 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+
+    /* Extra Layer: Text selection block karein aur default graphics ko clean rakhein */
+    user-select: none !important;
+    color: transparent !important;
+    /* 🎯 THE FIX: Yeh line guarantee karegi ke element ka jo asli border-radius hai, woh chokor na bane */
+    border-radius: 14px !important;
+}
+
+/* 3. Special target for live editor box */
+.live-editor-container.skeleton-shimmer {
+    background-color: #05070f !important;
+}
+
+/* 🪄 4. Shimmer Laser Wave (Bina kisi disturbance ke chalegi) */
+.skeleton-shimmer::after {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    transform: translateX(-100%);
+    background-image: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.04) 20%,
+            rgba(255, 255, 255, 0.1) 60%,
+            rgba(255, 255, 255, 0) 100%) !important;
+    animation: realStructureShimmer 1.4s infinite linear !important;
+    content: '' !important;
+    visibility: visible !important;
+    display: block !important;
+    z-index: 9999 !important;
+    /* Text ke hamesha upar wave dauray gi */
+    /* 🎯 THE FIX FOR THE WAVE: Border radius ko overlay par mask karne ke liye */
+    border-radius: 14px !important;
+}
+
+/* ⚡ Headings Loading State Constraints */
+h1.skeleton-shimmer,
+h2.skeleton-shimmer {
+    max-width: 250px;
+    /* Heading ko loading ke waqt ek choti sleek line me restrict karega */
+    height: 24px;
+    /* Patli horizontal bar jaisi high-tech look */
+    display: block;
+}
+
+@keyframes realStructureShimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* 💡 Ek Mazedar Tip (Agar aap alag alag elements par alag roundedness chahte hain):Agar aap chahte hain ke baray cards loading ke waqt zyada gol dikhein (16px) aur chote buttons thode kam gol dikhein (8px), to aap direct HTML mein un elements par custom utility tags laga sakte hain, ya CSS mein unhe specify kar sakte hain: */
+
+/* Chote components ya buttons ke liye custom logic
+.sidebar-panel.skeleton-shimmer,
+.nav-list li a.skeleton-shimmer {
+    border-radius: 8px !important;
+}
+
+.sidebar-panel.skeleton-shimmer::after,
+.nav-list li a.skeleton-shimmer::after {
+    border-radius: 8px !important;
+} */

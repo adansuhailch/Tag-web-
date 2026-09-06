@@ -7,7 +7,7 @@
 /* 2. LAYOUT STYLES (Page ka outer dhancha)*/
 @import url('layout/header.css');
 @import url('layout/footer.css');
-
+@import url('layout/loading-screen.css');
 /*3. COMPONENT STYLES (Azaad aur functional blocks) */
 @import url('components/buttons.css');
 @import url('components/navbar.css');
