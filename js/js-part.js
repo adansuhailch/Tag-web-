@@ -2,10 +2,6 @@
  * js-part.js — JavaScript Learning Page Logic
  * Tag Web | Requires js-topics.js to be loaded first
  */
-
-/* ═══════════════════════════════════════════════
-   STATE
-═══════════════════════════════════════════════ */
 let currentTopicKey = null;
 let allTopicKeys = [];
 let filteredKeys = [];

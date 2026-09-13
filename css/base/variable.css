@@ -1,9 +1,9 @@
 :root {
     /* Backgrounds (Layered Deep Tech Dark) */
-    --bg-body: #050814;
+    --bg-body: #010409;
     /* --bg-header: #0b0f19; */
     --bg-nav: #0b0f19;
-    --bg-section: #080c16;
+    --bg-section: #0d1117 !important;
     --bg-card: #0d1326;
     --bg-modal: #0d1326;
     --bg-entry: #060a12;
@@ -51,4 +51,8 @@
     --footer-text: #64748b;
     --overlay-bg: rgba(3, 7, 18, 0.85);
     --youtube-clr: #ff0000;
+    /* New colors  */
+    --html-style: #e34c26;
+    --css-style: #264de4;
+    --js-style: #f7df1e;
 }

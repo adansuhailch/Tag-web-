@@ -30,5 +30,6 @@
 
 #searchBar::placeholder {
     color: var(--text-secondary);
-    font-family: 'Outfit', 'Roboto', sans-serif;
+    font-family: 'Press Start 2P', 'Outfit', 'Roboto', sans-serif;
+    font-size: 14px;
 }

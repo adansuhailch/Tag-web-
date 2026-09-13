@@ -4,6 +4,10 @@ section {
     padding: 24px;
     max-width: 1100px;
     background: var(--bg-section);
+    border: 3px groove #2c3137 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    /* Soft lift shadow */
+    /* Hard retro Neubrutalism shadow */
     border-radius: 12px;
     box-shadow: 0 0 20px var(--shadow-section);
     transition: background 0.3s;
@@ -26,7 +30,7 @@ section {
 }
 
 /* Tag cards */
-.tag-card {
+/* .tag-card {
     background: var(--bg-card);
     color: var(--text-primary);
     border: 1px solid var(--border-card);
@@ -42,7 +46,7 @@ section {
     font-weight: 700;
     font-size: 19px;
     font-family: 'Roboto', 'Ubuntu', serif;
-    /* extra code */
+    extra code
     min-height: 100px;
     display: flex;
     flex-direction: column;
@@ -53,7 +57,42 @@ section {
     transform: translateY(-4px);
     box-shadow: 0 12px 28px var(--shadow-card);
     border-color: var(--text-accent);
+} */
+/* ⚡ THE PERFECT RE-ENGINEERED TAG-CARD (GITHUB + CUSTOM LOGIC) */
+.tag-card {
+    background-color: #161b22 !important;
+    border: 2px groove #30363d !important;
+    color: #c9d1d9;
+    position: relative;
+    min-height: 70px;
+    /* agr tag-card ko big karna hoo to yaha par 100 kar dena ok :) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
+
+.tag-card:hover {
+    transform: translateY(-4px);
+    transform: scale(1.03);
+    background-color: #21262d !important;
+    border-color: #8b949e !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* 🧱 Ensuring Skeleton Loader remains on TOP with maximum specificity */
+.tag-card.skeleton-shimmer {
+    background-color: #0d1220 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
 
 .tag-card.highlight {
     background: #1b1b1c;
@@ -65,7 +104,7 @@ section {
 .more-tags-link {
     display: block;
     margin-top: 12px;
-    color:var(--link-more);
+    color: var(--link-more);
     font-weight: bold;
     font-size: 1rem;
     text-decoration: none;
@@ -81,22 +120,31 @@ section {
 }
 
 /* tooltip */
+/* 🐙 GITHUB PREMIUM DARK STYLE TOOLTIP */
 .tooltip {
     visibility: hidden;
-    background: var(--tooltip-bg);
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 5px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    color: #e6edf3;
     position: absolute;
     top: -36px;
-    left: 0;
-    z-index: 10;
-    font-size: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    border-radius: 6px;
+    z-index: 100;
     white-space: nowrap;
     pointer-events: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .tag-card:hover .tooltip {
     visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -4px);
 }

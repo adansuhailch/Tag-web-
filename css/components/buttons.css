@@ -1,98 +1,144 @@
+/* ⚡ CODE-DEX LEGENDARY 3D INTERACTIVE BUTTONS SYSTEM */
+
 .button-group {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
+    /* Spacing thodi aur wide ki Code-Dex style */
     margin-left: auto;
 }
 
+/* 🧱 Global Buttons Core (The Code-Dex 3D Box Layer) */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 10px 20px;
+    /* Thoda chunky luxury size */
     font-size: 14px;
-    font-weight: 500;
-    font-family: 'Roboto', 'Outfit', sans-serif;
+    font-weight: 700;
+    font-family: 'Press Start 2P', 'VT323', monospace;
+    /* Pixelated core style input */
     border-radius: 8px;
+    /* Clean sharp corner blocks */
     cursor: pointer;
     text-decoration: none;
     box-sizing: border-box;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    /* 🎯 Code-Dex Signature: Stark 3D Rigid Solid Extrusion (No soft blur lines!) */
+    border: 3px solid #ffffff !important;
+    background-color: #0d1117;
+    /* GitHub Dark Panel Base */
+    color: #ffffff;
+
+    /* Hard solid offset shadows creating the 3D depth block */
+    box-shadow: 5px 5px 0px #000000;
+
+    /* Super-fast snappy gaming transition response */
+    transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
 }
 
+/* 🚀 1. THE CODE LAB BUTTON (Cyber Arcade Gold Customization) */
 .color-lab {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #fffafa;
+    border-color: #f1c40f !important;
+    /* Premium Game Gold Outline */
+    color: #f1c40f;
 }
 
 .color-lab .icon-palette {
-    font-size: 15px;
-    transition: transform 0.25s ease;
+    font-size: 17px;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Code-Dex Gold Hover Transformation */
 .color-lab:hover {
-    border-color: #d4c08d;
-    background: rgba(255, 183, 3, 0.08);
-    box-shadow: 0 0 12px rgba(255, 183, 3, 0.15);
+    background-color: #f1c40f !important;
+    /* Full solid block color fills up */
+    color: #010409 !important;
+    /* Dark contrast inversion like professional tech games */
+    border-color: #ffffff !important;
+
+    /* 3D Pop Out Action: Moves forward and shadow grows larger */
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px #000000;
 }
 
 .color-lab:hover .icon-palette {
-    transform: scale(1.2) rotate(-10deg);
-
+    transform: scale(1.2) rotate(-15deg);
+    filter: invert(1);
+    /* Icon colors automatically inverts beautifully */
 }
 
+
+/* 🚀 2. THE DISCORD SERVER BUTTON (Electric Blue Command) */
 .btn-discord {
-    background: #232fb9;
-    border: 1px solid rgba(88, 101, 242, 0.4);
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.15);
+    border-color: #5865f2 !important;
+    /* Official Discord Pixel Blur Border */
+    color: #5865f2;
 }
 
 .btn-discord i {
-    font-size: 15px;
+    font-size: 19px;
     transition: transform 0.25s ease;
 }
 
+/* Code-Dex Discord Hover Transformation */
 .btn-discord:hover {
-    background: #232fb9;
-    border-color: #232fb9;
-    box-shadow: 0 0 14px rgba(88, 101, 242, 0.35);
+    background-color: #5865f2 !important;
+    /* Fills with clean blue */
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+
+    /* 3D Pop Out Action */
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px #000000;
 }
 
 .btn-discord:hover i {
-    transform: scale(1.15) translateY(-1px);
+    transform: scale(1.2) translateY(-1px);
 }
 
+
+/* 🚀 3. THE CONTACT US BUTTON (The Cyber Cyan Fusion - 100% Fixed and Pop-up!) */
 .contact-btn {
-    background: rgba(202, 177, 177, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-color: #38bdf8 !important;
+    /* Sharp visible tech-cyan frame */
+    color: #38bdf8;
 }
 
 .contact-btn i {
-    font-size: 14px;
-    color: #7aa2f7;
+    font-size: 19px;
+    color: #38bdf8;
     transition: transform 0.25s ease;
 }
 
-.contact-btn .icon-palette{
-    color: #fffafa;
-}
-
+/* Code-Dex Contact Us Hover Transformation (Now fully reactive!) */
 .contact-btn:hover {
-    border-color: #fffafa;
-    background: rgba(122, 162, 247, 0.08);
-    box-shadow: 0 0 12px rgba(122, 162, 247, 0.2);
+    background-color: #38bdf8 !important;
+    /* Complete cyan layer block takeover on hover */
+    color: #010409 !important;
+    /* Stark crisp black contrast inversion */
+    border-color: #ffffff !important;
+
+    /* Extreme 3D Pop Action */
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px #000000;
 }
 
 .contact-btn:hover i {
-    transform: scale(1.1) rotate(15deg);
-    color: #e0af68;
+    transform: scale(1.25) rotate(15deg);
+    color: #010409 !important;
+    /* Icon shifts to clear dark matching text inversion */
 }
 
+
+/* 🕹️ CONTROLLER HARD PRESS SNAP (REAL PHYSICAL SNAP CLICK) */
 .btn:active,
 .contact-btn:active {
-    transform: scale(0.96);
+    /* Instantly compresses completely flat into the screen with zero shadow spacing */
+    transform: translate(5px, 5px) !important;
+    box-shadow: 0px 0px 0px #000000 !important;
 }

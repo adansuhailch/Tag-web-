@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- 1: insert charset -->
+    <meta charset="UTF-8" />
+    <!-- 2: insert viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 3: insert Tittle and description -->
+    <title>Dashboard | Tag Web | Interactive Web Development Learning Platform</title>
+    <meta name="description"
+        content="Learn HTML, CSS, and JavaScript with interactive examples, live code editors, quizzes, and beginner-friendly tutorials on Tag Web." />
+
+    <!-- 4: insert canonical tag -->
+    <link rel="canonical" href="https://tag-web.is-cool.dev/pages/dashboard.html">
+
+    <!-- 5: insert robots meta tag -->
+    <meta name="robots" content="index, follow">
+
+    <!-- THeme color -->
+    <meta name="theme-color" content="#0d1117"> <!-- 🎯 FIX: Dashboard background shade matching variables -->
+
+    <!-- Author -->
+    <meta name="author" content="Muhammad Adan Suhail">
+    <!-- Place open graphs -->
+    <!-- Open graph tags jo mane phla pta nhi kuon nhi insert kiyay :) !! -->
+    <meta property="og:title" content="Dashboard | Tag Web | Interactive Web Development Learning Platform">
+
+    <meta property="og:description"
+        content="Learn HTML, CSS, and JavaScript with interactive examples, live code editors, quizzes, and beginner-friendly tutorials on Tag Web.">
+
+    <meta property="og:image" content="https://tag-web.is-cool.dev/assets/tag-web-ogimage.png">
+
+    <meta property="og:url" content="https://tag-web.is-cool.dev/pages/dashboard.html">
+
+    <meta property="og:type" content="website">
+
+    <!-- For twitter or X -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Tag Web">
+
+    <meta name="twitter:description" content="Learn HTML, CSS & JavaScript">
+
+    <meta name="twitter:image" content="https://tag-web.is-cool.dev/assets/tag-web-ogimage.png">
+
+    <!-- Fav icon -->
+    <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png" />
+    <!-- manifest file  -->
+    <link rel="manifest" href="../manifest.json" />
+    <!-- Css links and other external libraries -->
+
+    <!-- Place to write all links -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<!-- <body> -->
+
+<!-- header -->
+<header>
+    <div class="logo skeleton-shimmer">
+        <img src="/assets/tag-web-logo.png" alt="logo" class="tag-web-logo" />
+        <a href="/index.html"><span class="brand-wordmark">Tag Web</span></a>
+    </div>
+
+    <div class="search-container skeleton-shimmer">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchBar" placeholder="Search Topics, Tags..." onkeyup="searchTag()"
+            aria-label="Search HTML tags" />
+    </div>
+    <div class="button-group">
+        <a href="https://amazing-color-picker.vercel.app/" target="_blank"><button
+                class="btn color-lab  skeleton-shimmer">
+                <span class="icon-palette">🎨</span> Color Lab
+            </button>
+        </a>
+
+        <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover  skeleton-shimmer">
+            <i class="fa-brands fa-discord"></i>Join Community
+        </a>
+        <a href="/pages/contact-tagweb.html" target="_blank" class="btn contact-btn  skeleton-shimmer"
+            rel="noopener noreferrer">
+            <i class="fa-sharp fa-solid fa-at"></i><span class="icon-palette">Contact us
+            </span>
+        </a>
+    </div>
+</header>
+<div class="page-container">
+    <main class="content-panel">
+
+        <!-- HTML STRUCTURE -->
+        <section id="structure">
+            <h2>The HTML Structure</h2>
+            <div class="cards-grid ">
+                <div class="tag-card" data-tag="!DOCTYPE" onclick="openModal('!doctype')">
+                    &lt;!doctype&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="html" onclick="openModal('html')">
+                    &lt;html&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="head" onclick="openModal('head')">
+                    &lt;head&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="meta" onclick="openModal('meta')">
+                    &lt;meta&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="title" onclick="openModal('title')">
+                    &lt;title&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="link" onclick="openModal('link')">
+                    &lt;link&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="body" onclick="openModal('body')">
+                    &lt;body&gt;<span class="tooltip">Click for more details</span>
+                </div>
+                <div class="tag-card" data-tag="script" onclick="openModal('script')">
+                    &lt;script&gt;<span class="tooltip">Click for more details</span>
+                </div>
+            </div>
+
+        </section>
+        <!-- TEXT SECTION -->
+        <section id="text">
+            <h2>Text Tags</h2>
+            <div class="cards-grid">
+                <div class="tag-card" data-tag="h1" onclick="openModal('h1')">
+                    &lt;h1&gt; Heading<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="Paragraph" onclick="openModal('p')">
+                    &lt;p&gt; Paragraph<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="bold" onclick="openModal('b')">
+                    &lt;b&gt; Bold<span class="tooltip">Click for details</span>
+                </div>
+            </div>
+            <a href="/pages/text-tag.html" class="more-tags-link" target="_blank">Click here to view and enjoy
+                more tags</a>
+        </section>
+
+
+        <!-- Forms Section -->
+        <section id="forms">
+            <h2>Form Tags</h2>
+            <div class="cards-grid">
+                <div class="tag-card" data-tag="form" onclick="openModal('form')">
+                    &lt;form&gt; Form<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="input" onclick="openModal('input')">
+                    &lt;input&gt; Input<span class="tooltip">Click for details</span>
+                </div>
+            </div>
+            <a href="/pages/form-tag.html" class="more-tags-link" target="_blank">Click here to view and enjoy
+                more tags</a>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media">
+            <h2>Semantic and Media Tags</h2>
+            <div class="cards-grid">
+
+
+                <div class="tag-card" onclick="openModal('main')">&lt;main&gt;<span class="tooltip">Click for
+                        details</span>
+                    Main
+                    Content</div>
+                <div class="tag-card" onclick="openModal('div')">&lt;div&gt;<span class="tooltip">Click for
+                        details</span>
+                    Division
+                </div>
+
+                <div class="tag-card" data-tag="img" onclick="openModal('img')">
+                    &lt;img&gt; Image<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="audio" onclick="openModal('audio')">
+                    &lt;audio&gt; Audio<span class="tooltip">Click for details</span>
+                </div>
+            </div>
+
+            <a href="/pages/semantic-media.html" class="more-tags-link" target="_blank">Click here to view and
+                enjoy more tags</a>
+        </section>
+        <!-- Links Section -->
+        <section id="links">
+            <h2>Link Tags</h2>
+            <div class="cards-grid">
+                <div class="tag-card" data-tag="Anchor" onclick="openModal('a')">
+                    &lt;a&gt; Anchor Link<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="Navigation" onclick="openModal('nav')">
+                    &lt;nav&gt; Navigation<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="href" onclick="openModal('href')">
+                    &lt;href&gt; Hyperlink Reference<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="target" onclick="openModal('target')">
+                    &lt;target&gt; Target Attribute<span class="tooltip">Click for details</span>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Table Sectin -->
+        <section id="tables">
+            <h2>Table Tags</h2>
+            <div class="cards-grid">
+                <div class="tag-card" data-tag="tables" onclick="openModal('table')">
+                    &lt;table&gt; Table<span class="tooltip">Click for details</span>
+                </div>
+
+                <div class="tag-card" data-tag="caption" onclick="openModal('caption')">
+                    &lt;caption&gt; Table Caption<span class="tooltip">Click for details</span>
+                </div>
+
+                <div class="tag-card" data-tag="column group" onclick="openModal('colgroup')">
+                    &lt;colgroup&gt; Column Group<span class="tooltip">Click for details</span>
+                </div>
+
+                <div class="tag-card" data-tag="column" onclick="openModal('col')">
+                    &lt;col&gt; Column<span class="tooltip">Click for details</span>
+                </div>
+
+                <div class="tag-card" data-tag="table body" onclick="openModal('tbody')">
+                    &lt;tbody&gt; Table Body<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="tr" onclick="openModal('tr')">
+                    &lt;tr&gt; Table Row<span class="tooltip">Click for details</span>
+                </div>
+
+                <div class="tag-card" data-tag="Table header" onclick="openModal('th')">
+                    &lt;th&gt; Table Header Cell<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="td" onclick="openModal('td')">
+                    &lt;td&gt; Table Data Cell<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="table foot" onclick="openModal('tfoot')">
+                    &lt;tfoot&gt; Table Footer<span class="tooltip">Click for details</span>
+                </div>
+
+                <div class="tag-card"><a href="/cheatsheets/tabletags-cheatsheet.html" target="_blank"> Checkout
+                        The Table Tags CheatSheet</a></div>
+            </div>
+        </section>
+
+
+
+        <!-- LISTS SECTION -->
+        <section id="lists">
+            <h2>List Tags</h2>
+            <div class="cards-grid">
+                <div class="tag-card" data-tag="ul" onclick="openModal('ul')">
+                    &lt;ul&gt; Unordered List<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="ol" onclick="openModal('ol')">
+                    &lt;ol&gt; Ordered List<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="li" onclick="openModal('li')">
+                    &lt;li&gt; List Item<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="dl" onclick="openModal('dl')">
+                    &lt;dl&gt; Description List<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="dt" onclick="openModal('dt')">
+                    &lt;dt&gt; Description Term<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="dd" onclick="openModal('dd')">
+                    &lt;dd&gt; Description Definition<span class="tooltip">Click for details</span>
+                </div>
+
+
+                <div class="tag-card"><a href="/cheatsheets/listtags-cheatsheet.html" target="_blank"> Checkout
+                        The List Tags CheatSheet</a></div>
+            </div>
+        </section>
+
+
+
+        <section class="quiz quiz-exercise-card">
+
+            <h2>Take a short quiz</h2>
+            <p>Which tag is used to navigate other files or pages?</p>
+            <br>
+            <form action="" method="post" target="_blank" rel="opener">
+                <div class="quizoption">
+                    <input type="radio" name="quizoption" id="quizoption1" value="1">
+                    <label for="quizoption1">
+                        <code>link-tag</code>
+                    </label>
+                </div>
+                <div class="quizoption">
+                    <input type="radio" name="quizoption" id="quizoption2" value="1">
+                    <label for="quizoption2">
+                        <code>anchor-tag</code>
+                    </label>
+                </div>
+                <div class="quizoption">
+                    <input type="radio" name="quizoption" id="quizoption3" value="1">
+                    <label for="quizoption3">
+                        <code>nav-tag</code>
+                    </label>
+                </div>
+                <div class="quizoption">
+                    <input type="radio" name="quizoption" id="quizoption4" value="1">
+                    <label for="quizoption4">
+                        <code>button-tag</code>
+                    </label>
+                </div>
+            </form>
+        </section>
+
+        <!-- Other HTML tags -->
+        <section id="Other-tags">
+            <h2>Other HTML5 Tags</h2>
+            <div class="cards-grid">
+                <div class="tag-card" data-tag="Citation" onclick="openModal('cite')">
+                    &lt;cite&gt; Citation<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="inline quote" onclick="openModal('q')">
+                    &lt;q&gt; Inline Quote<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="blockquote" onclick="openModal('blockquote')">
+                    &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
+                </div>
+            </div>
+            <a href="/pages/other-tags.html" class="more-tags-link" target="_blank">Click here to view and enjoy
+                more tags</a>
+        </section>
+
+        <section id="Css-tags">
+            <h2>CSS Tags</h2>
+            <div class="cards-grid">
+
+
+                <!-- flexbox-grid-combo -->
+                <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
+                    Flexbox + Grid Combo<span class="tooltip">Click for details</span>
+                </div>
+                <div class="tag-card" data-tag="text-shadow" onclick="openModal('text-shadow')">text-shadow<span
+                        class="tooltip">Click for details</span></div>
+            </div>
+            <a href="/pages/css-part.html" target="_blank" class="css-link"
+                style="text-decoration: none; color: inherit;">
+                <span class="css-icon">🎨</span> Explore CSS Tags
+            </a>
+
+        </section>
+
+        <!-- Learn JavaScript Section -->
+        <section id="javascript-tags" style="text-align: center">
+            <h2>Learn JavaScript <span style="color: #f59e0b">⚡</span></h2>
+            <p id="js-des">
+                Master JavaScript from scratch — variables, functions, DOM, async/await
+                and more. Interactive cards, live code editor, and quizzes await you!
+            </p>
+            <div class="button-container">
+                <a href="/pages/javascript-part.html" target="_blank" id="js-pg-link-a">
+                    ⚡ Start Learning JavaScript →
+                </a>
+            </div>
+
+        </section>
+    </main>
+</div>
+<footer class="site-footer  skeleton-shimmer">
+    <div class="footer-main">
+        <div class="footer-inner">
+            <div class="footer-col footer-col-brand">
+                <div class="footer-brand-logo">
+                    <span class="footer-brand-name">Tag Web</span>
+                </div>
+                <p class="footer-brand-tagline">Your interactive Web Development Learning Platform</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hafiz-adan-suhail-2676a13b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BD%2F6qN1F2TjedwxIfMtwDWw%3D%3D"
+                        target="_blank" aria-label="LinkedIn" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+
+                    <a href="https://github.com/adansuhailch" target="_blank" aria-label="GitHub" class="icon"><i
+                            class="fa-brands fa-github"></i></a>
+
+                    <a href="https://wa.me/923074449331?text=Hi%20Hafiz%20Adan%20Suhail%20i%20want%20to%20appreciate%20you%20and%20want%20a%20source%20code%20of%20%22...%22%20website"
+                        target="_blank" aria-label="whatsapp" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+
+                    <a href="https://discord.gg/kKDSCWZfWZ" target="_blank" aria-label="Discord" class="icon"><i
+                            class="fa-brands fa-discord"></i></a>
+                    <a href="http://www.youtube.com/@thehellodevs" target="_blank" aria-label="YouTube" class="icon"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/user/312vcmxn6si567ozqmhq5cttv4ga?si=c94043df239e4aa0"
+                        target="_blank" aria-label="Spotify" class="icon">
+                        <i class="fa-brands fa-spotify"></i>
+                    </a>
+                    <a href="https://www.instagram.com/adansuhailch13/?__pwa=1#" target="_blank" aria-label="Instagram"
+                        class="icon"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+            </div>
+
+            <div class="footer-col footer-col-links">
+                <h4 class="footer-col-title">Quick Links</h4>
+                <ul class="footer-link-list">
+                    <li><a href="#text"><i class="fa-solid fa-code"></i> HTML Tags</a></li>
+                    <li><a href="/pages/css-part.html"><i class="fa-solid fa-palette"></i> CSS Tags</a></li>
+                    <li><a href="/pages/javascript-part.html"><i class="fa-brands fa-js"></i> JavaScript</a>
+                    </li>
+                    <li><a href="https://amazing-color-picker.vercel.app/" target="_blank"><i
+                                class="fa-solid fa-droplet"></i> Color Lab</a></li>
+                    <li><a href="/pages/quiz-section.html"><i class="fa-solid fa-circle-question"></i>
+                            Quizzes</a>
+                    </li>
+                    <li><a href="/pages/editor.html"><i class="fa-solid fa-terminal"></i> Code Editor</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-learn">
+                <h4 class="footer-col-title">Learn</h4>
+                <ul class="footer-link-list">
+                    <li><a href="/pages/text-tag.html"><i class="fa-solid fa-t"></i> Text Tags</a></li>
+                    <li><a href="/pages/form-tag.html"><i class="fa-solid fa-wpforms"></i> Form Tags</a>
+                    </li>
+                    <li><a href="/pages/semantic-media.html"><i class="fa-solid fa-photo-film"></i> Media
+                            &amp;
+                            Semantic</a></li>
+                    <li><a href="/pages/css-flex.html"><i class="fa-solid fa-table-columns"></i> Flexbox</a>
+                    </li>
+                    <li><a href="/pages/css-grid.html"><i class="fa-solid fa-border-all"></i> CSS Grid</a>
+                    </li>
+                    <li><a href="/pages/other-tags.html"><i class="fa-solid fa-layer-group"></i> Other
+                            HTML5</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-contact-legal">
+                <h4 class="footer-col-title">Contact</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fa-solid fa-envelope footer-contact-icon"></i>
+                        <a href="mailto:adansuhailch@gmail.com" id="gmial-a">adansuhailch@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-discord footer-contact-icon"></i>
+                        <a href="https://discord.gg/XwWbEyEVX9" target="_blank">Join our Discord</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github footer-contact-icon"></i>
+                        <a href="https://github.com/adansuhailch" target="_blank">GitHub Profile</a>
+                    </li>
+                </ul>
+
+                <h4 class="footer-col-title" style="margin-top: 24px;">Legal</h4>
+                <ul class="footer-link-list">
+                    <li><a href="/pages/privacy-policy.html"><i class="fa-solid fa-shield-halved"></i>
+                            Privacy
+                            Policy</a></li>
+                    <li><a href="/pages/terms-of-service.html"><i class="fa-solid fa-file-contract"></i>
+                            Terms of
+                            Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            <p class="footer-copyright">&copy; 2026 <strong>Tag Web</strong> &mdash; Built with ❤️ by a
+                Developer
+                for future Developers.
+                <a href="./pages/privacy-policy.html">All rights reserved.</a>
+            </p>
+            <div class="footer-bottom-links">
+                <a href="/pages/privacy-policy.html">Privacy Policy</a>
+                <span class="footer-dot">&bull;</span>
+                <a href="/pages/terms-of-service.html">Terms of Service</a>
+                <span class="footer-dot">&bull;</span>
+                <a href="https://discord.gg/XwWbEyEVX9" target="_blank">Community</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/js/core-actions.js"></script>
+<script>
+    // Check karo ke kya browser service worker support karta hai
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                })
+                .catch((error) => {
+                    console.log('❌ ServiceWorker registration failed: ', error);
+                });
+        });
+    }
+</script>
+
+<script>
+    // Check karo ke kya browser service worker support karta hai
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                })
+                .catch((error) => {
+                    console.log('❌ ServiceWorker registration failed: ', error);
+                });
+        });
+    }
+</script>
+
+</body>
+
+
+</html>
