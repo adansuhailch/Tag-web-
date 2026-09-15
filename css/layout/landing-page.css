@@ -20,11 +20,10 @@
 }
 
 /* Muted minimal roadmap text link */
-.nav-anchor-link {
+/* .nav-anchor-link {
     font-family: 'VT323', monospace !important;
     font-size: 19px;
     color: #7d8590 !important;
-    /* GitHub official muted gray */
     text-decoration: none;
     letter-spacing: 0.5px;
     transition: color 0.2s ease;
@@ -32,8 +31,8 @@
 
 .nav-anchor-link:hover {
     color: #ffffff !important;
-    /* Lights up crisp white on hover */
-}
+    Lights up crisp white on hover
+} */
 
 .landing-gateway-premium {
     background-color: #010409 !important;
@@ -127,10 +126,53 @@
     gap: 16px;
     color: #7d8590;
     font-size: 15px;
+    align-items: center;
 }
 
 .windows-mini-controls span {
     cursor: pointer;
+    display: inline-block;
+    /* Animation smoothly chalne ke liye zaroori hai */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Pro-level smooth effect */
+    user-select: none;
+}
+
+/* 1. Minimize Button (—) Hover */
+.windows-mini-controls span:nth-child(1):hover {
+    color: #fffafa;
+    transform: scale(2.2) translateY(2px);
+    /* Thoda bada aur neeche bend hoga */
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+
+/* 2. Maximize Button (🗖) Hover */
+.windows-mini-controls span:nth-child(2):hover {
+    color: #64748b;
+    /*  Gray color */
+    transform: scale(2.25) rotate(90deg);
+    /* Thoda bada hokar rotate karega, boht satisfying lagta hai! */
+    text-shadow: 0 0 10px #64748b;
+}
+
+/* 3. Close Button (🗙) Hover */
+.windows-mini-controls span.close-glow:hover {
+    color: #8e1717;
+    transform: scale(2.3) rotate(-25deg);
+    text-shadow: 0 0 12px rgba(164, 27, 27, 0.8);
+    animation: closePulse 0.6s infinite alternate;
+    /* Danger alert pulse effect */
+}
+
+/* Close button ke liye infinite breathing effect */
+@keyframes closePulse {
+    from {
+        transform: scale(2.3) rotate(-15deg);
+    }
+
+    to {
+        transform: scale(2.0) rotate(-15deg);
+    }
 }
 
 .close-glow:hover {
@@ -191,6 +233,7 @@
 /* 🧱 The Code-Dex Styled Premium 3D Cards */
 .pipeline-card-premium {
     background-color: #0d1117;
+    color: #fffafa;
     /* GitHub Base Panel Color */
     border: 2px solid #30363d !important;
     /* Thick internal boundaries */
@@ -300,7 +343,7 @@
 
 .path-html:hover *,
 .path-css:hover *,
-.path-form-tag *,
+.path-form-tag:hover *,
 .path-js:hover *,
 .path-flex:hover *,
 .path-boxmodel:hover *,
@@ -347,35 +390,35 @@
 }
 
 .path-boxmodel:hover {
-    background-color: #111f2a;
+    background-color: #a65fc0;
 }
 
 .path-text-fonts:hover {
-    background-color: #01120271;
+    background-color: #d6146be3;
 }
 
 .path-animation:hover {
-    background-color: #0c0c3c;
+    background-color: LemonChiffon;
 }
 
 .path-effects:hover {
-    background-color: #2c0202;
+    background-color: #7286b0;
 }
 
 .path-background:hover {
-    background-color: rgb(48, 29, 4);
+    background-color: #87CEEB;
 }
 
 .path-flex:hover {
-    background-color: #07401b !important;
+    background-color: #3c955b !important;
 }
 
 .path-sem-med:hover {
-    background-color: #0c0c3c !important;
+    background-color: RebeccaPurple !important;
 }
 
 .path-oth-tag:hover {
-    background-color: #5d6092 !important;
+    background-color: BurlyWood !important;
 }
 
 /* Active Click Feedback Mechanics */

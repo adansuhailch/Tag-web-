@@ -1,5 +1,5 @@
-const CACHE_NAME = 'tag-web-v1';
-const DYNAMIC_CACHE_NAME = 'tag-web-dynamic-v1';
+const CACHE_NAME = 'tag-web-v2.o';
+const DYNAMIC_CACHE_NAME = 'tag-web-dynamic-v2.o';
 const OFFLINE_URL = '/pages/offline.html'; // <--- Tumhara custom sorry page
 
 // 📦 Sirf main default heavy traffic pages aur core files
