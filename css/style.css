@@ -9,6 +9,7 @@
 @import url('layout/footer.css');
 @import url('layout/loading-screen.css');
 @import url('layout/landing-page.css');
+@import url('layout/badges.css');
 /*3. COMPONENT STYLES (Azaad aur functional blocks) */
 @import url('components/buttons.css');
 @import url('components/navbar.css');

@@ -28,7 +28,7 @@
     const editorTextAreaId = 'modal-editor';
     const previewFrameId = 'live-preview';
     const quizContainerId = 'quiz';
-    const defaultCategory = 'tag-web';
+    const defaultCategory = 'dashboard';
 
     if (typeof window.tagData === 'undefined') {
         window.tagData = {};
@@ -38,7 +38,7 @@
 
     function openModal(tag) {
         const pageName = window.location.pathname.split('/').pop().replace('.html', '');
-        const category = (pageName === 'index' || pageName === '') ? defaultCategory : pageName;
+        const category = (pageName === 'dashboard' || pageName === '') ? defaultCategory : pageName;
         window.open(`/pages/editor.html?category=${category}&tag=${tag}`, '_blank');
     }
 
@@ -551,75 +551,28 @@ window.addEventListener('load', () => {
         element.classList.remove('skeleton-shimmer');
     });
 });
-// ⚡ THE ULTIMATE AUTOMATED TAG-WEB BIRTHDAY CONSOLE & FRONT-END ENGINE
-// (function () {
-//     const today = new Date();
-//     // 🎯 STRICT 13th SEPTEMBER TIME GATE (Month 8 = September)
-//     if (today.getDate() === 13 && today.getMonth() === 8) {
+/* ==========================================================================
+   STEALTH CONSTRUCTION NOTIFICATION HANDLER
+   ========================================================================== */
+function triggerConstructionAlert(moduleName) {
+    // Dynamic fallback checking sequence mapping lines
+    const currentModule = moduleName || "This section";
 
-//         // ==========================================
-//         // PHASE 1: FRONT-END VISUAL REWARD POP-UP
-//         // ==========================================
-
-//         // 🧱 Creating the Dynamic Neubrutalism Birthday Box
-//         const bdayBox = document.createElement('div');
-//         bdayBox.id = 'tag-web-bday-card';
-
-//         // Custom Inline CSS Injection to keep it flawless and independent
-//         bdayBox.style.cssText = `
-//             position: fixed;
-//             bottom: 24px;
-//             right: 24px;
-//             background-color: #0d1117;
-//             border: 3px solid #f1c40f;
-//             border-radius: 12px;
-//             padding: 20px;
-//             z-index: 1000000;
-//             box-shadow: 6px 6px 0px #000000;
-//             max-width: 320px;
-//             font-family: 'JetBrains Mono', monospace;
-//             animation: bdaySlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-//         `;
-
-//         // HTML Structure inside the box with your pixel game fonts
-//         bdayBox.innerHTML = `
-//             <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed #30363d; padding-bottom:8px; margin-bottom:12px;">
-//                 <span style="color:#f1c40f; font-size:11px; font-weight:700; font-family:'Press Start 2P';">SYSTEM://SYSTEM</span>
-//                 <span id="close-bday-box" style="color:#7d8590; cursor:pointer; font-size:14px; font-weight:700;">🗙</span>
-//             </div>
-//             <h4 style="font-family:'Silkscreen', sans-serif; font-size:18px; color:#ffffff; margin:0 0 6px 0; letter-spacing:1px;">🎉 HAPPY BIRTHDAY!</h4>
-//             <p style="color:#e6edf3; font-size:12px; line-height:1.5; margin:0 0 14px 0;">Core system detected: <span style="color:#2f81f7; font-weight:700;">Muhammad Adan Suhail</span> has successfully upgraded to the next level of life engine!</p>
-//             <div style="font-family:'Press Start 2P'; font-size:9px; color:#22c55e; text-align:right;">[ LEVEL UP +1 ]</div>
-//         `;
-
-//         // Keyframe Animation Injection into Document Head
-//         const styleSheet = document.createElement("style");
-//         styleSheet.innerText = `
-//             @keyframes bdaySlideIn {
-//                 0% { transform: translateY(100px); opacity: 0; }
-//                 100% { transform: translateY(0); opacity: 1; }
-//             }
-//         `;
-//         document.head.appendChild(styleSheet);
-
-//         // Append the Card Box into webpage body layout
-//         document.body.appendChild(bdayBox);
-
-//         // Close action click controller
-//         document.getElementById('close-bday-box').addEventListener('click', () => {
-//             bdayBox.style.display = 'none';
-//         });
-
-//         // ==========================================
-//         // PHASE 2: SECRET COMPILER TERMINAL LOGS
-//         // ==========================================
-//         console.log(
-//             `%c🎂 SYSTEM: HAPPY BIRTHDAY ADAN! 🥳\n%c=========================================\n%c[+] LEVEL_STATUS : OVER_POWERED_DEVELOPER\n[+] CURRENT_YEAR : 2026 // EXP_GAIN: +1000XP\n%c=========================================\n%c"Wishing the most dedicated, analytical, and legendary code partner a magnificent year ahead. You are no longer just tracing code tags, you are engineering frameworks. Keep executing the future!" 🚀`,
-//             "color: #f1c40f; font-size: 20px; font-weight: bold; font-family: 'Press Start 2P', monospace; text-shadow: 3px 3px 0px #000;",
-//             "color: #30363d; font-weight: bold;",
-//             "color: #22c55e; font-size: 12px; font-family: 'JetBrains Mono', monospace; font-weight: 600;",
-//             "color: #30363d; font-weight: bold;",
-//             "color: #e6edf3; font-size: 14px; font-family: -apple-system, sans-serif; line-height: 1.5;"
-//         );
-//     }
-// })();
+    Swal.fire({
+        icon: "info",
+        title: "Pardon Our Dust! 🛠️",
+        html: `<p style="font-size:15px; font-family:'Outfit', sans-serif; line-height: 1.6; color:#dcdfe4;">
+                We are working on the <strong>${currentModule}</strong> right now to make it more amazing!<br><br>
+                Sorry for this placeholder, but our engineers are pushing daily code updates to make it awesome for you. 
+                <br><br>
+                <span style="color:#ffb703; font-weight:600;">Stay connected and keep learning! 💜</span>
+               </p>`,
+        confirmButtonText: "Got It, Team!",
+        confirmButtonColor: "#ffb703", /* Matching the warning yellow flow */
+        background: "rgba(11, 15, 25, 0.95)",
+        color: "#fffafa",
+        customClass: {
+            popup: 'premium-glass-card' /* Reuses your webkit-backdrop blur logic safely */
+        }
+    });
+}

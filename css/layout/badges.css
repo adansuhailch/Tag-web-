@@ -1,0 +1,46 @@
+/* ==========================================================================
+   PORTFOLIO/TAGWEB - BETA UNDER CONSTRUCTION BADGE
+   ========================================================================== */
+
+.under-construction-wrapper {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    margin: 8px 0;
+}
+
+.beta-warning-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 183, 3, 0.08);
+    /* Transparent Amber/Warning color tint 🟨 */
+    border: 1px solid #ffb703;
+    /* Crisp warning color boundary lines */
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffb703;
+    letter-spacing: 0.5px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Micro interaction motion hover states dynamic triggers */
+.under-construction-wrapper:hover .beta-warning-badge {
+    background: #ffb703;
+    color: #0b0f19 !important;
+    /* Text color flips smoothly on hover overlays */
+    box-shadow: 0 0 12px rgba(255, 183, 3, 0.3);
+}
+
+.under-construction-wrapper:hover i {
+    transform: scale(1.15) rotate(10deg);
+    /* Triangle icon moves slightly on focus */
+}
+
+.under-construction-wrapper:active {
+    transform: scale(0.96);
+    /* Smooth pressing touch physical feedback */
+}
