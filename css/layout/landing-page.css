@@ -390,7 +390,7 @@
 }
 
 .path-boxmodel:hover {
-    background-color: #a65fc0;
+    background-color: #762295;
 }
 
 .path-text-fonts:hover {
@@ -398,15 +398,15 @@
 }
 
 .path-animation:hover {
-    background-color: LemonChiffon;
+    background-color: rgb(46, 45, 39);
 }
 
 .path-effects:hover {
-    background-color: #7286b0;
+    background-color: #0034a3;
 }
 
 .path-background:hover {
-    background-color: #87CEEB;
+    background-color: #58001a;
 }
 
 .path-flex:hover {
@@ -414,11 +414,11 @@
 }
 
 .path-sem-med:hover {
-    background-color: RebeccaPurple !important;
+    background-color: rgb(33, 0, 67) !important;
 }
 
 .path-oth-tag:hover {
-    background-color: BurlyWood !important;
+    background-color: rgb(148, 84, 0) !important;
 }
 
 /* Active Click Feedback Mechanics */
