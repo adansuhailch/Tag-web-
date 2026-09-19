@@ -551,3 +551,31 @@ window.addEventListener('load', () => {
         element.classList.remove('skeleton-shimmer');
     });
 });
+
+/* ==========================================================================
+   RETRO MODAL ACCESS CONTROL LOGIC - ANNOUNCEMENT HANDLER
+   ========================================================================== */
+function dismissUpgradePopup() {
+    const modal = document.getElementById("retro-upgrade-modal");
+    if (modal) {
+        modal.style.opacity = "0";
+        setTimeout(() => {
+            modal.style.display = "none";
+            // Storing configuration inside storage key tokens
+            sessionStorage.setItem("tagWebUpgradeAnnounced", "true");
+        }, 300);
+    }
+}
+
+// Initializing the checking frame matrix upon index render loops
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("retro-upgrade-modal");
+    if (!modal) return;
+
+    // Check if the user has already acknowledged this notification session
+    if (sessionStorage.getItem("tagWebUpgradeAnnounced") === "true") {
+        modal.style.display = "none";
+    } else {
+        modal.style.display = "flex";
+    }
+});
