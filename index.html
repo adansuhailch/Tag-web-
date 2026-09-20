@@ -2,33 +2,23 @@
 <html lang="en">
 
 <head>
-
-    <!-- 1: insert charset -->
-    <meta charset="UTF-8" />
-    <!-- 2: insert viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- 3: insert Tittle and description -->
-    <title>Tag Web | Interactive Web Development Learning Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Web | Choose What You Want to Learn (HTML, CSS, JS)</title>
     <meta name="description"
-        content="Learn HTML, CSS, and JavaScript with interactive examples, live code editors, quizzes, and beginner-friendly tutorials on Tag Web." />
-
+        content="Select your personal coding pipeline on Tag Web. Choose what you want to learn today—master structural HTML, visual CSS box layouts, or dynamic JavaScript logic with zero logins required." />
     <!-- 4: insert canonical tag -->
     <link rel="canonical" href="https://tag-web.is-cool.dev/">
-
-    <!-- 5: insert robots meta tag -->
     <meta name="robots" content="index, follow">
-
-    <!-- THeme color -->
-
-    <meta name="theme-color" content="#080C16">
-    <!-- Author -->
     <meta name="author" content="Muhammad Adan Suhail">
+    <meta name="theme-color" content="#010409"> <!-- 🎯 FIX: GitHub Pure Dark Core color matching variables -->
+
     <!-- Place open graphs -->
     <!-- Open graph tags jo mane phla pta nhi kuon nhi insert kiyay :) !! -->
-    <meta property="og:title" content="Tag Web | Learn HTML, CSS & JavaScript">
+    <meta property="og:title" content="Tag Web | Choose What You Want to Learn (HTML, CSS, JS)" />
+    <meta property="og:description"
+        content="Select your personal coding pipeline today. Master structural HTML, visual CSS box model, or dynamic JavaScript logic with zero logins required!" />
 
-    <meta property="og:description" content="Interactive web development learning platform.">
 
     <meta property="og:image" content="https://tag-web.is-cool.dev/assets/tag-web-ogimage.png">
 
@@ -41,7 +31,7 @@
 
     <meta name="twitter:title" content="Tag Web">
 
-    <meta name="twitter:description" content="Learn HTML, CSS & JavaScript">
+    <meta name="twitter:description" content="Tag Web | Choose what you want to Learn!">
 
     <meta name="twitter:image" content="https://tag-web.is-cool.dev/assets/tag-web-ogimage.png">
 
@@ -120,461 +110,287 @@
 
     <!-- Fav icon -->
     <link rel="icon" type="image/x-icon" href="/assets/tag-web-logo.png" />
+
     <!-- manifest file  -->
     <link rel="manifest" href="./manifest.json" />
+
     <!-- Css links and other external libraries -->
 
     <!-- Place to write all links -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!-- GOOGLE site verification link -->
     <meta name="google-site-verification" content="XLfrzxEuL6an8gio5RLJykIMb5_RGxiCh6NvhLKWBKE" />
 </head>
 
-<body>
-    <!-- ==========================================================================
-     RETRO POPUP COMPONENT - TAG-WEB 2.0 (SIMPLE ENGLISH)
-     ========================================================================== -->
-    <div id="retro-upgrade-modal" class="upgrade-overlay-mask">
-        <div class="pixel-popup-card">
-            <!-- Close Window Cross Button Handle -->
-            <button class="pixel-close-btn" onclick="dismissUpgradePopup()">&times;</button>
+<body class="landing-gateway-premium">
+    <header class="landing-page-navbar">
 
-            <!-- Animated Retro Terminal Pulse Icon -->
-            <div class="pixel-pulse-icon"><i class="fa-solid fa-laptop-code"></i></div>
-
-            <!-- Main Core Notice Strings Display Section -->
-            <h2 class="pixel-heading">TAG-WEB 2.0</h2>
-            <p class="pixel-subheading">A BIG UPGRADE IS COMING SOON</p>
-
-            <p class="pixel-notice-text">
-                Hey devs! We are redesigning Tag-Web from scratch. Get ready for a premium new look, epic dark mode
-                layouts, and super smooth coding features. Something awesome is cooking behind the scenes. You don't
-                want to miss this!
-            </p>
-
-            <!-- CTA Interactive Grid Trigger Button -->
-            <button class="pixel-action-btn" onclick="dismissUpgradePopup()">I AM READY</button>
-        </div>
-    </div>
-
-
-    <!-- header -->
-    <header>
-        <div class="logo skeleton-shimmer">
+        <div class="logo">
             <img src="/assets/tag-web-logo.png" alt="logo" class="tag-web-logo" />
-            <a href="/index.html"><span class="brand-wordmark">Tag Web</span></a>
-        </div>
-
-        <div class="search-container skeleton-shimmer">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="searchBar" placeholder="Search Topics, Tags..." onkeyup="searchTag()"
-                aria-label="Search HTML tags" />
+            <a href="./pages/dashboard.html"><span class="brand-wordmark">Tag Web</span></a>
         </div>
         <div class="button-group">
-            <a href="https://amazing-color-picker.vercel.app/" target="_blank"><button
-                    class="btn color-lab  skeleton-shimmer">
+            <a href="https://amazing-color-picker.vercel.app/" target="_blank"><button class="btn color-lab">
                     <span class="icon-palette">🎨</span> Color Lab
                 </button>
             </a>
 
-            <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover  skeleton-shimmer">
+            <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover">
                 <i class="fa-brands fa-discord"></i>Join Community
             </a>
-            <a href="/pages/contact-tagweb.html" target="_blank" class="btn contact-btn  skeleton-shimmer"
-                rel="noopener noreferrer">
+            <a href="/pages/contact-tagweb.html" target="_blank" class="btn contact-btn" rel="noopener noreferrer">
                 <i class="fa-sharp fa-solid fa-at"></i><span class="icon-palette">Contact us
                 </span>
             </a>
         </div>
+        <div class="landing-nav-actions">
+            <a href="./pages/dashboard.html" class="btn">START LEARNING ➔</a>
+            <!-- <a href="#roadmap" class="btn nav-anchor-link">ROADMAP</a> -->
+            <!-- This button direct takes them to your core dashboard combined page -->
+        </div>
     </header>
-    <div class="page-container">
-        <main class="content-panel">
-
-            <!-- HTML STRUCTURE -->
-            <section id="structure">
-                <h2>The HTML Structure</h2>
-                <div class="cards-grid ">
-                    <div class="tag-card" data-tag="!DOCTYPE" onclick="openModal('!doctype')">
-                        &lt;!doctype&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                    <div class="tag-card" data-tag="html" onclick="openModal('html')">
-                        &lt;html&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                    <div class="tag-card" data-tag="head" onclick="openModal('head')">
-                        &lt;head&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                    <div class="tag-card" data-tag="meta" onclick="openModal('meta')">
-                        &lt;meta&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                    <div class="tag-card" data-tag="title" onclick="openModal('title')">
-                        &lt;title&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                    <div class="tag-card" data-tag="link" onclick="openModal('link')">
-                        &lt;link&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                    <div class="tag-card" data-tag="body" onclick="openModal('body')">
-                        &lt;body&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                    <div class="tag-card" data-tag="script" onclick="openModal('script')">
-                        &lt;script&gt;<span class="tooltip">Click for more details</span>
-                    </div>
-                </div>
-
-            </section>
-            <!-- TEXT SECTION -->
-            <section id="text">
-                <h2>Text Tags</h2>
-                <div class="cards-grid">
-                    <div class="tag-card" data-tag="h1" onclick="openModal('h1')">
-                        &lt;h1&gt; Heading<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="Paragraph" onclick="openModal('p')">
-                        &lt;p&gt; Paragraph<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="bold" onclick="openModal('b')">
-                        &lt;b&gt; Bold<span class="tooltip">Click for details</span>
-                    </div>
-                </div>
-                <a href="/pages/text-tag.html" class="more-tags-link" target="_blank">Click here to view and enjoy
-                    more tags</a>
-            </section>
 
 
-            <!-- Forms Section -->
-            <section id="forms">
-                <h2>Form Tags</h2>
-                <div class="cards-grid">
-                    <div class="tag-card" data-tag="form" onclick="openModal('form')">
-                        &lt;form&gt; Form<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="input" onclick="openModal('input')">
-                        &lt;input&gt; Input<span class="tooltip">Click for details</span>
-                    </div>
-                </div>
-                <a href="/pages/form-tag.html" class="more-tags-link" target="_blank">Click here to view and enjoy
-                    more tags</a>
-            </section>
+    <div class="space-station-console">
 
-            <!-- Media Section -->
-            <section id="media">
-                <h2>Semantic and Media Tags</h2>
-                <div class="cards-grid">
-
-
-                    <div class="tag-card" onclick="openModal('main')">&lt;main&gt;<span class="tooltip">Click for
-                            details</span>
-                        Main
-                        Content</div>
-                    <div class="tag-card" onclick="openModal('div')">&lt;div&gt;<span class="tooltip">Click for
-                            details</span>
-                        Division
-                    </div>
-
-                    <div class="tag-card" data-tag="img" onclick="openModal('img')">
-                        &lt;img&gt; Image<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="audio" onclick="openModal('audio')">
-                        &lt;audio&gt; Audio<span class="tooltip">Click for details</span>
-                    </div>
-                </div>
-
-                <a href="/pages/semantic-media.html" class="more-tags-link" target="_blank">Click here to view and
-                    enjoy more tags</a>
-            </section>
-            <!-- Links Section -->
-            <section id="links">
-                <h2>Link Tags</h2>
-                <div class="cards-grid">
-                    <div class="tag-card" data-tag="Anchor" onclick="openModal('a')">
-                        &lt;a&gt; Anchor Link<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="Navigation" onclick="openModal('nav')">
-                        &lt;nav&gt; Navigation<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="href" onclick="openModal('href')">
-                        &lt;href&gt; Hyperlink Reference<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="target" onclick="openModal('target')">
-                        &lt;target&gt; Target Attribute<span class="tooltip">Click for details</span>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-            <!-- Table Sectin -->
-            <section id="tables">
-                <h2>Table Tags</h2>
-                <div class="cards-grid">
-                    <div class="tag-card" data-tag="tables" onclick="openModal('table')">
-                        &lt;table&gt; Table<span class="tooltip">Click for details</span>
-                    </div>
-
-                    <div class="tag-card" data-tag="caption" onclick="openModal('caption')">
-                        &lt;caption&gt; Table Caption<span class="tooltip">Click for details</span>
-                    </div>
-
-                    <div class="tag-card" data-tag="column group" onclick="openModal('colgroup')">
-                        &lt;colgroup&gt; Column Group<span class="tooltip">Click for details</span>
-                    </div>
-
-                    <div class="tag-card" data-tag="column" onclick="openModal('col')">
-                        &lt;col&gt; Column<span class="tooltip">Click for details</span>
-                    </div>
-
-                    <div class="tag-card" data-tag="table body" onclick="openModal('tbody')">
-                        &lt;tbody&gt; Table Body<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="tr" onclick="openModal('tr')">
-                        &lt;tr&gt; Table Row<span class="tooltip">Click for details</span>
-                    </div>
-
-                    <div class="tag-card" data-tag="Table header" onclick="openModal('th')">
-                        &lt;th&gt; Table Header Cell<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="td" onclick="openModal('td')">
-                        &lt;td&gt; Table Data Cell<span class="tooltip">Click for details</span>
-                    </div>
-                    <div class="tag-card" data-tag="table foot" onclick="openModal('tfoot')">
-                        &lt;tfoot&gt; Table Footer<span class="tooltip">Click for details</span>
-                    </div>
-
-                    <div class="tag-card"><a href="/cheatsheets/tabletags-cheatsheet.html" target="_blank"> Checkout
-                            The Table Tags CheatSheet</a></div>
-                </div>
-    </div>
-    </section>
-
-
-
-    <!-- LISTS SECTION -->
-    <section id="lists">
-        <h2>List Tags</h2>
-        <div class="cards-grid">
-            <div class="tag-card" data-tag="ul" onclick="openModal('ul')">
-                &lt;ul&gt; Unordered List<span class="tooltip">Click for details</span>
+        <!-- Windows Style Terminal Header Control -->
+        <div class="console-top-bar">
+            <div class="console-title"><span class="window"><i
+                        class="fa-solid fa-window-maximize"></i></span>Welcome-to-Tag-Web.exe
             </div>
-            <div class="tag-card" data-tag="ol" onclick="openModal('ol')">
-                &lt;ol&gt; Ordered List<span class="tooltip">Click for details</span>
-            </div>
-            <div class="tag-card" data-tag="li" onclick="openModal('li')">
-                &lt;li&gt; List Item<span class="tooltip">Click for details</span>
-            </div>
-            <div class="tag-card" data-tag="dl" onclick="openModal('dl')">
-                &lt;dl&gt; Description List<span class="tooltip">Click for details</span>
-            </div>
-            <div class="tag-card" data-tag="dt" onclick="openModal('dt')">
-                &lt;dt&gt; Description Term<span class="tooltip">Click for details</span>
-            </div>
-            <div class="tag-card" data-tag="dd" onclick="openModal('dd')">
-                &lt;dd&gt; Description Definition<span class="tooltip">Click for details</span>
-            </div>
-
-
-            <div class="tag-card"><a href="/cheatsheets/listtags-cheatsheet.html" target="_blank"> Checkout
-                    The List Tags CheatSheet</a></div>
-        </div>
-    </section>
-
-
-
-    <section class="quiz quiz-exercise-card">
-
-        <h2>Take a short quiz</h2>
-        <p>Which tag is used to navigate other files or pages?</p>
-        <br>
-        <form action="" method="post" target="_blank" rel="opener">
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption1" value="1">
-                <label for="quizoption1">
-                    <code>link-tag</code>
-                </label>
-            </div>
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption2" value="1">
-                <label for="quizoption2">
-                    <code>anchor-tag</code>
-                </label>
-            </div>
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption3" value="1">
-                <label for="quizoption3">
-                    <code>nav-tag</code>
-                </label>
-            </div>
-            <div class="quizoption">
-                <input type="radio" name="quizoption" id="quizoption4" value="1">
-                <label for="quizoption4">
-                    <code>button-tag</code>
-                </label>
-            </div>
-        </form>
-    </section>
-
-    <!-- Other HTML tags -->
-    <section id="Other-tags">
-        <h2>Other HTML5 Tags</h2>
-        <div class="cards-grid">
-            <div class="tag-card" data-tag="Citation" onclick="openModal('cite')">
-                &lt;cite&gt; Citation<span class="tooltip">Click for details</span>
-            </div>
-            <div class="tag-card" data-tag="inline quote" onclick="openModal('q')">
-                &lt;q&gt; Inline Quote<span class="tooltip">Click for details</span>
-            </div>
-            <div class="tag-card" data-tag="blockquote" onclick="openModal('blockquote')">
-                &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
+            <div class="windows-mini-controls">
+                <span>—</span>
+                <span>🗖</span>
+                <span class="close-glow">🗙</span>
             </div>
         </div>
-        <a href="/pages/other-tags.html" class="more-tags-link" target="_blank">Click here to view and enjoy
-            more tags</a>
-    </section>
 
-    <section id="Css-tags">
-        <h2>CSS Tags</h2>
-        <div class="cards-grid">
-
-
-            <!-- flexbox-grid-combo -->
-            <div class="tag-card" data-tag="flexbox-grid-combo" onclick="openModal('flexbox-grid-combo')">
-                Flexbox + Grid Combo<span class="tooltip">Click for details</span>
+        <div class="console-body">
+            <div class="gateway-header-premium">
+                <h3 class="game-title-premium">TAG WEB ECOSYSTEM</h3>
+                <!-- <div class="system-status-badge">⚡ HOST SYSTEM: CORE_READY_STATUS_200</div> -->
+                <p class="game-subtitle-premium">SELECT From Where You Want To Start Your Coding Journey &amp; What you
+                    Want To Learn!!!</p>
             </div>
-            <div class="tag-card" data-tag="text-shadow" onclick="openModal('text-shadow')">text-shadow<span
-                    class="tooltip">Click for details</span></div>
+            <div class="marketing-promo-bar">
+                <div class="promo-badge-item html-style">
+                    <span class="promo-icon"><i class="fa-solid fa-unlock-keyhole"></i></span>
+                    <span class="promo-text">100% FREE & NO SIGN-IN REQUIRED</span>
+                </div>
+                <div class="promo-badge-item css-style">
+                    <span class="promo-icon"><i class="fa-solid fa-laptop-code"></i></span>
+                    <span class="promo-text">LIVE COMPILER & BENTO PLAYGROUNDS</span>
+                </div>
+                <div class="promo-badge-item js-style">
+                    <span class="promo-icon"><i class="fa-sharp fa-solid fa-bullseye"></i></span>
+                    <span class="promo-text">GAMIFIED LOGIC FOR BEGINNERS</span>
+                </div>
+            </div>
+
+            <div class="pipeline-grid-premium">
+
+                <!-- PATH 1: HTML STRUCTURE ENGINE -->
+                <div class="pipeline-card-premium path-html" onclick="location.href='./pages/dashboard.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">MODULE://01</span>
+                        <span class="status-dot-green">●</span>
+                    </div>
+                    <h2 class="path-title">LEARN_HTML</h2>
+                    <p class="path-desc">Learn how to build website structures. Master headings, text paragraphs, links,
+                        buttons, and layouts step-by-step.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">START HTML</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+
+                <!-- PATH 2: CSS RENDERING ENGINE -->
+                <div class="pipeline-card-premium path-css" onclick="location.href='./pages/css-part.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">MODULE://02</span>
+                        <span class="status-dot-blue">●</span>
+                    </div>
+                    <h2 class="path-title">STYLE_WITH_CSS</h2>
+                    <!-- ✨ Zero difficult words description -->
+                    <p class="path-desc">Make your website look beautiful. Master custom colors, layout spacing, boxes,
+                        grids, and premium fonts easily.</p>
+
+                    <div class="path-action-row">
+                        <span class="path-action">LAUNCH SANDBOX</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+
+                <!-- PATH 3: FULL Js TERMINAL -->
+                <div class="pipeline-card-premium path-js" onclick="location.href='./pages/javascript-part.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">JS_LOGIC</h2>
+                    <p class="path-desc">Learn simple JavaScript code logic. Master functions, trigger dynamic buttons,
+                        and make your entire website fully interactive.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">INJECT LOGIC</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <div class="pipeline-card-premium path-form-tag" onclick="location.href='./pages/form-tag.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">HTML_ForM</h2>
+                    <p class="path-desc">Learn simple JavaScript code logic. Master functions, trigger dynamic buttons,
+                        and make your entire website fully interactive.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">INJECT LOGIC</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <!-- PATH 3+2: html SEmantic & Media Tags -->
+                <div class="pipeline-card-premium path-sem-med" onclick="location.href='./pages/semantic-media.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">HTML_Semantic_Tags</h2>
+                    <p class="path-desc">Learn simple JavaScript code logic. Master functions, trigger dynamic buttons,
+                        and make your entire website fully interactive.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">INJECT LOGIC</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <!-- PATH 3+2: All HTML Tags -->
+                <div class="pipeline-card-premium path-oth-tag" onclick="location.href='./pages/other-tags.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">Drive_Deep_INTO_HTML</h2>
+                    <p class="path-desc">Learn simple JavaScript code logic. Master functions, trigger dynamic buttons,
+                        and make your entire website fully interactive.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">INJECT LOGIC</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+
+                <!-- PATH 4: FULL CSS FLEx box -->
+                <div class="pipeline-card-premium path-flex" onclick="location.href='./pages/css-flex.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">CSS_FLEXBOX</h2>
+                    <p class="path-desc">Master CSS Flexbox alignment. Learn how to arrange website items, elements, and
+                        layout grids in clean rows or columns perfectly.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">ALIGN ELEMENTS</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <!-- PATH 5: FULL Css Box MOdel -->
+                <div class="pipeline-card-premium path-boxmodel" onclick="location.href='./pages/css-boxmodel.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">CSS_BoxModel</h2>
+                    <p class="path-desc">Simultaneously engage global tutorial streams, automated quiz sandboxes, and
+                        full-screen response compilers.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">ENTER ECOSYSTEM</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <!-- PATH 6: FULL CSS Text and Fonts -->
+                <div class="pipeline-card-premium path-text-fonts"
+                    onclick="location.href='./pages/css-text-fonts.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">CSS_TexT & FontS</h2>
+                    <p class="path-desc">Simultaneously engage global tutorial streams, automated quiz sandboxes, and
+                        full-screen response compilers.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">ENTER ECOSYSTEM</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <!-- PATH 7: FULL Css Background -->
+                <div class="pipeline-card-premium path-background"
+                    onclick="location.href='./pages/css-background.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">CSS_BackGround</h2>
+                    <p class="path-desc">Simultaneously engage global tutorial streams, automated quiz sandboxes, and
+                        full-screen response compilers.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">ENTER ECOSYSTEM</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <!-- PATH 8: FULL Css Effects -->
+                <div class="pipeline-card-premium path-effects" onclick="location.href='./pages/css-effects.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">CSS_EffectS</h2>
+                    <p class="path-desc">Simultaneously engage global tutorial streams, automated quiz sandboxes, and
+                        full-screen response compilers.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">ENTER ECOSYSTEM</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+                <!-- PATH 9: FULL Css Animation  -->
+                <div class="pipeline-card-premium path-animation" onclick="location.href='./pages/css-animation.html'">
+                    <div class="card-glow-line"></div>
+                    <div class="card-meta-row">
+                        <span class="path-badge">SYSTEM://MASTER</span>
+                        <span class="status-dot-purple">●</span>
+                    </div>
+                    <h2 class="path-title">CSS_AnimatioN</h2>
+                    <p class="path-desc">Simultaneously engage global tutorial streams, automated quiz sandboxes, and
+                        full-screen response compilers.</p>
+                    <div class="path-action-row">
+                        <span class="path-action">ENTER ECOSYSTEM</span>
+                        <span class="action-arrow">➔</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <a href="/pages/css-part.html" target="_blank" class="css-link" style="text-decoration: none; color: inherit;">
-            <span class="css-icon">🎨</span> Explore CSS Tags
-        </a>
 
-    </section>
-
-    <!-- Learn JavaScript Section -->
-    <section id="javascript-tags" style="text-align: center">
-        <h2>Learn JavaScript <span style="color: #f59e0b">⚡</span></h2>
-        <p id="js-des">
-            Master JavaScript from scratch — variables, functions, DOM, async/await
-            and more. Interactive cards, live code editor, and quizzes await you!
-        </p>
-        <div class="button-container">
-            <a href="/pages/javascript-part.html" target="_blank" id="js-pg-link-a">
-                ⚡ Start Learning JavaScript →
-            </a>
-        </div>
-
-    </section>
-
-
-    </main>
+        <!-- Dynamic Micro Footer Inside Window Console -->
+        <footer class="console-footer">
+            <span class="footer-system-text">CURR_TARGET_YEAR: 2026 // BUILDER: M_ADAN_SUHAIL</span>
+            <span class="blink-cursor">_</span>
+        </footer>
 
     </div>
-    <footer class="site-footer  skeleton-shimmer">
-        <div class="footer-main">
-            <div class="footer-inner">
-                <div class="footer-col footer-col-brand">
-                    <div class="footer-brand-logo">
-                        <span class="footer-brand-name">Tag Web</span>
-                    </div>
-                    <p class="footer-brand-tagline">Your interactive Web Development Learning Platform</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/hafiz-adan-suhail-2676a13b8/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BD%2F6qN1F2TjedwxIfMtwDWw%3D%3D"
-                            target="_blank" aria-label="LinkedIn" class="icon"><i class="fa-brands fa-linkedin"></i></a>
-
-                        <a href="https://github.com/adansuhailch" target="_blank" aria-label="GitHub" class="icon"><i
-                                class="fa-brands fa-github"></i></a>
-
-                        <a href="https://wa.me/923074449331?text=Hi%20Hafiz%20Adan%20Suhail%20i%20want%20to%20appreciate%20you%20and%20want%20a%20source%20code%20of%20%22...%22%20website"
-                            target="_blank" aria-label="whatsapp" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
-
-                        <a href="https://discord.gg/kKDSCWZfWZ" target="_blank" aria-label="Discord" class="icon"><i
-                                class="fa-brands fa-discord"></i></a>
-                        <a href="http://www.youtube.com/@thehellodevs" target="_blank" aria-label="YouTube"
-                            class="icon"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://open.spotify.com/user/312vcmxn6si567ozqmhq5cttv4ga?si=c94043df239e4aa0"
-                            target="_blank" aria-label="Spotify" class="icon">
-                            <i class="fa-brands fa-spotify"></i>
-                        </a>
-                        <a href="https://www.instagram.com/adansuhailch13/?__pwa=1#" target="_blank"
-                            aria-label="Instagram" class="icon"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-
-                </div>
-
-                <div class="footer-col footer-col-links">
-                    <h4 class="footer-col-title">Quick Links</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="#text"><i class="fa-solid fa-code"></i> HTML Tags</a></li>
-                        <li><a href="/pages/css-part.html"><i class="fa-solid fa-palette"></i> CSS Tags</a></li>
-                        <li><a href="/pages/javascript-part.html"><i class="fa-brands fa-js"></i> JavaScript</a></li>
-                        <li><a href="https://amazing-color-picker.vercel.app/" target="_blank"><i
-                                    class="fa-solid fa-droplet"></i> Color Lab</a></li>
-                        <li><a href="/pages/quiz-section.html"><i class="fa-solid fa-circle-question"></i> Quizzes</a>
-                        </li>
-                        <li><a href="/pages/editor.html"><i class="fa-solid fa-terminal"></i> Code Editor</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col footer-col-learn">
-                    <h4 class="footer-col-title">Learn</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="/pages/text-tag.html"><i class="fa-solid fa-t"></i> Text Tags</a></li>
-                        <li><a href="/pages/form-tag.html"><i class="fa-solid fa-wpforms"></i> Form Tags</a></li>
-                        <li><a href="/pages/semantic-media.html"><i class="fa-solid fa-photo-film"></i> Media &amp;
-                                Semantic</a></li>
-                        <li><a href="/pages/css-flex.html"><i class="fa-solid fa-table-columns"></i> Flexbox</a></li>
-                        <li><a href="/pages/css-grid.html"><i class="fa-solid fa-border-all"></i> CSS Grid</a></li>
-                        <li><a href="/pages/other-tags.html"><i class="fa-solid fa-layer-group"></i> Other HTML5</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-col footer-col-contact-legal">
-                    <h4 class="footer-col-title">Contact</h4>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <i class="fa-solid fa-envelope footer-contact-icon"></i>
-                            <a href="mailto:adansuhailch@gmail.com" id="gmial-a">adansuhailch@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-discord footer-contact-icon"></i>
-                            <a href="https://discord.gg/XwWbEyEVX9" target="_blank">Join our Discord</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-github footer-contact-icon"></i>
-                            <a href="https://github.com/adansuhailch" target="_blank">GitHub Profile</a>
-                        </li>
-                    </ul>
-
-                    <h4 class="footer-col-title" style="margin-top: 24px;">Legal</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="/pages/privacy-policy.html"><i class="fa-solid fa-shield-halved"></i> Privacy
-                                Policy</a></li>
-                        <li><a href="/pages/terms-of-service.html"><i class="fa-solid fa-file-contract"></i> Terms of
-                                Service</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p class="footer-copyright">&copy; 2026 <strong>Tag Web</strong> &mdash; Built with ❤️ by a Developer
-                    for future Developers.
-                    <a href="./pages/privacy-policy.html">All rights reserved.</a>
-                </p>
-                <div class="footer-bottom-links">
-                    <a href="/pages/privacy-policy.html">Privacy Policy</a>
-                    <span class="footer-dot">&bull;</span>
-                    <a href="/pages/terms-of-service.html">Terms of Service</a>
-                    <span class="footer-dot">&bull;</span>
-                    <a href="https://discord.gg/XwWbEyEVX9" target="_blank">Community</a>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script src="/js/core-actions.js"></script>
     <script>
         // Check karo ke kya browser service worker support karta hai
@@ -591,22 +407,6 @@
         }
     </script>
 
-    <script>
-        // Check karo ke kya browser service worker support karta hai
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then((registration) => {
-                        console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
-                    })
-                    .catch((error) => {
-                        console.log('❌ ServiceWorker registration failed: ', error);
-                    });
-            });
-        }
-    </script>
-
 </body>
-
 
 </html>

@@ -1,8 +1,8 @@
 body {
     background:
-        radial-gradient(circle at 15% 20%, #0b0f19, transparent 35%),
-        radial-gradient(circle at 85% 80%, #0b0f19, transparent 35%),
-        linear-gradient(180deg, #0b0f19 0%, #0b0f19 40%, #0b0f19 100%);
+        radial-gradient(circle at 15% 20%, #010409, transparent 35%),
+        radial-gradient(circle at 85% 80%, #010409, transparent 35%),
+        linear-gradient(180deg, #010409 0%, #010409 40%, #010409 100%);
     color: var(--text-primary);
     transition: background-color .3s ease, color .3s ease;
     margin: 0;

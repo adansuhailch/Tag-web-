@@ -28,7 +28,7 @@
     const editorTextAreaId = 'modal-editor';
     const previewFrameId = 'live-preview';
     const quizContainerId = 'quiz';
-    const defaultCategory = 'tag-web';
+    const defaultCategory = 'dashboard';
 
     if (typeof window.tagData === 'undefined') {
         window.tagData = {};
@@ -38,7 +38,7 @@
 
     function openModal(tag) {
         const pageName = window.location.pathname.split('/').pop().replace('.html', '');
-        const category = (pageName === 'index' || pageName === '') ? defaultCategory : pageName;
+        const category = (pageName === 'dashboard' || pageName === '') ? defaultCategory : pageName;
         window.open(`/pages/editor.html?category=${category}&tag=${tag}`, '_blank');
     }
 
@@ -551,31 +551,28 @@ window.addEventListener('load', () => {
         element.classList.remove('skeleton-shimmer');
     });
 });
-
 /* ==========================================================================
-   RETRO MODAL ACCESS CONTROL LOGIC - ANNOUNCEMENT HANDLER
+   STEALTH CONSTRUCTION NOTIFICATION HANDLER
    ========================================================================== */
-function dismissUpgradePopup() {
-    const modal = document.getElementById("retro-upgrade-modal");
-    if (modal) {
-        modal.style.opacity = "0";
-        setTimeout(() => {
-            modal.style.display = "none";
-            // Storing configuration inside storage key tokens
-            sessionStorage.setItem("tagWebUpgradeAnnounced", "true");
-        }, 300);
-    }
+function triggerConstructionAlert(moduleName) {
+    // Dynamic fallback checking sequence mapping lines
+    const currentModule = moduleName || "This section";
+
+    Swal.fire({
+        icon: "info",
+        title: "Pardon Our Dust! 🛠️",
+        html: `<p style="font-size:15px; font-family:'Outfit', sans-serif; line-height: 1.6; color:#dcdfe4;">
+                We are working on the <strong>${currentModule}</strong> right now to make it more amazing!<br><br>
+                Sorry for this placeholder, but our engineers are pushing daily code updates to make it awesome for you. 
+                <br><br>
+                <span style="color:#ffb703; font-weight:600;">Stay connected and keep learning! 💜</span>
+               </p>`,
+        confirmButtonText: "Got It, Team!",
+        confirmButtonColor: "#ffb703", /* Matching the warning yellow flow */
+        background: "rgba(11, 15, 25, 0.95)",
+        color: "#fffafa",
+        customClass: {
+            popup: 'premium-glass-card' /* Reuses your webkit-backdrop blur logic safely */
+        }
+    });
 }
-
-// Initializing the checking frame matrix upon index render loops
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("retro-upgrade-modal");
-    if (!modal) return;
-
-    // Check if the user has already acknowledged this notification session
-    if (sessionStorage.getItem("tagWebUpgradeAnnounced") === "true") {
-        modal.style.display = "none";
-    } else {
-        modal.style.display = "flex";
-    }
-});
