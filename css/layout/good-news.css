@@ -1,0 +1,140 @@
+/* ==========================================================================
+   RETRO UPGRADE MODAL - COMPONENT SPECIFIC ARCHITECTURE
+   ========================================================================== */
+
+/* 1. External Retro Font Import System Protocol */
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
+
+/* 2. Background Blur Mask Layer */
+.upgrade-overlay-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 12, 22, 0.85);
+    /* Deep slate overlay transparency */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    /* Safe premium glass background filter */
+    z-index: 99999;
+    /* Making sure it floats on top of everything else */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 3. The Core Pixel Art Card Container */
+.pixel-popup-card {
+    background: #0b0f19;
+    /* Tag Web authentic background color matching sheets */
+    border: 4px solid #fffafa;
+    /* Solid thick retro boundary padding */
+    border-radius: 0px;
+    /* STRICT: Pure sharp corners to preserve pixel art style! */
+    max-width: 460px;
+    width: 100%;
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    box-shadow: 8px 8px 0px #080c16;
+    /* Pure solid sharp Neo-Brutalist shadow matrix */
+    font-family: 'Press Start 2P', monospace;
+    /* Applying your chosen retro font */
+}
+
+/* 4. Functional Micro Elements Alignments */
+.pixel-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #b4bbc6;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.pixel-close-btn:hover {
+    color: #ea4335;
+    /* Turns blood red on hovering crosses triggers */
+}
+
+/* Icon pulse loops setup */
+.pixel-pulse-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    animation: pixelGlowPulse 1.5s infinite alternate;
+}
+
+.pixel-heading {
+    font-size: 20px;
+    color: #fffafa;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+
+.pixel-subheading {
+    font-size: 10px;
+    color: #ffb703;
+    /* Warning dynamic yellow alert token */
+    margin: 0 0 24px 0;
+    letter-spacing: 0.5px;
+}
+
+.pixel-notice-text {
+    font-size: 10px;
+    color: #b4bbc6;
+    line-height: 1.8;
+    margin: 0 0 28px 0;
+    text-align: justify;
+    /* Keeps block texts aligned perfectly inside boxes */
+}
+
+/* Retro Command Interactive Active Button */
+.pixel-action-btn {
+    background: transparent;
+    border: 2px solid #fffafa;
+    /* Mint neon green layout color indicator */
+    color: #fffafa;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 12px 24px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.pixel-action-btn:hover {
+    background: rgb(194, 189, 189);
+    color: #0b0f19 !important;
+    /* Text color flips smoothly on focus overlays */
+    box-shadow: 0 0 14px #080c16;
+}
+
+.pixel-action-btn:active {
+    transform: translate(5px, 5px);
+}
+
+/* ==========================================================================
+   RETRO CORE KEYFRAMES ENGINE FOR GLOW PULSING
+   ========================================================================== */
+@keyframes pixelGlowPulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2px black);
+    }
+
+    70% {
+        transform: scale(1.12);
+        filter: drop-shadow(0 0 12px #080c16);
+    }
+}
