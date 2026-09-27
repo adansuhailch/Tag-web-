@@ -15,7 +15,9 @@
     margin-top: 1rem;
 }
 
-#js-pg-link-a {
+.js-pg-link-a,
+.css-pg-link-a,
+.all-pg-link-a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +27,7 @@
     padding: 10px 20px;
     max-width: 240px;
     background-color: #212121;
-    color: #ff5733;
+    color: #F7DF1E;
     font-size: 19px;
     font-weight: bold;
     border-radius: 0.3em;
@@ -35,7 +37,31 @@
     transition: all 0.3s ease;
 }
 
-#js-pg-link-a:hover {
+.all-pg-link-a {
+    color: #5f5f99;
+}
+
+/* 🎯 THE UNIQUE HAND-POINTER ROTATION & GAP ENGINE */
+
+/* Target the font-awesome icon inside this specific button wrapper container */
+.all-pg-link-a i.fa-hand-pointer {
+    /* 1. Rotate the hand right side towards your text text */
+    transform: rotate(100deg) !important;
+    /* Smooth transitions fallback logic */
+    display: inline-block;
+    transition: transform 0.35s ease-in-out !important;
+}
+
+/* 🔥 BONUS MICRO-INTERACTION: Mouse hover karne par click animation trigger hoga */
+.all-pg-link-a:hover i.fa-hand-pointer {
+    /* Jab user mouse laye ga, to finger halqi si text ki taraf aur aage push (nudge) hogi */
+    transform: rotate(100deg) scale(1.50) translateX(2px) !important;
+}
+
+
+.js-pg-link-a:hover,
+.css-pg-link-a:hover,
+.all-pg-link-a:hover {
     transform: translateY(0.4em);
     box-shadow: 0 0 0 0 #495270;
 }

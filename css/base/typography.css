@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
 @import url(https://fonts.googleapis.com/css?family=VT323:regular);
-/* @import url(https://fonts.googleapis.com/css?family=Silkscreen:regular,700); */
+@import url(https://fonts.googleapis.com/css?family=Silkscreen:regular,700);
 
 h1 {
     margin: 0;
@@ -23,6 +23,13 @@ h2 {
     margin-bottom: 24px;
 }
 
+@media(max-width: 768px) {
+    #js-title {
+        font-size: 25px;
+        line-height: 2.5rem;
+    }
+}
+
 p {
     margin: 0 0 8px;
     line-height: 1.6;
@@ -35,17 +42,20 @@ p {
     color: rgb(128, 105, 76);
     transition: color .2s;
 } */
-
+/* 
 a {
     font-family: 'VT323', monospace !important;
     font-size: 18px;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
-    /* VT323 thoda compressed hota hai isliye size 18px-19px best hai */
+    VT323 thoda compressed hota hai isliye size 18px-19px best hai
     letter-spacing: 0.5px;
     font-weight: 500;
-}
+} */
 
-a:not(.no-hover):hover {
+/* a:not(.no-hover):hover {
     color: var(--nav-link-hover);
+} */
+a {
+    text-decoration: none;
 }

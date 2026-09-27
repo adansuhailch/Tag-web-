@@ -62,32 +62,56 @@
 <!-- <body> -->
 
 <!-- header -->
-<header>
-    <div class="logo skeleton-shimmer">
+<header class="landing-page-navbar">
+    <!-- 🧭 LEFT CONTAINER: Logo and Wordmark Grouping -->
+    <div class="logo">
         <img src="/assets/tag-web-logo.png" alt="logo" class="tag-web-logo" />
-        <a href="/index.html"><span class="brand-wordmark">Tag Web</span></a>
+        <a href="../index.html">
+            <span class="brand-wordmark">Tag Web</span>
+        </a>
     </div>
 
-    <div class="search-container skeleton-shimmer">
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="searchBar" placeholder="Search Topics, Tags..." onkeyup="searchTag()"
-            aria-label="Search HTML tags" />
-    </div>
-    <div class="button-group">
-        <a href="https://amazing-color-picker.vercel.app/" target="_blank"><button
-                class="btn color-lab  skeleton-shimmer">
-                <span class="icon-palette">🎨</span> Color Lab
-            </button>
-        </a>
 
-        <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover  skeleton-shimmer">
-            <i class="fa-brands fa-discord"></i>Join Community
+    <!-- Desktop Button Group (Hidden on Mobile) -->
+    <div class="button-group desktop-only">
+        <a href="https://amazing-color-picker.vercel.app/" target="_blank" class="btn color-lab">
+            <span class="icon-palette">🎨</span> Color Lab
         </a>
-        <a href="/pages/contact-tagweb.html" target="_blank" class="btn contact-btn  skeleton-shimmer"
-            rel="noopener noreferrer">
-            <i class="fa-sharp fa-solid fa-at"></i><span class="icon-palette">Contact us
-            </span>
+        <a href="https://discord.gg/XwWbEyEVX9" target="_blank" class="btn btn-discord">
+            <i class="fa-brands fa-discord"></i> Join Community
         </a>
+        <a href="/pages/contact-tagweb.html" target="_blank" class="btn contact-btn" rel="noopener noreferrer">
+            <i class="fa-sharp fa-solid fa-at"></i> <span class="icon-palette">Contact us</span>
+        </a>
+        <a href="./pages/dashboard.html" class="btn start-btn">START LEARNING <i
+                class="fa-regular fa-lightbulb"></i></a>
+    </div>
+
+    <button class="hamburger-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <!-- 📱 Full Screen Retro Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <span class="menu-title">[ MENU_SELECT ]</span>
+            </div>
+            <div class="mobile-links-stack">
+                <a href="./pages/dashboard.html" class="mobile-btn action-pulse">START LEARNING <span
+                        class="arrow">➔</span></a>
+                <a href="https://amazing-color-picker.vercel.app/" target="_blank" class="mobile-btn">🎨 Color Lab</a>
+                <a href="https://discord.gg/XwWbEyEVX9" target="_blank" class="mobile-btn discord-style"><i
+                        class="fa-brands fa-discord"></i> Join Community</a>
+                <a href="/pages/contact-tagweb.html" target="_blank" class="mobile-btn"><i
+                        class="fa-sharp fa-solid fa-at"></i> Contact Us</a>
+            </div>
+            <div class="mobile-menu-footer">
+                <span class="retro-pixel-text">SYS_READY // TAG WEB</span>
+            </div>
+        </div>
     </div>
 </header>
 <div class="page-container">
@@ -154,7 +178,9 @@
                     &lt;input&gt; Input<span class="tooltip">Click for details</span>
                 </div>
             </div>
-            <a href="/pages/form-tag.html" class="more-tags-link" target="_blank">Click here to view and enjoy
+            <a href="/pages/form-tag.html" class="all-pg-link-a" target="_blank"><i
+                    class="fa-regular fa-hand-pointer"></i>Click here
+                to view and enjoy
                 more tags</a>
         </section>
 
@@ -181,7 +207,8 @@
                 </div>
             </div>
 
-            <a href="/pages/semantic-media.html" class="more-tags-link" target="_blank">Click here to view and
+            <a href="/pages/semantic-media.html" class="all-pg-link-a" target="_blank"><i
+                    class="fa-regular fa-hand-pointer"></i>Click here to view and
                 enjoy more tags</a>
         </section>
         <!-- Links Section -->
@@ -328,8 +355,12 @@
                     &lt;blockquote&gt; Block Quote<span class="tooltip">Click for details</span>
                 </div>
             </div>
-            <a href="/pages/other-tags.html" class="more-tags-link" target="_blank">Click here to view and enjoy
-                more tags</a>
+            <!-- <a href="/pages/other-tags.html" class="more-tags-link" target="_blank">Click here to view and enjoy
+                more tags</a> -->
+            <a href="/pages/css-part.html" class="css-pg-link-a" target="_blank"
+                style="text-decoration: none; color: inherit;">Explore <i class=" fa-brands fa-html5"
+                    style="color:#E34C26; font-size: 2rem;"></i> Tags
+            </a>
         </section>
 
         <section id="Css-tags">
@@ -349,7 +380,7 @@
                         class="fa-brands fa-square-js"></i>Start Learning JavaScript →
                 </a> -->
 
-                <a href="/pages/css-part.html" id="js-pg-link-a" target="_blank" class="css-link"
+                <a href="/pages/css-part.html" class="css-pg-link-a" target="_blank"
                     style="text-decoration: none; color: inherit;">Explore <i class=" fa-brands fa-css"
                         style="color:#264DE4; font-size: 2rem;"></i> Tags
                 </a>
@@ -359,9 +390,8 @@
 
         <!-- Learn JavaScript Section -->
         <section id="javascript-tags" style="text-align: center">
-            <h2>Learn JavaScript <span style="color: #f59e0b; font-size: 3rem;"><i
-                        class=" fa-brands fa-square-js"></i></span>
-            </h2>
+            <h2 id="js-title">Learn JavaScript</h2>
+            <span style="color: #f59e0b; font-size: 3rem;"><i class=" fa-brands fa-square-js"></i></span>
             <p id="js-des">
                 Master JavaScript from scratch — variables, functions, DOM, async/await
                 and more. Interactive cards, live code editor, and quizzes await you!
@@ -374,7 +404,7 @@
 
             </div>
             <div class="button-container">
-                <a href="/pages/javascript-part.html" target="_blank" id="js-pg-link-a">Start Learning <i
+                <a href="/pages/javascript-part.html" target="_blank" class="js-pg-link-a">Start Learning <i
                         class="fa-brands fa-square-js"></i></a>
             </div>
 
@@ -499,35 +529,40 @@
 <script src="/js/core-actions.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    // Check karo ke kya browser service worker support karta hai
+    //    🚀 LIVE PRODUCTION SERVICE WORKER REGISTER & AUTO - UPDATE PIPELINE
+
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            // Automatically checks if dashboard context relative path structure applies
+            const swPath = window.location.pathname.includes('/pages/') ? '../sw.js' : './sw.js';
+
+            navigator.serviceWorker.register(swPath)
                 .then((registration) => {
-                    console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                    console.log("✅ ServiceWorker registered successfully under scope: ", registration.scope);
+
+                    // 🔍 MONITOR CHANGES: Check if a new version is pushing from GitHub cloud
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        if (newWorker) {
+                            newWorker.addEventListener('statechange', () => {
+                                // If the new code is fully compiled and installed safely
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    console.log("✨ New core deployment found! Reloading client views automatically...");
+
+                                    // ⚡ THE 1-SECOND MAGIC: Dynamic programmatic reload for mobile devices!
+                                    window.location.reload();
+                                }
+                            });
+                        }
+                    });
                 })
                 .catch((error) => {
-                    console.log('❌ ServiceWorker registration failed: ', error);
+                    console.log("❌ ServiceWorker registration failed: ", error);
                 });
         });
     }
-</script>
 
-<script>
-    // Check karo ke kya browser service worker support karta hai
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then((registration) => {
-                    console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
-                })
-                .catch((error) => {
-                    console.log('❌ ServiceWorker registration failed: ', error);
-                });
-        });
-    }
 </script>
-
 </body>
 
 

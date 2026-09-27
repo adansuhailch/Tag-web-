@@ -1,5 +1,4 @@
 :root {
-    /* Backgrounds (Layered Deep Tech Dark) */
     --bg-body: #010409;
     /* --bg-header: #0b0f19; */
     --bg-nav: #0b0f19;
@@ -55,4 +54,20 @@
     --html-style: #e34c26;
     --css-style: #264de4;
     --js-style: #f7df1e;
+
+    /* yaha ma ab se sara new variables apply kar rha houn aur sab values ko ab yaha se hi manage karoun ga jab tak mujahy phlii wali ka purpose na clear ho gai:) */
+    --youtube-org-clr: #ff0000;
+    --edtr-yt-lgo: var(--youtube-org-clr);
+    --aqua-in-hex: #64ffda;
+    --whitesmoke-hex: #f5f5f5;
+    --black-hex: #000;
+    --snow-hex: #fffafa;
+    /* --- 🏗️ TIER 2: UTILITY/SEMANTIC ROLES (Kaam ke mutabiq) --- */
+    /* Ab hum Tier 1 ke variables ko yahan assign karenge */
+    --editor-breadcrumb-clr: var(--aqua-in-hex);
+    --bk-2-mainpg: var(--aqua-in-hex);
+    --selection-clr: var(--whitesmoke-hex);
+    --selection-bg-clr: var(--black-hex);
+    --land-pg-bg-clr: var(--bg-section);
+
 }

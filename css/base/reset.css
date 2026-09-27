@@ -5,8 +5,8 @@
 }
 
 ::selection {
-    background: #2d395f;
-    color: #fffafa;
+    background: var(--selection-bg-clr);
+    color: var(--selection-clr);
 }
 
 /* page container */
@@ -16,5 +16,5 @@
     align-items: flex-start;
     width: 100%;
     min-height: calc(100vh - 70px);
-    background-color: #010409 !important;
+    background-color: var(--bg-body) !important;
 }

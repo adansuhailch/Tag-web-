@@ -1,7 +1,4 @@
-/* ==========================================================================
-   PORTFOLIO/TAGWEB - BETA UNDER CONSTRUCTION BADGE
-   ========================================================================== */
-
+/* PORTFOLIO/TAGWEB - BETA UNDER CONSTRUCTION BADGE */
 .under-construction-wrapper {
     display: inline-block;
     cursor: pointer;
@@ -43,4 +40,17 @@
 .under-construction-wrapper:active {
     transform: scale(0.96);
     /* Smooth pressing touch physical feedback */
+}
+
+/* Back to main Page Css */
+.back-to-main-page,
+.css-part-a {
+    display: inline-block;
+    margin-top: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--bk-2-mainpg);
+    transition: color 0.2s ease-in-out;
 }

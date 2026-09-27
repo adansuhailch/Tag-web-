@@ -127,7 +127,7 @@ textarea:focus {
 
 /* YouTube Icon Pop Glow */
 .video-summary-trigger i.fa-youtube {
-    color: #ea4335;
+    color: var(--edtr-yt-lgo);
     font-size: 16px;
     transition: transform 0.2s ease;
 }

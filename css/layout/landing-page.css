@@ -1,38 +1,232 @@
+/* 🌐 Base Desktop & Global Floating Rules */
 .landing-page-navbar {
-    background-color: #0d1117;
-    border-bottom: 2px solid #30363d;
-    padding: 14px 32px;
+    background-color: rgba(1, 6, 14, 0.85);
+    /* Slightly transparent for premium glassmorphism effect */
+    backdrop-filter: blur(12px);
+    /* Smooth background blur */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #30363d;
+    /* Sleek structural border */
+
+    /* 🚀 Floating Mechanics */
+    width: calc(100% - 40px);
+    /* Leaves exactly 20px gap on left & right */
+    max-width: 1200px;
+    /* Optional: Stops the navbar from stretching too wide on massive screens */
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Perfectly centers the floating menu */
+    top: 20px;
+    /* 20px gap from top screen boundary */
+    border-radius: 16px;
+    /* Smooth professional curve */
+
+    padding: 14px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
     box-sizing: border-box;
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 99999;
 }
 
-.landing-nav-actions {
+/* .landing-nav-actions {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-/* Muted minimal roadmap text link */
-/* .nav-anchor-link {
-    font-family: 'VT323', monospace !important;
-    font-size: 19px;
-    color: #7d8590 !important;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: color 0.2s ease;
-}
-
-.nav-anchor-link:hover {
-    color: #ffffff !important;
-    Lights up crisp white on hover
 } */
+
+/* Mobile responsive code */
+/* Existing CSS settings updated for desktop helper classes */
+@media (min-width: 769px) {
+    .hamburger-toggle {
+        display: none !important;
+    }
+
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+}
+
+/* 📱 Responsive Mobile Rules */
+@media (max-width: 768px) {
+    .landing-page-navbar {
+        width: calc(100% - 32px);
+        /* Margins remain crisp (16px left/right gap on mobile) */
+        top: 16px;
+        /* Balanced top clearance for smaller viewports */
+        padding: 12px 20px;
+        border-radius: 12px;
+        /* Proportionate border radius for mobile scaling */
+    }
+
+    /* Hide desktop panels */
+
+    .button-group,
+    .landing-nav-actions {
+        display: none !important;
+    }
+
+    /* 🎮 Retro Hamburger Button Styling */
+    .hamburger-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 100001;
+        /* Layer over overlay */
+    }
+
+    .hamburger-toggle .bar {
+        width: 100%;
+        height: 3px;
+        background-color: var(--snow-hex);
+        /* Neon cyber blue */
+        border-radius: 0px;
+        /* Sharp retro edge */
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
+    }
+
+    /* Hamburger Animation to 'X' When Active */
+    .hamburger-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+        background-color: #ff7b72;
+        /* Error red accent */
+    }
+
+    .hamburger-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+        background-color: #ff7b72;
+    }
+
+    /* 🌌 Fullscreen Cyber Game Menu Overlay */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(7, 10, 14, 0.98);
+        /* Deep GitHub Dark */
+        border-left: 6px solid var(--snow-hex);
+        z-index: 100000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s linear;
+    }
+
+    .mobile-menu-overlay.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .mobile-menu-content {
+        width: 85%;
+        max-width: 360px;
+        background: #161b22;
+        border: 2px solid #30363d;
+        padding: 24px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+        position: relative;
+    }
+
+    .mobile-menu-header {
+        border-bottom: 2px dashed #30363d;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .menu-title {
+        font-family: monospace;
+        color: var(--whitesmoke-hex);
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    /* ⚡ Vertical Stack for Retro Buttons */
+    .mobile-links-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .mobile-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #c9d1d9;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 14px;
+        background: #0d1117;
+        border: 2px solid #30363d;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.2s ease;
+    }
+
+    /* Button Hover & Active States */
+    .mobile-btn:active,
+    .mobile-btn:hover {
+        background: #010812;
+        border-color: var(--snow-hex);
+        color: #ffffff;
+    }
+
+    /* Core Action Primary Button */
+    .action-pulse {
+        background: #02040a;
+        border-color: var(--snow-hex);
+        color: #ffffff;
+    }
+
+    .action-pulse:active {
+        background: #02040a;
+    }
+
+    .discord-style {
+        border-color: #5865F2;
+    }
+
+    .discord-style:active {
+        background: #5865F2;
+    }
+
+    /* Footer Text inside Navbar */
+    .mobile-menu-footer {
+        margin-top: 24px;
+        text-align: center;
+        border-top: 2px dashed #30363d;
+        padding-top: 12px;
+    }
+
+    .retro-pixel-text {
+        font-family: monospace;
+        font-size: 14px;
+        color: #d8dee4;
+    }
+}
 
 .landing-gateway-premium {
     background-color: #010409 !important;
@@ -93,12 +287,31 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    margin-top: 80px !important;
+    margin-top: 90px !important;
 }
+
+@media (max-width: 600px) {
+
+    /* Main outer console window ki borders mobile par halki kar do */
+    .space-station-console {
+        border: 2px solid #30363d !important;
+        /* Stark white ki jagah subtle gray stroke lines */
+        box-shadow: none !important;
+        /* Heavy desktop shadows drop settings reset */
+        background-color: transparent !important;
+        /* Fluid look over background laser lines */
+    }
+
+    /* Title text ke margins ko thoda sa saaf breathe karne do */
+    .game-title-premium {
+        padding: 0 8px;
+    }
+}
+
 
 /* Windows Header Title Panel Rules */
 .console-top-bar {
-    background-color: #0d1117;
+    background-color: #010204;
     border-bottom: 3px solid #ffffff;
     /* Sharp White Divider Line */
     padding: 12px 20px;
@@ -140,7 +353,7 @@
 
 /* 1. Minimize Button (—) Hover */
 .windows-mini-controls span:nth-child(1):hover {
-    color: #fffafa;
+    color: var(--snow-hex);
     transform: scale(2.2) translateY(2px);
     /* Thoda bada aur neeche bend hoga */
     text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
@@ -148,11 +361,8 @@
 
 /* 2. Maximize Button (🗖) Hover */
 .windows-mini-controls span:nth-child(2):hover {
-    color: #64748b;
-    /*  Gray color */
+    color: var(--snow-hex);
     transform: scale(2.25) rotate(90deg);
-    /* Thoda bada hokar rotate karega, boht satisfying lagta hai! */
-    text-shadow: 0 0 10px #64748b;
 }
 
 /* 3. Close Button (🗙) Hover */
@@ -182,6 +392,7 @@
 /* Internal Body Spacing Layout */
 .console-body {
     padding: 45px 35px;
+    background-color: #010204;
 }
 
 /* Premium Main Headings Controls */
@@ -199,20 +410,36 @@
     margin: 0 0 12px 0;
 }
 
-/* .system-status-badge {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    font-weight: 700;
-    background-color: rgba(34, 197, 94, 0.1);
-    color: #22c55e;
-    Cyber Green Status Indicator
-    border: 1px solid rgba(34, 197, 94, 0.2);
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
-} */
+/* ==========================================================================
+   🕹️ MOBILE MONITOR TYPOGRAPHY RESET (ANTI-OVERFLOW ENGINE)
+   ========================================================================= */
+
+@media (max-width: 600px) {
+
+    .game-title-premium {
+        font-size: 22px !important;
+        /* Compresses pixel letter boundaries slightly for dense compact game console view */
+        letter-spacing: 1px !important;
+
+        /* Line height adjustments to ensure lines don't crash into each other when wrapping */
+        line-height: 1.4 !important;
+        /* Restricts total horizontal bounds to prevent out-of-screen stretching */
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        word-wrap: break-word !important;
+        /* Safety check fallback */
+        margin: 12px 0 16px 0 !important;
+        text-align: center !important;
+    }
+
+    /* Bonus Tuning: Make the terminal sub-title paragraph look clean and tight under the small text */
+    .game-subtitle-premium {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+        padding: 0 10px !important;
+    }
+}
 
 .game-subtitle-premium {
     font-family: 'VT323', monospace;
@@ -232,10 +459,10 @@
 
 /* 🧱 The Code-Dex Styled Premium 3D Cards */
 .pipeline-card-premium {
-    background-color: #0d1117;
-    color: #fffafa;
+    background-color: #07090c;
+    color: var(--snow-hex);
     /* GitHub Base Panel Color */
-    border: 2px solid #30363d !important;
+    border: 2px solid var(--snow-hex) !important;
     /* Thick internal boundaries */
     border-radius: 12px;
     padding: 28px 24px;
@@ -245,8 +472,52 @@
     display: flex;
     flex-direction: column;
     min-height: 260px;
-    box-shadow: 6px 6px 0px #000000;
+    box-shadow: 6px 4px 0px var(--whitesmoke-hex);
     transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ==========================================================================
+   🧱 THE GRID RE-BALANCING & ANTI-TOUCH ENGINE (MOBILE VIEW FIX)
+   ========================================================================== */
+
+@media (max-width: 950px) {
+
+    /* 1. Main Console Window Inner Body Core Tuning */
+    .console-body {
+        /* Ensures standard spacing padding on left and right side boundaries */
+        padding: 24px 16px !important;
+
+        /* 🎯 CRITICAL LOCK: Forces browser to calculate width inside the layout boxes safely */
+        box-sizing: border-box !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    /* 🗺️ 2. The 4-Card Pipeline Matrix Grid Layout Adjustment */
+    .pipeline-grid-premium {
+        grid-template-columns: 1fr !important;
+        /* Single column view */
+        gap: 20px !important;
+        /* Balanced grid gaps */
+        width: 100% !important;
+
+        /* Spacing setup calibration check */
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 🧱 3. The Code-Dex Styled Premium 3D Cards Constraints */
+    .pipeline-card-premium {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        /* 🎯 CRITICAL FIX: Stops the 3D box shadows from pushing card edges out of borders */
+        box-sizing: border-box !important;
+
+        margin: 0 auto !important;
+        /* Centers the card perfectly in the layout line */
+    }
 }
 
 /* Metadata Row Settings */
@@ -261,7 +532,7 @@
 .path-badge {
     font-family: 'VT323', monospace;
     font-size: 15px;
-    color: #7d8590;
+    color: #d3d6da;
 }
 
 .status-dot-green {
@@ -291,7 +562,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 14px;
     line-height: 1.6;
-    color: #7d8590;
+    color: #e3ebf8;
     margin: 0 0 24px 0;
 }
 
@@ -429,8 +700,8 @@
 
 /* 📠 Console Footer Area Controls */
 .console-footer {
-    background-color: #0d1117;
-    border-top: 3px solid #ffffff;
+    background-color: #010204;
+    border-top: 3px groove #ffffff;
     padding: 12px 24px;
     display: flex;
     align-items: center;
@@ -439,17 +710,17 @@
 
 .footer-system-text {
     font-family: 'JetBrains Mono', monospace;
-    color: #30363d;
+    color: var(--whitesmoke-hex);
     /* Dim gray tech metadata font */
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .blink-cursor {
     font-family: monospace;
-    color: #30363d;
-    font-size: 12px;
+    color: var(--whitesmoke-hex);
+    font-size: 20px;
     animation: terminalCursorBlink 1s infinite;
 }
 
@@ -486,16 +757,15 @@
 }
 
 .promo-icon i {
-    color: #fffafa;
+    color: var(--black-hex);
 }
 
 /* Color popping for marketing attraction */
 .html-style {
     border-color: var(--html-style);
     background-color: var(--html-style);
-    /* Electric Blue outline for 'No Login' */
     border: 2px groove var(--html-style);
-    color: var(--text-primary);
+    color: var(--black-hex);
     box-shadow: 2px 2px 0px var(--html-style);
 }
 
@@ -504,7 +774,7 @@
     background-color: var(--css-style);
     border: 2px groove var(--css-style);
     box-shadow: 2px 2px 0px var(--css-style);
-    color: var(--text-primary);
+    color: var(--black-hex);
 }
 
 .js-style {
@@ -512,5 +782,5 @@
     background-color: var(--js-style);
     border: 2px groove var(--js-style);
     box-shadow: 2px 2px 0px var(--js-style);
-    color: #fffafa;
+    color: var(--black-hex);
 }

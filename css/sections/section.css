@@ -13,6 +13,10 @@ section {
     transition: background 0.3s;
 }
 
+#structure {
+    margin-top: 85px;
+}
+
 .center {
     display: flex;
     align-items: center;

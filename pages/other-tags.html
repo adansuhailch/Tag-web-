@@ -484,19 +484,41 @@
 
         <script src="/js/core-actions.js"></script>
         <script>
-                // Check karo ke kya browser service worker support karta hai
+                //    🚀 LIVE PRODUCTION SERVICE WORKER REGISTER & AUTO - UPDATE PIPELINE
+
                 if ('serviceWorker' in navigator) {
                         window.addEventListener('load', () => {
-                                navigator.serviceWorker.register('/sw.js')
+                                // Automatically checks if dashboard context relative path structure applies
+                                const swPath = window.location.pathname.includes('/pages/') ? '../sw.js' : './sw.js';
+
+                                navigator.serviceWorker.register(swPath)
                                         .then((registration) => {
-                                                console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                                                console.log("✅ ServiceWorker registered successfully under scope: ", registration.scope);
+
+                                                // 🔍 MONITOR CHANGES: Check if a new version is pushing from GitHub cloud
+                                                registration.addEventListener('updatefound', () => {
+                                                        const newWorker = registration.installing;
+                                                        if (newWorker) {
+                                                                newWorker.addEventListener('statechange', () => {
+                                                                        // If the new code is fully compiled and installed safely
+                                                                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                                                                console.log("✨ New core deployment found! Reloading client views automatically...");
+
+                                                                                // ⚡ THE 1-SECOND MAGIC: Dynamic programmatic reload for mobile devices!
+                                                                                window.location.reload();
+                                                                        }
+                                                                });
+                                                        }
+                                                });
                                         })
                                         .catch((error) => {
-                                                console.log('❌ ServiceWorker registration failed: ', error);
+                                                console.log("❌ ServiceWorker registration failed: ", error);
                                         });
                         });
                 }
+
         </script>
+
 
 </body>
 
