@@ -22,8 +22,6 @@
         quizoption.classList.add('skeleton-shimmer');
     });
 })();
-
-
 (function () {
     const editorTextAreaId = 'modal-editor';
     const previewFrameId = 'live-preview';
@@ -195,11 +193,25 @@
 
         });
 
+        // 🎯 FIX: Preview updates ke sath mechanical typing sound inject ho gayi!
         window.myCodeEditor.on('change', function (instance) {
+            // 1. Live Preview Core (Purana logic same to same)
             const preview = document.getElementById(previewFrameId);
             if (preview) {
                 preview.srcdoc = instance.getValue();
             }
+
+            // 2. Real-Time Typing Audio Engine
+            // Dashboard folder se relative path toggle tracking
+            const typingAudio = new Audio('../assets/sounds/mechanical-click.mp3');
+
+            typingAudio.currentTime = 0; // Fast typing par overlapping loops crash nahi hone dega
+            typingAudio.volume = 0.30;   // Balanced volume jo kaan mein meethe mechanical switch jaisa lagay
+
+            typingAudio.play().catch(error => {
+                // Safety browser logs cache protection
+                console.log("Audio thread waiting for first user click interaction...");
+            });
         });
 
         const wrapper = window.myCodeEditor.getWrapperElement();
@@ -576,3 +588,62 @@ function triggerConstructionAlert(moduleName) {
         }
     });
 }
+// Landing page mobile responsive menu js
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            // Hamburger icon ko active static toggle do (X shape transformation)
+            menuToggle.classList.toggle('is-active');
+            // Menu canvas code inject
+            mobileMenu.classList.toggle('is-open');
+
+            // Prevent background page from scrolling when menu is active
+            if (mobileMenu.classList.contains('is-open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu if a user clicks an internal option link
+        const mobileLinks = mobileMenu.querySelectorAll('.mobile-btn');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('is-active');
+                mobileMenu.classList.remove('is-open');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+});
+
+/* ==========================================================================
+   🔊 THE AUTOMATED TACTILE MECHANICAL CLICK ENGINE
+   ========================================================================== */
+
+function playMechanicalClick() {
+    // 🎯 Points to your newly downloaded clean audio asset
+    const audio = new Audio('../assets/sounds/mechanical-click.mp3');
+
+    audio.currentTime = 0; // Instantly rewinds to start to allow rapid click spamming
+    audio.volume = 0.4;    // Balanced volume so it sounds punchy but doesn't hurt ears
+
+    audio.play().catch(error => {
+        // Safe fallback in case browser blocks audio before user clicks anything
+        console.log("Audio waiting for first touch interaction...");
+    });
+}
+
+/* ⚙️ AUTOMATIC DETECTOR: BINDS TO ALL GAMIFIED BUTTONS & CARDS */
+document.addEventListener("DOMContentLoaded", () => {
+    // Automatically targets every 3D button, pipeline card, and search input box on the screen!
+    const targetInteractiveElements = document.querySelectorAll(".btn, .pipeline-card-premium, #searchBar, .landing-cta-btn,.tag-card");
+
+    targetInteractiveElements.forEach(element => {
+        // Using 'mousedown' instead of 'click' for instant real-time physical feedback!
+        element.addEventListener("mousedown", playMechanicalClick);
+    });
+});

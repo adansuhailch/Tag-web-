@@ -129,31 +129,66 @@
 
 <body class="landing-gateway-premium">
     <header class="landing-page-navbar">
-
         <div class="logo">
             <img src="/assets/tag-web-logo.png" alt="logo" class="tag-web-logo" />
             <a href="./pages/dashboard.html"><span class="brand-wordmark">Tag Web</span></a>
         </div>
-        <div class="button-group">
-            <a href="https://amazing-color-picker.vercel.app/" target="_blank"><button class="btn color-lab">
-                    <span class="icon-palette">🎨</span> Color Lab
-                </button>
+
+        <!-- Desktop Button Group (Hidden on Mobile) -->
+        <div class="button-group desktop-only">
+            <!-- 🎯 FIX: HTML cleaned up, direct anchor style buttons -->
+            <a href="https://amazing-color-picker.vercel.app/" target="_blank" class="btn color-lab">
+                <span class="icon-palette">🎨</span> Color Lab
             </a>
 
-            <a href="https://discord.gg/XwWbEyEVX9" class="btn btn-discord no-hover">
-                <i class="fa-brands fa-discord"></i>Join Community
+            <a href="https://discord.gg/XwWbEyEVX9" target="_blank" class="btn btn-discord">
+                <i class="fa-brands fa-discord"></i> Join Community
             </a>
+
             <a href="/pages/contact-tagweb.html" target="_blank" class="btn contact-btn" rel="noopener noreferrer">
-                <i class="fa-sharp fa-solid fa-at"></i><span class="icon-palette">Contact us
-                </span>
+                <i class="fa-sharp fa-solid fa-at"></i> <span class="icon-palette">Contact us</span>
             </a>
+            <a href="./pages/dashboard.html" class="btn start-btn">START LEARNING<i
+                    class="fa-regular fa-lightbulb"></i></a>
+
         </div>
-        <div class="landing-nav-actions">
-            <a href="./pages/dashboard.html" class="btn">START LEARNING ➔</a>
-            <!-- <a href="#roadmap" class="btn nav-anchor-link">ROADMAP</a> -->
-            <!-- This button direct takes them to your core dashboard combined page -->
+
+        <!-- 🎮 Retro Style Hamburger Trigger (Visible ONLY on Mobile) -->
+        <button class="hamburger-toggle" id="menuToggle" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- 📱 Full Screen Retro Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <span class="menu-title">[ MENU_SELECT ]</span>
+                </div>
+
+                <div class="mobile-links-stack">
+                    <a href="./pages/dashboard.html" class="mobile-btn action-pulse">
+                        START LEARNING <span class="arrow">➔</span>
+                    </a>
+                    <a href="https://amazing-color-picker.vercel.app/" target="_blank" class="mobile-btn">
+                        🎨 Color Lab
+                    </a>
+                    <a href="https://discord.gg/XwWbEyEVX9" target="_blank" class="mobile-btn discord-style">
+                        <i class="fa-brands fa-discord"></i> Join Community
+                    </a>
+                    <a href="/pages/contact-tagweb.html" target="_blank" class="mobile-btn">
+                        <i class="fa-sharp fa-solid fa-at"></i> Contact Us
+                    </a>
+                </div>
+
+                <div class="mobile-menu-footer">
+                    <span class="retro-pixel-text">SYS_READY // TAG WEB</span>
+                </div>
+            </div>
         </div>
     </header>
+
 
 
     <div class="space-station-console">
@@ -391,20 +426,41 @@
         </footer>
 
     </div>
-    <script src="/js/core-actions.js"></script>
+    <script src="./js/core-actions.js"></script>
     <script>
-        // Check karo ke kya browser service worker support karta hai
+        //    🚀 LIVE PRODUCTION SERVICE WORKER REGISTER & AUTO - UPDATE PIPELINE
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                // Automatically checks if dashboard context relative path structure applies
+                const swPath = window.location.pathname.includes('/pages/') ? '../sw.js' : './sw.js';
+
+                navigator.serviceWorker.register(swPath)
                     .then((registration) => {
-                        console.log('✅ ServiceWorker registered successfully under scope: ', registration.scope);
+                        console.log("✅ ServiceWorker registered successfully under scope: ", registration.scope);
+
+                        // 🔍 MONITOR CHANGES: Check if a new version is pushing from GitHub cloud
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            if (newWorker) {
+                                newWorker.addEventListener('statechange', () => {
+                                    // If the new code is fully compiled and installed safely
+                                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                        console.log("✨ New core deployment found! Reloading client views automatically...");
+
+                                        // ⚡ THE 1-SECOND MAGIC: Dynamic programmatic reload for mobile devices!
+                                        window.location.reload();
+                                    }
+                                });
+                            }
+                        });
                     })
                     .catch((error) => {
-                        console.log('❌ ServiceWorker registration failed: ', error);
+                        console.log("❌ ServiceWorker registration failed: ", error);
                     });
             });
         }
+
     </script>
 
 </body>

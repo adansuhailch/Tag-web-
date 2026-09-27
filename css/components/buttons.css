@@ -14,19 +14,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 10px 20px;
+    gap: 4px;
+    padding: 10px 15px;
     /* Thoda chunky luxury size */
-    font-size: 14px;
-    font-weight: 700;
-    font-family: 'Press Start 2P', 'VT323', monospace;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Silkscreen', monospace;
     /* Pixelated core style input */
     border-radius: 8px;
     /* Clean sharp corner blocks */
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none !important;
     box-sizing: border-box;
     position: relative;
+    width: fit-content !important;
+    min-width: 200px !important;
+    /* Shuruat hi 200px se hogi, chote text wale automatic bade ho jayenge! */
 
     /* 🎯 Code-Dex Signature: Stark 3D Rigid Solid Extrusion (No soft blur lines!) */
     border: 3px solid #ffffff !important;
@@ -81,7 +84,12 @@
 }
 
 .btn-discord i {
-    font-size: 19px;
+    font-size: 17px;
+    transition: transform 0.25s ease;
+}
+
+.start-btn i {
+    font-size: 14px;
     transition: transform 0.25s ease;
 }
 
@@ -97,8 +105,19 @@
     box-shadow: 8px 8px 0px #000000;
 }
 
+.start-btn:hover {
+    border-color: var(--black-hex) !important;
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 4px 0px var(--snow-hex);
+}
+
+
 .btn-discord:hover i {
     transform: scale(1.2) translateY(-1px);
+}
+
+.start-btn:hover i {
+    transform: scale(2) translateZ(10px);
 }
 
 
